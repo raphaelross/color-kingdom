@@ -1,97 +1,153 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import '../data/sample_coloring_pages.dart';
 import '../models/coloring_page.dart';
+import '../models/coloring_state.dart';
+import '../repositories/coloring_page_repository.dart';
+import '../repositories/local_coloring_page_repository.dart';
 
-final availableColoringPagesProvider = Provider<List<ColoringPage>>(
-  (ref) => sampleColoringPages,
+final coloringPageRepositoryProvider = Provider<ColoringPageRepository>(
+  (ref) => LocalColoringPageRepository(),
 );
 
-final activeColoringPageProvider = StateProvider<ColoringPage>(
-  (ref) => sampleColoringPages.first,
+final availableColoringPagesProvider = FutureProvider<List<ColoringPage>>(
+  (ref) => ref.watch(coloringPageRepositoryProvider).getPages(),
 );
 
 final coloringControllerProvider =
-    StateNotifierProvider<ColoringController, ColoringPageState>((ref) {
-  final page = ref.watch(activeColoringPageProvider);
-  return ColoringController(page);
+    StateNotifierProvider<ColoringController, ColoringState>((ref) {
+  final repository = ref.watch(coloringPageRepositoryProvider);
+  final controller = ColoringController(repository);
+  unawaited(controller.loadInitialPage());
+  return controller;
 });
 
-class ColoringController extends StateNotifier<ColoringPageState> {
-  ColoringController(ColoringPage page) : super(ColoringPageState.initial(page));
+class ColoringController extends StateNotifier<ColoringState> {
+  ColoringController(
+    this._repository, {
+    this.initialPageId = 'happy-cat',
+  }) : super(ColoringState.loading());
+
+  final ColoringPageRepository _repository;
+  final String initialPageId;
+
+  Future<void> loadInitialPage() async {
+    await loadPageById(initialPageId);
+  }
+
+  Future<void> loadPageById(String pageId) async {
+    final selectedColor = state.selectedColor;
+    state = ColoringState.loading(selectedColor: selectedColor);
+
+    try {
+      final page = await _repository.getPageById(pageId);
+      state = ColoringState.ready(
+        page: page,
+        regionColors: _initialRegionColors(page),
+        selectedColor: selectedColor,
+      );
+    } on StateError catch (error) {
+      state = ColoringState.error(
+        message: error.message,
+        selectedColor: selectedColor,
+      );
+    } catch (error) {
+      state = ColoringState.error(
+        message: 'Failed to load coloring page: $error',
+        selectedColor: selectedColor,
+      );
+    }
+  }
 
   void selectColor(Color color) {
     state = state.copyWith(selectedColor: color);
   }
 
   void fillRegion(String regionId) {
-    final currentColors = Map<String, Color>.from(state.regionColors);
-    final nextColors = Map<String, Color>.from(currentColors);
-    nextColors[regionId] = state.selectedColor;
-
-    if (_mapsEqual(currentColors, nextColors)) {
+    if (!state.isReady || state.page == null) {
       return;
     }
 
+    final previousColor = state.regionColors[regionId];
+    if (previousColor == null) {
+      return;
+    }
+
+    final nextColor = state.selectedColor;
+    if (previousColor == nextColor) {
+      return;
+    }
+
+    final action = ColoringHistoryAction(
+      regionId: regionId,
+      previousColor: previousColor,
+      nextColor: nextColor,
+    );
+
+    final currentColors = Map<String, Color>.from(state.regionColors);
+    currentColors[regionId] = nextColor;
+
     state = state.copyWith(
-      regionColors: nextColors,
-      undoStack: [...state.undoStack, currentColors],
+      regionColors: currentColors,
+      undoStack: [...state.undoStack, action],
       redoStack: const [],
     );
   }
 
   void undo() {
-    if (state.undoStack.isEmpty) {
+    if (!state.isReady || state.undoStack.isEmpty) {
       return;
     }
 
-    final previous = state.undoStack.last;
+    final lastAction = state.undoStack.last;
     final remainingUndo = [...state.undoStack]..removeLast();
+    final nextColors = Map<String, Color>.from(state.regionColors);
+    nextColors[lastAction.regionId] = lastAction.previousColor;
+
     state = state.copyWith(
-      regionColors: previous,
+      regionColors: nextColors,
       undoStack: remainingUndo,
-      redoStack: [state.regionColors, ...state.redoStack],
+      redoStack: [lastAction, ...state.redoStack],
     );
   }
 
   void redo() {
-    if (state.redoStack.isEmpty) {
+    if (!state.isReady || state.redoStack.isEmpty) {
       return;
     }
 
-    final next = state.redoStack.first;
+    final action = state.redoStack.first;
+    final nextColors = Map<String, Color>.from(state.regionColors);
+    nextColors[action.regionId] = action.nextColor;
+
     state = state.copyWith(
-      regionColors: next,
-      undoStack: [...state.undoStack, state.regionColors],
+      regionColors: nextColors,
+      undoStack: [...state.undoStack, action],
       redoStack: state.redoStack.sublist(1),
     );
   }
 
   void clear() {
-    state = ColoringPageState.initial(state.page).copyWith(
+    if (!state.isReady || state.page == null) {
+      return;
+    }
+
+    state = ColoringState.ready(
+      page: state.page!,
+      regionColors: _initialRegionColors(state.page!),
       selectedColor: state.selectedColor,
     );
   }
 
-  void setPage(ColoringPage page) {
-    state = ColoringPageState.initial(page).copyWith(
-      selectedColor: state.selectedColor,
-    );
+  Future<void> setPage(ColoringPage page) async {
+    await loadPageById(page.id);
   }
 
-  bool _mapsEqual(Map<String, Color> a, Map<String, Color> b) {
-    if (identical(a, b)) {
-      return true;
-    }
-    if (a.length != b.length) {
-      return false;
-    }
-    for (final entry in a.entries) {
-      if (b[entry.key] != entry.value) {
-        return false;
-      }
-    }
-    return true;
+  Map<String, Color> _initialRegionColors(ColoringPage page) {
+    return {
+      for (final region in page.regions) region.id: region.defaultColor,
+    };
   }
 }
