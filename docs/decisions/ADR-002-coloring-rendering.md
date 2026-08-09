@@ -1,20 +1,21 @@
 # ADR-002: Coloring Rendering Strategy
 
 ## Status
-Accepted for the current baseline and CK-002.1 foundation, with a planned future migration path.
+Accepted and implemented for the current baseline, CK-002.1 foundation, and CK-002.2 Happy Cat SVG renderer.
 
 ## Context
 The coloring engine must feel immediate and reliable for young children, while also supporting a growing content library and future AI-generated pages.
 
 ## Decision
-Use named regions for coloring pages, keep rendering behind a renderer contract, and treat the current sample-page renderer as the baseline until the SVG asset pipeline is introduced.
+Use named regions for coloring pages, keep rendering behind a renderer contract, and implement SVG interaction with public parsing/geometry APIs.
 
 ## Current Baseline
 The implemented engine stores and updates color state by region ID.
-The current Happy Cat page is a deliberately simple test page that demonstrates the interaction model without requiring a full parser.
-The controller now uses action-based history and an explicit loading/ready/error lifecycle.
+The Happy Cat page now renders from an SVG asset with `data-role` metadata.
+The controller uses action-based history and an explicit loading/ready/error lifecycle.
 The page source is abstracted by a repository interface.
 The canvas validates renderer/page region mismatches and fails gracefully.
+The SVG renderer parses once, caches by page/asset key, renders by z-order, and performs region hit testing in SVG coordinates.
 
 ## Why Named Regions
 - Tap-to-fill is simpler than pixel-based flood fill.
@@ -29,13 +30,18 @@ The canvas validates renderer/page region mismatches and fails gracefully.
 - It keeps the current baseline offline-friendly and easy to debug.
 
 ## Planned Transition
-Move from the placeholder sample renderer to a true SVG-based named-region pipeline behind the existing renderer boundary.
+Continue expanding from the first SVG renderer to a scalable multi-page SVG pipeline behind the existing renderer boundary.
 
 Planned behavior:
 - SVG assets define independently colorable regions.
 - Region taps map to stable identifiers.
-- The same Riverpod state model continues to manage fills and action history.
+- The same Riverpod state model manages fills and action history.
 - Future exports and recoloring remain simple.
+
+## Dependency Choice
+- `xml` is used for SVG XML parsing.
+- `path_drawing` is used to parse SVG path geometry into Flutter paths.
+- This avoids reliance on private or undocumented APIs and keeps the interaction layer inside the renderer boundary.
 
 ## Consequences
 - The current engine remains a prototype baseline, not the final rendering system.

@@ -12,17 +12,31 @@ final coloringPageRepositoryProvider = Provider<ColoringPageRepository>(
   (ref) => LocalColoringPageRepository(),
 );
 
+final coloringInitialPageIdProvider = Provider<String>(
+  (ref) => 'happy-cat',
+);
+
 final availableColoringPagesProvider = FutureProvider<List<ColoringPage>>(
   (ref) => ref.watch(coloringPageRepositoryProvider).getPages(),
 );
 
 final coloringControllerProvider =
-    StateNotifierProvider<ColoringController, ColoringState>((ref) {
-  final repository = ref.watch(coloringPageRepositoryProvider);
-  final controller = ColoringController(repository);
-  unawaited(controller.loadInitialPage());
-  return controller;
-});
+    StateNotifierProvider<ColoringController, ColoringState>(
+  (ref) {
+    final repository = ref.watch(coloringPageRepositoryProvider);
+    final initialPageId = ref.watch(coloringInitialPageIdProvider);
+    final controller = ColoringController(
+      repository,
+      initialPageId: initialPageId,
+    );
+    unawaited(controller.loadInitialPage());
+    return controller;
+  },
+  dependencies: [
+    coloringPageRepositoryProvider,
+    coloringInitialPageIdProvider,
+  ],
+);
 
 class ColoringController extends StateNotifier<ColoringState> {
   ColoringController(

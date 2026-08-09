@@ -1,7 +1,9 @@
 import 'package:go_router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../features/categories/category_screen.dart';
 import '../../features/coloring/coloring_screen.dart';
+import '../../features/coloring/providers/coloring_provider.dart';
 import '../../features/gallery/gallery_screen.dart';
 import '../../features/home/home_screen.dart';
 import '../../features/parent/parent_zone_screen.dart';
@@ -58,7 +60,19 @@ class AppRouter {
       GoRoute(
         path: AppRoute.coloring,
         name: AppRouteName.coloring,
-        builder: (context, state) => const ColoringScreen(),
+        builder: (context, state) {
+          final pageId = state.uri.queryParameters['pageId'];
+          if (pageId == null || pageId.isEmpty) {
+            return const ColoringScreen();
+          }
+
+          return ProviderScope(
+            overrides: [
+              coloringInitialPageIdProvider.overrideWithValue(pageId),
+            ],
+            child: const ColoringScreen(),
+          );
+        },
       ),
       GoRoute(
         path: AppRoute.gallery,

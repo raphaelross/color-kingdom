@@ -24,7 +24,7 @@ Color Kingdom currently uses a feature-first Flutter architecture with a shared 
 - `lib/shared/` exists for future reusable widgets and providers.
 
 ### Coloring Engine Baseline
-The current coloring implementation is intentionally simple and uses a sample page model with named regions, Riverpod state, and a renderer-independent foundation.
+The current coloring implementation now uses a production-ready renderer-independent foundation with an SVG renderer for Happy Cat.
 
 Current coloring pieces:
 - `models/coloring_page.dart` defines `ColoringPage` and `ColoringRegion`.
@@ -37,7 +37,11 @@ Current coloring pieces:
 - `widgets/coloring_renderer.dart` defines the renderer contract and region validation.
 - `widgets/coloring_renderer_registry.dart` resolves a renderer for a page.
 - `widgets/coloring_canvas.dart` hosts zoom/pan, runs renderer/page validation, and delegates drawing to a renderer.
-- `widgets/renderers/happy_cat_renderer.dart` renders the current sample page.
+- `widgets/renderers/svg/svg_coloring_renderer.dart` loads, validates, caches, and renders SVG coloring pages.
+- `widgets/renderers/svg/svg_coloring_parser.dart` parses SVG assets and validates colorable region IDs.
+- `widgets/renderers/svg/svg_region_hit_tester.dart` maps taps into SVG coordinates and resolves region hits.
+- `widgets/renderers/svg/svg_coloring_models.dart` contains SVG renderer-specific internal models.
+- `widgets/renderers/happy_cat_renderer.dart` remains as fallback sample renderer.
 - `widgets/color_palette.dart` provides a 24-color palette with a clear selected state.
 - `widgets/coloring_toolbar.dart` provides undo, redo, and clear actions.
 
@@ -50,16 +54,24 @@ Current coloring pieces:
 - Action-based undo/redo history
 - Repository abstraction for page loading
 - Renderer contract with graceful region validation
-- Placeholder sample-page renderer
+- Real SVG renderer for Happy Cat with parser, validation, and hit testing
 - Offline coloring baseline once content is available locally
 
 ### Planned
-- SVG-based named-region asset pipeline
 - Expanded coloring content library
 - Persistent user progress and artwork storage
 - Firebase-backed account and content services
 - AI content generation pipeline
 - Purchase and subscription infrastructure
+
+### SVG Asset Conventions In Use
+- Colorable regions use unique SVG IDs and `data-role="colorable"`.
+- Static elements use `data-role="static"`.
+- Optional human-readable names use `data-region-name`.
+- Renderer validates region ID mapping in both directions:
+	- every model region exists in SVG
+	- every SVG colorable region exists in model
+- Duplicate IDs and metadata issues are surfaced as diagnostic errors without crashing.
 
 ## Architectural Guidelines
 - Keep feature logic close to the feature.

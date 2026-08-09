@@ -17,6 +17,7 @@ const ColoringPage sampleHappyCatPage = ColoringPage(
     ColoringRegion(id: 'cat-eye-left', name: 'Left Eye', defaultColor: _catDefault),
     ColoringRegion(id: 'cat-eye-right', name: 'Right Eye', defaultColor: _catDefault),
     ColoringRegion(id: 'cat-nose', name: 'Nose', defaultColor: _catDefault),
+    ColoringRegion(id: 'cat-mouth', name: 'Mouth', defaultColor: _catDefault),
     ColoringRegion(id: 'cat-collar', name: 'Collar', defaultColor: _catDefault),
     ColoringRegion(id: 'cat-tail', name: 'Tail', defaultColor: _catDefault),
   ],
