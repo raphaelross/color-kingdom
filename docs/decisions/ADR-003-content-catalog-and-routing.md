@@ -80,4 +80,5 @@ Local content keeps the milestone focused on validating catalog architecture and
 ## Consequences
 - Adding local pages is now mostly a content operation (model entry + SVG asset), not a renderer implementation task.
 - Navigation and tests become deterministic through stable IDs.
+- Stable page IDs now also serve as local persistence identity for coloring sessions.
 - Future persistence and remote catalogs can layer on top of this without rewriting the core coloring pipeline.

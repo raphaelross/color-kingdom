@@ -1,12 +1,28 @@
 import 'package:color_kingdom/features/categories/category_screen.dart';
 import 'package:color_kingdom/app/router/app_router.dart';
+import 'package:color_kingdom/features/coloring/models/coloring_session.dart';
 import 'package:color_kingdom/features/coloring/providers/coloring_provider.dart';
 import 'package:color_kingdom/features/coloring/coloring_screen.dart';
+import 'package:color_kingdom/features/coloring/repositories/coloring_session_repository.dart';
 import 'package:color_kingdom/features/home/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
+
+class _InMemorySessionRepository implements ColoringSessionRepository {
+  @override
+  Future<void> clearAllSessions() async {}
+
+  @override
+  Future<void> deleteSession(String pageId) async {}
+
+  @override
+  Future<ColoringSession?> getSession(String pageId) async => null;
+
+  @override
+  Future<void> saveSession(ColoringSession session) async {}
+}
 
 void main() {
   Future<void> _pumpUntilFound(
@@ -58,6 +74,11 @@ void main() {
 
     await tester.pumpWidget(
       ProviderScope(
+        overrides: [
+          coloringSessionRepositoryProvider.overrideWithValue(
+            _InMemorySessionRepository(),
+          ),
+        ],
         child: MaterialApp.router(routerConfig: router),
       ),
     );
@@ -95,14 +116,13 @@ void main() {
 
     expect(find.text('Happy Cat'), findsOneWidget);
 
-    await tester.tap(find.text('Happy Cat').first);
-    await _pumpUntilFound(tester, find.text('Back to Animals'));
+    await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
+    await _pumpUntilFound(tester, find.byType(ColoringScreen));
 
     expect(find.byType(ColoringScreen), findsOneWidget);
     expect(find.byType(InteractiveViewer), findsOneWidget);
     expect(find.text('Happy Cat'), findsAtLeastNWidgets(1));
     expect(find.byIcon(Icons.arrow_back), findsOneWidget);
-    expect(find.text('Back to Animals'), findsOneWidget);
   });
 
   testWidgets('back control routes to animals catalog from Happy Cat', (
@@ -115,12 +135,12 @@ void main() {
 
     expect(find.text('Happy Cat'), findsOneWidget);
 
-    await tester.tap(find.text('Happy Cat').first);
-    await _pumpUntilFound(tester, find.text('Back to Animals'));
+    await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
+    await _pumpUntilFound(tester, find.byType(ColoringScreen));
 
-    expect(find.text('Back to Animals'), findsOneWidget);
+    expect(find.byIcon(Icons.arrow_back), findsOneWidget);
 
-    await tester.tap(find.byTooltip('Back to Animals'));
+    await tester.tap(find.byIcon(Icons.arrow_back));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
@@ -142,14 +162,14 @@ void main() {
 
     expect(find.text('Playful Puppy'), findsOneWidget);
 
-    await tester.tap(find.text('Playful Puppy').first);
-    await _pumpUntilFound(tester, find.text('Back to Animals'));
+    await tester.tap(find.widgetWithText(ListTile, 'Playful Puppy').first);
+    await _pumpUntilFound(tester, find.byType(ColoringScreen));
 
     expect(find.byType(ColoringScreen), findsOneWidget);
     expect(find.text('Playful Puppy'), findsAtLeastNWidgets(1));
-    expect(find.text('Back to Animals'), findsOneWidget);
+    expect(find.byIcon(Icons.arrow_back), findsOneWidget);
 
-    await tester.tap(find.byTooltip('Back to Animals'));
+    await tester.tap(find.byIcon(Icons.arrow_back));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 

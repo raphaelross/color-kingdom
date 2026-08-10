@@ -3,6 +3,8 @@
 ## Architecture Summary
 Color Kingdom currently uses a feature-first Flutter architecture with a shared app shell, centralized routing, a global theme, and feature-local state management for coloring.
 
+CK-002.4 adds local save-and-resume coloring progress while preserving the existing CK-002.1/CK-002.2/CK-002.3 boundaries.
+
 ## Implemented Architecture Today
 
 ### App Shell
@@ -50,6 +52,8 @@ Current coloring pieces:
 - `data/sample_coloring_pages.dart` defines multiple local Animals pages.
 - `repositories/coloring_page_repository.dart` defines the page-source abstraction.
 - `repositories/local_coloring_page_repository.dart` provides the current in-memory local catalog source.
+- `repositories/coloring_session_repository.dart` defines the local user-progress persistence abstraction.
+- `repositories/local_coloring_session_repository.dart` provides a SharedPreferences-backed local session implementation.
 - `providers/coloring_provider.dart` manages loading state, selected color, fills, undo, redo, clear, and page selection.
 - `screens/coloring_screen.dart` composes toolbar, canvas, and palette.
 - `widgets/coloring_renderer.dart` defines the renderer contract and region validation.
@@ -74,19 +78,50 @@ Current coloring pieces:
 - Renderer contract with graceful region validation
 - Real SVG renderer for multiple local pages with parser, validation, and hit testing
 - Offline coloring baseline once content is available locally
+- Local page-scoped session persistence for region-color progress
+- Resume behavior across route navigation and app/controller recreation
+
+### CK-002.4 Session Persistence
+- Persistence boundary is separate from content boundary:
+	- `ColoringPageRepository` manages catalog/content identity.
+	- `ColoringSessionRepository` manages user-created local coloring progress.
+- Sessions are keyed by stable `pageId`.
+- Session payload stores:
+	- `pageId`
+	- `regionColors` as ARGB `int` values
+	- `schemaVersion` (current: `1`)
+	- `lastUpdatedAtEpochMs`
+- `loadPageById` restore sequence:
+	- load page content from `ColoringPageRepository`
+	- build default region colors from page model
+	- load local session by `pageId`
+	- reconcile saved region IDs against current page region IDs
+	- apply valid saved colors and enter ready state
+- Restore semantics:
+	- unknown saved region IDs are ignored
+	- new page regions missing from saved session keep defaults
+	- restored sessions start with empty undo/redo history
+- Save semantics:
+	- persist after fill, undo, and redo
+	- clear resets visible colors and deletes persisted page session
+	- persistence operations are asynchronous and serialized to avoid stale write ordering
+- Failure semantics:
+	- persistence read/write errors are non-fatal to child coloring flow
+	- coloring remains usable in memory
+	- content load failures remain fatal according to existing loading/error lifecycle
 
 ### Planned
 - Expanded coloring content library
-- Persistent user progress and artwork storage
+- Saved artwork storage and richer parent-facing progress features
 - Firebase-backed account and content services
 - AI content generation pipeline
 - Purchase and subscription infrastructure
 
-### CK-002.3 State Semantics
-- Coloring state is intentionally in-memory only.
-- Opening a page starts a fresh session for that route entry.
-- Opening another page does not carry over region colors or undo/redo history.
-- Persistence is intentionally deferred to a later milestone.
+### CK-002.4 State Semantics
+- Coloring region colors are persisted locally per page ID.
+- Opening a page restores saved region colors when available and valid.
+- Undo/redo history remains in-memory only and resets on restore/restart.
+- Page sessions remain isolated by stable page identity.
 
 ### SVG Asset Conventions In Use
 - Colorable regions use unique SVG IDs and `data-role="colorable"`.

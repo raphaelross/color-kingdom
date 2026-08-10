@@ -13,9 +13,10 @@
 - CK-002.1 production coloring engine foundation completed.
 - CK-002.2 real SVG coloring pipeline completed and validated on Windows.
 - CK-002.3 local multi-page Animals catalog foundation implemented.
+- CK-002.4 local save-and-resume coloring progress implemented.
 
 ## Current MVP Baseline
-The app now has a usable local SVG coloring pipeline with multi-page catalog navigation for Animals.
+The app now has a usable local SVG coloring pipeline with multi-page catalog navigation for Animals and local per-page progress persistence.
 
 ## Remaining MVP Work
 - Add more real coloring pages across additional categories using the existing SVG pipeline.
@@ -24,6 +25,13 @@ The app now has a usable local SVG coloring pipeline with multi-page catalog nav
 - Add saved artwork storage and retrieval.
 - Add parent-zone controls.
 - Add integration-level runtime tests for multi-page workflows.
+
+## CK-002.4 Acceptance Status
+- Save and resume coloring progress by stable page ID.
+- Restore progress after navigation away/back and controller recreation.
+- Keep page sessions isolated across Happy Cat, Playful Puppy, Friendly Lion, and Cute Elephant.
+- Keep persistence failures non-fatal to coloring interactions.
+- Keep undo/redo history in-memory only across restarts.
 
 ## Next Product Phases
 - Build a scalable content library.
@@ -128,4 +136,4 @@ Goal: ship to stores with a polished presence.
 - Beta testing and analytics review
 
 ## Recommended Next Build Step
-Expand local content coverage beyond Animals while keeping stable category/page IDs and repository-owned catalog filtering.
+Expand local content coverage beyond Animals while keeping stable category/page IDs, repository-owned catalog filtering, and page-scoped session persistence semantics.

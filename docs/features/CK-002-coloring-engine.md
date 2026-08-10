@@ -1,7 +1,7 @@
 # CK-002 Coloring Engine
 
 ## Status
-Implemented baseline, CK-002.1 foundation, CK-002.2 real SVG renderer, and CK-002.3 local multi-page catalog foundation.
+Implemented baseline, CK-002.1 foundation, CK-002.2 real SVG renderer, CK-002.3 local multi-page catalog foundation, and CK-002.4 local save-and-resume progress.
 
 ## Goal
 Provide a child-friendly tap-to-fill coloring experience that is easy to extend into a full content platform.
@@ -41,6 +41,8 @@ CK-002.3 extends this to multiple local Animals pages with stable category/page 
 - `ColoringPageRepository` abstracts page sources from controller logic.
 - `ColoringPageRepository` owns category listing, page listing, category filtering, and page lookup.
 - `LocalColoringPageRepository` currently returns a local in-memory multi-page catalog.
+- `ColoringSessionRepository` abstracts persisted user progress from controller logic.
+- `LocalColoringSessionRepository` stores page-scoped coloring sessions in SharedPreferences.
 - `ColoringRenderer` defines rendering and region-validation contracts.
 - `ColoringCanvas` validates renderer/page region IDs and fails gracefully on mismatch.
 - `SvgColoringRenderer` loads, parses, validates, and renders SVG pages.
@@ -68,6 +70,36 @@ CK-002.3 extends this to multiple local Animals pages with stable category/page 
 - The canvas supports zooming and panning.
 - SVG region hit testing is deterministic and based on rendered z-order.
 
+### CK-002.4 Save And Resume Semantics
+- Progress is saved per page ID using a local `ColoringSession`.
+- Session fields:
+  - `pageId`
+  - `regionColors` serialized as ARGB integers
+  - `schemaVersion` (`1`)
+  - `lastUpdatedAtEpochMs`
+- Save triggers:
+  - fill
+  - undo
+  - redo
+- Restore flow during page load:
+  - load page
+  - build defaults
+  - load session by page ID
+  - reconcile known region IDs
+  - apply valid saved colors
+  - emit ready state
+- Clear behavior:
+  - reset visible colors to defaults
+  - clear undo/redo history
+  - delete persisted page session
+- Restart behavior:
+  - region colors restore
+  - undo stack is empty
+  - redo stack is empty
+- Isolation:
+  - each page ID has an independent session
+  - page state never leaks between pages
+
 ### Offline Behavior
 - The current implementation does not require an internet connection to operate once local assets are bundled in the app.
 
@@ -75,7 +107,7 @@ CK-002.3 extends this to multiple local Animals pages with stable category/page 
 - Home uses stable category IDs.
 - Category catalog lists pages loaded by repository category query.
 - Catalog item selection navigates to coloring with canonical page ID.
-- Coloring sessions are intentionally in-memory and isolated to the active page session.
+- Coloring sessions are persisted locally per canonical page ID.
 
 ## Why This Baseline Exists
 This prototype proves the core interaction model before the app expands into a large content library.
@@ -88,7 +120,7 @@ This prototype proves the core interaction model before the app expands into a l
 - Region IDs are canonical and must match `ColoringPage.regions` IDs.
 
 ## Next Planned Enhancement
-Expand from local Animals coverage to broader local category coverage, then evaluate persistence and remote catalog phases.
+Expand from local Animals coverage to broader local category coverage and maintain stable per-page session persistence semantics.
 
 Expected future behavior:
 - Load SVG assets from local app content or cached storage.
