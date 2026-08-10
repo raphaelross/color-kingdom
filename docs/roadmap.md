@@ -14,9 +14,10 @@
 - CK-002.2 real SVG coloring pipeline completed and validated on Windows.
 - CK-002.3 local multi-page Animals catalog foundation implemented.
 - CK-002.4 local save-and-resume coloring progress implemented.
+- CK-002.5 My Creations Lite (started pages resume) implemented.
 
 ## Current MVP Baseline
-The app now has a usable local SVG coloring pipeline with multi-page catalog navigation for Animals and local per-page progress persistence.
+The app now has a usable local SVG coloring pipeline with multi-page catalog navigation for Animals, local per-page progress persistence, and a child-facing My Creations resume surface.
 
 ## Remaining MVP Work
 - Add more real coloring pages across additional categories using the existing SVG pipeline.
@@ -25,6 +26,20 @@ The app now has a usable local SVG coloring pipeline with multi-page catalog nav
 - Add saved artwork storage and retrieval.
 - Add parent-zone controls.
 - Add integration-level runtime tests for multi-page workflows.
+
+## CK-002.5 Acceptance Status
+- Home exposes My Creations as a child-facing destination.
+- My Creations lists only started pages with non-zero progress.
+- Progress is derived deterministically from persisted region colors versus page defaults.
+- My Creations opens Coloring by stable page ID and relies on existing CK-002.4 restore behavior.
+- Back navigation is origin-aware:
+  - category origin returns to category
+  - My Creations origin returns to My Creations
+  - direct route remains safe
+- Clear in Coloring deletes the persisted session and removes the item from My Creations on return.
+
+## Recommended Next Build Step
+CK-002.6: Expand local content beyond Animals while preserving stable category/page IDs, repository-owned catalog filtering, and page-scoped session persistence semantics.
 
 ## CK-002.4 Acceptance Status
 - Save and resume coloring progress by stable page ID.
@@ -135,5 +150,3 @@ Goal: ship to stores with a polished presence.
 - Onboarding and screenshots
 - Beta testing and analytics review
 
-## Recommended Next Build Step
-Expand local content coverage beyond Animals while keeping stable category/page IDs, repository-owned catalog filtering, and page-scoped session persistence semantics.

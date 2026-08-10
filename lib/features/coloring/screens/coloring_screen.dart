@@ -13,7 +13,14 @@ import '../widgets/coloring_renderer_registry.dart';
 import '../widgets/coloring_toolbar.dart';
 
 class ColoringScreen extends ConsumerWidget {
-  const ColoringScreen({super.key});
+  const ColoringScreen({
+    this.navigationSource,
+    this.sourceCategoryId,
+    super.key,
+  });
+
+  final String? navigationSource;
+  final String? sourceCategoryId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -22,7 +29,10 @@ class ColoringScreen extends ConsumerWidget {
     final controller = ref.read(coloringControllerProvider.notifier);
 
     final title = state.page?.title ?? 'Coloring';
-    final backDestination = _resolveBackDestination(state, categoriesAsync);
+    final backDestination = _resolveBackDestination(
+      state,
+      categoriesAsync,
+    );
 
     return Scaffold(
       appBar: AppBar(
@@ -30,33 +40,31 @@ class ColoringScreen extends ConsumerWidget {
             ? null
             : IconButton(
                 icon: const Icon(Icons.arrow_back),
-                tooltip: 'Back to ${backDestination.categoryTitle}',
-                onPressed: () {
+                tooltip: 'Back to ${backDestination.destinationTitle}',
+                onPressed: () async {
+                  await controller.waitForPendingPersistence();
+                  if (!context.mounted) {
+                    return;
+                  }
                   context.goNamed(
-                    AppRouteName.category,
-                    pathParameters: <String, String>{
-                      'categoryId': backDestination.categoryId,
-                    },
+                    backDestination.routeName,
+                    pathParameters: backDestination.pathParameters,
                   );
                 },
               ),
         title: Text(title),
         actions: [
-          if (backDestination != null)
-            Padding(
-              padding: const EdgeInsets.only(right: AppSpacing.sm),
-              child: TextButton(
-                onPressed: () {
-                  context.goNamed(
-                    AppRouteName.category,
-                    pathParameters: <String, String>{
-                      'categoryId': backDestination.categoryId,
-                    },
-                  );
-                },
-                child: Text('Back to ${backDestination.categoryTitle}'),
-              ),
-            ),
+          IconButton(
+            icon: const Icon(Icons.home_rounded),
+            tooltip: 'Home',
+            onPressed: () async {
+              await controller.waitForPendingPersistence();
+              if (!context.mounted) {
+                return;
+              }
+              context.goNamed(AppRouteName.home);
+            },
+          ),
         ],
       ),
       body: SafeArea(
@@ -136,20 +144,58 @@ class ColoringScreen extends ConsumerWidget {
     );
   }
 
-  _CategoryBackDestination? _resolveBackDestination(
+  _BackDestination? _resolveBackDestination(
     ColoringState state,
     AsyncValue<List<Category>> categoriesAsync,
   ) {
-    if (state.status != ColoringLoadStatus.ready || state.page == null) {
-      return null;
+    if (navigationSource == ColoringRouteQuery.sourceMyCreations) {
+      return const _BackDestination(
+        routeName: AppRouteName.gallery,
+        pathParameters: <String, String>{},
+        destinationTitle: 'My Creations',
+      );
     }
 
-    final categoryId = state.page!.categoryId.trim();
-    if (categoryId.isEmpty) {
-      return null;
+    if (navigationSource == ColoringRouteQuery.sourceCategory) {
+      final originCategoryId = sourceCategoryId?.trim() ?? '';
+      if (originCategoryId.isNotEmpty) {
+        return _BackDestination(
+          routeName: AppRouteName.category,
+          pathParameters: <String, String>{'categoryId': originCategoryId},
+          destinationTitle: _resolveCategoryTitle(
+            categoryId: originCategoryId,
+            categoriesAsync: categoriesAsync,
+          ),
+        );
+      }
     }
 
-    final categoryTitle = categoriesAsync.when(
+    if (state.page != null) {
+      final categoryId = state.page!.categoryId.trim();
+      if (categoryId.isNotEmpty) {
+        return _BackDestination(
+          routeName: AppRouteName.category,
+          pathParameters: <String, String>{'categoryId': categoryId},
+          destinationTitle: _resolveCategoryTitle(
+            categoryId: categoryId,
+            categoriesAsync: categoriesAsync,
+          ),
+        );
+      }
+    }
+
+    return const _BackDestination(
+      routeName: AppRouteName.home,
+      pathParameters: <String, String>{},
+      destinationTitle: 'Home',
+    );
+  }
+
+  String _resolveCategoryTitle({
+    required String categoryId,
+    required AsyncValue<List<Category>> categoriesAsync,
+  }) {
+    return categoriesAsync.when(
       data: (categories) {
         for (final category in categories) {
           if (category.categoryId == categoryId) {
@@ -161,22 +207,19 @@ class ColoringScreen extends ConsumerWidget {
       loading: () => _formatCategoryId(categoryId),
       error: (_, stackTrace) => _formatCategoryId(categoryId),
     );
-
-    return _CategoryBackDestination(
-      categoryId: categoryId,
-      categoryTitle: categoryTitle,
-    );
   }
 }
 
-class _CategoryBackDestination {
-  const _CategoryBackDestination({
-    required this.categoryId,
-    required this.categoryTitle,
+class _BackDestination {
+  const _BackDestination({
+    required this.routeName,
+    required this.pathParameters,
+    required this.destinationTitle,
   });
 
-  final String categoryId;
-  final String categoryTitle;
+  final String routeName;
+  final Map<String, String> pathParameters;
+  final String destinationTitle;
 }
 
 String _formatCategoryId(String categoryId) {

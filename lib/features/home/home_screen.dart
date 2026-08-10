@@ -23,7 +23,7 @@ class _ActionItem {
 const List<_ActionItem> _actions = [
   _ActionItem(
     emoji: '⭐',
-    title: 'Favorites',
+    title: 'My Creations',
     routeName: AppRouteName.gallery,
   ),
   _ActionItem(

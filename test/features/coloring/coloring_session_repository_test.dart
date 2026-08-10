@@ -136,4 +136,155 @@ void main() {
 
     expect(loaded, isNull);
   });
+
+  test('getAllSessions returns empty list when no sessions exist', () async {
+    final repository = LocalColoringSessionRepository();
+
+    final sessions = await repository.getAllSessions();
+
+    expect(sessions, isEmpty);
+  });
+
+  test('getAllSessions returns multiple sessions newest first', () async {
+    final repository = LocalColoringSessionRepository();
+
+    await repository.saveSession(
+      const ColoringSession(
+        pageId: 'happy-cat',
+        regionColors: {'cat-body': 0xFF000001},
+        schemaVersion: ColoringSession.currentSchemaVersion,
+        lastUpdatedAtEpochMs: 10,
+      ),
+    );
+    await repository.saveSession(
+      const ColoringSession(
+        pageId: 'playful-puppy',
+        regionColors: {'puppy-body': 0xFF000002},
+        schemaVersion: ColoringSession.currentSchemaVersion,
+        lastUpdatedAtEpochMs: 30,
+      ),
+    );
+    await repository.saveSession(
+      const ColoringSession(
+        pageId: 'friendly-lion',
+        regionColors: {'lion-body': 0xFF000003},
+        schemaVersion: ColoringSession.currentSchemaVersion,
+        lastUpdatedAtEpochMs: 20,
+      ),
+    );
+
+    final sessions = await repository.getAllSessions();
+
+    expect(
+      sessions.map((session) => session.pageId).toList(),
+      ['playful-puppy', 'friendly-lion', 'happy-cat'],
+    );
+  });
+
+  test('getAllSessions orders same timestamp by pageId ascending', () async {
+    final repository = LocalColoringSessionRepository();
+
+    await repository.saveSession(
+      const ColoringSession(
+        pageId: 'zebra-page',
+        regionColors: {'zebra-body': 0xFF000004},
+        schemaVersion: ColoringSession.currentSchemaVersion,
+        lastUpdatedAtEpochMs: 50,
+      ),
+    );
+    await repository.saveSession(
+      const ColoringSession(
+        pageId: 'apple-page',
+        regionColors: {'apple-body': 0xFF000005},
+        schemaVersion: ColoringSession.currentSchemaVersion,
+        lastUpdatedAtEpochMs: 50,
+      ),
+    );
+
+    final sessions = await repository.getAllSessions();
+
+    expect(
+      sessions.map((session) => session.pageId).toList(),
+      ['apple-page', 'zebra-page'],
+    );
+  });
+
+  test('getAllSessions excludes malformed and unsupported entries', () async {
+    final validRaw = jsonEncode(<String, dynamic>{
+      'pageId': 'happy-cat',
+      'regionColors': <String, int>{'cat-body': 0xFF000000},
+      'schemaVersion': ColoringSession.currentSchemaVersion,
+      'lastUpdatedAtEpochMs': 3,
+    });
+
+    final unsupportedRaw = jsonEncode(<String, dynamic>{
+      'pageId': 'playful-puppy',
+      'regionColors': <String, int>{'puppy-body': 0xFF000000},
+      'schemaVersion': 999,
+      'lastUpdatedAtEpochMs': 4,
+    });
+
+    SharedPreferences.setMockInitialValues(<String, Object>{
+      'coloring_session:happy-cat': validRaw,
+      'coloring_session:bad-json': '{not valid json}',
+      'coloring_session:playful-puppy': unsupportedRaw,
+      'coloring_session:bad-map': jsonEncode(<String, dynamic>{'foo': 'bar'}),
+    });
+
+    final repository = LocalColoringSessionRepository();
+
+    final sessions = await repository.getAllSessions();
+
+    expect(sessions.length, 1);
+    expect(sessions.single.pageId, 'happy-cat');
+  });
+
+  test('getAllSessions ignores unrelated SharedPreferences keys', () async {
+    final validRaw = jsonEncode(<String, dynamic>{
+      'pageId': 'happy-cat',
+      'regionColors': <String, int>{'cat-body': 0xFF000000},
+      'schemaVersion': ColoringSession.currentSchemaVersion,
+      'lastUpdatedAtEpochMs': 3,
+    });
+
+    SharedPreferences.setMockInitialValues(<String, Object>{
+      'coloring_session:happy-cat': validRaw,
+      'not_a_session_key': '42',
+      'color_palette': 'blue',
+    });
+
+    final repository = LocalColoringSessionRepository();
+
+    final sessions = await repository.getAllSessions();
+
+    expect(sessions.length, 1);
+    expect(sessions.single.pageId, 'happy-cat');
+  });
+
+  test('one malformed entry does not block other valid entries', () async {
+    SharedPreferences.setMockInitialValues(<String, Object>{
+      'coloring_session:happy-cat': jsonEncode(<String, dynamic>{
+        'pageId': 'happy-cat',
+        'regionColors': <String, int>{'cat-body': 0xFF000001},
+        'schemaVersion': ColoringSession.currentSchemaVersion,
+        'lastUpdatedAtEpochMs': 10,
+      }),
+      'coloring_session:bad-entry': '{broken json',
+      'coloring_session:friendly-lion': jsonEncode(<String, dynamic>{
+        'pageId': 'friendly-lion',
+        'regionColors': <String, int>{'lion-body': 0xFF000002},
+        'schemaVersion': ColoringSession.currentSchemaVersion,
+        'lastUpdatedAtEpochMs': 11,
+      }),
+    });
+
+    final repository = LocalColoringSessionRepository();
+
+    final sessions = await repository.getAllSessions();
+
+    expect(
+      sessions.map((session) => session.pageId).toList(),
+      ['friendly-lion', 'happy-cat'],
+    );
+  });
 }

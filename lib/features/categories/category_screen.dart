@@ -19,6 +19,11 @@ class CategoryScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          tooltip: 'Back',
+          onPressed: () => context.goNamed(AppRouteName.home),
+        ),
         title: categoriesAsync.when(
           data: (categories) {
             final match = categories.where((c) => c.categoryId == categoryId);
@@ -27,6 +32,13 @@ class CategoryScreen extends ConsumerWidget {
           loading: () => Text(_toTitleCase(categoryId)),
           error: (_, _) => Text(_toTitleCase(categoryId)),
         ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.home_rounded),
+            tooltip: 'Home',
+            onPressed: () => context.goNamed(AppRouteName.home),
+          ),
+        ],
       ),
       body: pagesAsync.when(
         data: (pages) {
@@ -65,6 +77,10 @@ class CategoryScreen extends ConsumerWidget {
                     context.goNamed(
                       AppRouteName.coloring,
                       pathParameters: <String, String>{'pageId': page.id},
+                      queryParameters: <String, String>{
+                        ColoringRouteQuery.source: ColoringRouteQuery.sourceCategory,
+                        ColoringRouteQuery.sourceCategoryId: categoryId,
+                      },
                     );
                   },
                 ),

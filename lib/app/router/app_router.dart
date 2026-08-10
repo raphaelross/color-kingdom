@@ -34,6 +34,16 @@ class AppRouteName {
   static const String settings = 'settings';
 }
 
+class ColoringRouteQuery {
+  ColoringRouteQuery._();
+
+  static const String source = 'source';
+  static const String sourceCategoryId = 'sourceCategoryId';
+
+  static const String sourceCategory = 'category';
+  static const String sourceMyCreations = 'my-creations';
+}
+
 class AppRouter {
   AppRouter._();
 
@@ -62,15 +72,24 @@ class AppRouter {
         name: AppRouteName.coloring,
         builder: (context, state) {
           final pageId = state.pathParameters['pageId'];
+          final source = state.uri.queryParameters[ColoringRouteQuery.source];
+          final sourceCategoryId =
+              state.uri.queryParameters[ColoringRouteQuery.sourceCategoryId];
           if (pageId == null || pageId.isEmpty) {
-            return const ColoringScreen();
+            return ColoringScreen(
+              navigationSource: source,
+              sourceCategoryId: sourceCategoryId,
+            );
           }
 
           return ProviderScope(
             overrides: [
               coloringInitialPageIdProvider.overrideWithValue(pageId),
             ],
-            child: const ColoringScreen(),
+            child: ColoringScreen(
+              navigationSource: source,
+              sourceCategoryId: sourceCategoryId,
+            ),
           );
         },
       ),

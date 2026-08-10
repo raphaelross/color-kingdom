@@ -37,6 +37,15 @@ Save behavior:
 - clear resets visible colors and deletes persisted session
 - persistence is asynchronous and serialized to avoid stale write ordering
 
+Session listing behavior (`getAllSessions`):
+- enumerate only keys in the `coloring_session:` namespace
+- parse entries independently so one malformed payload does not block others
+- exclude malformed entries
+- exclude unsupported schema entries
+- return deterministic ordering:
+  - newest `lastUpdatedAtEpochMs` first
+  - then `pageId` ascending for timestamp ties
+
 ## Alternatives Considered
 
 ### SharedPreferences
@@ -58,12 +67,14 @@ Save behavior:
 - Existing rendering and catalog architecture remains unchanged.
 - Undo/redo history is intentionally not persisted.
 - SharedPreferences can be replaced later behind `ColoringSessionRepository` without touching controller logic.
+- My Creations can compose started-page resume cards directly from persisted sessions and catalog metadata without embedding persistence logic in UI widgets.
 
 ## Failure Semantics
 - Persistence is non-fatal to coloring interactions.
 - If session read fails, malformed JSON is found, or schema is unsupported:
   - ignore persisted payload
   - fall back to default in-memory coloring state
+- For `getAllSessions`, malformed/unsupported entries are skipped while remaining valid sessions still load.
 - If save/delete fails:
   - keep current in-memory coloring usable
   - do not surface a child-facing fatal error screen

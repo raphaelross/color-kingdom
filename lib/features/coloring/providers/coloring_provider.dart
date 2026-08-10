@@ -286,4 +286,8 @@ class ColoringController extends StateNotifier<ColoringState> {
       debugPrint('Coloring persistence queue error: $error');
     });
   }
+
+  Future<void> waitForPendingPersistence() async {
+    await _persistenceQueue;
+  }
 }

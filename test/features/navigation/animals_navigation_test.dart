@@ -12,6 +12,9 @@ import 'package:go_router/go_router.dart';
 
 class _InMemorySessionRepository implements ColoringSessionRepository {
   @override
+  Future<List<ColoringSession>> getAllSessions() async => const [];
+
+  @override
   Future<void> clearAllSessions() async {}
 
   @override
@@ -25,6 +28,24 @@ class _InMemorySessionRepository implements ColoringSessionRepository {
 }
 
 void main() {
+  Finder _findIconButtonByTooltip(String tooltip) {
+    return find.byWidgetPredicate(
+      (widget) => widget is IconButton && widget.tooltip == tooltip,
+    );
+  }
+
+  Future<void> _pressIconButtonByTooltip(
+    WidgetTester tester,
+    String tooltip,
+  ) async {
+    final buttonFinder = _findIconButtonByTooltip(tooltip);
+    expect(buttonFinder, findsWidgets);
+    final button = tester.widget<IconButton>(buttonFinder.last);
+    expect(button.onPressed, isNotNull);
+    button.onPressed!.call();
+    await tester.pump();
+  }
+
   Future<void> _pumpUntilFound(
     WidgetTester tester,
     Finder finder, {
@@ -93,7 +114,7 @@ void main() {
     expect(find.text('Choose an Adventure'), findsOneWidget);
     expect(find.text('Animals'), findsAtLeastNWidgets(1));
 
-    await tester.tap(find.text('Animals').first);
+    await tester.tap(find.text('Animals').hitTestable().first);
     await _pumpUntilFound(tester, find.text('Happy Cat'));
 
     expect(
@@ -122,7 +143,7 @@ void main() {
     expect(find.byType(ColoringScreen), findsOneWidget);
     expect(find.byType(InteractiveViewer), findsOneWidget);
     expect(find.text('Happy Cat'), findsAtLeastNWidgets(1));
-    expect(find.byIcon(Icons.arrow_back), findsOneWidget);
+    expect(find.byTooltip('Back to Animals'), findsWidgets);
   });
 
   testWidgets('back control routes to animals catalog from Happy Cat', (
@@ -138,9 +159,9 @@ void main() {
     await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
     await _pumpUntilFound(tester, find.byType(ColoringScreen));
 
-    expect(find.byIcon(Icons.arrow_back), findsOneWidget);
+    expect(find.byTooltip('Back to Animals'), findsWidgets);
 
-    await tester.tap(find.byIcon(Icons.arrow_back));
+    await tester.tap(find.byTooltip('Back to Animals').hitTestable().first);
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
@@ -167,9 +188,9 @@ void main() {
 
     expect(find.byType(ColoringScreen), findsOneWidget);
     expect(find.text('Playful Puppy'), findsAtLeastNWidgets(1));
-    expect(find.byIcon(Icons.arrow_back), findsOneWidget);
+    expect(find.byTooltip('Back to Animals'), findsWidgets);
 
-    await tester.tap(find.byIcon(Icons.arrow_back));
+    await tester.tap(find.byTooltip('Back to Animals').hitTestable().first);
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
 
@@ -179,5 +200,43 @@ void main() {
     );
     expect(find.text('Happy Cat'), findsAtLeastNWidgets(1));
     expect(find.text('Playful Puppy'), findsAtLeastNWidgets(1));
+  });
+
+  testWidgets('Animals category shows Back and Home controls and both go Home', (
+    WidgetTester tester,
+  ) async {
+    await _pumpToHome(tester);
+
+    await tester.tap(find.text('Animals').first);
+    await _pumpUntilFound(tester, find.text('Happy Cat'));
+
+    expect(_findIconButtonByTooltip('Back'), findsWidgets);
+    expect(_findIconButtonByTooltip('Home'), findsWidgets);
+
+    await _pressIconButtonByTooltip(tester, 'Back');
+    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+
+    await tester.tap(find.text('Animals').first);
+    await _pumpUntilFound(tester, find.text('Happy Cat'));
+
+    await _pressIconButtonByTooltip(tester, 'Home');
+    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+  });
+
+  testWidgets('Coloring opened from category shows Home control that returns Home', (
+    WidgetTester tester,
+  ) async {
+    await _pumpToHome(tester);
+
+    await tester.tap(find.text('Animals').first);
+    await _pumpUntilFound(tester, find.text('Happy Cat'));
+
+    await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
+    await _pumpUntilFound(tester, find.byType(ColoringScreen));
+
+    expect(_findIconButtonByTooltip('Home'), findsWidgets);
+
+    await _pressIconButtonByTooltip(tester, 'Home');
+    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
   });
 }

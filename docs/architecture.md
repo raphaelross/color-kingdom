@@ -5,6 +5,8 @@ Color Kingdom currently uses a feature-first Flutter architecture with a shared 
 
 CK-002.4 adds local save-and-resume coloring progress while preserving the existing CK-002.1/CK-002.2/CK-002.3 boundaries.
 
+CK-002.5 adds a child-facing My Creations surface that composes existing page metadata and persisted sessions without changing the coloring engine architecture.
+
 ## Implemented Architecture Today
 
 ### App Shell
@@ -25,7 +27,8 @@ CK-002.4 adds local save-and-resume coloring progress while preserving the exist
 - `lib/features/home/` owns the home experience and reusable category card widget.
 - `lib/features/coloring/` owns the current coloring baseline.
 - `lib/features/categories/` now owns category identity models and the page catalog screen.
-- `gallery/`, `parent/`, and `settings/` remain non-coloring sections.
+- `lib/features/gallery/` now owns My Creations presentation and provider-based composition.
+- `parent/` and `settings/` remain non-coloring sections.
 - `lib/shared/` exists for future reusable widgets and providers.
 
 ### Category And Catalog Foundation (CK-002.3)
@@ -109,6 +112,51 @@ Current coloring pieces:
 	- persistence read/write errors are non-fatal to child coloring flow
 	- coloring remains usable in memory
 	- content load failures remain fatal according to existing loading/error lifecycle
+
+### CK-002.5 My Creations Composition
+- `ColoringSessionRepository` now supports session listing through `getAllSessions`.
+- `LocalColoringSessionRepository.getAllSessions` semantics:
+	- enumerate only `coloring_session:` keys
+	- skip malformed entries
+	- skip unsupported schema entries
+	- continue loading valid entries even when one entry is malformed
+	- return deterministic ordering: newest `lastUpdatedAtEpochMs` first, then `pageId` ascending
+- `lib/features/gallery/providers/my_creations_provider.dart` composes:
+	- persisted sessions (`ColoringSessionRepository`)
+	- page and category metadata (`ColoringPageRepository`)
+	- derived child-facing progress (`colored regions / total regions`)
+- `GalleryScreen` consumes `myCreationsProvider` and supports:
+	- loading state
+	- ready state
+	- empty state with Home CTA
+	- friendly error state with retry
+- My Creations only includes pages with non-zero progress (`coloredRegionCount > 0`).
+
+### CK-002.5 Progress Derivation Semantics
+- Progress formula: `colored valid page regions / total page regions`.
+- Region rules:
+	- missing session value => uncolored
+	- persisted value equal to region default => uncolored
+	- persisted value different from region default => colored
+	- unknown persisted region IDs => ignored
+	- zero page regions => progress ratio `0`
+
+### CK-002.5 Origin-Aware Return Navigation
+- Coloring route accepts optional query metadata:
+	- `source`
+	- `sourceCategoryId`
+- Supported origins:
+	- category catalog (`source=category` + `sourceCategoryId`)
+	- My Creations (`source=my-creations`)
+- `ColoringScreen` back destination resolution:
+	- My Creations origin returns to My Creations
+	- category origin returns to that category
+	- missing/invalid origin falls back safely (page category when available, then Home)
+- CK-002.4 restore behavior remains in `ColoringController`; My Creations does not implement restore logic.
+
+### CK-002.5 Refresh Semantics
+- My Creations progress refreshes when returning from Coloring by route re-entry and provider recomputation.
+- Clearing a page in Coloring still deletes the persisted session, so the page disappears from My Creations on return.
 
 ### Planned
 - Expanded coloring content library

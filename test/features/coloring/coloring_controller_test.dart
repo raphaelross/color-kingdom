@@ -71,6 +71,21 @@ class _MemorySessionRepository implements ColoringSessionRepository {
   final List<String> deleteHistory = <String>[];
 
   @override
+  Future<List<ColoringSession>> getAllSessions() async {
+    final allSessions = sessions.values.toList();
+    allSessions.sort((a, b) {
+      final timestampOrder =
+          b.lastUpdatedAtEpochMs.compareTo(a.lastUpdatedAtEpochMs);
+      if (timestampOrder != 0) {
+        return timestampOrder;
+      }
+
+      return a.pageId.compareTo(b.pageId);
+    });
+    return allSessions;
+  }
+
+  @override
   Future<ColoringSession?> getSession(String pageId) async {
     if (readFailures.contains(pageId)) {
       throw StateError('Read failure for $pageId');

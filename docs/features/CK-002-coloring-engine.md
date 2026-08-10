@@ -1,7 +1,7 @@
 # CK-002 Coloring Engine
 
 ## Status
-Implemented baseline, CK-002.1 foundation, CK-002.2 real SVG renderer, CK-002.3 local multi-page catalog foundation, and CK-002.4 local save-and-resume progress.
+Implemented baseline, CK-002.1 foundation, CK-002.2 real SVG renderer, CK-002.3 local multi-page catalog foundation, CK-002.4 local save-and-resume progress, and CK-002.5 My Creations Lite.
 
 ## Goal
 Provide a child-friendly tap-to-fill coloring experience that is easy to extend into a full content platform.
@@ -99,6 +99,39 @@ CK-002.3 extends this to multiple local Animals pages with stable category/page 
 - Isolation:
   - each page ID has an independent session
   - page state never leaks between pages
+
+### CK-002.5 My Creations Resume Semantics
+- Home now exposes My Creations as a child-facing destination.
+- My Creations lists started pages by composing:
+  - `ColoringSessionRepository.getAllSessions`
+  - `ColoringPageRepository` page/category metadata
+- Listing rules:
+  - include only non-zero progress pages
+  - skip malformed sessions
+  - skip unsupported schema sessions
+  - skip stale sessions whose page IDs no longer exist in catalog
+- Progress rules:
+  - `colored valid regions / total page regions`
+  - equal-to-default color counts as uncolored
+  - unknown persisted region IDs are ignored
+- Card tap behavior:
+  - navigate to `/coloring/:pageId`
+  - rely on existing CK-002.4 restore flow in `ColoringController`
+  - My Creations does not implement restore logic
+
+### CK-002.5 Navigation Behavior
+- Coloring route supports optional source metadata.
+- Back behavior is origin-aware:
+  - category origin returns to source category
+  - My Creations origin returns to My Creations
+  - direct/deep-linked route falls back safely
+- Existing category flow is preserved:
+  - Home -> Animals -> Page -> Back -> Animals
+
+### CK-002.5 Scope Limits
+- Uses static SVG asset preview for My Creations cards.
+- Does not generate persisted artwork thumbnails.
+- Does not add completed-artwork gallery, achievements, cloud sync, sharing, export, monetization, or AI generation.
 
 ### Offline Behavior
 - The current implementation does not require an internet connection to operate once local assets are bundled in the app.

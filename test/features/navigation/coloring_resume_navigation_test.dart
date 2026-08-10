@@ -14,6 +14,21 @@ class _MemorySessionRepository implements ColoringSessionRepository {
   final Map<String, ColoringSession> _sessions = <String, ColoringSession>{};
 
   @override
+  Future<List<ColoringSession>> getAllSessions() async {
+    final allSessions = _sessions.values.toList();
+    allSessions.sort((a, b) {
+      final timestampOrder =
+          b.lastUpdatedAtEpochMs.compareTo(a.lastUpdatedAtEpochMs);
+      if (timestampOrder != 0) {
+        return timestampOrder;
+      }
+
+      return a.pageId.compareTo(b.pageId);
+    });
+    return allSessions;
+  }
+
+  @override
   Future<ColoringSession?> getSession(String pageId) async => _sessions[pageId];
 
   @override
@@ -107,7 +122,7 @@ void main() {
 
     await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
     await pumpUntilFound(tester, find.byType(ColoringScreen));
-    await pumpUntilFound(tester, find.text('Back to Animals'));
+    await pumpUntilFound(tester, find.byTooltip('Back to Animals'));
 
     final firstColoringContainer = ProviderScope.containerOf(
       tester.element(find.byType(ColoringScreen)),
