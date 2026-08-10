@@ -15,8 +15,8 @@ class AppRoute {
 
   static const String root = '/';
   static const String home = '/home';
-  static const String category = '/category/:category';
-  static const String coloring = '/coloring';
+  static const String category = '/category/:categoryId';
+  static const String coloring = '/coloring/:pageId';
   static const String gallery = '/gallery';
   static const String parentZone = '/parent-zone';
   static const String settings = '/settings';
@@ -54,14 +54,14 @@ class AppRouter {
         path: AppRoute.category,
         name: AppRouteName.category,
         builder: (_, state) => CategoryScreen(
-          categoryName: state.pathParameters['category'] ?? 'Adventure',
+          categoryId: state.pathParameters['categoryId'] ?? 'adventure',
         ),
       ),
       GoRoute(
         path: AppRoute.coloring,
         name: AppRouteName.coloring,
         builder: (context, state) {
-          final pageId = state.uri.queryParameters['pageId'];
+          final pageId = state.pathParameters['pageId'];
           if (pageId == null || pageId.isEmpty) {
             return const ColoringScreen();
           }

@@ -10,18 +10,20 @@
 - First coloring-engine baseline implemented.
 - Sample Happy Cat coloring page data defined.
 - Riverpod state controller implemented for coloring actions.
+- CK-002.1 production coloring engine foundation completed.
+- CK-002.2 real SVG coloring pipeline completed and validated on Windows.
+- CK-002.3 local multi-page Animals catalog foundation implemented.
 
 ## Current MVP Baseline
-The app now has a usable foundation for content and navigation, but the coloring engine is still a prototype implementation rather than a full SVG asset pipeline.
+The app now has a usable local SVG coloring pipeline with multi-page catalog navigation for Animals.
 
 ## Remaining MVP Work
-- Replace the placeholder cat rendering with a real SVG named-region asset pipeline.
-- Add more real coloring pages and categories.
-- Expand the coloring engine with stronger region detection and asset loading.
+- Add more real coloring pages across additional categories using the existing SVG pipeline.
+- Expand local catalog coverage while preserving repository-driven loading.
 - Hook up Firebase authentication and persistence where needed.
 - Add saved artwork storage and retrieval.
 - Add parent-zone controls.
-- Add production-ready tests for the coloring controller and page loading.
+- Add integration-level runtime tests for multi-page workflows.
 
 ## Next Product Phases
 - Build a scalable content library.
@@ -126,4 +128,4 @@ Goal: ship to stores with a polished presence.
 - Beta testing and analytics review
 
 ## Recommended Next Build Step
-Implement the core content model and route-to-screen flow so every category opens a real page with consistent layout.
+Expand local content coverage beyond Animals while keeping stable category/page IDs and repository-owned catalog filtering.

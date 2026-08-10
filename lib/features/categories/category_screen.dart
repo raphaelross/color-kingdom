@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/router/app_router.dart';
@@ -7,50 +8,70 @@ import '../../app/theme/app_spacing.dart';
 import '../coloring/providers/coloring_provider.dart';
 
 class CategoryScreen extends ConsumerWidget {
-  const CategoryScreen({required this.categoryName, super.key});
+  const CategoryScreen({required this.categoryId, super.key});
 
-  final String categoryName;
+  final String categoryId;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final title = _toTitleCase(categoryName);
-    final pagesAsync = ref.watch(availableColoringPagesProvider);
+    final pagesAsync = ref.watch(categoryPagesProvider(categoryId));
+    final categoriesAsync = ref.watch(availableCategoriesProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(
+        title: categoriesAsync.when(
+          data: (categories) {
+            final match = categories.where((c) => c.categoryId == categoryId);
+            return Text(match.isEmpty ? _toTitleCase(categoryId) : match.first.title);
+          },
+          loading: () => Text(_toTitleCase(categoryId)),
+          error: (_, _) => Text(_toTitleCase(categoryId)),
+        ),
+      ),
       body: pagesAsync.when(
         data: (pages) {
-          final categoryPages = pages
-              .where(
-                (page) =>
-                    page.category.toLowerCase() == categoryName.toLowerCase(),
-              )
-              .toList(growable: false);
-
-          if (categoryPages.isEmpty) {
-            return _EmptyCategoryMessage(categoryName: title);
+          if (pages.isEmpty) {
+            return _EmptyCategoryMessage(categoryName: _toTitleCase(categoryId));
           }
 
           return ListView.separated(
             padding: const EdgeInsets.all(AppSpacing.md),
             itemBuilder: (context, index) {
-              final page = categoryPages[index];
+              final page = pages[index];
               return Card(
                 child: ListTile(
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: AppSpacing.md,
+                    vertical: AppSpacing.sm,
+                  ),
+                  leading: SizedBox(
+                    width: 64,
+                    height: 64,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(AppSpacing.radiusCard),
+                      child: ColoredBox(
+                        color: Colors.white,
+                        child: SvgPicture.asset(
+                          page.assetPath,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
                   title: Text(page.title),
-                  subtitle: Text(page.category),
+                  subtitle: Text(_toTitleCase(page.categoryId)),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () {
                     context.goNamed(
                       AppRouteName.coloring,
-                      queryParameters: <String, String>{'pageId': page.id},
+                      pathParameters: <String, String>{'pageId': page.id},
                     );
                   },
                 ),
               );
             },
             separatorBuilder: (_, _) => const SizedBox(height: AppSpacing.sm),
-            itemCount: categoryPages.length,
+            itemCount: pages.length,
           );
         },
         loading: () => const Center(child: CircularProgressIndicator()),

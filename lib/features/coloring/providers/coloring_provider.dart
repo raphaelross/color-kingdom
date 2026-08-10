@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../categories/models/category.dart';
 import '../models/coloring_page.dart';
 import '../models/coloring_state.dart';
 import '../repositories/coloring_page_repository.dart';
@@ -18,6 +19,16 @@ final coloringInitialPageIdProvider = Provider<String>(
 
 final availableColoringPagesProvider = FutureProvider<List<ColoringPage>>(
   (ref) => ref.watch(coloringPageRepositoryProvider).getPages(),
+);
+
+final availableCategoriesProvider = FutureProvider<List<Category>>(
+  (ref) => ref.watch(coloringPageRepositoryProvider).getCategories(),
+);
+
+final categoryPagesProvider = FutureProvider.family<List<ColoringPage>, String>(
+  (ref, categoryId) => ref
+      .watch(coloringPageRepositoryProvider)
+      .getPagesByCategory(categoryId),
 );
 
 final coloringControllerProvider =

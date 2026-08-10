@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g id="colorable-regions">
+    <path id="elephant-body" data-role="colorable" data-region-name="Body" fill="transparent" d="M150 256 C150 208 190 170 238 170 H286 C334 170 372 208 372 256 V354 C372 404 332 444 282 444 H238 C188 444 150 404 150 354 Z"/>
+    <path id="elephant-head" data-role="colorable" data-region-name="Head" fill="transparent" d="M184 136 C184 94 218 62 258 62 C300 62 332 96 332 136 C332 176 300 208 258 208 C218 208 184 176 184 136 Z"/>
+    <path id="elephant-ear-left" data-role="colorable" data-region-name="Left Ear" fill="transparent" d="M186 114 C160 114 138 132 132 160 C162 162 188 150 204 128 Z"/>
+    <path id="elephant-ear-right" data-role="colorable" data-region-name="Right Ear" fill="transparent" d="M334 128 C350 150 376 162 406 160 C400 132 378 114 352 114 Z"/>
+    <path id="elephant-trunk" data-role="colorable" data-region-name="Trunk" fill="transparent" d="M246 152 C252 184 252 212 246 238 C242 258 244 274 254 286 C266 300 286 296 294 282 C300 272 298 258 288 252 C278 246 268 252 266 262"/>
+    <path id="elephant-eye-left" data-role="colorable" data-region-name="Left Eye" fill="transparent" d="M230 132 C230 124 236 118 244 118 C252 118 258 124 258 132 C258 140 252 146 244 146 C236 146 230 140 230 132 Z"/>
+    <path id="elephant-eye-right" data-role="colorable" data-region-name="Right Eye" fill="transparent" d="M258 132 C258 124 264 118 272 118 C280 118 286 124 286 132 C286 140 280 146 272 146 C264 146 258 140 258 132 Z"/>
+    <path id="elephant-cheek" data-role="colorable" data-region-name="Cheek" fill="transparent" d="M226 156 C238 168 278 168 290 156 C284 186 232 186 226 156 Z"/>
+    <path id="elephant-leg-front" data-role="colorable" data-region-name="Front Leg" fill="transparent" d="M210 328 H252 V444 H210 Z"/>
+    <path id="elephant-leg-back" data-role="colorable" data-region-name="Back Leg" fill="transparent" d="M264 328 H306 V444 H264 Z"/>
+  </g>
+
+  <g id="static-outlines" data-role="static" fill="none" stroke="#1D2A33" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 256 C150 208 190 170 238 170 H286 C334 170 372 208 372 256 V354 C372 404 332 444 282 444 H238 C188 444 150 404 150 354 Z"/>
+    <path d="M184 136 C184 94 218 62 258 62 C300 62 332 96 332 136 C332 176 300 208 258 208 C218 208 184 176 184 136 Z"/>
+    <path d="M186 114 C160 114 138 132 132 160 C162 162 188 150 204 128 Z"/>
+    <path d="M334 128 C350 150 376 162 406 160 C400 132 378 114 352 114 Z"/>
+    <path d="M246 152 C252 184 252 212 246 238 C242 258 244 274 254 286 C266 300 286 296 294 282 C300 272 298 258 288 252 C278 246 268 252 266 262"/>
+    <path d="M230 132 C230 124 236 118 244 118 C252 118 258 124 258 132 C258 140 252 146 244 146 C236 146 230 140 230 132 Z"/>
+    <path d="M258 132 C258 124 264 118 272 118 C280 118 286 124 286 132 C286 140 280 146 272 146 C264 146 258 140 258 132 Z"/>
+    <path d="M226 156 C238 168 278 168 290 156 C284 186 232 186 226 156 Z"/>
+    <path d="M210 328 H252 V444 H210 Z"/>
+    <path d="M264 328 H306 V444 H264 Z"/>
+  </g>
+</svg>

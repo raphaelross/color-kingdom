@@ -7,13 +7,13 @@ class ColoringRendererRegistry {
   ColoringRendererRegistry._();
 
   static const ColoringRenderer _fallbackRenderer = HappyCatRenderer();
+  static final ColoringRenderer _svgRenderer = SvgColoringRenderer();
 
   static ColoringRenderer resolve(ColoringPage page) {
-    switch (page.id) {
-      case 'happy-cat':
-        return SvgColoringRenderer();
-      default:
-        return _fallbackRenderer;
+    if (page.rendererType == ColoringRendererType.svg) {
+      return _svgRenderer;
     }
+
+    return _fallbackRenderer;
   }
 }

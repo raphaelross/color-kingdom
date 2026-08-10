@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g id="colorable-regions">
+    <path id="puppy-tail" data-role="colorable" data-region-name="Tail" fill="transparent" d="M374 286 C418 258 448 290 430 324 C414 354 374 356 352 332 C340 320 340 304 350 294 C358 286 368 284 374 286 Z"/>
+    <path id="puppy-body" data-role="colorable" data-region-name="Body" fill="transparent" d="M146 268 C146 220 186 182 234 182 H278 C328 182 366 222 366 270 V352 C366 402 326 442 276 442 H234 C184 442 146 402 146 352 Z"/>
+    <path id="puppy-head" data-role="colorable" data-region-name="Head" fill="transparent" d="M168 130 C168 84 206 48 252 48 C300 48 338 84 338 130 C338 178 300 214 252 214 C206 214 168 178 168 130 Z"/>
+    <path id="puppy-ear-left" data-role="colorable" data-region-name="Left Ear" fill="transparent" d="M186 92 C164 94 146 112 144 140 C166 132 184 118 196 98 Z"/>
+    <path id="puppy-ear-right" data-role="colorable" data-region-name="Right Ear" fill="transparent" d="M318 98 C330 118 348 132 370 140 C368 112 350 94 328 92 Z"/>
+    <path id="puppy-eye-left" data-role="colorable" data-region-name="Left Eye" fill="transparent" d="M220 128 C220 118 228 110 238 110 C248 110 256 118 256 128 C256 138 248 146 238 146 C228 146 220 138 220 128 Z"/>
+    <path id="puppy-eye-right" data-role="colorable" data-region-name="Right Eye" fill="transparent" d="M252 128 C252 118 260 110 270 110 C280 110 288 118 288 128 C288 138 280 146 270 146 C260 146 252 138 252 128 Z"/>
+    <path id="puppy-nose" data-role="colorable" data-region-name="Nose" fill="transparent" d="M242 150 L262 150 L252 164 Z"/>
+    <path id="puppy-mouth" data-role="colorable" data-region-name="Mouth" fill="transparent" d="M236 168 C244 178 260 178 268 168 L266 184 C258 190 246 190 238 184 Z"/>
+    <path id="puppy-collar" data-role="colorable" data-region-name="Collar" fill="transparent" d="M202 204 H302 C296 220 284 232 268 236 H236 C220 232 208 220 202 204 Z"/>
+  </g>
+
+  <g id="static-outlines" data-role="static" fill="none" stroke="#1D2A33" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M374 286 C418 258 448 290 430 324 C414 354 374 356 352 332 C340 320 340 304 350 294 C358 286 368 284 374 286 Z"/>
+    <path d="M146 268 C146 220 186 182 234 182 H278 C328 182 366 222 366 270 V352 C366 402 326 442 276 442 H234 C184 442 146 402 146 352 Z"/>
+    <path d="M168 130 C168 84 206 48 252 48 C300 48 338 84 338 130 C338 178 300 214 252 214 C206 214 168 178 168 130 Z"/>
+    <path d="M186 92 C164 94 146 112 144 140 C166 132 184 118 196 98 Z"/>
+    <path d="M318 98 C330 118 348 132 370 140 C368 112 350 94 328 92 Z"/>
+    <path d="M220 128 C220 118 228 110 238 110 C248 110 256 118 256 128 C256 138 248 146 238 146 C228 146 220 138 220 128 Z"/>
+    <path d="M252 128 C252 118 260 110 270 110 C280 110 288 118 288 128 C288 138 280 146 270 146 C260 146 252 138 252 128 Z"/>
+    <path d="M242 150 L262 150 L252 164 Z"/>
+    <path d="M236 168 C244 178 260 178 268 168 L266 184 C258 190 246 190 238 184 Z"/>
+    <path d="M202 204 H302 C296 220 284 232 268 236 H236 C220 232 208 220 202 204 Z"/>
+    <path d="M210 318 H298"/>
+  </g>
+</svg>

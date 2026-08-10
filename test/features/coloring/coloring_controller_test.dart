@@ -9,6 +9,7 @@ import 'package:color_kingdom/features/coloring/models/coloring_page.dart';
 import 'package:color_kingdom/features/coloring/models/coloring_state.dart';
 import 'package:color_kingdom/features/coloring/providers/coloring_provider.dart';
 import 'package:color_kingdom/features/coloring/repositories/coloring_page_repository.dart';
+import 'package:color_kingdom/features/categories/models/category.dart';
 
 class _FakeRepository implements ColoringPageRepository {
   _FakeRepository(this.pages);
@@ -17,6 +18,16 @@ class _FakeRepository implements ColoringPageRepository {
 
   @override
   Future<List<ColoringPage>> getPages() async => pages;
+
+  @override
+  Future<List<Category>> getCategories() async => const [
+        Category(categoryId: 'animals', title: 'Animals', sortOrder: 0),
+      ];
+
+  @override
+  Future<List<ColoringPage>> getPagesByCategory(String categoryId) async {
+    return pages.where((page) => page.categoryId == categoryId).toList();
+  }
 
   @override
   Future<ColoringPage> getPageById(String id) async {
@@ -33,6 +44,17 @@ class _DelayedRepository implements ColoringPageRepository {
 
   @override
   Future<List<ColoringPage>> getPages() async => [await _completer.future];
+
+  @override
+  Future<List<Category>> getCategories() async => const [
+        Category(categoryId: 'animals', title: 'Animals', sortOrder: 0),
+      ];
+
+  @override
+  Future<List<ColoringPage>> getPagesByCategory(String categoryId) async {
+    final page = await _completer.future;
+    return page.categoryId == categoryId ? [page] : const [];
+  }
 
   @override
   Future<ColoringPage> getPageById(String id) async => _completer.future;
@@ -226,5 +248,66 @@ void main() {
     expect(state.regionColors['cat-tail'], Colors.transparent);
     expect(state.undoStack, isEmpty);
     expect(state.redoStack, isEmpty);
+  });
+
+  test('loading a new page resets colors and history', () async {
+    final container = ProviderContainer(
+      overrides: [
+        coloringPageRepositoryProvider.overrideWithValue(
+          _FakeRepository([
+            sampleHappyCatPage,
+            samplePlayfulPuppyPage,
+          ]),
+        ),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    await _waitForReady(container);
+
+    final controller = container.read(coloringControllerProvider.notifier);
+    controller.selectColor(Colors.red);
+    controller.fillRegion('cat-body');
+
+    expect(container.read(coloringControllerProvider).undoStack.length, 1);
+
+    await controller.loadPageById('playful-puppy');
+
+    final state = container.read(coloringControllerProvider);
+    expect(state.page?.id, 'playful-puppy');
+    expect(state.undoStack, isEmpty);
+    expect(state.redoStack, isEmpty);
+    expect(state.regionColors.containsKey('cat-body'), isFalse);
+    expect(state.regionColors.containsKey('puppy-body'), isTrue);
+  });
+
+  test('undo and redo remain scoped to active page', () async {
+    final container = ProviderContainer(
+      overrides: [
+        coloringPageRepositoryProvider.overrideWithValue(
+          _FakeRepository([
+            sampleHappyCatPage,
+            samplePlayfulPuppyPage,
+          ]),
+        ),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    await _waitForReady(container);
+
+    final controller = container.read(coloringControllerProvider.notifier);
+    controller.selectColor(Colors.green);
+    controller.fillRegion('cat-tail');
+
+    await controller.loadPageById('playful-puppy');
+    controller.selectColor(Colors.blue);
+    controller.fillRegion('puppy-body');
+    controller.undo();
+
+    final state = container.read(coloringControllerProvider);
+    expect(state.page?.id, 'playful-puppy');
+    expect(state.regionColors['puppy-body'], Colors.transparent);
+    expect(state.regionColors.containsKey('cat-tail'), isFalse);
   });
 }

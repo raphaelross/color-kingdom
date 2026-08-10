@@ -16,6 +16,7 @@ The controller uses action-based history and an explicit loading/ready/error lif
 The page source is abstracted by a repository interface.
 The canvas validates renderer/page region mismatches and fails gracefully.
 The SVG renderer parses once, caches by page/asset key, renders by z-order, and performs region hit testing in SVG coordinates.
+Renderer selection is metadata-driven (renderer type), avoiding page-id specific renderer mappings for SVG pages.
 
 ## Why Named Regions
 - Tap-to-fill is simpler than pixel-based flood fill.
@@ -37,6 +38,7 @@ Planned behavior:
 - Region taps map to stable identifiers.
 - The same Riverpod state model manages fills and action history.
 - Future exports and recoloring remain simple.
+- Additional SVG pages should not require new renderer classes.
 
 ## Dependency Choice
 - `xml` is used for SVG XML parsing.

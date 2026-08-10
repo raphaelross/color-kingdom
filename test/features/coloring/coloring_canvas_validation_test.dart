@@ -32,8 +32,9 @@ void main() {
     const page = ColoringPage(
       id: 'test-page',
       title: 'Test',
-      category: 'Test',
+      categoryId: 'test',
       assetPath: 'assets/test.svg',
+      sortOrder: 0,
       regions: [
         ColoringRegion(
           id: 'existing-region',

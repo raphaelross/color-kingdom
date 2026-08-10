@@ -7,8 +7,9 @@ import 'package:color_kingdom/features/coloring/widgets/renderers/svg/svg_colori
 const ColoringPage _page = ColoringPage(
   id: 'page',
   title: 'Page',
-  category: 'Test',
+  categoryId: 'test',
   assetPath: 'assets/page.svg',
+  sortOrder: 0,
   regions: [
     ColoringRegion(id: 'a', name: 'A', defaultColor: Colors.transparent),
     ColoringRegion(id: 'b', name: 'B', defaultColor: Colors.transparent),
@@ -75,8 +76,9 @@ void main() {
     final singleRegionPage = const ColoringPage(
       id: 'page',
       title: 'Page',
-      category: 'Test',
+      categoryId: 'test',
       assetPath: 'assets/page.svg',
+      sortOrder: 0,
       regions: [
         ColoringRegion(id: 'a', name: 'A', defaultColor: Colors.transparent),
       ],

@@ -4,65 +4,29 @@ import 'package:go_router/go_router.dart';
 import '../../app/router/app_router.dart';
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_spacing.dart';
+import '../categories/data/local_categories.dart';
+import '../categories/models/category.dart';
 import 'widgets/category_card.dart';
 
-class _CategoryItem {
-  const _CategoryItem({
+class _ActionItem {
+  const _ActionItem({
     required this.emoji,
     required this.title,
     required this.routeName,
-    this.pathParameters = const <String, String>{},
   });
 
   final String emoji;
   final String title;
   final String routeName;
-  final Map<String, String> pathParameters;
 }
 
-const List<_CategoryItem> _categories = [
-  _CategoryItem(
-    emoji: '🐶',
-    title: 'Animals',
-    routeName: AppRouteName.category,
-    pathParameters: <String, String>{'category': 'animals'},
-  ),
-  _CategoryItem(
-    emoji: '🦖',
-    title: 'Dinosaurs',
-    routeName: AppRouteName.category,
-    pathParameters: <String, String>{'category': 'dinosaurs'},
-  ),
-  _CategoryItem(
-    emoji: '🚀',
-    title: 'Space',
-    routeName: AppRouteName.category,
-    pathParameters: <String, String>{'category': 'space'},
-  ),
-  _CategoryItem(
-    emoji: '🚒',
-    title: 'Vehicles',
-    routeName: AppRouteName.category,
-    pathParameters: <String, String>{'category': 'vehicles'},
-  ),
-  _CategoryItem(
-    emoji: '🦄',
-    title: 'Unicorns',
-    routeName: AppRouteName.category,
-    pathParameters: <String, String>{'category': 'unicorns'},
-  ),
-  _CategoryItem(
-    emoji: '🎄',
-    title: 'Holidays',
-    routeName: AppRouteName.category,
-    pathParameters: <String, String>{'category': 'holidays'},
-  ),
-  _CategoryItem(
+const List<_ActionItem> _actions = [
+  _ActionItem(
     emoji: '⭐',
     title: 'Favorites',
     routeName: AppRouteName.gallery,
   ),
-  _CategoryItem(
+  _ActionItem(
     emoji: '⚙',
     title: 'Parent Zone',
     routeName: AppRouteName.parentZone,
@@ -74,6 +38,13 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final categories = [...localCategories]
+      ..sort((a, b) => a.sortOrder.compareTo(b.sortOrder));
+    final items = [
+      ...categories.map(_HomeGridItem.fromCategory),
+      ..._actions.map(_HomeGridItem.fromAction),
+    ];
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -103,7 +74,7 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: AppSpacing.lg),
               Expanded(
                 child: GridView.builder(
-                  itemCount: _categories.length,
+                  itemCount: items.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: AppSpacing.md,
@@ -111,15 +82,22 @@ class HomeScreen extends StatelessWidget {
                     childAspectRatio: 1.25,
                   ),
                   itemBuilder: (context, index) {
-                    final category = _categories[index];
+                    final item = items[index];
                     return CategoryCard(
-                      emoji: category.emoji,
-                      title: category.title,
+                      emoji: item.emoji,
+                      title: item.title,
                       onTap: () {
-                        context.goNamed(
-                          category.routeName,
-                          pathParameters: category.pathParameters,
-                        );
+                        if (item.isCategory) {
+                          context.goNamed(
+                            AppRouteName.category,
+                            pathParameters: <String, String>{
+                              'categoryId': item.categoryId!,
+                            },
+                          );
+                          return;
+                        }
+
+                        context.goNamed(item.routeName!);
                       },
                     );
                   },
@@ -131,4 +109,42 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+class _HomeGridItem {
+  const _HomeGridItem.category({
+    required this.emoji,
+    required this.title,
+    required this.categoryId,
+  })  : isCategory = true,
+        routeName = null;
+
+  const _HomeGridItem.action({
+    required this.emoji,
+    required this.title,
+    required this.routeName,
+  })  : isCategory = false,
+        categoryId = null;
+
+  factory _HomeGridItem.fromCategory(Category category) {
+    return _HomeGridItem.category(
+      emoji: category.emoji ?? '📘',
+      title: category.title,
+      categoryId: category.categoryId,
+    );
+  }
+
+  factory _HomeGridItem.fromAction(_ActionItem action) {
+    return _HomeGridItem.action(
+      emoji: action.emoji,
+      title: action.title,
+      routeName: action.routeName,
+    );
+  }
+
+  final String emoji;
+  final String title;
+  final bool isCategory;
+  final String? categoryId;
+  final String? routeName;
 }

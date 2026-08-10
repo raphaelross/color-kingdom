@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g id="colorable-regions">
+    <path id="lion-tail" data-role="colorable" data-region-name="Tail" fill="transparent" d="M378 300 C420 274 452 300 442 334 C434 362 398 372 372 356 C356 346 350 326 360 314 C366 306 372 302 378 300 Z"/>
+    <path id="lion-body" data-role="colorable" data-region-name="Body" fill="transparent" d="M154 274 C154 226 194 188 242 188 H282 C330 188 370 226 370 274 V352 C370 402 330 442 280 442 H242 C194 442 154 402 154 352 Z"/>
+    <path id="lion-mane" data-role="colorable" data-region-name="Mane" fill="transparent" d="M146 132 C146 76 194 32 252 32 C312 32 358 78 358 132 C358 190 310 234 252 234 C194 234 146 190 146 132 Z"/>
+    <path id="lion-head" data-role="colorable" data-region-name="Head" fill="transparent" d="M182 136 C182 96 214 66 252 66 C292 66 322 98 322 136 C322 176 292 206 252 206 C212 206 182 176 182 136 Z"/>
+    <path id="lion-ear-left" data-role="colorable" data-region-name="Left Ear" fill="transparent" d="M202 96 L176 74 L180 112 Z"/>
+    <path id="lion-ear-right" data-role="colorable" data-region-name="Right Ear" fill="transparent" d="M324 112 L328 74 L302 96 Z"/>
+    <path id="lion-eye-left" data-role="colorable" data-region-name="Left Eye" fill="transparent" d="M224 132 C224 124 230 118 238 118 C246 118 252 124 252 132 C252 140 246 146 238 146 C230 146 224 140 224 132 Z"/>
+    <path id="lion-eye-right" data-role="colorable" data-region-name="Right Eye" fill="transparent" d="M252 132 C252 124 258 118 266 118 C274 118 280 124 280 132 C280 140 274 146 266 146 C258 146 252 140 252 132 Z"/>
+    <path id="lion-nose" data-role="colorable" data-region-name="Nose" fill="transparent" d="M242 150 L262 150 L252 164 Z"/>
+    <path id="lion-mouth" data-role="colorable" data-region-name="Mouth" fill="transparent" d="M236 166 C242 176 262 176 268 166 L266 182 C258 188 246 188 238 182 Z"/>
+  </g>
+
+  <g id="static-outlines" data-role="static" fill="none" stroke="#1D2A33" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M378 300 C420 274 452 300 442 334 C434 362 398 372 372 356 C356 346 350 326 360 314 C366 306 372 302 378 300 Z"/>
+    <path d="M154 274 C154 226 194 188 242 188 H282 C330 188 370 226 370 274 V352 C370 402 330 442 280 442 H242 C194 442 154 402 154 352 Z"/>
+    <path d="M146 132 C146 76 194 32 252 32 C312 32 358 78 358 132 C358 190 310 234 252 234 C194 234 146 190 146 132 Z"/>
+    <path d="M182 136 C182 96 214 66 252 66 C292 66 322 98 322 136 C322 176 292 206 252 206 C212 206 182 176 182 136 Z"/>
+    <path d="M202 96 L176 74 L180 112 Z"/>
+    <path d="M324 112 L328 74 L302 96 Z"/>
+    <path d="M224 132 C224 124 230 118 238 118 C246 118 252 124 252 132 C252 140 246 146 238 146 C230 146 224 140 224 132 Z"/>
+    <path d="M252 132 C252 124 258 118 266 118 C274 118 280 124 280 132 C280 140 274 146 266 146 C258 146 252 140 252 132 Z"/>
+    <path d="M242 150 L262 150 L252 164 Z"/>
+    <path d="M236 166 C242 176 262 176 268 166 L266 182 C258 188 246 188 238 182 Z"/>
+    <path d="M210 320 H298"/>
+  </g>
+</svg>
