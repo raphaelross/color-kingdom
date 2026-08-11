@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -54,11 +55,27 @@ class SvgColoringRenderer extends ColoringRenderer {
   }) {
     final cacheKey = '${page.id}::${page.assetPath}';
     return _cache.putIfAbsent(cacheKey, () async {
+      final stopwatch = Stopwatch()..start();
       final svgXml = await _assetBundle.loadString(page.assetPath);
       final parsed = _parser.parseAndValidate(
         svgXml: svgXml,
         page: page,
       );
+      stopwatch.stop();
+
+      assert(() {
+        if (kDebugMode) {
+          final regionCount = parsed.asset?.colorableRegions.length ?? 0;
+          final drawCount = parsed.asset?.drawElements.length ?? 0;
+          debugPrint(
+            'SvgColoringRenderer loaded ${page.id} '
+            'in ${stopwatch.elapsedMilliseconds}ms '
+            '(colorable=$regionCount, drawElements=$drawCount, valid=${parsed.isValid})',
+          );
+        }
+        return true;
+      }());
+
       return parsed;
     });
   }

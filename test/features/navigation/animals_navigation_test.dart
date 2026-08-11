@@ -125,6 +125,7 @@ void main() {
     expect(find.text('Playful Puppy'), findsOneWidget);
     expect(find.text('Friendly Lion'), findsOneWidget);
     expect(find.text('Cute Elephant'), findsOneWidget);
+    expect(find.text('Lovely Kitten'), findsOneWidget);
   });
 
   testWidgets('tapping Happy Cat opens ColoringScreen with Happy Cat page', (

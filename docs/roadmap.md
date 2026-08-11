@@ -15,12 +15,13 @@
 - CK-002.3 local multi-page Animals catalog foundation implemented.
 - CK-002.4 local save-and-resume coloring progress implemented.
 - CK-002.5 My Creations Lite (started pages resume) implemented.
+- CK-002.6 Phase 1 polished SVG foundation and Lovely Kitten benchmark implemented.
 
 ## Current MVP Baseline
-The app now has a usable local SVG coloring pipeline with multi-page catalog navigation for Animals, local per-page progress persistence, and a child-facing My Creations resume surface.
+The app now has a usable local SVG coloring pipeline with multi-page catalog navigation for Animals (including Lovely Kitten benchmark), local per-page progress persistence, a child-facing My Creations resume surface, and a reusable SVG authoring/validation foundation for polished content.
 
 ## Remaining MVP Work
-- Add more real coloring pages across additional categories using the existing SVG pipeline.
+- Add more real coloring pages across additional categories using the existing SVG pipeline and CK-002.6 authoring contract.
 - Expand local catalog coverage while preserving repository-driven loading.
 - Hook up Firebase authentication and persistence where needed.
 - Add saved artwork storage and retrieval.
@@ -39,7 +40,7 @@ The app now has a usable local SVG coloring pipeline with multi-page catalog nav
 - Clear in Coloring deletes the persisted session and removes the item from My Creations on return.
 
 ## Recommended Next Build Step
-CK-002.6: Expand local content beyond Animals while preserving stable category/page IDs, repository-owned catalog filtering, and page-scoped session persistence semantics.
+CK-002.6 Phase 2: Expand polished local content beyond Animals using the established authoring guide and validator gates while preserving stable category/page IDs, repository-owned catalog filtering, and page-scoped session persistence semantics.
 
 ## CK-002.4 Acceptance Status
 - Save and resume coloring progress by stable page ID.

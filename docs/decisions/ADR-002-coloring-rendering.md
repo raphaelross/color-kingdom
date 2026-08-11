@@ -1,13 +1,15 @@
 # ADR-002: Coloring Rendering Strategy
 
 ## Status
-Accepted and implemented for the current baseline, CK-002.1 foundation, and CK-002.2 Happy Cat SVG renderer.
+Accepted and implemented for the current baseline, CK-002.1 foundation, CK-002.2 Happy Cat SVG renderer, and CK-002.6 Phase 1 polished content benchmark.
 
 ## Context
 The coloring engine must feel immediate and reliable for young children, while also supporting a growing content library and future AI-generated pages.
 
 ## Decision
 Use named regions for coloring pages, keep rendering behind a renderer contract, and implement SVG interaction with public parsing/geometry APIs.
+
+For CK-002.6, continue using the existing renderer architecture and add content validation plus authoring standards rather than rewriting the renderer.
 
 ## Current Baseline
 The implemented engine stores and updates color state by region ID.
@@ -49,3 +51,9 @@ Planned behavior:
 - The current engine remains a prototype baseline, not the final rendering system.
 - Future content work should align with the SVG + named-region model.
 - Any rendering change should be documented before it is implemented.
+
+### CK-002.6 Addendum
+- Introduce a production SVG authoring guide for path-only polished content.
+- Introduce a reusable validator to block deterministic content-contract errors.
+- Keep cache policy and parser execution model unchanged unless benchmark evidence shows a measured blocker.
+- Use Lovely Kitten as a Detailed-tier benchmark page while preserving Happy Cat as a simpler regression baseline.

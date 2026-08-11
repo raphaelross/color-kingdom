@@ -84,9 +84,45 @@ const ColoringPage sampleCuteElephantPage = ColoringPage(
   ],
 );
 
+const ColoringPage sampleLovelyKittenPage = ColoringPage(
+  id: 'lovely-kitten',
+  title: 'Lovely Kitten',
+  categoryId: 'animals',
+  assetPath: 'assets/coloring_pages/animals/lovely_kitten.svg',
+  sortOrder: 4,
+  regions: [
+    ColoringRegion(
+      id: 'region-bow-center',
+      name: 'Bow Center',
+      defaultColor: _defaultTransparent,
+    ),
+    ColoringRegion(
+      id: 'region-bow-left',
+      name: 'Bow Left',
+      defaultColor: _defaultTransparent,
+    ),
+    ColoringRegion(
+      id: 'region-heart-center',
+      name: 'Heart Center',
+      defaultColor: _defaultTransparent,
+    ),
+    ColoringRegion(
+      id: 'region-paw-left',
+      name: 'Left Paw',
+      defaultColor: _defaultTransparent,
+    ),
+    ColoringRegion(
+      id: 'region-star-01',
+      name: 'Star',
+      defaultColor: _defaultTransparent,
+    ),
+  ],
+);
+
 const List<ColoringPage> sampleColoringPages = [
   sampleHappyCatPage,
   samplePlayfulPuppyPage,
   sampleFriendlyLionPage,
   sampleCuteElephantPage,
+  sampleLovelyKittenPage,
 ];

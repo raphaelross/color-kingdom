@@ -7,6 +7,8 @@ CK-002.4 adds local save-and-resume coloring progress while preserving the exist
 
 CK-002.5 adds a child-facing My Creations surface that composes existing page metadata and persisted sessions without changing the coloring engine architecture.
 
+CK-002.6 Phase 1 adds a polished SVG authoring standard, reusable SVG content validation, and the Lovely Kitten benchmark page without redesigning renderer architecture.
+
 ## Implemented Architecture Today
 
 ### App Shell
@@ -64,6 +66,7 @@ Current coloring pieces:
 - `widgets/coloring_canvas.dart` hosts zoom/pan, runs renderer/page validation, and delegates drawing to a renderer.
 - `widgets/renderers/svg/svg_coloring_renderer.dart` loads, validates, caches, and renders SVG coloring pages.
 - `widgets/renderers/svg/svg_coloring_parser.dart` parses SVG assets and validates colorable region IDs.
+- `widgets/renderers/svg/svg_content_validator.dart` performs reusable deterministic SVG content contract validation and warning diagnostics.
 - `widgets/renderers/svg/svg_region_hit_tester.dart` maps taps into SVG coordinates and resolves region hits.
 - `widgets/renderers/svg/svg_coloring_models.dart` contains SVG renderer-specific internal models.
 - `widgets/renderers/happy_cat_renderer.dart` remains as fallback sample renderer.
@@ -141,6 +144,19 @@ Current coloring pieces:
 	- unknown persisted region IDs => ignored
 	- zero page regions => progress ratio `0`
 
+	### CK-002.6 Polished Content Foundation
+	- Lovely Kitten is added as a new Animals benchmark page using the same `SvgColoringRenderer` pipeline.
+	- Happy Cat remains available as a simpler regression baseline.
+	- CK-002.6 introduces explicit content-authoring constraints documented in `docs/features/CK-002.6-svg-authoring-guide.md`.
+	- Validator hard failures focus on deterministic correctness issues:
+		- duplicate IDs
+		- missing/empty colorable IDs
+		- unsupported geometry usage
+		- unexpected transforms
+		- path metadata/geometry invalidity
+		- model/SVG mismatch
+	- Validator warning diagnostics surface probable usability risks (small targets, overlap, compound/hole-leaning paths) without changing runtime behavior.
+
 ### CK-002.5 Origin-Aware Return Navigation
 - Coloring route accepts optional query metadata:
 	- `source`
@@ -179,6 +195,7 @@ Current coloring pieces:
 	- every model region exists in SVG
 	- every SVG colorable region exists in model
 - Duplicate IDs and metadata issues are surfaced as diagnostic errors without crashing.
+- CK-002.6 content targets path-only assets with `viewBox="0 0 512 512"` and avoids relying on unsupported geometry and transforms.
 
 ## Architectural Guidelines
 - Keep feature logic close to the feature.

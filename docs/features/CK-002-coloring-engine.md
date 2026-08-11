@@ -1,7 +1,7 @@
 # CK-002 Coloring Engine
 
 ## Status
-Implemented baseline, CK-002.1 foundation, CK-002.2 real SVG renderer, CK-002.3 local multi-page catalog foundation, CK-002.4 local save-and-resume progress, and CK-002.5 My Creations Lite.
+Implemented baseline, CK-002.1 foundation, CK-002.2 real SVG renderer, CK-002.3 local multi-page catalog foundation, CK-002.4 local save-and-resume progress, CK-002.5 My Creations Lite, and CK-002.6 Phase 1 polished SVG foundation.
 
 ## Goal
 Provide a child-friendly tap-to-fill coloring experience that is easy to extend into a full content platform.
@@ -61,6 +61,29 @@ CK-002.3 extends this to multiple local Animals pages with stable category/page 
   - Playful Puppy
   - Friendly Lion
   - Cute Elephant
+  - Lovely Kitten (polished benchmark page)
+
+### CK-002.6 Polished SVG Foundation
+- The existing renderer architecture remains unchanged.
+- A reusable SVG content validator now verifies deterministic content contract issues:
+  - duplicate IDs
+  - missing/empty colorable IDs
+  - unsupported geometry presence
+  - unexpected transforms
+  - invalid/missing path metadata
+  - model/SVG region mismatch
+  - malformed or non-hittable colorable geometry
+- Warning-level diagnostics are also produced for likely content risks:
+  - very small colorable bounds
+  - overlapping colorable bounds
+  - compound/hole-leaning colorable paths
+- `Lovely Kitten` is introduced as the Detailed-tier benchmark for polished local content.
+
+### CK-002.6 Complexity Tier Planning
+- Easy: 8-15 colorable regions
+- Standard: 15-30 colorable regions
+- Detailed: 30-50+ colorable regions
+- The tier is currently documentation-level only; no new `ColoringPage` field is required.
 
 ### Interaction Model
 - The child selects a color from a 24-color palette.
@@ -151,6 +174,7 @@ This prototype proves the core interaction model before the app expands into a l
 - Static/non-colorable elements use `data-role="static"`.
 - Optional labels may use `data-region-name`.
 - Region IDs are canonical and must match `ColoringPage.regions` IDs.
+- Production authoring rules are documented in `docs/features/CK-002.6-svg-authoring-guide.md`.
 
 ## Next Planned Enhancement
 Expand from local Animals coverage to broader local category coverage and maintain stable per-page session persistence semantics.
