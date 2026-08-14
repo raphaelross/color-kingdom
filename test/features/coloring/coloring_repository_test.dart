@@ -22,7 +22,14 @@ void main() {
     expect(pages.length, greaterThanOrEqualTo(4));
     expect(
       pages.map((page) => page.id).toList(),
-      ['happy-cat', 'playful-puppy', 'friendly-lion', 'cute-elephant', 'lovely-kitten'],
+      [
+        'happy-cat',
+        'playful-puppy',
+        'friendly-lion',
+        'cute-elephant',
+        'lovely-kitten',
+        'lovely-kitten-raster-poc',
+      ],
     );
   });
 

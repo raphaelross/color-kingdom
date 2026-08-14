@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:color_kingdom/features/coloring/data/sample_coloring_pages.dart';
+import 'package:color_kingdom/features/coloring/models/coloring_page.dart';
 import 'package:color_kingdom/features/coloring/widgets/renderers/svg/svg_coloring_parser.dart';
 import 'package:color_kingdom/features/coloring/widgets/renderers/svg/svg_content_validator.dart';
 
@@ -13,6 +14,10 @@ void main() {
     final validator = SvgContentValidator();
 
     for (final page in sampleColoringPages) {
+      if (page.rendererType != ColoringRendererType.svg) {
+        continue;
+      }
+
       final svg = await rootBundle.loadString(page.assetPath);
       final result = parser.parseAndValidate(svgXml: svg, page: page);
       final report = validator.validate(svgXml: svg, page: page);

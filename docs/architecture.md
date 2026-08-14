@@ -9,6 +9,8 @@ CK-002.5 adds a child-facing My Creations surface that composes existing page me
 
 CK-002.6 Phase 1 adds a polished SVG authoring standard, reusable SVG content validation, and the Lovely Kitten benchmark page without redesigning renderer architecture.
 
+CK-002.6 Phase 2E adds a runtime raster-region renderer proof of concept for Lovely Kitten while preserving the existing SVG implementation.
+
 ## Implemented Architecture Today
 
 ### App Shell
@@ -69,6 +71,8 @@ Current coloring pieces:
 - `widgets/renderers/svg/svg_content_validator.dart` performs reusable deterministic SVG content contract validation and warning diagnostics.
 - `widgets/renderers/svg/svg_region_hit_tester.dart` maps taps into SVG coordinates and resolves region hits.
 - `widgets/renderers/svg/svg_coloring_models.dart` contains SVG renderer-specific internal models.
+- `widgets/renderers/raster_region/raster_region_coloring_renderer.dart` adds the raster-region POC renderer with deterministic region-map lookup.
+- `widgets/renderers/raster_region/raster_region_hit_tester.dart` maps canvas taps to image pixels and region IDs in O(1)-style lookup.
 - `widgets/renderers/happy_cat_renderer.dart` remains as fallback sample renderer.
 - `widgets/color_palette.dart` provides a 24-color palette with a clear selected state.
 - `widgets/coloring_toolbar.dart` provides undo, redo, and clear actions.
@@ -180,6 +184,28 @@ Current coloring pieces:
 - Firebase-backed account and content services
 - AI content generation pipeline
 - Purchase and subscription infrastructure
+
+### CK-002.6 Phase 2E RasterRegion POC
+- `ColoringRendererType` now supports both `svg` and `rasterRegion`.
+- Existing `ColoringController`, undo/redo action history, and `ColoringSession` persistence remain renderer-agnostic.
+- Raster page metadata is represented by `RasterRegionMetadata` on `ColoringPage` and includes:
+	- `regionMapAssetPath`
+	- `contentVersion`
+	- `imageWidth`
+	- `imageHeight`
+	- deterministic `regionMapEntries` mapping encoded RGBA to stable `region-*` IDs
+	- optional `metadataAssetPath` for provenance
+- Raster rendering stack is:
+	- dynamic color layer (derived from region map + current `regionColors`)
+	- original line-art raster image on top (unchanged)
+- Tap flow is:
+	- tap location in canvas coordinates
+	- map to raster pixel coordinates with letterbox-safe math
+	- sample region-map RGBA
+	- decode deterministic region ID
+	- dispatch existing `fillRegion(regionId)` action
+- Phase 2E uses the approved `CHILDREN_DETAILED` profile output for runtime POC and keeps `CHILDREN_SIMPLE` and weighted experiments as non-primary alternatives.
+- SVG Lovely Kitten remains intact as the known-working comparison path.
 
 ### CK-002.4 State Semantics
 - Coloring region colors are persisted locally per page ID.

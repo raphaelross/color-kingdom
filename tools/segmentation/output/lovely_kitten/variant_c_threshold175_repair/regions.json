@@ -1,0 +1,8834 @@
+{
+  "acceptedRegions": [
+    {
+      "areaPercent": 0.10587535069222767,
+      "areaPixels": 1665,
+      "aspectRatio": 0.9692307692307692,
+      "bounds": {
+        "height": 63,
+        "width": 65,
+        "x": 336,
+        "y": 34
+      },
+      "centroid": {
+        "x": 367.72492492492495,
+        "y": 68.44804804804805
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 3,
+      "id": "region-002",
+      "mapColorRgba": [
+        59,
+        89,
+        81,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.30370010504869627,
+      "areaPixels": 4776,
+      "aspectRatio": 0.9090909090909091,
+      "bounds": {
+        "height": 80,
+        "width": 88,
+        "x": 177,
+        "y": 34
+      },
+      "centroid": {
+        "x": 218.12039363484087,
+        "y": 71.52491624790619
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 2,
+      "id": "region-003",
+      "mapColorRgba": [
+        243,
+        199,
+        32,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.13207393596862274,
+      "areaPixels": 2077,
+      "aspectRatio": 0.9649122807017544,
+      "bounds": {
+        "height": 55,
+        "width": 57,
+        "x": 488,
+        "y": 45
+      },
+      "centroid": {
+        "x": 518.30476649013,
+        "y": 71.87385652383244
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 5,
+      "id": "region-004",
+      "mapColorRgba": [
+        136,
+        76,
+        247,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.24678812975167302,
+      "areaPixels": 3881,
+      "aspectRatio": 0.9240506329113924,
+      "bounds": {
+        "height": 73,
+        "width": 79,
+        "x": 683,
+        "y": 40
+      },
+      "centroid": {
+        "x": 719.3831486730224,
+        "y": 74.786652924504
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 4,
+      "id": "region-006",
+      "mapColorRgba": [
+        25,
+        112,
+        21,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.35902236036535584,
+      "areaPixels": 5646,
+      "aspectRatio": 0.978021978021978,
+      "bounds": {
+        "height": 89,
+        "width": 91,
+        "x": 915,
+        "y": 47
+      },
+      "centroid": {
+        "x": 964.8196953595466,
+        "y": 94.16542685086787
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 6,
+      "id": "region-009",
+      "mapColorRgba": [
+        166,
+        237,
+        10,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01977611655572541,
+      "areaPixels": 311,
+      "aspectRatio": 0.9523809523809523,
+      "bounds": {
+        "height": 20,
+        "width": 21,
+        "x": 611,
+        "y": 97
+      },
+      "centroid": {
+        "x": 620.9774919614148,
+        "y": 105.91961414790997
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 11,
+      "id": "region-010",
+      "mapColorRgba": [
+        127,
+        106,
+        217,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.09951647077077255,
+      "areaPixels": 1565,
+      "aspectRatio": 0.9365079365079365,
+      "bounds": {
+        "height": 63,
+        "width": 59,
+        "x": 1039,
+        "y": 137
+      },
+      "centroid": {
+        "x": 1065.8,
+        "y": 167.60127795527157
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 15,
+      "id": "region-015",
+      "mapColorRgba": [
+        21,
+        139,
+        108,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.17595020742666304,
+      "areaPixels": 2767,
+      "aspectRatio": 0.9759036144578314,
+      "bounds": {
+        "height": 83,
+        "width": 81,
+        "x": 56,
+        "y": 133
+      },
+      "centroid": {
+        "x": 98.4904228406216,
+        "y": 175.4257318395374
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 12,
+      "id": "region-017",
+      "mapColorRgba": [
+        250,
+        190,
+        242,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.4652792438528707,
+      "areaPixels": 7317,
+      "aspectRatio": 0.6903225806451613,
+      "bounds": {
+        "height": 155,
+        "width": 107,
+        "x": 763,
+        "y": 136
+      },
+      "centroid": {
+        "x": 833.020500205002,
+        "y": 202.8912122454558
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 14,
+      "id": "region-021",
+      "mapColorRgba": [
+        217,
+        81,
+        182,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.5290588094650656,
+      "areaPixels": 8320,
+      "aspectRatio": 0.9322033898305084,
+      "bounds": {
+        "height": 118,
+        "width": 110,
+        "x": 589,
+        "y": 159
+      },
+      "centroid": {
+        "x": 641.5893028846153,
+        "y": 221.30228365384616
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 17,
+      "id": "region-022",
+      "mapColorRgba": [
+        145,
+        223,
+        5,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.20736307423865127,
+      "areaPixels": 3261,
+      "aspectRatio": 0.8068181818181818,
+      "bounds": {
+        "height": 71,
+        "width": 88,
+        "x": 740,
+        "y": 194
+      },
+      "centroid": {
+        "x": 781.396197485434,
+        "y": 231.18828580190126
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 23,
+      "id": "region-023",
+      "mapColorRgba": [
+        174,
+        68,
+        212,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.14860702376440604,
+      "areaPixels": 2337,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 60,
+        "width": 60,
+        "x": 974,
+        "y": 221
+      },
+      "centroid": {
+        "x": 1003.8562259306804,
+        "y": 250.41934103551563
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 25,
+      "id": "region-025",
+      "mapColorRgba": [
+        63,
+        72,
+        122,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.22917403236924236,
+      "areaPixels": 3604,
+      "aspectRatio": 0.9466666666666667,
+      "bounds": {
+        "height": 71,
+        "width": 75,
+        "x": 684,
+        "y": 237
+      },
+      "centroid": {
+        "x": 717.1662042175361,
+        "y": 274.18368479467256
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 27,
+      "id": "region-028",
+      "mapColorRgba": [
+        68,
+        229,
+        111,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.14275685423666734,
+      "areaPixels": 2245,
+      "aspectRatio": 0.9833333333333333,
+      "bounds": {
+        "height": 60,
+        "width": 59,
+        "x": 38,
+        "y": 249
+      },
+      "centroid": {
+        "x": 66.69888641425389,
+        "y": 278.82449888641423
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 28,
+      "id": "region-029",
+      "mapColorRgba": [
+        29,
+        99,
+        62,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.052397170552790154,
+      "areaPixels": 824,
+      "aspectRatio": 0.9166666666666666,
+      "bounds": {
+        "height": 36,
+        "width": 33,
+        "x": 126,
+        "y": 277
+      },
+      "centroid": {
+        "x": 143.06796116504853,
+        "y": 293.81432038834953
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 32,
+      "id": "region-033",
+      "mapColorRgba": [
+        115,
+        5,
+        226,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.5448924204694888,
+      "areaPixels": 8569,
+      "aspectRatio": 0.9834710743801653,
+      "bounds": {
+        "height": 119,
+        "width": 121,
+        "x": 737,
+        "y": 268
+      },
+      "centroid": {
+        "x": 800.8639281129654,
+        "y": 319.01015287664836
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 31,
+      "id": "region-038",
+      "mapColorRgba": [
+        105,
+        186,
+        117,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.03649997074915236,
+      "areaPixels": 574,
+      "aspectRatio": 0.8378378378378378,
+      "bounds": {
+        "height": 37,
+        "width": 31,
+        "x": 1020,
+        "y": 307
+      },
+      "centroid": {
+        "x": 1035.7961672473868,
+        "y": 324.19337979094075
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 39,
+      "id": "region-042",
+      "mapColorRgba": [
+        76,
+        93,
+        57,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.029378025237122636,
+      "areaPixels": 462,
+      "aspectRatio": 0.7878787878787878,
+      "bounds": {
+        "height": 26,
+        "width": 33,
+        "x": 40,
+        "y": 344
+      },
+      "centroid": {
+        "x": 54.72943722943723,
+        "y": 356.1363636363636
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 52,
+      "id": "region-051",
+      "mapColorRgba": [
+        88,
+        148,
+        112,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.02384579970545668,
+      "areaPixels": 375,
+      "aspectRatio": 0.864406779661017,
+      "bounds": {
+        "height": 59,
+        "width": 51,
+        "x": 738,
+        "y": 328
+      },
+      "centroid": {
+        "x": 763.4933333333333,
+        "y": 363.25866666666667
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 47,
+      "id": "region-055",
+      "mapColorRgba": [
+        190,
+        143,
+        52,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.18129166656068535,
+      "areaPixels": 2851,
+      "aspectRatio": 0.574468085106383,
+      "bounds": {
+        "height": 94,
+        "width": 54,
+        "x": 1048,
+        "y": 323
+      },
+      "centroid": {
+        "x": 1076.2988425113995,
+        "y": 370.9049456331112
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 43,
+      "id": "region-056",
+      "mapColorRgba": [
+        119,
+        52,
+        139,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11636750256262861,
+      "areaPixels": 1830,
+      "aspectRatio": 0.7692307692307693,
+      "bounds": {
+        "height": 50,
+        "width": 65,
+        "x": 933,
+        "y": 368
+      },
+      "centroid": {
+        "x": 964.3737704918033,
+        "y": 391.89562841530056
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 59,
+      "id": "region-060",
+      "mapColorRgba": [
+        85,
+        47,
+        79,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.15420283809528654,
+      "areaPixels": 2425,
+      "aspectRatio": 0.8611111111111112,
+      "bounds": {
+        "height": 72,
+        "width": 62,
+        "x": 121,
+        "y": 360
+      },
+      "centroid": {
+        "x": 156.4362886597938,
+        "y": 393.9579381443299
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 57,
+      "id": "region-062",
+      "mapColorRgba": [
+        58,
+        210,
+        237,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 14.593565830940275,
+      "areaPixels": 229499,
+      "aspectRatio": 0.8904694167852063,
+      "bounds": {
+        "height": 626,
+        "width": 703,
+        "x": 211,
+        "y": 94
+      },
+      "centroid": {
+        "x": 538.8146832883804,
+        "y": 422.84487949838564
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 10,
+      "id": "region-065",
+      "mapColorRgba": [
+        64,
+        79,
+        194,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.15922635323323608,
+      "areaPixels": 2504,
+      "aspectRatio": 0.8194444444444444,
+      "bounds": {
+        "height": 72,
+        "width": 59,
+        "x": 38,
+        "y": 399
+      },
+      "centroid": {
+        "x": 64.31070287539936,
+        "y": 430.7563897763578
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 66,
+      "id": "region-066",
+      "mapColorRgba": [
+        24,
+        245,
+        145,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.19400942640359556,
+      "areaPixels": 3051,
+      "aspectRatio": 0.9411764705882353,
+      "bounds": {
+        "height": 68,
+        "width": 64,
+        "x": 1019,
+        "y": 420
+      },
+      "centroid": {
+        "x": 1049.968534906588,
+        "y": 450.4818092428712
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 68,
+      "id": "region-068",
+      "mapColorRgba": [
+        233,
+        249,
+        55,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.20303903589206185,
+      "areaPixels": 3193,
+      "aspectRatio": 0.9850746268656716,
+      "bounds": {
+        "height": 66,
+        "width": 67,
+        "x": 93,
+        "y": 421
+      },
+      "centroid": {
+        "x": 125.2680864390855,
+        "y": 451.88631381146257
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 67,
+      "id": "region-069",
+      "mapColorRgba": [
+        166,
+        102,
+        134,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.037453802737370624,
+      "areaPixels": 589,
+      "aspectRatio": 0.9142857142857143,
+      "bounds": {
+        "height": 32,
+        "width": 35,
+        "x": 1082,
+        "y": 439
+      },
+      "centroid": {
+        "x": 1099.4634974533108,
+        "y": 453.9269949066214
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 70,
+      "id": "region-070",
+      "mapColorRgba": [
+        126,
+        236,
+        85,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1909571640412971,
+      "areaPixels": 3003,
+      "aspectRatio": 0.8985507246376812,
+      "bounds": {
+        "height": 62,
+        "width": 69,
+        "x": 949,
+        "y": 433
+      },
+      "centroid": {
+        "x": 981.2750582750583,
+        "y": 463.1495171495171
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 69,
+      "id": "region-072",
+      "mapColorRgba": [
+        207,
+        147,
+        251,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.16838314032013146,
+      "areaPixels": 2648,
+      "aspectRatio": 0.8405797101449275,
+      "bounds": {
+        "height": 58,
+        "width": 69,
+        "x": 142,
+        "y": 446
+      },
+      "centroid": {
+        "x": 179.15747734138972,
+        "y": 475.3285498489426
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 72,
+      "id": "region-076",
+      "mapColorRgba": [
+        45,
+        138,
+        191,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.19400942640359556,
+      "areaPixels": 3051,
+      "aspectRatio": 0.8533333333333334,
+      "bounds": {
+        "height": 64,
+        "width": 75,
+        "x": 23,
+        "y": 463
+      },
+      "centroid": {
+        "x": 56.03212061619141,
+        "y": 493.76073418551294
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 73,
+      "id": "region-078",
+      "mapColorRgba": [
+        178,
+        185,
+        221,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.043367561064323885,
+      "areaPixels": 682,
+      "aspectRatio": 0.9545454545454546,
+      "bounds": {
+        "height": 42,
+        "width": 44,
+        "x": 1011,
+        "y": 481
+      },
+      "centroid": {
+        "x": 1035.2903225806451,
+        "y": 499.1011730205279
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 79,
+      "id": "region-080",
+      "mapColorRgba": [
+        3,
+        173,
+        99,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.14250249903980913,
+      "areaPixels": 2241,
+      "aspectRatio": 0.8709677419354839,
+      "bounds": {
+        "height": 54,
+        "width": 62,
+        "x": 1057,
+        "y": 476
+      },
+      "centroid": {
+        "x": 1090.3873270861222,
+        "y": 500.475234270415
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 78,
+      "id": "region-081",
+      "mapColorRgba": [
+        216,
+        43,
+        50,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.07261840870301742,
+      "areaPixels": 1142,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 38,
+        "width": 38,
+        "x": 653,
+        "y": 482
+      },
+      "centroid": {
+        "x": 671.8309982486866,
+        "y": 500.7793345008757
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 80,
+      "id": "region-082",
+      "mapColorRgba": [
+        145,
+        80,
+        129,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05754786328916879,
+      "areaPixels": 905,
+      "aspectRatio": 0.9166666666666666,
+      "bounds": {
+        "height": 44,
+        "width": 48,
+        "x": 97,
+        "y": 487
+      },
+      "centroid": {
+        "x": 120.85524861878453,
+        "y": 509.3723756906077
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 82,
+      "id": "region-084",
+      "mapColorRgba": [
+        102,
+        68,
+        39,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.18625159289942034,
+      "areaPixels": 2929,
+      "aspectRatio": 0.927536231884058,
+      "bounds": {
+        "height": 64,
+        "width": 69,
+        "x": 945,
+        "y": 493
+      },
+      "centroid": {
+        "x": 974.5360191191533,
+        "y": 522.8251963127348
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 83,
+      "id": "region-086",
+      "mapColorRgba": [
+        247,
+        75,
+        69,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.06587799598627499,
+      "areaPixels": 1036,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 36,
+        "width": 36,
+        "x": 411,
+        "y": 512
+      },
+      "centroid": {
+        "x": 428.37258687258685,
+        "y": 529.4874517374517
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 89,
+      "id": "region-088",
+      "mapColorRgba": [
+        68,
+        126,
+        235,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.19521761358867204,
+      "areaPixels": 3070,
+      "aspectRatio": 0.8767123287671232,
+      "bounds": {
+        "height": 64,
+        "width": 73,
+        "x": 142,
+        "y": 502
+      },
+      "centroid": {
+        "x": 183.05537459283389,
+        "y": 530.2814332247557
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 87,
+      "id": "region-089",
+      "mapColorRgba": [
+        28,
+        228,
+        186,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.15598332447329397,
+      "areaPixels": 2453,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 61,
+        "width": 61,
+        "x": 1044,
+        "y": 518
+      },
+      "centroid": {
+        "x": 1075.948226661231,
+        "y": 548.4333469221361
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 91,
+      "id": "region-091",
+      "mapColorRgba": [
+        237,
+        235,
+        216,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11700339055477411,
+      "areaPixels": 1840,
+      "aspectRatio": 0.5904761904761905,
+      "bounds": {
+        "height": 105,
+        "width": 62,
+        "x": 373,
+        "y": 496
+      },
+      "centroid": {
+        "x": 389.89728260869566,
+        "y": 550.8239130434782
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 84,
+      "id": "region-094",
+      "mapColorRgba": [
+        11,
+        4,
+        205,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.2457707089642402,
+      "areaPixels": 3865,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 74,
+        "width": 74,
+        "x": 37,
+        "y": 518
+      },
+      "centroid": {
+        "x": 72.50633893919793,
+        "y": 554.3109961190169
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 90,
+      "id": "region-095",
+      "mapColorRgba": [
+        195,
+        130,
+        156,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.19807910955332683,
+      "areaPixels": 3115,
+      "aspectRatio": 0.8970588235294118,
+      "bounds": {
+        "height": 68,
+        "width": 61,
+        "x": 991,
+        "y": 524
+      },
+      "centroid": {
+        "x": 1021.5592295345105,
+        "y": 560.099518459069
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 92,
+      "id": "region-098",
+      "mapColorRgba": [
+        105,
+        63,
+        241,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.2328621827236863,
+      "areaPixels": 3662,
+      "aspectRatio": 0.88,
+      "bounds": {
+        "height": 75,
+        "width": 66,
+        "x": 107,
+        "y": 531
+      },
+      "centroid": {
+        "x": 138.15729109776078,
+        "y": 570.8230475150191
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 95,
+      "id": "region-102",
+      "mapColorRgba": [
+        79,
+        214,
+        181,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01589719980363779,
+      "areaPixels": 250,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 43,
+        "width": 43,
+        "x": 397,
+        "y": 556
+      },
+      "centroid": {
+        "x": 411.764,
+        "y": 582.468
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 100,
+      "id": "region-105",
+      "mapColorRgba": [
+        149,
+        67,
+        170,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1355077311262085,
+      "areaPixels": 2131,
+      "aspectRatio": 0.5797101449275363,
+      "bounds": {
+        "height": 40,
+        "width": 69,
+        "x": 694,
+        "y": 583
+      },
+      "centroid": {
+        "x": 727.6677616142656,
+        "y": 602.422806194275
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 109,
+      "id": "region-112",
+      "mapColorRgba": [
+        16,
+        151,
+        67,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05945552726560533,
+      "areaPixels": 935,
+      "aspectRatio": 0.4714285714285714,
+      "bounds": {
+        "height": 70,
+        "width": 33,
+        "x": 1041,
+        "y": 577
+      },
+      "centroid": {
+        "x": 1061.9251336898396,
+        "y": 603.8342245989305
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 106,
+      "id": "region-113",
+      "mapColorRgba": [
+        41,
+        29,
+        18,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.09875340518019793,
+      "areaPixels": 1553,
+      "aspectRatio": 0.41237113402061853,
+      "bounds": {
+        "height": 97,
+        "width": 40,
+        "x": 79,
+        "y": 588
+      },
+      "centroid": {
+        "x": 92.22279459111397,
+        "y": 622.7153895685769
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 113,
+      "id": "region-114",
+      "mapColorRgba": [
+        225,
+        154,
+        225,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05888322807267437,
+      "areaPixels": 926,
+      "aspectRatio": 0.6470588235294118,
+      "bounds": {
+        "height": 51,
+        "width": 33,
+        "x": 1086,
+        "y": 599
+      },
+      "centroid": {
+        "x": 1103.7127429805616,
+        "y": 624.450323974082
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 118,
+      "id": "region-115",
+      "mapColorRgba": [
+        190,
+        0,
+        176,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1763953290211649,
+      "areaPixels": 2774,
+      "aspectRatio": 0.9393939393939394,
+      "bounds": {
+        "height": 62,
+        "width": 66,
+        "x": 915,
+        "y": 594
+      },
+      "centroid": {
+        "x": 944.6456380677722,
+        "y": 624.7170151405912
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 116,
+      "id": "region-116",
+      "mapColorRgba": [
+        118,
+        142,
+        7,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11426907218854841,
+      "areaPixels": 1797,
+      "aspectRatio": 0.5846153846153846,
+      "bounds": {
+        "height": 38,
+        "width": 65,
+        "x": 373,
+        "y": 618
+      },
+      "centroid": {
+        "x": 405.4045631608236,
+        "y": 637.1012799109627
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 121,
+      "id": "region-118",
+      "mapColorRgba": [
+        199,
+        189,
+        165,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0883884309082261,
+      "areaPixels": 1390,
+      "aspectRatio": 0.7457627118644068,
+      "bounds": {
+        "height": 59,
+        "width": 44,
+        "x": 20,
+        "y": 609
+      },
+      "centroid": {
+        "x": 39.610791366906476,
+        "y": 637.3244604316546
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 119,
+      "id": "region-119",
+      "mapColorRgba": [
+        156,
+        59,
+        116,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.07662450305353415,
+      "areaPixels": 1205,
+      "aspectRatio": 0.6440677966101694,
+      "bounds": {
+        "height": 59,
+        "width": 38,
+        "x": 1022,
+        "y": 617
+      },
+      "centroid": {
+        "x": 1039.5427385892117,
+        "y": 645.4838174273859
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 120,
+      "id": "region-121",
+      "mapColorRgba": [
+        109,
+        46,
+        154,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05945552726560533,
+      "areaPixels": 935,
+      "aspectRatio": 0.7380952380952381,
+      "bounds": {
+        "height": 31,
+        "width": 42,
+        "x": 549,
+        "y": 640
+      },
+      "centroid": {
+        "x": 569.4171122994652,
+        "y": 654.6930481283423
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 125,
+      "id": "region-122",
+      "mapColorRgba": [
+        58,
+        84,
+        105,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.020030471752583615,
+      "areaPixels": 315,
+      "aspectRatio": 0.2,
+      "bounds": {
+        "height": 130,
+        "width": 26,
+        "x": 1055,
+        "y": 586
+      },
+      "centroid": {
+        "x": 1071.3746031746032,
+        "y": 656.2095238095238
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 112,
+      "id": "region-123",
+      "mapColorRgba": [
+        242,
+        210,
+        56,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.07815063423468337,
+      "areaPixels": 1229,
+      "aspectRatio": 0.704225352112676,
+      "bounds": {
+        "height": 71,
+        "width": 50,
+        "x": 94,
+        "y": 631
+      },
+      "centroid": {
+        "x": 116.45077298616762,
+        "y": 658.2229454841334
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 123,
+      "id": "region-124",
+      "mapColorRgba": [
+        139,
+        91,
+        143,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01710538698871426,
+      "areaPixels": 269,
+      "aspectRatio": 0.8947368421052632,
+      "bounds": {
+        "height": 17,
+        "width": 19,
+        "x": 856,
+        "y": 667
+      },
+      "centroid": {
+        "x": 864.8029739776952,
+        "y": 674.4163568773234
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 129,
+      "id": "region-128",
+      "mapColorRgba": [
+        233,
+        114,
+        179,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.02658011807168238,
+      "areaPixels": 418,
+      "aspectRatio": 0.22377622377622378,
+      "bounds": {
+        "height": 143,
+        "width": 32,
+        "x": 71,
+        "y": 599
+      },
+      "centroid": {
+        "x": 80.13875598086125,
+        "y": 674.4712918660288
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 117,
+      "id": "region-129",
+      "mapColorRgba": [
+        161,
+        248,
+        2,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.04845466500148798,
+      "areaPixels": 762,
+      "aspectRatio": 0.8541666666666666,
+      "bounds": {
+        "height": 48,
+        "width": 41,
+        "x": 102,
+        "y": 657
+      },
+      "centroid": {
+        "x": 123.00656167979002,
+        "y": 679.3425196850394
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 127,
+      "id": "region-132",
+      "mapColorRgba": [
+        207,
+        21,
+        119,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.2729867150280681,
+      "areaPixels": 4293,
+      "aspectRatio": 0.6,
+      "bounds": {
+        "height": 110,
+        "width": 66,
+        "x": 158,
+        "y": 631
+      },
+      "centroid": {
+        "x": 191.5206149545772,
+        "y": 684.3489401351037
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 124,
+      "id": "region-133",
+      "mapColorRgba": [
+        135,
+        146,
+        198,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.09474731082968121,
+      "areaPixels": 1490,
+      "aspectRatio": 0.9423076923076923,
+      "bounds": {
+        "height": 52,
+        "width": 49,
+        "x": 1070,
+        "y": 686
+      },
+      "centroid": {
+        "x": 1093.2510067114094,
+        "y": 710.3651006711409
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 138,
+      "id": "region-138",
+      "mapColorRgba": [
+        178,
+        51,
+        89,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.6554097535043787,
+      "areaPixels": 10307,
+      "aspectRatio": 0.7686567164179104,
+      "bounds": {
+        "height": 103,
+        "width": 134,
+        "x": 636,
+        "y": 679
+      },
+      "centroid": {
+        "x": 704.4715242068497,
+        "y": 729.3873095954206
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 135,
+      "id": "region-142",
+      "mapColorRgba": [
+        144,
+        42,
+        29,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.6556641087012369,
+      "areaPixels": 10311,
+      "aspectRatio": 0.7761194029850746,
+      "bounds": {
+        "height": 104,
+        "width": 134,
+        "x": 360,
+        "y": 681
+      },
+      "centroid": {
+        "x": 424.5434972359616,
+        "y": 731.4611579866163
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 137,
+      "id": "region-143",
+      "mapColorRgba": [
+        169,
+        83,
+        236,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11471419378305028,
+      "areaPixels": 1804,
+      "aspectRatio": 0.3821138211382114,
+      "bounds": {
+        "height": 47,
+        "width": 123,
+        "x": 508,
+        "y": 715
+      },
+      "centroid": {
+        "x": 569.6330376940133,
+        "y": 734.4844789356985
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 147,
+      "id": "region-144",
+      "mapColorRgba": [
+        97,
+        217,
+        163,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.14638141579189676,
+      "areaPixels": 2302,
+      "aspectRatio": 0.6582278481012658,
+      "bounds": {
+        "height": 79,
+        "width": 52,
+        "x": 126,
+        "y": 706
+      },
+      "centroid": {
+        "x": 151.374022589053,
+        "y": 749.7419635099914
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 142,
+      "id": "region-146",
+      "mapColorRgba": [
+        246,
+        204,
+        193,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1183387553382797,
+      "areaPixels": 1861,
+      "aspectRatio": 0.48872180451127817,
+      "bounds": {
+        "height": 65,
+        "width": 133,
+        "x": 497,
+        "y": 732
+      },
+      "centroid": {
+        "x": 564.3836646963998,
+        "y": 758.1606663084364
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 150,
+      "id": "region-151",
+      "mapColorRgba": [
+        237,
+        109,
+        84,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.5089647489132675,
+      "areaPixels": 8004,
+      "aspectRatio": 0.8373205741626795,
+      "bounds": {
+        "height": 209,
+        "width": 175,
+        "x": 188,
+        "y": 675
+      },
+      "centroid": {
+        "x": 288.5970764617691,
+        "y": 769.01011994003
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 132,
+      "id": "region-153",
+      "mapColorRgba": [
+        114,
+        16,
+        250,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11725774575163232,
+      "areaPixels": 1844,
+      "aspectRatio": 0.9423076923076923,
+      "bounds": {
+        "height": 49,
+        "width": 52,
+        "x": 73,
+        "y": 748
+      },
+      "centroid": {
+        "x": 97.13611713665944,
+        "y": 772.1187635574837
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 154,
+      "id": "region-156",
+      "mapColorRgba": [
+        155,
+        141,
+        239,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.16488575636333114,
+      "areaPixels": 2593,
+      "aspectRatio": 0.3615819209039548,
+      "bounds": {
+        "height": 64,
+        "width": 177,
+        "x": 477,
+        "y": 760
+      },
+      "centroid": {
+        "x": 565.3324334747397,
+        "y": 783.4342460470498
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 157,
+      "id": "region-159",
+      "mapColorRgba": [
+        33,
+        62,
+        220,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.7921892606148782,
+      "areaPixels": 12458,
+      "aspectRatio": 0.5111111111111111,
+      "bounds": {
+        "height": 225,
+        "width": 115,
+        "x": 745,
+        "y": 676
+      },
+      "centroid": {
+        "x": 806.7241932894526,
+        "y": 790.1179161984268
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 134,
+      "id": "region-160",
+      "mapColorRgba": [
+        249,
+        164,
+        147,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.055513021714303154,
+      "areaPixels": 873,
+      "aspectRatio": 0.9722222222222222,
+      "bounds": {
+        "height": 35,
+        "width": 36,
+        "x": 119,
+        "y": 781
+      },
+      "centroid": {
+        "x": 137.32187857961054,
+        "y": 798.0057273768614
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 164,
+      "id": "region-164",
+      "mapColorRgba": [
+        220,
+        95,
+        87,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11490496018069392,
+      "areaPixels": 1807,
+      "aspectRatio": 0.9607843137254902,
+      "bounds": {
+        "height": 49,
+        "width": 51,
+        "x": 154,
+        "y": 781
+      },
+      "centroid": {
+        "x": 180.70448256779193,
+        "y": 804.8682899833979
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 165,
+      "id": "region-166",
+      "mapColorRgba": [
+        173,
+        66,
+        245,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.4060780717841237,
+      "areaPixels": 6386,
+      "aspectRatio": 0.4090909090909091,
+      "bounds": {
+        "height": 176,
+        "width": 72,
+        "x": 299,
+        "y": 725
+      },
+      "centroid": {
+        "x": 333.6658315064203,
+        "y": 810.5869088631381
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 149,
+      "id": "region-167",
+      "mapColorRgba": [
+        101,
+        200,
+        68,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.03503742836721769,
+      "areaPixels": 551,
+      "aspectRatio": 0.675,
+      "bounds": {
+        "height": 40,
+        "width": 27,
+        "x": 27,
+        "y": 791
+      },
+      "centroid": {
+        "x": 37.936479128856625,
+        "y": 814.595281306715
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 170,
+      "id": "region-168",
+      "mapColorRgba": [
+        50,
+        118,
+        27,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.10403127551500568,
+      "areaPixels": 1636,
+      "aspectRatio": 0.9215686274509803,
+      "bounds": {
+        "height": 47,
+        "width": 51,
+        "x": 73,
+        "y": 801
+      },
+      "centroid": {
+        "x": 95.5385085574572,
+        "y": 823.880195599022
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 174,
+      "id": "region-170",
+      "mapColorRgba": [
+        131,
+        101,
+        185,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 2.4985946875373584,
+      "areaPixels": 39293,
+      "aspectRatio": 0.7281879194630873,
+      "bounds": {
+        "height": 298,
+        "width": 217,
+        "x": 876,
+        "y": 688
+      },
+      "centroid": {
+        "x": 988.5381111139388,
+        "y": 826.6416155549334
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 139,
+      "id": "region-171",
+      "mapColorRgba": [
+        91,
+        227,
+        8,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11541367057441033,
+      "areaPixels": 1815,
+      "aspectRatio": 0.9411764705882353,
+      "bounds": {
+        "height": 51,
+        "width": 48,
+        "x": 118,
+        "y": 817
+      },
+      "centroid": {
+        "x": 141.40275482093665,
+        "y": 843.6159779614325
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 175,
+      "id": "region-179",
+      "mapColorRgba": [
+        159,
+        188,
+        240,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1928012392185191,
+      "areaPixels": 3032,
+      "aspectRatio": 0.8390804597701149,
+      "bounds": {
+        "height": 73,
+        "width": 87,
+        "x": 186,
+        "y": 831
+      },
+      "centroid": {
+        "x": 242.29419525065964,
+        "y": 863.0854221635884
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 178,
+      "id": "region-185",
+      "mapColorRgba": [
+        67,
+        90,
+        218,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.14510963980760574,
+      "areaPixels": 2282,
+      "aspectRatio": 0.27647058823529413,
+      "bounds": {
+        "height": 170,
+        "width": 47,
+        "x": 738,
+        "y": 781
+      },
+      "centroid": {
+        "x": 764.1082383873795,
+        "y": 868.1954425942156
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 166,
+      "id": "region-187",
+      "mapColorRgba": [
+        208,
+        78,
+        120,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.13595285272071037,
+      "areaPixels": 2138,
+      "aspectRatio": 0.2556818181818182,
+      "bounds": {
+        "height": 176,
+        "width": 45,
+        "x": 352,
+        "y": 786
+      },
+      "centroid": {
+        "x": 371.45930776426565,
+        "y": 873.2352666043031
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 167,
+      "id": "region-188",
+      "mapColorRgba": [
+        232,
+        247,
+        207,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.053223824942579316,
+      "areaPixels": 837,
+      "aspectRatio": 0.9512195121951219,
+      "bounds": {
+        "height": 39,
+        "width": 41,
+        "x": 79,
+        "y": 860
+      },
+      "centroid": {
+        "x": 99.1326164874552,
+        "y": 876.1600955794504
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 192,
+      "id": "region-190",
+      "mapColorRgba": [
+        121,
+        251,
+        109,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11153475382232272,
+      "areaPixels": 1754,
+      "aspectRatio": 0.9615384615384616,
+      "bounds": {
+        "height": 50,
+        "width": 52,
+        "x": 179,
+        "y": 857
+      },
+      "centroid": {
+        "x": 207.56214367160774,
+        "y": 880.6527936145952
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 190,
+      "id": "region-192",
+      "mapColorRgba": [
+        206,
+        238,
+        243,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.03535537236329044,
+      "areaPixels": 556,
+      "aspectRatio": 0.7741935483870968,
+      "bounds": {
+        "height": 62,
+        "width": 48,
+        "x": 129,
+        "y": 867
+      },
+      "centroid": {
+        "x": 152.70323741007195,
+        "y": 889.7212230215828
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 194,
+      "id": "region-194",
+      "mapColorRgba": [
+        95,
+        146,
+        17,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 3.3156471686451265,
+      "areaPixels": 52142,
+      "aspectRatio": 0.8841463414634146,
+      "bounds": {
+        "height": 290,
+        "width": 328,
+        "x": 404,
+        "y": 779
+      },
+      "centroid": {
+        "x": 566.9851750987688,
+        "y": 900.1029112807333
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 163,
+      "id": "region-196",
+      "mapColorRgba": [
+        44,
+        129,
+        183,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.09080480527837904,
+      "areaPixels": 1428,
+      "aspectRatio": 0.6764705882352942,
+      "bounds": {
+        "height": 68,
+        "width": 46,
+        "x": 1070,
+        "y": 870
+      },
+      "centroid": {
+        "x": 1096.922969187675,
+        "y": 901.4663865546219
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 198,
+      "id": "region-197",
+      "mapColorRgba": [
+        229,
+        15,
+        6,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.7679619281141342,
+      "areaPixels": 12077,
+      "aspectRatio": 0.8928571428571429,
+      "bounds": {
+        "height": 125,
+        "width": 140,
+        "x": 499,
+        "y": 860
+      },
+      "centroid": {
+        "x": 568.6444481245343,
+        "y": 912.6843586983522
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 193,
+      "id": "region-199",
+      "mapColorRgba": [
+        74,
+        50,
+        164,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.03522819476486134,
+      "areaPixels": 554,
+      "aspectRatio": 0.26666666666666666,
+      "bounds": {
+        "height": 16,
+        "width": 60,
+        "x": 203,
+        "y": 907
+      },
+      "centroid": {
+        "x": 231.80505415162455,
+        "y": 914.4783393501805
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 205,
+      "id": "region-200",
+      "mapColorRgba": [
+        2,
+        184,
+        123,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.3018560298714743,
+      "areaPixels": 4747,
+      "aspectRatio": 0.9368421052631579,
+      "bounds": {
+        "height": 95,
+        "width": 89,
+        "x": 24,
+        "y": 870
+      },
+      "centroid": {
+        "x": 64.21297661681062,
+        "y": 914.6823256793765
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 196,
+      "id": "region-201",
+      "mapColorRgba": [
+        219,
+        33,
+        202,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01659667659499785,
+      "areaPixels": 261,
+      "aspectRatio": 0.4722222222222222,
+      "bounds": {
+        "height": 36,
+        "width": 17,
+        "x": 107,
+        "y": 900
+      },
+      "centroid": {
+        "x": 117.66666666666667,
+        "y": 915.9272030651341
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 204,
+      "id": "region-202",
+      "mapColorRgba": [
+        147,
+        175,
+        153,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.13302776795684101,
+      "areaPixels": 2092,
+      "aspectRatio": 0.7435897435897436,
+      "bounds": {
+        "height": 78,
+        "width": 58,
+        "x": 140,
+        "y": 883
+      },
+      "centroid": {
+        "x": 169.95506692160612,
+        "y": 916.6118546845124
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 201,
+      "id": "region-204",
+      "mapColorRgba": [
+        97,
+        83,
+        63,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.39240647995299516,
+      "areaPixels": 6171,
+      "aspectRatio": 0.9318181818181818,
+      "bounds": {
+        "height": 132,
+        "width": 123,
+        "x": 252,
+        "y": 882
+      },
+      "centroid": {
+        "x": 300.7102576567817,
+        "y": 933.7569275644142
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 202,
+      "id": "region-207",
+      "mapColorRgba": [
+        142,
+        204,
+        44,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.7355952293139277,
+      "areaPixels": 11568,
+      "aspectRatio": 0.8216216216216217,
+      "bounds": {
+        "height": 304,
+        "width": 370,
+        "x": 383,
+        "y": 787
+      },
+      "centroid": {
+        "x": 567.5937067773167,
+        "y": 945.7098893499308
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 168,
+      "id": "region-211",
+      "mapColorRgba": [
+        236,
+        230,
+        208,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.07637014785667594,
+      "areaPixels": 1201,
+      "aspectRatio": 0.7843137254901961,
+      "bounds": {
+        "height": 51,
+        "width": 40,
+        "x": 213,
+        "y": 924
+      },
+      "centroid": {
+        "x": 232.90757701915072,
+        "y": 948.0566194837635
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 210,
+      "id": "region-213",
+      "mapColorRgba": [
+        125,
+        234,
+        118,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.07656091425431959,
+      "areaPixels": 1204,
+      "aspectRatio": 0.9591836734693877,
+      "bounds": {
+        "height": 47,
+        "width": 49,
+        "x": 172,
+        "y": 926
+      },
+      "centroid": {
+        "x": 198.01661129568106,
+        "y": 949.0897009966777
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 212,
+      "id": "region-214",
+      "mapColorRgba": [
+        10,
+        19,
+        197,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.6656475501779214,
+      "areaPixels": 10468,
+      "aspectRatio": 0.7473684210526316,
+      "bounds": {
+        "height": 190,
+        "width": 142,
+        "x": 766,
+        "y": 879
+      },
+      "centroid": {
+        "x": 852.6923958731372,
+        "y": 952.0293274742071
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 200,
+      "id": "region-215",
+      "mapColorRgba": [
+        194,
+        153,
+        148,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.08985097329016078,
+      "areaPixels": 1413,
+      "aspectRatio": 0.6666666666666666,
+      "bounds": {
+        "height": 40,
+        "width": 60,
+        "x": 1056,
+        "y": 938
+      },
+      "centroid": {
+        "x": 1086.45364472753,
+        "y": 955.3389950460014
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 214,
+      "id": "region-218",
+      "mapColorRgba": [
+        104,
+        10,
+        137,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1705451594934262,
+      "areaPixels": 2682,
+      "aspectRatio": 0.96875,
+      "bounds": {
+        "height": 62,
+        "width": 64,
+        "x": 96,
+        "y": 935
+      },
+      "centroid": {
+        "x": 127.33706189410887,
+        "y": 963.561894108874
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 213,
+      "id": "region-219",
+      "mapColorRgba": [
+        32,
+        176,
+        88,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01869510696907804,
+      "areaPixels": 294,
+      "aspectRatio": 0.8125,
+      "bounds": {
+        "height": 26,
+        "width": 32,
+        "x": 395,
+        "y": 964
+      },
+      "centroid": {
+        "x": 412.7312925170068,
+        "y": 975.204081632653
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 225,
+      "id": "region-221",
+      "mapColorRgba": [
+        177,
+        167,
+        254,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.10784660346787875,
+      "areaPixels": 1696,
+      "aspectRatio": 0.9056603773584906,
+      "bounds": {
+        "height": 53,
+        "width": 48,
+        "x": 1005,
+        "y": 956
+      },
+      "centroid": {
+        "x": 1029.3343160377358,
+        "y": 981.152712264151
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 222,
+      "id": "region-223",
+      "mapColorRgba": [
+        6,
+        171,
+        28,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11630391376341406,
+      "areaPixels": 1829,
+      "aspectRatio": 0.75,
+      "bounds": {
+        "height": 54,
+        "width": 72,
+        "x": 25,
+        "y": 963
+      },
+      "centroid": {
+        "x": 57.29196282121378,
+        "y": 983.5882996172772
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 223,
+      "id": "region-225",
+      "mapColorRgba": [
+        148,
+        94,
+        162,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.04324038346589478,
+      "areaPixels": 680,
+      "aspectRatio": 0.8717948717948718,
+      "bounds": {
+        "height": 39,
+        "width": 34,
+        "x": 211,
+        "y": 971
+      },
+      "centroid": {
+        "x": 226.67205882352943,
+        "y": 988.6058823529412
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 227,
+      "id": "region-226",
+      "mapColorRgba": [
+        172,
+        196,
+        113,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11999206411785802,
+      "areaPixels": 1887,
+      "aspectRatio": 0.8392857142857143,
+      "bounds": {
+        "height": 47,
+        "width": 56,
+        "x": 155,
+        "y": 969
+      },
+      "centroid": {
+        "x": 183.80286168521462,
+        "y": 992.0074191838897
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 226,
+      "id": "region-227",
+      "mapColorRgba": [
+        101,
+        77,
+        192,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.04304961706825113,
+      "areaPixels": 677,
+      "aspectRatio": 0.6944444444444444,
+      "bounds": {
+        "height": 36,
+        "width": 25,
+        "x": 737,
+        "y": 984
+      },
+      "centroid": {
+        "x": 748.8567208271787,
+        "y": 1001.357459379616
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 233,
+      "id": "region-230",
+      "mapColorRgba": [
+        130,
+        255,
+        53,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.04298602826903658,
+      "areaPixels": 676,
+      "aspectRatio": 0.6944444444444444,
+      "bounds": {
+        "height": 36,
+        "width": 25,
+        "x": 357,
+        "y": 984
+      },
+      "centroid": {
+        "x": 368.88757396449705,
+        "y": 1001.4733727810651
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 232,
+      "id": "region-231",
+      "mapColorRgba": [
+        91,
+        100,
+        132,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.03573690515857775,
+      "areaPixels": 562,
+      "aspectRatio": 0.5952380952380952,
+      "bounds": {
+        "height": 25,
+        "width": 42,
+        "x": 908,
+        "y": 991
+      },
+      "centroid": {
+        "x": 924.6868327402135,
+        "y": 1003.4839857651245
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 240,
+      "id": "region-232",
+      "mapColorRgba": [
+        19,
+        226,
+        91,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1610068396112435,
+      "areaPixels": 2532,
+      "aspectRatio": 0.8923076923076924,
+      "bounds": {
+        "height": 65,
+        "width": 58,
+        "x": 1045,
+        "y": 973
+      },
+      "centroid": {
+        "x": 1074.8522906793048,
+        "y": 1004.8301737756714
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 228,
+      "id": "region-233",
+      "mapColorRgba": [
+        40,
+        104,
+        42,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.02467245409524585,
+      "areaPixels": 388,
+      "aspectRatio": 0.90625,
+      "bounds": {
+        "height": 29,
+        "width": 32,
+        "x": 222,
+        "y": 990
+      },
+      "centroid": {
+        "x": 241.5,
+        "y": 1006.8247422680413
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 239,
+      "id": "region-234",
+      "mapColorRgba": [
+        224,
+        145,
+        249,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1177028673461342,
+      "areaPixels": 1851,
+      "aspectRatio": 0.9107142857142857,
+      "bounds": {
+        "height": 51,
+        "width": 56,
+        "x": 954,
+        "y": 982
+      },
+      "centroid": {
+        "x": 980.267963263101,
+        "y": 1007.1172339276067
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 231,
+      "id": "region-235",
+      "mapColorRgba": [
+        185,
+        31,
+        72,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05150692736378644,
+      "areaPixels": 810,
+      "aspectRatio": 0.7,
+      "bounds": {
+        "height": 40,
+        "width": 28,
+        "x": 778,
+        "y": 988
+      },
+      "centroid": {
+        "x": 791.204938271605,
+        "y": 1007.4246913580247
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 237,
+      "id": "region-236",
+      "mapColorRgba": [
+        113,
+        133,
+        31,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.050807450572426374,
+      "areaPixels": 799,
+      "aspectRatio": 0.717948717948718,
+      "bounds": {
+        "height": 39,
+        "width": 28,
+        "x": 313,
+        "y": 989
+      },
+      "centroid": {
+        "x": 326.57697121401753,
+        "y": 1007.7897371714644
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 236,
+      "id": "region-237",
+      "mapColorRgba": [
+        14,
+        2,
+        238,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.04355832746196754,
+      "areaPixels": 685,
+      "aspectRatio": 0.9210526315789473,
+      "bounds": {
+        "height": 35,
+        "width": 38,
+        "x": 120,
+        "y": 991
+      },
+      "centroid": {
+        "x": 138.34598540145984,
+        "y": 1008.5970802919708
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 238,
+      "id": "region-238",
+      "mapColorRgba": [
+        198,
+        136,
+        189,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.12278997128329827,
+      "areaPixels": 1931,
+      "aspectRatio": 0.9444444444444444,
+      "bounds": {
+        "height": 51,
+        "width": 54,
+        "x": 66,
+        "y": 993
+      },
+      "centroid": {
+        "x": 90.23200414293112,
+        "y": 1017.4966338684619
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 241,
+      "id": "region-240",
+      "mapColorRgba": [
+        87,
+        191,
+        195,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.04591111303290593,
+      "areaPixels": 722,
+      "aspectRatio": 0.9285714285714286,
+      "bounds": {
+        "height": 39,
+        "width": 42,
+        "x": 1008,
+        "y": 1011
+      },
+      "centroid": {
+        "x": 1026.218836565097,
+        "y": 1028.6897506925209
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 243,
+      "id": "region-245",
+      "mapColorRgba": [
+        66,
+        220,
+        86,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.10288667712914376,
+      "areaPixels": 1618,
+      "aspectRatio": 0.8363636363636363,
+      "bounds": {
+        "height": 46,
+        "width": 55,
+        "x": 148,
+        "y": 1017
+      },
+      "centroid": {
+        "x": 175.08776266996293,
+        "y": 1038.176761433869
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 245,
+      "id": "region-250",
+      "mapColorRgba": [
+        121,
+        124,
+        233,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.03840763472558889,
+      "areaPixels": 604,
+      "aspectRatio": 0.7058823529411765,
+      "bounds": {
+        "height": 34,
+        "width": 24,
+        "x": 808,
+        "y": 1025
+      },
+      "centroid": {
+        "x": 819.4950331125827,
+        "y": 1041.6390728476822
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 254,
+      "id": "region-252",
+      "mapColorRgba": [
+        206,
+        96,
+        15,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.03796251313108703,
+      "areaPixels": 597,
+      "aspectRatio": 0.7575757575757576,
+      "bounds": {
+        "height": 33,
+        "width": 25,
+        "x": 288,
+        "y": 1026
+      },
+      "centroid": {
+        "x": 299.8174204355109,
+        "y": 1042.0887772194305
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 256,
+      "id": "region-253",
+      "mapColorRgba": [
+        134,
+        233,
+        222,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.03764456913501428,
+      "areaPixels": 592,
+      "aspectRatio": 0.9473684210526315,
+      "bounds": {
+        "height": 38,
+        "width": 36,
+        "x": 1080,
+        "y": 1036
+      },
+      "centroid": {
+        "x": 1099.8125,
+        "y": 1049.9206081081081
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 260,
+      "id": "region-255",
+      "mapColorRgba": [
+        23,
+        157,
+        124,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.11007221144038803,
+      "areaPixels": 1731,
+      "aspectRatio": 0.9019607843137255,
+      "bounds": {
+        "height": 51,
+        "width": 46,
+        "x": 103,
+        "y": 1027
+      },
+      "centroid": {
+        "x": 126.06528018486424,
+        "y": 1053.4979780473714
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 255,
+      "id": "region-256",
+      "mapColorRgba": [
+        44,
+        27,
+        51,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.021938135729020147,
+      "areaPixels": 345,
+      "aspectRatio": 0.9393939393939394,
+      "bounds": {
+        "height": 33,
+        "width": 31,
+        "x": 55,
+        "y": 1039
+      },
+      "centroid": {
+        "x": 73.08115942028985,
+        "y": 1053.5942028985507
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 262,
+      "id": "region-257",
+      "mapColorRgba": [
+        228,
+        128,
+        130,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.12743195362596052,
+      "areaPixels": 2004,
+      "aspectRatio": 0.8823529411764706,
+      "bounds": {
+        "height": 60,
+        "width": 68,
+        "x": 965,
+        "y": 1035
+      },
+      "centroid": {
+        "x": 1002.7789421157685,
+        "y": 1061.7704590818364
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 259,
+      "id": "region-260",
+      "mapColorRgba": [
+        2,
+        61,
+        247,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.2850685868788328,
+      "areaPixels": 4483,
+      "aspectRatio": 0.48518518518518516,
+      "bounds": {
+        "height": 131,
+        "width": 270,
+        "x": 422,
+        "y": 987
+      },
+      "centroid": {
+        "x": 552.3598037028776,
+        "y": 1062.3069373187598
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 234,
+      "id": "region-261",
+      "mapColorRgba": [
+        218,
+        187,
+        70,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 1.2401087622821767,
+      "areaPixels": 19502,
+      "aspectRatio": 0.9908256880733946,
+      "bounds": {
+        "height": 218,
+        "width": 216,
+        "x": 271,
+        "y": 952
+      },
+      "centroid": {
+        "x": 375.53984206748027,
+        "y": 1062.907240283048
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 220,
+      "id": "region-262",
+      "mapColorRgba": [
+        147,
+        33,
+        21,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 1.2212864777146695,
+      "areaPixels": 19206,
+      "aspectRatio": 0.9678899082568807,
+      "bounds": {
+        "height": 218,
+        "width": 211,
+        "x": 640,
+        "y": 952
+      },
+      "centroid": {
+        "x": 750.9518900343643,
+        "y": 1062.9268457773612
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 221,
+      "id": "region-263",
+      "mapColorRgba": [
+        171,
+        174,
+        228,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.017296153386357916,
+      "areaPixels": 272,
+      "aspectRatio": 0.5428571428571428,
+      "bounds": {
+        "height": 35,
+        "width": 19,
+        "x": 84,
+        "y": 1050
+      },
+      "centroid": {
+        "x": 93.76102941176471,
+        "y": 1065.1838235294117
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 267,
+      "id": "region-264",
+      "mapColorRgba": [
+        96,
+        212,
+        187,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1108988658301772,
+      "areaPixels": 1744,
+      "aspectRatio": 0.8028169014084507,
+      "bounds": {
+        "height": 57,
+        "width": 71,
+        "x": 24,
+        "y": 1039
+      },
+      "centroid": {
+        "x": 54.26662844036697,
+        "y": 1068.3079128440368
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 261,
+      "id": "region-265",
+      "mapColorRgba": [
+        57,
+        82,
+        10,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.13875075988615063,
+      "areaPixels": 2182,
+      "aspectRatio": 0.9649122807017544,
+      "bounds": {
+        "height": 55,
+        "width": 57,
+        "x": 1035,
+        "y": 1042
+      },
+      "centroid": {
+        "x": 1063.3615948670945,
+        "y": 1069.8629697525207
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 263,
+      "id": "region-266",
+      "mapColorRgba": [
+        241,
+        219,
+        217,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01983970535493996,
+      "areaPixels": 312,
+      "aspectRatio": 0.9230769230769231,
+      "bounds": {
+        "height": 39,
+        "width": 36,
+        "x": 126,
+        "y": 1062
+      },
+      "centroid": {
+        "x": 140.3397435897436,
+        "y": 1082.701923076923
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 270,
+      "id": "region-267",
+      "mapColorRgba": [
+        142,
+        65,
+        168,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.3552706212116973,
+      "areaPixels": 5587,
+      "aspectRatio": 0.9032258064516129,
+      "bounds": {
+        "height": 93,
+        "width": 84,
+        "x": 328,
+        "y": 1044
+      },
+      "centroid": {
+        "x": 373.17236441739755,
+        "y": 1091.4245570073385
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 264,
+      "id": "region-270",
+      "mapColorRgba": [
+        215,
+        242,
+        157,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.3557157428061991,
+      "areaPixels": 5594,
+      "aspectRatio": 0.8924731182795699,
+      "bounds": {
+        "height": 93,
+        "width": 83,
+        "x": 711,
+        "y": 1044
+      },
+      "centroid": {
+        "x": 747.6244190203789,
+        "y": 1091.446013585985
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 265,
+      "id": "region-271",
+      "mapColorRgba": [
+        236,
+        120,
+        108,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.04254090667453472,
+      "areaPixels": 669,
+      "aspectRatio": 0.7446808510638298,
+      "bounds": {
+        "height": 35,
+        "width": 47,
+        "x": 1040,
+        "y": 1100
+      },
+      "centroid": {
+        "x": 1062.2077727952167,
+        "y": 1112.7877428998506
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 278,
+      "id": "region-278",
+      "mapColorRgba": [
+        107,
+        140,
+        5,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.34846661969574033,
+      "areaPixels": 5480,
+      "aspectRatio": 0.43312101910828027,
+      "bounds": {
+        "height": 68,
+        "width": 157,
+        "x": 485,
+        "y": 1080
+      },
+      "centroid": {
+        "x": 560.4175182481752,
+        "y": 1120.632299270073
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 272,
+      "id": "region-281",
+      "mapColorRgba": [
+        177,
+        57,
+        122,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1409763678586599,
+      "areaPixels": 2217,
+      "aspectRatio": 0.6790123456790124,
+      "bounds": {
+        "height": 55,
+        "width": 81,
+        "x": 36,
+        "y": 1097
+      },
+      "centroid": {
+        "x": 71.0234551195309,
+        "y": 1123.4510599909788
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 276,
+      "id": "region-282",
+      "mapColorRgba": [
+        73,
+        166,
+        201,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1302934495906153,
+      "areaPixels": 2049,
+      "aspectRatio": 0.8813559322033898,
+      "bounds": {
+        "height": 52,
+        "width": 59,
+        "x": 186,
+        "y": 1109
+      },
+      "centroid": {
+        "x": 216.5046364080039,
+        "y": 1133.263055148853
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 283,
+      "id": "region-285",
+      "mapColorRgba": [
+        151,
+        208,
+        62,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.14816190216990419,
+      "areaPixels": 2330,
+      "aspectRatio": 0.875,
+      "bounds": {
+        "height": 56,
+        "width": 64,
+        "x": 884,
+        "y": 1109
+      },
+      "centroid": {
+        "x": 913.8815450643776,
+        "y": 1134.9150214592275
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 284,
+      "id": "region-286",
+      "mapColorRgba": [
+        172,
+        89,
+        141,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.13410877754348838,
+      "areaPixels": 2109,
+      "aspectRatio": 0.8493150684931506,
+      "bounds": {
+        "height": 62,
+        "width": 73,
+        "x": 1047,
+        "y": 1102
+      },
+      "centroid": {
+        "x": 1089.4272166903745,
+        "y": 1134.9834044570887
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 280,
+      "id": "region-287",
+      "mapColorRgba": [
+        100,
+        199,
+        92,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.723307329753708,
+      "areaPixels": 105731,
+      "aspectRatio": 0.3360995850622407,
+      "bounds": {
+        "height": 324,
+        "width": 964,
+        "x": 93,
+        "y": 1017
+      },
+      "centroid": {
+        "x": 573.863039222177,
+        "y": 1190.5975541704893
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 246,
+      "id": "region-293",
+      "mapColorRgba": [
+        43,
+        237,
+        166,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.35387166762897715,
+      "areaPixels": 5565,
+      "aspectRatio": 0.9306930693069307,
+      "bounds": {
+        "height": 94,
+        "width": 101,
+        "x": 23,
+        "y": 1151
+      },
+      "centroid": {
+        "x": 71.69901168014376,
+        "y": 1192.7477088948788
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 289,
+      "id": "region-294",
+      "mapColorRgba": [
+        224,
+        107,
+        117,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.2654196479215365,
+      "areaPixels": 4174,
+      "aspectRatio": 0.8791208791208791,
+      "bounds": {
+        "height": 80,
+        "width": 91,
+        "x": 1025,
+        "y": 1167
+      },
+      "centroid": {
+        "x": 1072.7220891231432,
+        "y": 1200.5927168183996
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 294,
+      "id": "region-295",
+      "mapColorRgba": [
+        184,
+        144,
+        196,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.019330994961223553,
+      "areaPixels": 304,
+      "aspectRatio": 0.9259259259259259,
+      "bounds": {
+        "height": 25,
+        "width": 27,
+        "x": 248,
+        "y": 1208
+      },
+      "centroid": {
+        "x": 260.24013157894734,
+        "y": 1216.6809210526317
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 298,
+      "id": "region-296",
+      "mapColorRgba": [
+        113,
+        30,
+        155,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.2230059188454309,
+      "areaPixels": 3507,
+      "aspectRatio": 0.9857142857142858,
+      "bounds": {
+        "height": 69,
+        "width": 70,
+        "x": 128,
+        "y": 1189
+      },
+      "centroid": {
+        "x": 162.65896777872825,
+        "y": 1219.968634160251
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 296,
+      "id": "region-297",
+      "mapColorRgba": [
+        9,
+        132,
+        106,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.22961915396374424,
+      "areaPixels": 3611,
+      "aspectRatio": 0.958904109589041,
+      "bounds": {
+        "height": 70,
+        "width": 73,
+        "x": 949,
+        "y": 1189
+      },
+      "centroid": {
+        "x": 984.5732484076433,
+        "y": 1220.1952367765161
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 297,
+      "id": "region-298",
+      "mapColorRgba": [
+        198,
+        2,
+        57,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.10193284514092549,
+      "areaPixels": 1603,
+      "aspectRatio": 0.8867924528301887,
+      "bounds": {
+        "height": 47,
+        "width": 53,
+        "x": 635,
+        "y": 1209
+      },
+      "centroid": {
+        "x": 659.0149719276357,
+        "y": 1231.2994385527136
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 300,
+      "id": "region-299",
+      "mapColorRgba": [
+        158,
+        139,
+        136,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.06098165844675456,
+      "areaPixels": 959,
+      "aspectRatio": 0.6,
+      "bounds": {
+        "height": 55,
+        "width": 33,
+        "x": 266,
+        "y": 1208
+      },
+      "centroid": {
+        "x": 282.8706986444213,
+        "y": 1232.5662148070908
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 299,
+      "id": "region-300",
+      "mapColorRgba": [
+        87,
+        49,
+        95,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1472080701816859,
+      "areaPixels": 2315,
+      "aspectRatio": 0.828125,
+      "bounds": {
+        "height": 53,
+        "width": 64,
+        "x": 444,
+        "y": 1211
+      },
+      "centroid": {
+        "x": 474.87386609071274,
+        "y": 1234.23282937365
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 301,
+      "id": "region-301",
+      "mapColorRgba": [
+        111,
+        191,
+        46,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.10803736986552241,
+      "areaPixels": 1699,
+      "aspectRatio": 0.9827586206896551,
+      "bounds": {
+        "height": 58,
+        "width": 57,
+        "x": 835,
+        "y": 1212
+      },
+      "centroid": {
+        "x": 859.9882283696292,
+        "y": 1235.6739258387286
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 302,
+      "id": "region-302",
+      "mapColorRgba": [
+        36,
+        36,
+        253,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.23171758433782438,
+      "areaPixels": 3644,
+      "aspectRatio": 0.9090909090909091,
+      "bounds": {
+        "height": 70,
+        "width": 77,
+        "x": 880,
+        "y": 1215
+      },
+      "centroid": {
+        "x": 914.6188254665203,
+        "y": 1249.6212952799121
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 303,
+      "id": "region-305",
+      "mapColorRgba": [
+        66,
+        81,
+        210,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.23216270593232627,
+      "areaPixels": 3651,
+      "aspectRatio": 0.922077922077922,
+      "bounds": {
+        "height": 71,
+        "width": 77,
+        "x": 188,
+        "y": 1216
+      },
+      "centroid": {
+        "x": 228.25718981101068,
+        "y": 1250.6715968227884
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 304,
+      "id": "region-306",
+      "mapColorRgba": [
+        26,
+        223,
+        161,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05506790011980129,
+      "areaPixels": 866,
+      "aspectRatio": 0.5555555555555556,
+      "bounds": {
+        "height": 30,
+        "width": 54,
+        "x": 781,
+        "y": 1245
+      },
+      "centroid": {
+        "x": 812.4665127020785,
+        "y": 1258.3140877598153
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 309,
+      "id": "region-308",
+      "mapColorRgba": [
+        235,
+        194,
+        199,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.19534479118710116,
+      "areaPixels": 3072,
+      "aspectRatio": 0.9154929577464789,
+      "bounds": {
+        "height": 65,
+        "width": 71,
+        "x": 73,
+        "y": 1229
+      },
+      "centroid": {
+        "x": 104.21451822916667,
+        "y": 1260.6943359375
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 305,
+      "id": "region-309",
+      "mapColorRgba": [
+        160,
+        72,
+        150,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.21906341329412873,
+      "areaPixels": 3445,
+      "aspectRatio": 0.9459459459459459,
+      "bounds": {
+        "height": 70,
+        "width": 74,
+        "x": 1002,
+        "y": 1228
+      },
+      "centroid": {
+        "x": 1042.1648766328012,
+        "y": 1262.0830188679245
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 306,
+      "id": "region-311",
+      "mapColorRgba": [
+        49,
+        124,
+        52,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.06072730324989634,
+      "areaPixels": 955,
+      "aspectRatio": 0.6666666666666666,
+      "bounds": {
+        "height": 32,
+        "width": 48,
+        "x": 737,
+        "y": 1256
+      },
+      "centroid": {
+        "x": 759.9141361256544,
+        "y": 1270.5204188481675
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 313,
+      "id": "region-315",
+      "mapColorRgba": [
+        23,
+        22,
+        248,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.06568722958863134,
+      "areaPixels": 1033,
+      "aspectRatio": 0.86,
+      "bounds": {
+        "height": 43,
+        "width": 50,
+        "x": 141,
+        "y": 1257
+      },
+      "centroid": {
+        "x": 165.18586640851888,
+        "y": 1277.617618586641
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 312,
+      "id": "region-316",
+      "mapColorRgba": [
+        47,
+        156,
+        79,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.06816719275799883,
+      "areaPixels": 1072,
+      "aspectRatio": 0.8653846153846154,
+      "bounds": {
+        "height": 45,
+        "width": 52,
+        "x": 952,
+        "y": 1257
+      },
+      "centroid": {
+        "x": 976.1520522388059,
+        "y": 1278.6128731343283
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 314,
+      "id": "region-317",
+      "mapColorRgba": [
+        228,
+        26,
+        30,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.16437704596961475,
+      "areaPixels": 2585,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 51,
+        "width": 102,
+        "x": 248,
+        "y": 1262
+      },
+      "centroid": {
+        "x": 302.06847195357835,
+        "y": 1287.1586073500966
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 317,
+      "id": "region-321",
+      "mapColorRgba": [
+        218,
+        60,
+        194,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.1601165964222398,
+      "areaPixels": 2518,
+      "aspectRatio": 0.9710144927536232,
+      "bounds": {
+        "height": 67,
+        "width": 69,
+        "x": 20,
+        "y": 1252
+      },
+      "centroid": {
+        "x": 51.744241461477365,
+        "y": 1290.2386814932486
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 310,
+      "id": "region-322",
+      "mapColorRgba": [
+        146,
+        186,
+        145,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.08718024372314963,
+      "areaPixels": 1371,
+      "aspectRatio": 0.8333333333333334,
+      "bounds": {
+        "height": 40,
+        "width": 48,
+        "x": 819,
+        "y": 1273
+      },
+      "centroid": {
+        "x": 843.144420131291,
+        "y": 1292.3202042304888
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 320,
+      "id": "region-324",
+      "mapColorRgba": [
+        99,
+        174,
+        55,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.060155004056965396,
+      "areaPixels": 946,
+      "aspectRatio": 0.9,
+      "bounds": {
+        "height": 36,
+        "width": 40,
+        "x": 777,
+        "y": 1279
+      },
+      "centroid": {
+        "x": 796.9207188160676,
+        "y": 1296.2040169133193
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 322,
+      "id": "region-325",
+      "mapColorRgba": [
+        56,
+        215,
+        134,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01710538698871426,
+      "areaPixels": 269,
+      "aspectRatio": 0.75,
+      "bounds": {
+        "height": 21,
+        "width": 28,
+        "x": 860,
+        "y": 1295
+      },
+      "centroid": {
+        "x": 874.5799256505576,
+        "y": 1305.2416356877322
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 332,
+      "id": "region-327",
+      "mapColorRgba": [
+        137,
+        219,
+        36,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.08438233655770938,
+      "areaPixels": 1327,
+      "aspectRatio": 0.8431372549019608,
+      "bounds": {
+        "height": 43,
+        "width": 51,
+        "x": 726,
+        "y": 1287
+      },
+      "centroid": {
+        "x": 749.86284853052,
+        "y": 1308.2215523737755
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 327,
+      "id": "region-328",
+      "mapColorRgba": [
+        70,
+        64,
+        251,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.036182026753079605,
+      "areaPixels": 569,
+      "aspectRatio": 0.4418604651162791,
+      "bounds": {
+        "height": 19,
+        "width": 43,
+        "x": 531,
+        "y": 1300
+      },
+      "centroid": {
+        "x": 550.7416520210896,
+        "y": 1308.9015817223199
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 334,
+      "id": "region-329",
+      "mapColorRgba": [
+        30,
+        206,
+        74,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.04222296267846196,
+      "areaPixels": 664,
+      "aspectRatio": 0.6511627906976745,
+      "bounds": {
+        "height": 28,
+        "width": 43,
+        "x": 337,
+        "y": 1298
+      },
+      "centroid": {
+        "x": 359.01656626506025,
+        "y": 1312.058734939759
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 333,
+      "id": "region-330",
+      "mapColorRgba": [
+        215,
+        116,
+        25,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.2726051822327808,
+      "areaPixels": 4287,
+      "aspectRatio": 0.9259259259259259,
+      "bounds": {
+        "height": 75,
+        "width": 81,
+        "x": 889,
+        "y": 1283
+      },
+      "centroid": {
+        "x": 928.6617681362258,
+        "y": 1319.7074877536738
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 326,
+      "id": "region-334",
+      "mapColorRgba": [
+        53,
+        110,
+        221,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.2922541211900771,
+      "areaPixels": 4596,
+      "aspectRatio": 0.9512195121951219,
+      "bounds": {
+        "height": 78,
+        "width": 82,
+        "x": 168,
+        "y": 1283
+      },
+      "centroid": {
+        "x": 208.47280243690165,
+        "y": 1321.7880765883376
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 324,
+      "id": "region-336",
+      "mapColorRgba": [
+        154,
+        18,
+        99,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.27228723823670803,
+      "areaPixels": 4282,
+      "aspectRatio": 0.9493670886075949,
+      "bounds": {
+        "height": 75,
+        "width": 79,
+        "x": 87,
+        "y": 1289
+      },
+      "centroid": {
+        "x": 126.49836524988324,
+        "y": 1327.0053713218122
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 328,
+      "id": "region-339",
+      "mapColorRgba": [
+        35,
+        143,
+        80,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.28290656770553807,
+      "areaPixels": 4449,
+      "aspectRatio": 0.8809523809523809,
+      "bounds": {
+        "height": 74,
+        "width": 84,
+        "x": 970,
+        "y": 1291
+      },
+      "centroid": {
+        "x": 1011.0137109462801,
+        "y": 1329.3333333333333
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 330,
+      "id": "region-340",
+      "mapColorRgba": [
+        248,
+        53,
+        39,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.10275949953071466,
+      "areaPixels": 1616,
+      "aspectRatio": 0.9791666666666666,
+      "bounds": {
+        "height": 47,
+        "width": 48,
+        "x": 804,
+        "y": 1311
+      },
+      "centroid": {
+        "x": 827.2314356435644,
+        "y": 1334.8087871287128
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 337,
+      "id": "region-341",
+      "mapColorRgba": [
+        176,
+        178,
+        246,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.07795986783703972,
+      "areaPixels": 1226,
+      "aspectRatio": 0.8936170212765957,
+      "bounds": {
+        "height": 47,
+        "width": 42,
+        "x": 312,
+        "y": 1313
+      },
+      "centroid": {
+        "x": 332.731647634584,
+        "y": 1336.089722675367
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 338,
+      "id": "region-342",
+      "mapColorRgba": [
+        73,
+        56,
+        69,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.16234220439474908,
+      "areaPixels": 2553,
+      "aspectRatio": 0.8243243243243243,
+      "bounds": {
+        "height": 61,
+        "width": 74,
+        "x": 241,
+        "y": 1303
+      },
+      "centroid": {
+        "x": 278.1120250685468,
+        "y": 1338.130043086565
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 335,
+      "id": "region-343",
+      "mapColorRgba": [
+        1,
+        166,
+        20,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.10116977955035088,
+      "areaPixels": 1591,
+      "aspectRatio": 0.9,
+      "bounds": {
+        "height": 50,
+        "width": 45,
+        "x": 756,
+        "y": 1315
+      },
+      "centroid": {
+        "x": 778.5889377749843,
+        "y": 1340.914519170333
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 340,
+      "id": "region-345",
+      "mapColorRgba": [
+        151,
+        85,
+        186,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05087103937164092,
+      "areaPixels": 800,
+      "aspectRatio": 0.8333333333333334,
+      "bounds": {
+        "height": 36,
+        "width": 30,
+        "x": 352,
+        "y": 1325
+      },
+      "centroid": {
+        "x": 366.97375,
+        "y": 1342.5025
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 350,
+      "id": "region-346",
+      "mapColorRgba": [
+        175,
+        211,
+        9,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.13347288955134287,
+      "areaPixels": 2099,
+      "aspectRatio": 0.5974025974025974,
+      "bounds": {
+        "height": 46,
+        "width": 77,
+        "x": 386,
+        "y": 1318
+      },
+      "centroid": {
+        "x": 422.8689852310624,
+        "y": 1344.020009528347
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 343,
+      "id": "region-347",
+      "mapColorRgba": [
+        100,
+        88,
+        216,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.08533616854592764,
+      "areaPixels": 1342,
+      "aspectRatio": 0.8245614035087719,
+      "bounds": {
+        "height": 47,
+        "width": 57,
+        "x": 846,
+        "y": 1317
+      },
+      "centroid": {
+        "x": 873.6736214605068,
+        "y": 1345.4441132637853
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 342,
+      "id": "region-348",
+      "mapColorRgba": [
+        60,
+        198,
+        175,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.15598332447329397,
+      "areaPixels": 2453,
+      "aspectRatio": 0.4838709677419355,
+      "bounds": {
+        "height": 45,
+        "width": 93,
+        "x": 653,
+        "y": 1320
+      },
+      "centroid": {
+        "x": 694.7607011822258,
+        "y": 1345.4659600489197
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 347,
+      "id": "region-349",
+      "mapColorRgba": [
+        245,
+        76,
+        126,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05703915289545238,
+      "areaPixels": 897,
+      "aspectRatio": 0.975609756097561,
+      "bounds": {
+        "height": 41,
+        "width": 40,
+        "x": 57,
+        "y": 1321
+      },
+      "centroid": {
+        "x": 74.21516164994426,
+        "y": 1345.6098104793757
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 345,
+      "id": "region-350",
+      "mapColorRgba": [
+        141,
+        245,
+        205,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.05627608730487777,
+      "areaPixels": 885,
+      "aspectRatio": 0.9285714285714286,
+      "bounds": {
+        "height": 39,
+        "width": 42,
+        "x": 1045,
+        "y": 1323
+      },
+      "centroid": {
+        "x": 1068.439548022599,
+        "y": 1346.2790960451978
+      },
+      "classification": "ACCEPTED",
+      "componentLabel": 349,
+      "id": "region-351",
+      "mapColorRgba": [
+        90,
+        115,
+        156,
+        255
+      ],
+      "touchesBorder": false
+    }
+  ],
+  "flaggedTooSmallRegions": [
+    {
+      "areaPercent": 0.015197723012277725,
+      "areaPixels": 239,
+      "aspectRatio": 0.9444444444444444,
+      "bounds": {
+        "height": 18,
+        "width": 17,
+        "x": 852,
+        "y": 32
+      },
+      "centroid": {
+        "x": 859.9748953974895,
+        "y": 40.63598326359833
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 1,
+      "id": "region-001",
+      "mapColorRgba": [
+        98,
+        211,
+        130,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.014689012618561318,
+      "areaPixels": 231,
+      "aspectRatio": 0.9444444444444444,
+      "bounds": {
+        "height": 18,
+        "width": 17,
+        "x": 1072,
+        "y": 66
+      },
+      "centroid": {
+        "x": 1079.7489177489178,
+        "y": 74.73593073593074
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 7,
+      "id": "region-005",
+      "mapColorRgba": [
+        64,
+        202,
+        70,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.008520899094749854,
+      "areaPixels": 134,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 13,
+        "width": 13,
+        "x": 102,
+        "y": 69
+      },
+      "centroid": {
+        "x": 108.11194029850746,
+        "y": 75.26119402985074
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 8,
+      "id": "region-007",
+      "mapColorRgba": [
+        209,
+        249,
+        228,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0110644510633319,
+      "areaPixels": 174,
+      "aspectRatio": 0.9333333333333333,
+      "bounds": {
+        "height": 15,
+        "width": 14,
+        "x": 40,
+        "y": 85
+      },
+      "centroid": {
+        "x": 46.40229885057471,
+        "y": 92.2816091954023
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 9,
+      "id": "region-008",
+      "mapColorRgba": [
+        238,
+        103,
+        187,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 2,
+        "width": 1,
+        "x": 471,
+        "y": 135
+      },
+      "centroid": {
+        "x": 471.0,
+        "y": 135.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 13,
+      "id": "region-011",
+      "mapColorRgba": [
+        55,
+        144,
+        168,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 473,
+        "y": 142
+      },
+      "centroid": {
+        "x": 473.0,
+        "y": 142.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 16,
+      "id": "region-012",
+      "mapColorRgba": [
+        204,
+        30,
+        127,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 2,
+        "width": 2,
+        "x": 540,
+        "y": 161
+      },
+      "centroid": {
+        "x": 540.5,
+        "y": 161.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 18,
+      "id": "region-013",
+      "mapColorRgba": [
+        132,
+        135,
+        206,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 590,
+        "y": 165
+      },
+      "centroid": {
+        "x": 590.0,
+        "y": 165.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 19,
+      "id": "region-014",
+      "mapColorRgba": [
+        93,
+        13,
+        157,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 1,
+        "width": 2,
+        "x": 456,
+        "y": 175
+      },
+      "centroid": {
+        "x": 456.5,
+        "y": 175.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 20,
+      "id": "region-016",
+      "mapColorRgba": [
+        34,
+        49,
+        35,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 598,
+        "y": 179
+      },
+      "centroid": {
+        "x": 598.0,
+        "y": 179.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 21,
+      "id": "region-018",
+      "mapColorRgba": [
+        179,
+        36,
+        65,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.015134134213063175,
+      "areaPixels": 238,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 17,
+        "width": 17,
+        "x": 936,
+        "y": 186
+      },
+      "centroid": {
+        "x": 944.1134453781513,
+        "y": 193.94117647058823
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 22,
+      "id": "region-019",
+      "mapColorRgba": [
+        75,
+        162,
+        16,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.005277870334807745,
+      "areaPixels": 83,
+      "aspectRatio": 0.38095238095238093,
+      "bounds": {
+        "height": 8,
+        "width": 21,
+        "x": 413,
+        "y": 199
+      },
+      "centroid": {
+        "x": 422.0843373493976,
+        "y": 201.3012048192771
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 24,
+      "id": "region-020",
+      "mapColorRgba": [
+        0,
+        43,
+        231,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.014879779016204969,
+      "areaPixels": 234,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 17,
+        "width": 17,
+        "x": 153,
+        "y": 233
+      },
+      "centroid": {
+        "x": 160.85042735042734,
+        "y": 241.0982905982906
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 26,
+      "id": "region-024",
+      "mapColorRgba": [
+        102,
+        194,
+        171,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.014498246220917662,
+      "areaPixels": 228,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 17,
+        "width": 17,
+        "x": 1072,
+        "y": 249
+      },
+      "centroid": {
+        "x": 1080.171052631579,
+        "y": 256.82894736842104
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 29,
+      "id": "region-026",
+      "mapColorRgba": [
+        247,
+        241,
+        201,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01265417104369568,
+      "areaPixels": 199,
+      "aspectRatio": 0.29310344827586204,
+      "bounds": {
+        "height": 17,
+        "width": 58,
+        "x": 594,
+        "y": 265
+      },
+      "centroid": {
+        "x": 618.2361809045226,
+        "y": 274.06532663316585
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 30,
+      "id": "region-027",
+      "mapColorRgba": [
+        140,
+        127,
+        152,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.001144598385861921,
+      "areaPixels": 18,
+      "aspectRatio": 0.7142857142857143,
+      "bounds": {
+        "height": 5,
+        "width": 7,
+        "x": 596,
+        "y": 278
+      },
+      "centroid": {
+        "x": 598.6111111111111,
+        "y": 279.8333333333333
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 33,
+      "id": "region-030",
+      "mapColorRgba": [
+        213,
+        232,
+        141,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.012336227047622925,
+      "areaPixels": 194,
+      "aspectRatio": 0.5555555555555556,
+      "bounds": {
+        "height": 15,
+        "width": 27,
+        "x": 982,
+        "y": 278
+      },
+      "centroid": {
+        "x": 994.5979381443299,
+        "y": 286.08762886597935
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 34,
+      "id": "region-031",
+      "mapColorRgba": [
+        226,
+        22,
+        92,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0005087103937164092,
+      "areaPixels": 8,
+      "aspectRatio": 0.6,
+      "bounds": {
+        "height": 3,
+        "width": 5,
+        "x": 676,
+        "y": 287
+      },
+      "centroid": {
+        "x": 678.375,
+        "y": 287.625
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 35,
+      "id": "region-032",
+      "mapColorRgba": [
+        186,
+        156,
+        19,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 2,
+        "width": 1,
+        "x": 993,
+        "y": 299
+      },
+      "centroid": {
+        "x": 993.0,
+        "y": 299.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 36,
+      "id": "region-034",
+      "mapColorRgba": [
+        11,
+        131,
+        177,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01055574066961549,
+      "areaPixels": 166,
+      "aspectRatio": 0.6956521739130435,
+      "bounds": {
+        "height": 16,
+        "width": 23,
+        "x": 69,
+        "y": 302
+      },
+      "centroid": {
+        "x": 81.53614457831326,
+        "y": 310.8614457831325
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 37,
+      "id": "region-035",
+      "mapColorRgba": [
+        192,
+        9,
+        0,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 563,
+        "y": 315
+      },
+      "centroid": {
+        "x": 563.0,
+        "y": 315.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 41,
+      "id": "region-036",
+      "mapColorRgba": [
+        152,
+        182,
+        215,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.001716897578792881,
+      "areaPixels": 27,
+      "aspectRatio": 0.875,
+      "bounds": {
+        "height": 8,
+        "width": 7,
+        "x": 124,
+        "y": 311
+      },
+      "centroid": {
+        "x": 126.18518518518519,
+        "y": 315.0740740740741
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 40,
+      "id": "region-037",
+      "mapColorRgba": [
+        81,
+        60,
+        166,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 86,
+        "y": 322
+      },
+      "centroid": {
+        "x": 86.0,
+        "y": 322.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 42,
+      "id": "region-039",
+      "mapColorRgba": [
+        38,
+        35,
+        196,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 87,
+        "y": 324
+      },
+      "centroid": {
+        "x": 87.0,
+        "y": 324.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 44,
+      "id": "region-040",
+      "mapColorRgba": [
+        254,
+        169,
+        155,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 121,
+        "y": 324
+      },
+      "centroid": {
+        "x": 121.0,
+        "y": 324.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 45,
+      "id": "region-041",
+      "mapColorRgba": [
+        183,
+        215,
+        106,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 88,
+        "y": 327
+      },
+      "centroid": {
+        "x": 88.0,
+        "y": 327.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 46,
+      "id": "region-043",
+      "mapColorRgba": [
+        4,
+        218,
+        136,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 89,
+        "y": 330
+      },
+      "centroid": {
+        "x": 89.0,
+        "y": 330.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 48,
+      "id": "region-044",
+      "mapColorRgba": [
+        221,
+        64,
+        95,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 90,
+        "y": 333
+      },
+      "centroid": {
+        "x": 90.0,
+        "y": 333.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 49,
+      "id": "region-045",
+      "mapColorRgba": [
+        149,
+        206,
+        46,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0044512159450185804,
+      "areaPixels": 70,
+      "aspectRatio": 0.18181818181818182,
+      "bounds": {
+        "height": 66,
+        "width": 12,
+        "x": 992,
+        "y": 302
+      },
+      "centroid": {
+        "x": 995.2,
+        "y": 335.1
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 38,
+      "id": "region-046",
+      "mapColorRgba": [
+        162,
+        119,
+        253,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 91,
+        "y": 337
+      },
+      "centroid": {
+        "x": 91.0,
+        "y": 337.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 50,
+      "id": "region-047",
+      "mapColorRgba": [
+        122,
+        253,
+        76,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 2,
+        "width": 1,
+        "x": 92,
+        "y": 342
+      },
+      "centroid": {
+        "x": 92.0,
+        "y": 342.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 51,
+      "id": "region-048",
+      "mapColorRgba": [
+        51,
+        123,
+        3,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 837,
+        "y": 344
+      },
+      "centroid": {
+        "x": 837.0,
+        "y": 344.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 53,
+      "id": "region-049",
+      "mapColorRgba": [
+        203,
+        224,
+        210,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00019076639764365347,
+      "areaPixels": 3,
+      "aspectRatio": 0.3333333333333333,
+      "bounds": {
+        "height": 3,
+        "width": 1,
+        "x": 93,
+        "y": 348
+      },
+      "centroid": {
+        "x": 93.0,
+        "y": 349.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 54,
+      "id": "region-050",
+      "mapColorRgba": [
+        128,
+        110,
+        161,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 2,
+        "width": 2,
+        "x": 550,
+        "y": 356
+      },
+      "centroid": {
+        "x": 550.5,
+        "y": 356.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 56,
+      "id": "region-052",
+      "mapColorRgba": [
+        17,
+        29,
+        199,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 482,
+        "y": 361
+      },
+      "centroid": {
+        "x": 482.0,
+        "y": 361.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 58,
+      "id": "region-053",
+      "mapColorRgba": [
+        41,
+        155,
+        150,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.000826654389789165,
+      "areaPixels": 13,
+      "aspectRatio": 0.07692307692307693,
+      "bounds": {
+        "height": 13,
+        "width": 1,
+        "x": 94,
+        "y": 357
+      },
+      "centroid": {
+        "x": 94.0,
+        "y": 363.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 55,
+      "id": "region-054",
+      "mapColorRgba": [
+        230,
+        1,
+        101,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00038153279528730695,
+      "areaPixels": 6,
+      "aspectRatio": 0.75,
+      "bounds": {
+        "height": 3,
+        "width": 4,
+        "x": 285,
+        "y": 378
+      },
+      "centroid": {
+        "x": 286.5,
+        "y": 379.3333333333333
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 62,
+      "id": "region-057",
+      "mapColorRgba": [
+        15,
+        178,
+        90,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0003179439960727558,
+      "areaPixels": 5,
+      "aspectRatio": 0.2,
+      "bounds": {
+        "height": 5,
+        "width": 1,
+        "x": 93,
+        "y": 378
+      },
+      "centroid": {
+        "x": 93.0,
+        "y": 380.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 61,
+      "id": "region-058",
+      "mapColorRgba": [
+        196,
+        56,
+        41,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00038153279528730695,
+      "areaPixels": 6,
+      "aspectRatio": 0.16666666666666666,
+      "bounds": {
+        "height": 6,
+        "width": 1,
+        "x": 92,
+        "y": 385
+      },
+      "centroid": {
+        "x": 92.0,
+        "y": 387.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 63,
+      "id": "region-059",
+      "mapColorRgba": [
+        156,
+        161,
+        248,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0038789167520876205,
+      "areaPixels": 61,
+      "aspectRatio": 0.52,
+      "bounds": {
+        "height": 50,
+        "width": 26,
+        "x": 1004,
+        "y": 369
+      },
+      "centroid": {
+        "x": 1015.688524590164,
+        "y": 393.8360655737705
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 60,
+      "id": "region-061",
+      "mapColorRgba": [
+        98,
+        85,
+        30,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.001144598385861921,
+      "areaPixels": 18,
+      "aspectRatio": 0.8333333333333334,
+      "bounds": {
+        "height": 5,
+        "width": 6,
+        "x": 788,
+        "y": 395
+      },
+      "centroid": {
+        "x": 791.0555555555555,
+        "y": 396.6111111111111
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 65,
+      "id": "region-063",
+      "mapColorRgba": [
+        243,
+        88,
+        188,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0012717759842910232,
+      "areaPixels": 20,
+      "aspectRatio": 0.1111111111111111,
+      "bounds": {
+        "height": 18,
+        "width": 2,
+        "x": 90,
+        "y": 392
+      },
+      "centroid": {
+        "x": 90.5,
+        "y": 400.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 64,
+      "id": "region-064",
+      "mapColorRgba": [
+        139,
+        198,
+        115,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 283,
+        "y": 442
+      },
+      "centroid": {
+        "x": 283.0,
+        "y": 442.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 71,
+      "id": "region-067",
+      "mapColorRgba": [
+        209,
+        115,
+        96,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 281,
+        "y": 462
+      },
+      "centroid": {
+        "x": 281.0,
+        "y": 462.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 74,
+      "id": "region-071",
+      "mapColorRgba": [
+        55,
+        106,
+        36,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 675,
+        "y": 467
+      },
+      "centroid": {
+        "x": 675.0,
+        "y": 467.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 75,
+      "id": "region-073",
+      "mapColorRgba": [
+        132,
+        25,
+        74,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 672,
+        "y": 468
+      },
+      "centroid": {
+        "x": 672.0,
+        "y": 468.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 76,
+      "id": "region-074",
+      "mapColorRgba": [
+        92,
+        135,
+        25,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 887,
+        "y": 475
+      },
+      "centroid": {
+        "x": 887.0,
+        "y": 475.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 77,
+      "id": "region-075",
+      "mapColorRgba": [
+        21,
+        12,
+        232,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0022256079725092902,
+      "areaPixels": 35,
+      "aspectRatio": 0.46153846153846156,
+      "bounds": {
+        "height": 6,
+        "width": 13,
+        "x": 108,
+        "y": 487
+      },
+      "centroid": {
+        "x": 113.54285714285714,
+        "y": 489.57142857142856
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 81,
+      "id": "region-077",
+      "mapColorRgba": [
+        250,
+        48,
+        14,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.000826654389789165,
+      "areaPixels": 13,
+      "aspectRatio": 0.6,
+      "bounds": {
+        "height": 3,
+        "width": 5,
+        "x": 705,
+        "y": 496
+      },
+      "centroid": {
+        "x": 707.0,
+        "y": 496.84615384615387
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 85,
+      "id": "region-079",
+      "mapColorRgba": [
+        75,
+        39,
+        172,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.002797907165440251,
+      "areaPixels": 44,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 8,
+        "width": 8,
+        "x": 95,
+        "y": 504
+      },
+      "centroid": {
+        "x": 98.1590909090909,
+        "y": 507.75
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 88,
+      "id": "region-083",
+      "mapColorRgba": [
+        169,
+        222,
+        80,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.011382395059404657,
+      "areaPixels": 179,
+      "aspectRatio": 0.9629629629629629,
+      "bounds": {
+        "height": 27,
+        "width": 26,
+        "x": 1010,
+        "y": 496
+      },
+      "centroid": {
+        "x": 1019.8715083798883,
+        "y": 510.0670391061453
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 86,
+      "id": "region-085",
+      "mapColorRgba": [
+        62,
+        205,
+        246,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0004451215945018581,
+      "areaPixels": 7,
+      "aspectRatio": 0.75,
+      "bounds": {
+        "height": 4,
+        "width": 3,
+        "x": 730,
+        "y": 527
+      },
+      "centroid": {
+        "x": 731.0,
+        "y": 528.5714285714286
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 94,
+      "id": "region-087",
+      "mapColorRgba": [
+        143,
+        241,
+        20,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.011318806260190106,
+      "areaPixels": 178,
+      "aspectRatio": 0.875,
+      "bounds": {
+        "height": 16,
+        "width": 14,
+        "x": 707,
+        "y": 534
+      },
+      "centroid": {
+        "x": 713.2752808988764,
+        "y": 541.4831460674158
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 97,
+      "id": "region-090",
+      "mapColorRgba": [
+        213,
+        98,
+        9,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0035609727560148648,
+      "areaPixels": 56,
+      "aspectRatio": 0.9333333333333333,
+      "bounds": {
+        "height": 14,
+        "width": 15,
+        "x": 892,
+        "y": 541
+      },
+      "centroid": {
+        "x": 898.8571428571429,
+        "y": 549.1607142857143
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 98,
+      "id": "region-092",
+      "mapColorRgba": [
+        186,
+        17,
+        175,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.002098430374080188,
+      "areaPixels": 33,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 6,
+        "width": 6,
+        "x": 662,
+        "y": 547
+      },
+      "centroid": {
+        "x": 664.5757575757576,
+        "y": 549.4242424242424
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 99,
+      "id": "region-093",
+      "mapColorRgba": [
+        114,
+        159,
+        126,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.011954694252335616,
+      "areaPixels": 188,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 36,
+        "width": 36,
+        "x": 696,
+        "y": 533
+      },
+      "centroid": {
+        "x": 717.6063829787234,
+        "y": 554.9627659574468
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 96,
+      "id": "region-096",
+      "mapColorRgba": [
+        152,
+        8,
+        83,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01271775984291023,
+      "areaPixels": 200,
+      "aspectRatio": 0.9777777777777777,
+      "bounds": {
+        "height": 45,
+        "width": 44,
+        "x": 640,
+        "y": 527
+      },
+      "centroid": {
+        "x": 657.515,
+        "y": 557.76
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 93,
+      "id": "region-097",
+      "mapColorRgba": [
+        80,
+        182,
+        34,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00019076639764365347,
+      "areaPixels": 3,
+      "aspectRatio": 0.3333333333333333,
+      "bounds": {
+        "height": 1,
+        "width": 3,
+        "x": 691,
+        "y": 569
+      },
+      "centroid": {
+        "x": 692.0,
+        "y": 569.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 103,
+      "id": "region-099",
+      "mapColorRgba": [
+        33,
+        165,
+        64,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0027343183662256994,
+      "areaPixels": 43,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 13,
+        "width": 13,
+        "x": 646,
+        "y": 562
+      },
+      "centroid": {
+        "x": 652.0,
+        "y": 569.6976744186046
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 102,
+      "id": "region-100",
+      "mapColorRgba": [
+        254,
+        35,
+        23,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01049215187040094,
+      "areaPixels": 165,
+      "aspectRatio": 0.9333333333333333,
+      "bounds": {
+        "height": 15,
+        "width": 14,
+        "x": 460,
+        "y": 563
+      },
+      "centroid": {
+        "x": 466.8545454545455,
+        "y": 570.1575757575757
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 101,
+      "id": "region-101",
+      "mapColorRgba": [
+        182,
+        168,
+        230,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0020348415748656368,
+      "areaPixels": 32,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 6,
+        "width": 6,
+        "x": 419,
+        "y": 574
+      },
+      "centroid": {
+        "x": 421.1875,
+        "y": 576.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 105,
+      "id": "region-103",
+      "mapColorRgba": [
+        4,
+        92,
+        4,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01322647023662664,
+      "areaPixels": 208,
+      "aspectRatio": 0.23076923076923078,
+      "bounds": {
+        "height": 9,
+        "width": 39,
+        "x": 535,
+        "y": 573
+      },
+      "centroid": {
+        "x": 554.3605769230769,
+        "y": 576.7211538461538
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 104,
+      "id": "region-104",
+      "mapColorRgba": [
+        220,
+        197,
+        219,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.006994767913600626,
+      "areaPixels": 110,
+      "aspectRatio": 0.8888888888888888,
+      "bounds": {
+        "height": 16,
+        "width": 18,
+        "x": 557,
+        "y": 581
+      },
+      "centroid": {
+        "x": 563.2363636363636,
+        "y": 587.2454545454545
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 108,
+      "id": "region-106",
+      "mapColorRgba": [
+        173,
+        201,
+        121,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0032430287599421086,
+      "areaPixels": 51,
+      "aspectRatio": 0.375,
+      "bounds": {
+        "height": 6,
+        "width": 16,
+        "x": 864,
+        "y": 586
+      },
+      "centroid": {
+        "x": 871.9803921568628,
+        "y": 588.9215686274509
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 111,
+      "id": "region-107",
+      "mapColorRgba": [
+        122,
+        118,
+        200,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.006104524724596911,
+      "areaPixels": 96,
+      "aspectRatio": 0.6206896551724138,
+      "bounds": {
+        "height": 18,
+        "width": 29,
+        "x": 447,
+        "y": 579
+      },
+      "centroid": {
+        "x": 464.1041666666667,
+        "y": 589.0520833333334
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 107,
+      "id": "region-108",
+      "mapColorRgba": [
+        50,
+        252,
+        159,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.005087103937164093,
+      "areaPixels": 80,
+      "aspectRatio": 0.6666666666666666,
+      "bounds": {
+        "height": 12,
+        "width": 18,
+        "x": 536,
+        "y": 585
+      },
+      "centroid": {
+        "x": 547.1625,
+        "y": 589.0625
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 110,
+      "id": "region-109",
+      "mapColorRgba": [
+        203,
+        122,
+        110,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 474,
+        "y": 593
+      },
+      "centroid": {
+        "x": 474.0,
+        "y": 593.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 114,
+      "id": "region-110",
+      "mapColorRgba": [
+        131,
+        224,
+        61,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.005405047933236848,
+      "areaPixels": 85,
+      "aspectRatio": 0.9090909090909091,
+      "bounds": {
+        "height": 10,
+        "width": 11,
+        "x": 201,
+        "y": 595
+      },
+      "centroid": {
+        "x": 206.23529411764707,
+        "y": 599.3176470588236
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 115,
+      "id": "region-111",
+      "mapColorRgba": [
+        88,
+        105,
+        140,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.001208187185076472,
+      "areaPixels": 19,
+      "aspectRatio": 0.875,
+      "bounds": {
+        "height": 8,
+        "width": 7,
+        "x": 105,
+        "y": 623
+      },
+      "centroid": {
+        "x": 108.47368421052632,
+        "y": 626.0526315789474
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 122,
+      "id": "region-117",
+      "mapColorRgba": [
+        15,
+        55,
+        214,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.000826654389789165,
+      "areaPixels": 13,
+      "aspectRatio": 0.42857142857142855,
+      "bounds": {
+        "height": 3,
+        "width": 7,
+        "x": 280,
+        "y": 643
+      },
+      "centroid": {
+        "x": 282.7692307692308,
+        "y": 643.9230769230769
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 126,
+      "id": "region-120",
+      "mapColorRgba": [
+        84,
+        160,
+        203,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0036245615552294155,
+      "areaPixels": 57,
+      "aspectRatio": 0.8888888888888888,
+      "bounds": {
+        "height": 8,
+        "width": 9,
+        "x": 999,
+        "y": 657
+      },
+      "centroid": {
+        "x": 1002.7368421052631,
+        "y": 660.438596491228
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 128,
+      "id": "region-125",
+      "mapColorRgba": [
+        67,
+        193,
+        94,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 2,
+        "width": 1,
+        "x": 1064,
+        "y": 668
+      },
+      "centroid": {
+        "x": 1064.0,
+        "y": 668.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 130,
+      "id": "region-126",
+      "mapColorRgba": [
+        24,
+        79,
+        45,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 2,
+        "width": 1,
+        "x": 1063,
+        "y": 671
+      },
+      "centroid": {
+        "x": 1063.0,
+        "y": 671.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 131,
+      "id": "region-127",
+      "mapColorRgba": [
+        208,
+        244,
+        252,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 1062,
+        "y": 675
+      },
+      "centroid": {
+        "x": 1062.0,
+        "y": 675.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 133,
+      "id": "region-130",
+      "mapColorRgba": [
+        126,
+        97,
+        209,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 781,
+        "y": 678
+      },
+      "centroid": {
+        "x": 781.0,
+        "y": 678.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 136,
+      "id": "region-131",
+      "mapColorRgba": [
+        54,
+        239,
+        160,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 92,
+        "y": 700
+      },
+      "centroid": {
+        "x": 92.0,
+        "y": 700.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 140,
+      "id": "region-134",
+      "mapColorRgba": [
+        92,
+        24,
+        149,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00019076639764365347,
+      "areaPixels": 3,
+      "aspectRatio": 0.3333333333333333,
+      "bounds": {
+        "height": 3,
+        "width": 1,
+        "x": 93,
+        "y": 703
+      },
+      "centroid": {
+        "x": 93.0,
+        "y": 704.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 141,
+      "id": "region-135",
+      "mapColorRgba": [
+        20,
+        134,
+        100,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 1067,
+        "y": 708
+      },
+      "centroid": {
+        "x": 1067.0,
+        "y": 708.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 144,
+      "id": "region-136",
+      "mapColorRgba": [
+        45,
+        12,
+        59,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 2,
+        "width": 1,
+        "x": 94,
+        "y": 708
+      },
+      "centroid": {
+        "x": 94.0,
+        "y": 708.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 143,
+      "id": "region-137",
+      "mapColorRgba": [
+        229,
+        181,
+        138,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0023527855709383925,
+      "areaPixels": 37,
+      "aspectRatio": 0.4,
+      "bounds": {
+        "height": 15,
+        "width": 6,
+        "x": 1061,
+        "y": 710
+      },
+      "centroid": {
+        "x": 1063.2432432432433,
+        "y": 717.2972972972973
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 145,
+      "id": "region-139",
+      "mapColorRgba": [
+        74,
+        185,
+        40,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.003433795157585762,
+      "areaPixels": 54,
+      "aspectRatio": 0.7058823529411765,
+      "bounds": {
+        "height": 12,
+        "width": 17,
+        "x": 343,
+        "y": 714
+      },
+      "centroid": {
+        "x": 352.037037037037,
+        "y": 720.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 146,
+      "id": "region-140",
+      "mapColorRgba": [
+        3,
+        38,
+        255,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0015261311811492278,
+      "areaPixels": 24,
+      "aspectRatio": 0.875,
+      "bounds": {
+        "height": 7,
+        "width": 8,
+        "x": 501,
+        "y": 721
+      },
+      "centroid": {
+        "x": 503.3333333333333,
+        "y": 723.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 148,
+      "id": "region-141",
+      "mapColorRgba": [
+        219,
+        172,
+        78,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 630,
+        "y": 746
+      },
+      "centroid": {
+        "x": 630.0,
+        "y": 746.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 153,
+      "id": "region-145",
+      "mapColorRgba": [
+        62,
+        71,
+        114,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0005722991929309605,
+      "areaPixels": 9,
+      "aspectRatio": 0.6,
+      "bounds": {
+        "height": 5,
+        "width": 3,
+        "x": 631,
+        "y": 749
+      },
+      "centroid": {
+        "x": 631.5555555555555,
+        "y": 751.5555555555555
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 155,
+      "id": "region-147",
+      "mapColorRgba": [
+        143,
+        74,
+        144,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.007312711909673382,
+      "areaPixels": 115,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 13,
+        "width": 13,
+        "x": 615,
+        "y": 747
+      },
+      "centroid": {
+        "x": 620.6782608695652,
+        "y": 752.6086956521739
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 152,
+      "id": "region-148",
+      "mapColorRgba": [
+        71,
+        240,
+        103,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.006867590315171524,
+      "areaPixels": 108,
+      "aspectRatio": 0.9230769230769231,
+      "bounds": {
+        "height": 12,
+        "width": 13,
+        "x": 506,
+        "y": 747
+      },
+      "centroid": {
+        "x": 512.2870370370371,
+        "y": 752.7222222222222
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 151,
+      "id": "region-149",
+      "mapColorRgba": [
+        28,
+        126,
+        54,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 1,
+        "width": 2,
+        "x": 844,
+        "y": 754
+      },
+      "centroid": {
+        "x": 844.5,
+        "y": 754.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 156,
+      "id": "region-150",
+      "mapColorRgba": [
+        212,
+        231,
+        133,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00038153279528730695,
+      "areaPixels": 6,
+      "aspectRatio": 0.16666666666666666,
+      "bounds": {
+        "height": 6,
+        "width": 1,
+        "x": 183,
+        "y": 765
+      },
+      "centroid": {
+        "x": 183.0,
+        "y": 767.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 158,
+      "id": "region-152",
+      "mapColorRgba": [
+        165,
+        235,
+        43,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.005977347126167808,
+      "areaPixels": 94,
+      "aspectRatio": 0.8461538461538461,
+      "bounds": {
+        "height": 13,
+        "width": 11,
+        "x": 585,
+        "y": 766
+      },
+      "centroid": {
+        "x": 589.2872340425532,
+        "y": 770.7446808510638
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 160,
+      "id": "region-154",
+      "mapColorRgba": [
+        10,
+        158,
+        73,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.005977347126167808,
+      "areaPixels": 94,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 12,
+        "width": 12,
+        "x": 540,
+        "y": 766
+      },
+      "centroid": {
+        "x": 546.1170212765958,
+        "y": 770.8936170212766
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 159,
+      "id": "region-155",
+      "mapColorRgba": [
+        195,
+        4,
+        24,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00019076639764365347,
+      "areaPixels": 3,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 2,
+        "width": 2,
+        "x": 177,
+        "y": 773
+      },
+      "centroid": {
+        "x": 177.66666666666666,
+        "y": 773.6666666666666
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 161,
+      "id": "region-157",
+      "mapColorRgba": [
+        80,
+        11,
+        190,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 182,
+        "y": 774
+      },
+      "centroid": {
+        "x": 182.0,
+        "y": 774.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 162,
+      "id": "region-158",
+      "mapColorRgba": [
+        104,
+        177,
+        13,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0008902431890037162,
+      "areaPixels": 14,
+      "aspectRatio": 0.8333333333333334,
+      "bounds": {
+        "height": 5,
+        "width": 6,
+        "x": 734,
+        "y": 789
+      },
+      "centroid": {
+        "x": 736.3571428571429,
+        "y": 790.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 169,
+      "id": "region-161",
+      "mapColorRgba": [
+        182,
+        34,
+        98,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0005722991929309605,
+      "areaPixels": 9,
+      "aspectRatio": 0.6,
+      "bounds": {
+        "height": 3,
+        "width": 5,
+        "x": 396,
+        "y": 793
+      },
+      "centroid": {
+        "x": 398.0,
+        "y": 793.5555555555555
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 172,
+      "id": "region-162",
+      "mapColorRgba": [
+        78,
+        168,
+        49,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.007185534311244281,
+      "areaPixels": 113,
+      "aspectRatio": 0.7333333333333333,
+      "bounds": {
+        "height": 15,
+        "width": 11,
+        "x": 739,
+        "y": 791
+      },
+      "centroid": {
+        "x": 744.4513274336283,
+        "y": 797.4159292035398
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 171,
+      "id": "region-163",
+      "mapColorRgba": [
+        7,
+        209,
+        128,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.007567067106531588,
+      "areaPixels": 119,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 13,
+        "width": 13,
+        "x": 383,
+        "y": 796
+      },
+      "centroid": {
+        "x": 388.2773109243698,
+        "y": 801.4957983193277
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 173,
+      "id": "region-165",
+      "mapColorRgba": [
+        148,
+        197,
+        38,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.005659403130095053,
+      "areaPixels": 89,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 11,
+        "width": 11,
+        "x": 938,
+        "y": 818
+      },
+      "centroid": {
+        "x": 943.0112359550562,
+        "y": 822.685393258427
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 176,
+      "id": "region-169",
+      "mapColorRgba": [
+        202,
+        255,
+        234,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.009029609488466263,
+      "areaPixels": 142,
+      "aspectRatio": 0.8,
+      "bounds": {
+        "height": 15,
+        "width": 12,
+        "x": 754,
+        "y": 827
+      },
+      "centroid": {
+        "x": 759.5352112676056,
+        "y": 833.3661971830986
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 177,
+      "id": "region-172",
+      "mapColorRgba": [
+        16,
+        104,
+        223,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 186,
+        "y": 836
+      },
+      "centroid": {
+        "x": 186.0,
+        "y": 836.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 181,
+      "id": "region-173",
+      "mapColorRgba": [
+        40,
+        150,
+        174,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.006867590315171524,
+      "areaPixels": 108,
+      "aspectRatio": 0.9166666666666666,
+      "bounds": {
+        "height": 12,
+        "width": 11,
+        "x": 370,
+        "y": 832
+      },
+      "centroid": {
+        "x": 374.787037037037,
+        "y": 837.3888888888889
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 179,
+      "id": "region-174",
+      "mapColorRgba": [
+        225,
+        28,
+        125,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 185,
+        "y": 838
+      },
+      "centroid": {
+        "x": 185.0,
+        "y": 838.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 182,
+      "id": "region-175",
+      "mapColorRgba": [
+        185,
+        133,
+        204,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.004705571141876785,
+      "areaPixels": 74,
+      "aspectRatio": 0.6875,
+      "bounds": {
+        "height": 16,
+        "width": 11,
+        "x": 170,
+        "y": 834
+      },
+      "centroid": {
+        "x": 174.06756756756758,
+        "y": 839.4594594594595
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 180,
+      "id": "region-176",
+      "mapColorRgba": [
+        118,
+        3,
+        131,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 183,
+        "y": 841
+      },
+      "centroid": {
+        "x": 183.0,
+        "y": 841.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 183,
+      "id": "region-177",
+      "mapColorRgba": [
+        14,
+        137,
+        82,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 2,
+        "width": 2,
+        "x": 181,
+        "y": 843
+      },
+      "centroid": {
+        "x": 181.5,
+        "y": 843.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 184,
+      "id": "region-178",
+      "mapColorRgba": [
+        199,
+        55,
+        33,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0003179439960727558,
+      "areaPixels": 5,
+      "aspectRatio": 0.8,
+      "bounds": {
+        "height": 5,
+        "width": 4,
+        "x": 177,
+        "y": 846
+      },
+      "centroid": {
+        "x": 178.6,
+        "y": 848.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 185,
+      "id": "region-180",
+      "mapColorRgba": [
+        84,
+        58,
+        71,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00019076639764365347,
+      "areaPixels": 3,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 3,
+        "width": 3,
+        "x": 174,
+        "y": 852
+      },
+      "centroid": {
+        "x": 175.0,
+        "y": 853.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 187,
+      "id": "region-181",
+      "mapColorRgba": [
+        108,
+        160,
+        22,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0002543551968582046,
+      "areaPixels": 4,
+      "aspectRatio": 0.6666666666666666,
+      "bounds": {
+        "height": 2,
+        "width": 3,
+        "x": 96,
+        "y": 854
+      },
+      "centroid": {
+        "x": 97.0,
+        "y": 854.5
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 188,
+      "id": "region-182",
+      "mapColorRgba": [
+        37,
+        41,
+        229,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 171,
+        "y": 858
+      },
+      "centroid": {
+        "x": 171.0,
+        "y": 858.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 191,
+      "id": "region-183",
+      "mapColorRgba": [
+        242,
+        87,
+        180,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.007885011102604342,
+      "areaPixels": 124,
+      "aspectRatio": 0.9230769230769231,
+      "bounds": {
+        "height": 12,
+        "width": 13,
+        "x": 896,
+        "y": 854
+      },
+      "centroid": {
+        "x": 902.25,
+        "y": 858.9193548387096
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 189,
+      "id": "region-184",
+      "mapColorRgba": [
+        138,
+        221,
+        11,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.013989535827201253,
+      "areaPixels": 220,
+      "aspectRatio": 0.46938775510204084,
+      "bounds": {
+        "height": 49,
+        "width": 23,
+        "x": 103,
+        "y": 848
+      },
+      "centroid": {
+        "x": 117.21363636363637,
+        "y": 867.8681818181818
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 186,
+      "id": "region-186",
+      "mapColorRgba": [
+        27,
+        192,
+        169,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.008648076693178958,
+      "areaPixels": 136,
+      "aspectRatio": 0.6875,
+      "bounds": {
+        "height": 16,
+        "width": 11,
+        "x": 758,
+        "y": 867
+      },
+      "centroid": {
+        "x": 762.4926470588235,
+        "y": 874.6544117647059
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 195,
+      "id": "region-189",
+      "mapColorRgba": [
+        161,
+        125,
+        158,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.007757833504175241,
+      "areaPixels": 122,
+      "aspectRatio": 0.7333333333333333,
+      "bounds": {
+        "height": 15,
+        "width": 11,
+        "x": 367,
+        "y": 870
+      },
+      "centroid": {
+        "x": 372.5409836065574,
+        "y": 877.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 197,
+      "id": "region-191",
+      "mapColorRgba": [
+        54,
+        97,
+        60,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.008393721496320752,
+      "areaPixels": 132,
+      "aspectRatio": 0.6363636363636364,
+      "bounds": {
+        "height": 22,
+        "width": 14,
+        "x": 137,
+        "y": 873
+      },
+      "centroid": {
+        "x": 141.04545454545453,
+        "y": 880.7348484848485
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 199,
+      "id": "region-193",
+      "mapColorRgba": [
+        135,
+        20,
+        66,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0001271775984291023,
+      "areaPixels": 2,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 1,
+        "width": 2,
+        "x": 268,
+        "y": 899
+      },
+      "centroid": {
+        "x": 268.5,
+        "y": 899.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 203,
+      "id": "region-195",
+      "mapColorRgba": [
+        20,
+        27,
+        224,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0005087103937164092,
+      "areaPixels": 8,
+      "aspectRatio": 0.75,
+      "bounds": {
+        "height": 3,
+        "width": 4,
+        "x": 781,
+        "y": 909
+      },
+      "centroid": {
+        "x": 782.125,
+        "y": 909.625
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 208,
+      "id": "region-198",
+      "mapColorRgba": [
+        189,
+        180,
+        213,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00883884309082261,
+      "areaPixels": 139,
+      "aspectRatio": 0.8125,
+      "bounds": {
+        "height": 16,
+        "width": 13,
+        "x": 747,
+        "y": 908
+      },
+      "centroid": {
+        "x": 753.4172661870504,
+        "y": 916.0215827338129
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 207,
+      "id": "region-203",
+      "mapColorRgba": [
+        168,
+        213,
+        104,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00769424470496069,
+      "areaPixels": 121,
+      "aspectRatio": 0.8,
+      "bounds": {
+        "height": 15,
+        "width": 12,
+        "x": 377,
+        "y": 909
+      },
+      "centroid": {
+        "x": 381.8099173553719,
+        "y": 917.0165289256198
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 206,
+      "id": "region-205",
+      "mapColorRgba": [
+        57,
+        216,
+        142,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.004578393543447684,
+      "areaPixels": 72,
+      "aspectRatio": 0.3888888888888889,
+      "bounds": {
+        "height": 18,
+        "width": 7,
+        "x": 1069,
+        "y": 909
+      },
+      "centroid": {
+        "x": 1072.125,
+        "y": 917.75
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 209,
+      "id": "region-206",
+      "mapColorRgba": [
+        246,
+        70,
+        93,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.013989535827201253,
+      "areaPixels": 220,
+      "aspectRatio": 0.7333333333333333,
+      "bounds": {
+        "height": 30,
+        "width": 22,
+        "x": 1041,
+        "y": 925
+      },
+      "centroid": {
+        "x": 1053.5727272727272,
+        "y": 940.5363636363636
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 211,
+      "id": "region-208",
+      "mapColorRgba": [
+        71,
+        117,
+        227,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 1063,
+        "y": 941
+      },
+      "centroid": {
+        "x": 1063.0,
+        "y": 941.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 215,
+      "id": "region-209",
+      "mapColorRgba": [
+        31,
+        243,
+        178,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00019076639764365347,
+      "areaPixels": 3,
+      "aspectRatio": 0.6666666666666666,
+      "bounds": {
+        "height": 3,
+        "width": 2,
+        "x": 1061,
+        "y": 943
+      },
+      "centroid": {
+        "x": 1061.6666666666667,
+        "y": 944.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 216,
+      "id": "region-210",
+      "mapColorRgba": [
+        212,
+        121,
+        1,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 372,
+        "y": 948
+      },
+      "centroid": {
+        "x": 372.0,
+        "y": 948.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 219,
+      "id": "region-212",
+      "mapColorRgba": [
+        165,
+        108,
+        167,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.006740412716742422,
+      "areaPixels": 106,
+      "aspectRatio": 0.9333333333333333,
+      "bounds": {
+        "height": 15,
+        "width": 14,
+        "x": 727,
+        "y": 945
+      },
+      "centroid": {
+        "x": 734.1132075471698,
+        "y": 952.7735849056604
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 217,
+      "id": "region-216",
+      "mapColorRgba": [
+        155,
+        7,
+        107,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.008520899094749854,
+      "areaPixels": 134,
+      "aspectRatio": 0.875,
+      "bounds": {
+        "height": 16,
+        "width": 14,
+        "x": 395,
+        "y": 946
+      },
+      "centroid": {
+        "x": 400.32089552238807,
+        "y": 954.7910447761194
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 218,
+      "id": "region-217",
+      "mapColorRgba": [
+        83,
+        141,
+        58,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.002988673563083904,
+      "areaPixels": 47,
+      "aspectRatio": 0.8636363636363636,
+      "bounds": {
+        "height": 22,
+        "width": 19,
+        "x": 708,
+        "y": 963
+      },
+      "centroid": {
+        "x": 717.936170212766,
+        "y": 971.4893617021277
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 224,
+      "id": "region-220",
+      "mapColorRgba": [
+        249,
+        62,
+        47,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0006358879921455116,
+      "areaPixels": 10,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 4,
+        "width": 4,
+        "x": 995,
+        "y": 978
+      },
+      "centroid": {
+        "x": 997.0,
+        "y": 979.6
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 229,
+      "id": "region-222",
+      "mapColorRgba": [
+        78,
+        45,
+        77,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 921,
+        "y": 983
+      },
+      "centroid": {
+        "x": 921.0,
+        "y": 983.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 230,
+      "id": "region-224",
+      "mapColorRgba": [
+        223,
+        208,
+        211,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0030522623622984556,
+      "areaPixels": 48,
+      "aspectRatio": 0.9,
+      "bounds": {
+        "height": 9,
+        "width": 10,
+        "x": 940,
+        "y": 993
+      },
+      "centroid": {
+        "x": 945.5,
+        "y": 995.5625
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 242,
+      "id": "region-228",
+      "mapColorRgba": [
+        61,
+        203,
+        151,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0038153279528730694,
+      "areaPixels": 60,
+      "aspectRatio": 0.631578947368421,
+      "bounds": {
+        "height": 19,
+        "width": 12,
+        "x": 694,
+        "y": 987
+      },
+      "centroid": {
+        "x": 698.6666666666666,
+        "y": 995.9
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 235,
+      "id": "region-229",
+      "mapColorRgba": [
+        202,
+        113,
+        102,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 220,
+        "y": 1014
+      },
+      "centroid": {
+        "x": 220.0,
+        "y": 1014.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 244,
+      "id": "region-239",
+      "mapColorRgba": [
+        159,
+        54,
+        12,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00019076639764365347,
+      "areaPixels": 3,
+      "aspectRatio": 0.3333333333333333,
+      "bounds": {
+        "height": 1,
+        "width": 3,
+        "x": 204,
+        "y": 1018
+      },
+      "centroid": {
+        "x": 205.0,
+        "y": 1018.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 249,
+      "id": "region-241",
+      "mapColorRgba": [
+        108,
+        37,
+        146,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 202,
+        "y": 1019
+      },
+      "centroid": {
+        "x": 202.0,
+        "y": 1019.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 248,
+      "id": "region-242",
+      "mapColorRgba": [
+        36,
+        163,
+        97,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.007376300708887933,
+      "areaPixels": 116,
+      "aspectRatio": 0.45454545454545453,
+      "bounds": {
+        "height": 10,
+        "width": 22,
+        "x": 213,
+        "y": 1018
+      },
+      "centroid": {
+        "x": 223.85344827586206,
+        "y": 1021.4310344827586
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 250,
+      "id": "region-243",
+      "mapColorRgba": [
+        253,
+        41,
+        48,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.012844937441339332,
+      "areaPixels": 202,
+      "aspectRatio": 0.3870967741935484,
+      "bounds": {
+        "height": 12,
+        "width": 31,
+        "x": 927,
+        "y": 1017
+      },
+      "centroid": {
+        "x": 942.5049504950495,
+        "y": 1022.4108910891089
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 247,
+      "id": "region-244",
+      "mapColorRgba": [
+        138,
+        86,
+        135,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.008012188701033445,
+      "areaPixels": 126,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 14,
+        "width": 14,
+        "x": 461,
+        "y": 1022
+      },
+      "centroid": {
+        "x": 466.26190476190476,
+        "y": 1029.420634920635
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 252,
+      "id": "region-246",
+      "mapColorRgba": [
+        27,
+        90,
+        37,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.010174207874328186,
+      "areaPixels": 160,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 19,
+        "width": 19,
+        "x": 203,
+        "y": 1022
+      },
+      "centroid": {
+        "x": 211.48125,
+        "y": 1029.4625
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 251,
+      "id": "region-247",
+      "mapColorRgba": [
+        211,
+        195,
+        244,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.007821422303389792,
+      "areaPixels": 123,
+      "aspectRatio": 0.9333333333333333,
+      "bounds": {
+        "height": 14,
+        "width": 15,
+        "x": 655,
+        "y": 1025
+      },
+      "centroid": {
+        "x": 663.1951219512196,
+        "y": 1032.3170731707316
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 253,
+      "id": "region-248",
+      "mapColorRgba": [
+        232,
+        73,
+        75,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.010047030275899082,
+      "areaPixels": 158,
+      "aspectRatio": 0.6666666666666666,
+      "bounds": {
+        "height": 14,
+        "width": 21,
+        "x": 947,
+        "y": 1031
+      },
+      "centroid": {
+        "x": 956.9810126582279,
+        "y": 1036.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 257,
+      "id": "region-249",
+      "mapColorRgba": [
+        160,
+        247,
+        26,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.005722991929309603,
+      "areaPixels": 90,
+      "aspectRatio": 0.7647058823529411,
+      "bounds": {
+        "height": 17,
+        "width": 13,
+        "x": 1038,
+        "y": 1031
+      },
+      "centroid": {
+        "x": 1044.6222222222223,
+        "y": 1038.9777777777779
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 258,
+      "id": "region-251",
+      "mapColorRgba": [
+        49,
+        250,
+        184,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 97,
+        "y": 1049
+      },
+      "centroid": {
+        "x": 97.0,
+        "y": 1049.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 266,
+      "id": "region-254",
+      "mapColorRgba": [
+        95,
+        23,
+        173,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0009538319882182673,
+      "areaPixels": 15,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 5,
+        "width": 5,
+        "x": 473,
+        "y": 1057
+      },
+      "centroid": {
+        "x": 475.53333333333336,
+        "y": 1058.7333333333333
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 269,
+      "id": "region-258",
+      "mapColorRgba": [
+        189,
+        14,
+        81,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.007630655905746139,
+      "areaPixels": 120,
+      "aspectRatio": 0.9333333333333333,
+      "bounds": {
+        "height": 15,
+        "width": 14,
+        "x": 625,
+        "y": 1051
+      },
+      "centroid": {
+        "x": 632.4833333333333,
+        "y": 1059.1916666666666
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 268,
+      "id": "region-259",
+      "mapColorRgba": [
+        117,
+        180,
+        32,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.003942505551302171,
+      "areaPixels": 62,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 14,
+        "width": 7,
+        "x": 108,
+        "y": 1079
+      },
+      "centroid": {
+        "x": 111.14516129032258,
+        "y": 1085.1935483870968
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 271,
+      "id": "region-268",
+      "mapColorRgba": [
+        70,
+        207,
+        127,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0005722991929309605,
+      "areaPixels": 9,
+      "aspectRatio": 0.2857142857142857,
+      "bounds": {
+        "height": 2,
+        "width": 7,
+        "x": 92,
+        "y": 1089
+      },
+      "centroid": {
+        "x": 95.55555555555556,
+        "y": 1089.7777777777778
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 274,
+      "id": "region-269",
+      "mapColorRgba": [
+        31,
+        116,
+        206,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.002607140767796597,
+      "areaPixels": 41,
+      "aspectRatio": 0.28,
+      "bounds": {
+        "height": 25,
+        "width": 7,
+        "x": 119,
+        "y": 1082
+      },
+      "centroid": {
+        "x": 121.04878048780488,
+        "y": 1094.0975609756097
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 273,
+      "id": "region-272",
+      "mapColorRgba": [
+        164,
+        230,
+        35,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.012336227047622925,
+      "areaPixels": 194,
+      "aspectRatio": 0.72,
+      "bounds": {
+        "height": 25,
+        "width": 18,
+        "x": 1029,
+        "y": 1089
+      },
+      "centroid": {
+        "x": 1035.958762886598,
+        "y": 1101.701030927835
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 275,
+      "id": "region-273",
+      "mapColorRgba": [
+        125,
+        111,
+        242,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0031794399607275575,
+      "areaPixels": 50,
+      "aspectRatio": 0.6666666666666666,
+      "bounds": {
+        "height": 12,
+        "width": 8,
+        "x": 1020,
+        "y": 1097
+      },
+      "centroid": {
+        "x": 1024.18,
+        "y": 1102.34
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 277,
+      "id": "region-274",
+      "mapColorRgba": [
+        53,
+        149,
+        65,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 278,
+        "y": 1103
+      },
+      "centroid": {
+        "x": 278.0,
+        "y": 1103.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 279,
+      "id": "region-275",
+      "mapColorRgba": [
+        194,
+        19,
+        16,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 118,
+        "y": 1109
+      },
+      "centroid": {
+        "x": 118.0,
+        "y": 1109.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 282,
+      "id": "region-276",
+      "mapColorRgba": [
+        154,
+        152,
+        231,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0018440751772219833,
+      "areaPixels": 29,
+      "aspectRatio": 0.4166666666666667,
+      "bounds": {
+        "height": 5,
+        "width": 12,
+        "x": 101,
+        "y": 1108
+      },
+      "centroid": {
+        "x": 106.44827586206897,
+        "y": 1110.3103448275863
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 281,
+      "id": "region-277",
+      "mapColorRgba": [
+        83,
+        6,
+        182,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 830,
+        "y": 1118
+      },
+      "centroid": {
+        "x": 830.0,
+        "y": 1118.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 285,
+      "id": "region-279",
+      "mapColorRgba": [
+        32,
+        53,
+        212,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 95,
+        "y": 1120
+      },
+      "centroid": {
+        "x": 95.0,
+        "y": 1120.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 286,
+      "id": "region-280",
+      "mapColorRgba": [
+        248,
+        179,
+        171,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.00019076639764365347,
+      "areaPixels": 3,
+      "aspectRatio": 0.6666666666666666,
+      "bounds": {
+        "height": 2,
+        "width": 3,
+        "x": 482,
+        "y": 1130
+      },
+      "centroid": {
+        "x": 483.0,
+        "y": 1130.3333333333333
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 287,
+      "id": "region-283",
+      "mapColorRgba": [
+        6,
+        44,
+        152,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.001208187185076472,
+      "areaPixels": 19,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 7,
+        "width": 7,
+        "x": 639,
+        "y": 1130
+      },
+      "centroid": {
+        "x": 642.2631578947369,
+        "y": 1133.2105263157894
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 288,
+      "id": "region-284",
+      "mapColorRgba": [
+        222,
+        170,
+        111,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 1041,
+        "y": 1159
+      },
+      "centroid": {
+        "x": 1041.0,
+        "y": 1159.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 291,
+      "id": "region-288",
+      "mapColorRgba": [
+        61,
+        77,
+        19,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.005341459134022297,
+      "areaPixels": 84,
+      "aspectRatio": 0.5,
+      "bounds": {
+        "height": 8,
+        "width": 16,
+        "x": 1042,
+        "y": 1159
+      },
+      "centroid": {
+        "x": 1048.797619047619,
+        "y": 1162.452380952381
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 292,
+      "id": "region-289",
+      "mapColorRgba": [
+        245,
+        202,
+        226,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 435,
+        "y": 1167
+      },
+      "centroid": {
+        "x": 435.0,
+        "y": 1167.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 293,
+      "id": "region-290",
+      "mapColorRgba": [
+        130,
+        112,
+        177,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.011954694252335616,
+      "areaPixels": 188,
+      "aspectRatio": 0.8,
+      "bounds": {
+        "height": 40,
+        "width": 32,
+        "x": 1011,
+        "y": 1157
+      },
+      "centroid": {
+        "x": 1026.7553191489362,
+        "y": 1179.7021276595744
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 290,
+      "id": "region-291",
+      "mapColorRgba": [
+        90,
+        254,
+        0,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.004006094350516722,
+      "areaPixels": 63,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 12,
+        "width": 12,
+        "x": 125,
+        "y": 1185
+      },
+      "centroid": {
+        "x": 129.93650793650792,
+        "y": 1190.1746031746031
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 295,
+      "id": "region-292",
+      "mapColorRgba": [
+        19,
+        103,
+        215,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.004705571141876785,
+      "areaPixels": 74,
+      "aspectRatio": 0.8,
+      "bounds": {
+        "height": 12,
+        "width": 15,
+        "x": 297,
+        "y": 1235
+      },
+      "centroid": {
+        "x": 303.5,
+        "y": 1239.9594594594594
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 307,
+      "id": "region-303",
+      "mapColorRgba": [
+        252,
+        162,
+        76,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.002988673563083904,
+      "areaPixels": 47,
+      "aspectRatio": 0.9090909090909091,
+      "bounds": {
+        "height": 10,
+        "width": 11,
+        "x": 825,
+        "y": 1239
+      },
+      "centroid": {
+        "x": 830.8723404255319,
+        "y": 1242.8297872340424
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 308,
+      "id": "region-304",
+      "mapColorRgba": [
+        181,
+        40,
+        3,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0015261311811492278,
+      "areaPixels": 24,
+      "aspectRatio": 0.5555555555555556,
+      "bounds": {
+        "height": 5,
+        "width": 9,
+        "x": 290,
+        "y": 1253
+      },
+      "centroid": {
+        "x": 294.4583333333333,
+        "y": 1255.75
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 311,
+      "id": "region-307",
+      "mapColorRgba": [
+        211,
+        69,
+        112,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 992,
+        "y": 1261
+      },
+      "centroid": {
+        "x": 992.0,
+        "y": 1261.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 316,
+      "id": "region-310",
+      "mapColorRgba": [
+        120,
+        246,
+        101,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0020348415748656368,
+      "areaPixels": 32,
+      "aspectRatio": 0.875,
+      "bounds": {
+        "height": 7,
+        "width": 8,
+        "x": 841,
+        "y": 1260
+      },
+      "centroid": {
+        "x": 843.625,
+        "y": 1264.0625
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 315,
+      "id": "region-312",
+      "mapColorRgba": [
+        201,
+        229,
+        139,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.002098430374080188,
+      "areaPixels": 33,
+      "aspectRatio": 0.7777777777777778,
+      "bounds": {
+        "height": 7,
+        "width": 9,
+        "x": 992,
+        "y": 1264
+      },
+      "centroid": {
+        "x": 995.6969696969697,
+        "y": 1267.060606060606
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 318,
+      "id": "region-313",
+      "mapColorRgba": [
+        134,
+        99,
+        90,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0027343183662256994,
+      "areaPixels": 43,
+      "aspectRatio": 0.8888888888888888,
+      "bounds": {
+        "height": 8,
+        "width": 9,
+        "x": 791,
+        "y": 1266
+      },
+      "centroid": {
+        "x": 795.5348837209302,
+        "y": 1269.5581395348838
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 319,
+      "id": "region-314",
+      "mapColorRgba": [
+        94,
+        233,
+        41,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0005087103937164092,
+      "areaPixels": 8,
+      "aspectRatio": 0.75,
+      "bounds": {
+        "height": 3,
+        "width": 4,
+        "x": 814,
+        "y": 1278
+      },
+      "centroid": {
+        "x": 815.25,
+        "y": 1278.625
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 323,
+      "id": "region-318",
+      "mapColorRgba": [
+        188,
+        131,
+        237,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.01443465742170311,
+      "areaPixels": 227,
+      "aspectRatio": 0.6,
+      "bounds": {
+        "height": 18,
+        "width": 30,
+        "x": 860,
+        "y": 1273
+      },
+      "centroid": {
+        "x": 874.3039647577092,
+        "y": 1282.4977973568282
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 321,
+      "id": "region-319",
+      "mapColorRgba": [
+        117,
+        9,
+        188,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0019076639764365347,
+      "areaPixels": 30,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 7,
+        "width": 7,
+        "x": 350,
+        "y": 1283
+      },
+      "centroid": {
+        "x": 353.73333333333335,
+        "y": 1285.8
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 325,
+      "id": "region-320",
+      "mapColorRgba": [
+        13,
+        183,
+        115,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 956,
+        "y": 1291
+      },
+      "centroid": {
+        "x": 956.0,
+        "y": 1291.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 329,
+      "id": "region-323",
+      "mapColorRgba": [
+        171,
+        32,
+        96,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.004514804744233132,
+      "areaPixels": 71,
+      "aspectRatio": 0.7857142857142857,
+      "bounds": {
+        "height": 14,
+        "width": 11,
+        "x": 725,
+        "y": 1294
+      },
+      "centroid": {
+        "x": 730.3661971830986,
+        "y": 1300.4084507042253
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 331,
+      "id": "region-326",
+      "mapColorRgba": [
+        241,
+        93,
+        85,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 814,
+        "y": 1316
+      },
+      "centroid": {
+        "x": 814.0,
+        "y": 1316.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 341,
+      "id": "region-331",
+      "mapColorRgba": [
+        239,
+        253,
+        232,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0005087103937164092,
+      "areaPixels": 8,
+      "aspectRatio": 0.8,
+      "bounds": {
+        "height": 5,
+        "width": 4,
+        "x": 666,
+        "y": 1315
+      },
+      "centroid": {
+        "x": 667.75,
+        "y": 1316.875
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 339,
+      "id": "region-332",
+      "mapColorRgba": [
+        164,
+        123,
+        191,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.012336227047622925,
+      "areaPixels": 194,
+      "aspectRatio": 0.32432432432432434,
+      "bounds": {
+        "height": 12,
+        "width": 37,
+        "x": 401,
+        "y": 1311
+      },
+      "centroid": {
+        "x": 421.08762886597935,
+        "y": 1316.881443298969
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 336,
+      "id": "region-333",
+      "mapColorRgba": [
+        124,
+        225,
+        14,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0005087103937164092,
+      "areaPixels": 8,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 4,
+        "width": 4,
+        "x": 305,
+        "y": 1320
+      },
+      "centroid": {
+        "x": 306.625,
+        "y": 1320.875
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 346,
+      "id": "region-335",
+      "mapColorRgba": [
+        205,
+        148,
+        172,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0006994767913600627,
+      "areaPixels": 11,
+      "aspectRatio": 0.8,
+      "bounds": {
+        "height": 4,
+        "width": 5,
+        "x": 853,
+        "y": 1321
+      },
+      "centroid": {
+        "x": 854.7272727272727,
+        "y": 1322.2727272727273
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 348,
+      "id": "region-337",
+      "mapColorRgba": [
+        82,
+        152,
+        50,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 0.0040696831497312735,
+      "areaPixels": 64,
+      "aspectRatio": 0.3888888888888889,
+      "bounds": {
+        "height": 7,
+        "width": 18,
+        "x": 704,
+        "y": 1319
+      },
+      "centroid": {
+        "x": 713.890625,
+        "y": 1322.625
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 344,
+      "id": "region-338",
+      "mapColorRgba": [
+        107,
+        1,
+        129,
+        255
+      ],
+      "touchesBorder": false
+    },
+    {
+      "areaPercent": 6.358879921455115e-05,
+      "areaPixels": 1,
+      "aspectRatio": 1.0,
+      "bounds": {
+        "height": 1,
+        "width": 1,
+        "x": 85,
+        "y": 1340
+      },
+      "centroid": {
+        "x": 85.0,
+        "y": 1340.0
+      },
+      "classification": "FLAGGED_TOO_SMALL",
+      "componentLabel": 351,
+      "id": "region-344",
+      "mapColorRgba": [
+        222,
+        47,
+        235,
+        255
+      ],
+      "touchesBorder": false
+    }
+  ],
+  "metrics": {
+    "acceptedRegionCount": 173,
+    "exterior": {
+      "percent": 23.670866918817453,
+      "pixelCount": 372249
+    },
+    "flaggedTooSmallCount": 178,
+    "runtimeMs": 6111.414400000058,
+    "totalConnectedComponents": 351
+  },
+  "reservedMapColors": {
+    "barrier": [
+      0,
+      0,
+      0,
+      255
+    ],
+    "exterior": [
+      255,
+      255,
+      255,
+      0
+    ]
+  },
+  "schemaVersion": "1.0.0",
+  "settings": {
+    "connectivity": 8,
+    "deterministicOrdering": "centroidY asc, centroidX asc, areaPixels desc, componentLabel asc",
+    "minRegionAreaPercent": 0.015,
+    "minRegionAreaPixels": 250,
+    "morphology": {
+      "dilateIterations": 1,
+      "iterations": 1,
+      "kernel": 3
+    },
+    "threshold": 175
+  },
+  "source": {
+    "filename": "lovely_kitten_master.png",
+    "height": 1388,
+    "mode": "RGB",
+    "path": "C:\\Users\\rross\\color_kingdom\\assets\\source_artwork\\animals\\lovely_kitten_master.png",
+    "totalPixels": 1572604,
+    "width": 1133
+  },
+  "variantName": "C_threshold175_repair",
+  "warnings": [
+    {
+      "code": "EXCESSIVE_REGION_COUNT",
+      "message": "Detected 351 candidate regions; verify threshold and morphology.",
+      "value": 351
+    }
+  ]
+}

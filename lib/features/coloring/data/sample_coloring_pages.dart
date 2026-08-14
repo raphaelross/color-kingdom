@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'lovely_kitten_raster_regions.dart';
 import '../models/coloring_page.dart';
 
 const Color _defaultTransparent = Color(0x00000000);
@@ -125,4 +126,27 @@ const List<ColoringPage> sampleColoringPages = [
   sampleFriendlyLionPage,
   sampleCuteElephantPage,
   sampleLovelyKittenPage,
+  sampleLovelyKittenRasterPocPage,
 ];
+
+const ColoringPage sampleLovelyKittenRasterPocPage = ColoringPage(
+  id: 'lovely-kitten-raster-poc',
+  title: 'Lovely Kitten (Raster POC)',
+  categoryId: 'animals',
+  assetPath: 'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png',
+  thumbnailAssetPath: 'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png',
+  sortOrder: 5,
+  rendererType: ColoringRendererType.rasterRegion,
+  rasterRegionMetadata: RasterRegionMetadata(
+    regionMapAssetPath: 'assets/coloring_pages/animals/lovely_kitten_raster_poc/region_map.png',
+    regionFillMapAssetPath:
+      'assets/coloring_pages/animals/lovely_kitten_raster_poc/region_fill_map.png',
+    metadataAssetPath:
+        'assets/coloring_pages/animals/lovely_kitten_raster_poc/metadata_children_detailed.json',
+    contentVersion: 'phase2c-tuned-children-detailed-v1',
+    imageWidth: 1133,
+    imageHeight: 1388,
+    regionMapEntries: lovelyKittenRasterMapEntries,
+  ),
+  regions: lovelyKittenRasterChildrenDetailedRegions,
+);

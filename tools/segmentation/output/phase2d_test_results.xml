@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="32" time="2.513" timestamp="2026-08-11T22:11:51.714878-04:00" hostname="DESKTOP-H8R8V3E"><testcase classname="tests.test_boundary_repair" name="test_small_open_gap_detected" time="0.078" /><testcase classname="tests.test_boundary_repair" name="test_safe_short_gap_can_be_closed" time="0.107"><failure message="assert 0 &gt;= 1">def test_safe_short_gap_can_be_closed() -&gt; None:
+        b = _blank_barrier()
+        _box(b, 20, 20, 40, 40, 1)
+        b[20, 38] = 0
+    
+        cfg = BoundaryRepairConfig(
+            enabled=True,
+            diagnostics_only=False,
+            max_gap_pixels=6,
+            candidate_search_radius=10,
+            min_new_region_area_pixels=20,
+            max_repair_pixels=8,
+            border_margin_percent=1.0,
+            max_exterior_percent_delta=1.0,
+            max_new_regions_per_candidate=2,
+        )
+        res = detect_and_repair_boundaries(b, cfg, min_region_area_pixels=20)
+    
+&gt;       assert res.summary["appliedCount"] &gt;= 1
+E       assert 0 &gt;= 1
+
+tests\test_boundary_repair.py:48: AssertionError</failure></testcase><testcase classname="tests.test_boundary_repair" name="test_large_gap_is_rejected" time="0.065" /><testcase classname="tests.test_boundary_repair" name="test_border_opening_is_rejected" time="0.106" /><testcase classname="tests.test_boundary_repair" name="test_repair_creates_expected_enclosed_component" time="0.101"><failure message="assert 0 &gt;= 1">def test_repair_creates_expected_enclosed_component() -&gt; None:
+        b = _blank_barrier()
+        _box(b, 30, 30, 50, 50, 1)
+        b[30, 52] = 0
+    
+        cfg = BoundaryRepairConfig(enabled=True, diagnostics_only=False, max_gap_pixels=6, candidate_search_radius=10)
+        res = detect_and_repair_boundaries(b, cfg, min_region_area_pixels=20)
+    
+        assert res.summary["beforeAcceptedCount"] == 0
+&gt;       assert res.summary["afterAcceptedCount"] &gt;= 1
+E       assert 0 &gt;= 1
+
+tests\test_boundary_repair.py:83: AssertionError</failure></testcase><testcase classname="tests.test_boundary_repair" name="test_repair_does_not_merge_neighboring_valid_regions" time="0.096"><failure message="assert 2 == 3">def test_repair_does_not_merge_neighboring_valid_regions() -&gt; None:
+        b = _blank_barrier()
+        _box(b, 10, 15, 26, 26, 1)
+        _box(b, 45, 15, 26, 26, 1)
+        _box(b, 80, 15, 26, 26, 1)
+        b[15, 92] = 0  # only third box has gap
+    
+        cfg = BoundaryRepairConfig(enabled=True, diagnostics_only=False, max_gap_pixels=6, candidate_search_radius=10)
+        res = detect_and_repair_boundaries(b, cfg, min_region_area_pixels=20)
+    
+        assert res.summary["beforeAcceptedCount"] == 2
+&gt;       assert res.summary["afterAcceptedCount"] == 3
+E       assert 2 == 3
+
+tests\test_boundary_repair.py:97: AssertionError</failure></testcase><testcase classname="tests.test_boundary_repair" name="test_deterministic_candidate_detection" time="0.147" /><testcase classname="tests.test_boundary_repair" name="test_deterministic_repair_result_and_metadata" time="0.209" /><testcase classname="tests.test_segmentation_pipeline" name="test_single_enclosed_region_detected" time="0.037" /><testcase classname="tests.test_segmentation_pipeline" name="test_multiple_enclosed_regions_detected" time="0.014" /><testcase classname="tests.test_segmentation_pipeline" name="test_exterior_background_excluded" time="0.011" /><testcase classname="tests.test_segmentation_pipeline" name="test_open_boundary_leaks_to_exterior" time="0.023" /><testcase classname="tests.test_segmentation_pipeline" name="test_morphology_closes_small_gap" time="0.028" /><testcase classname="tests.test_segmentation_pipeline" name="test_small_region_flagged" time="0.026" /><testcase classname="tests.test_segmentation_pipeline" name="test_deterministic_region_ordering_ids" time="0.026" /><testcase classname="tests.test_segmentation_pipeline" name="test_region_map_matches_metadata_color_at_centroids" time="0.016" /><testcase classname="tests.test_segmentation_pipeline" name="test_repeated_runs_are_identical" time="0.032" /><testcase classname="tests.test_suitability_classifier" name="test_large_region_included_in_all_profiles" time="0.042" /><testcase classname="tests.test_suitability_classifier" name="test_tiny_region_retained_in_master_excluded_for_children" time="0.050" /><testcase classname="tests.test_suitability_classifier" name="test_medium_region_included_detailed_excluded_simple" time="0.040" /><testcase classname="tests.test_suitability_classifier" name="test_thin_sliver_region_can_be_rejected" time="0.068" /><testcase classname="tests.test_suitability_classifier" name="test_classification_is_deterministic_and_reasons_stable" time="0.088" /><testcase classname="tests.test_suitability_classifier" name="test_profile_configuration_changes_results_predictably" time="0.066" /><testcase classname="tests.test_suitability_classifier" name="test_metadata_contains_profile_results_and_master_ids_unchanged" time="0.040" /><testcase classname="tests.test_weighted_classifier" name="test_identical_features_produce_identical_scores" time="0.083" /><testcase classname="tests.test_weighted_classifier" name="test_scoring_is_deterministic" time="0.168" /><testcase classname="tests.test_weighted_classifier" name="test_score_in_range_zero_to_one" time="0.064" /><testcase classname="tests.test_weighted_classifier" name="test_larger_tap_target_improves_suitability" time="0.086" /><testcase classname="tests.test_weighted_classifier" name="test_hard_guardrail_excludes_unusably_tiny_region" time="0.094" /><testcase classname="tests.test_weighted_classifier" name="test_master_remains_unaffected" time="0.061" /><testcase classname="tests.test_weighted_classifier" name="test_weighted_children_detailed_reproducible" time="0.136" /><testcase classname="tests.test_weighted_classifier" name="test_weighted_metadata_contains_contributions" time="0.062" /></testsuite></testsuites>

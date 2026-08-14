@@ -259,4 +259,32 @@ void main() {
     expect(find.byTooltip('Back to My Creations'), findsOneWidget);
     expect(find.byTooltip('Home'), findsOneWidget);
   });
+
+  testWidgets('raster preview asset renders via Image widget', (tester) async {
+    await _pumpGallery(
+      tester,
+      myCreationsOverride: myCreationsProvider.overrideWith(
+        (ref) async => const <MyCreationItem>[
+          MyCreationItem(
+            pageId: 'lovely-kitten-raster-poc',
+            pageTitle: 'Lovely Kitten (Raster POC)',
+            categoryId: 'animals',
+            categoryTitle: 'Animals',
+            previewAssetPath:
+              'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png',
+            coloredRegionCount: 2,
+            totalRegionCount: 55,
+            progressRatio: 0.04,
+            progressPercent: 4,
+            lastUpdatedAtEpochMs: 100,
+          ),
+        ],
+      ),
+    );
+
+    await tester.pumpAndSettle();
+
+    expect(find.text('Lovely Kitten (Raster POC)'), findsOneWidget);
+    expect(find.byType(Image), findsWidgets);
+  });
 }

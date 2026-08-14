@@ -134,6 +134,16 @@ class ColoringController extends StateNotifier<ColoringState> {
       return;
     }
 
+    assert(() {
+      debugPrint(
+        'Controller fill page=${state.page!.id} region=$regionId '
+        'selected=0x${state.selectedColor.toARGB32().toRadixString(16).padLeft(8, '0')} '
+        'previous=0x${previousColor.toARGB32().toRadixString(16).padLeft(8, '0')} '
+        'next=0x${nextColor.toARGB32().toRadixString(16).padLeft(8, '0')}',
+      );
+      return true;
+    }());
+
     final action = ColoringHistoryAction(
       regionId: regionId,
       previousColor: previousColor,
@@ -148,6 +158,15 @@ class ColoringController extends StateNotifier<ColoringState> {
       undoStack: [...state.undoStack, action],
       redoStack: const [],
     );
+
+    assert(() {
+      debugPrint(
+        'Controller fill applied region=$regionId '
+        'stored=0x${state.regionColors[regionId]!.toARGB32().toRadixString(16).padLeft(8, '0')} '
+        'undoSize=${state.undoStack.length}',
+      );
+      return true;
+    }());
 
     _schedulePersistCurrentPageState();
   }

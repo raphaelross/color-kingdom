@@ -63,10 +63,7 @@ class CategoryScreen extends ConsumerWidget {
                       borderRadius: BorderRadius.circular(AppSpacing.radiusCard),
                       child: ColoredBox(
                         color: Colors.white,
-                        child: SvgPicture.asset(
-                          page.assetPath,
-                          fit: BoxFit.contain,
-                        ),
+                        child: _buildPreviewAsset(page.assetPath),
                       ),
                     ),
                   ),
@@ -123,6 +120,21 @@ class _EmptyCategoryMessage extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget _buildPreviewAsset(String assetPath) {
+  final isSvg = assetPath.toLowerCase().endsWith('.svg');
+  if (isSvg) {
+    return SvgPicture.asset(
+      assetPath,
+      fit: BoxFit.contain,
+    );
+  }
+
+  return Image.asset(
+    assetPath,
+    fit: BoxFit.contain,
+  );
 }
 
 String _toTitleCase(String text) {

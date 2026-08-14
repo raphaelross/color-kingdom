@@ -174,15 +174,28 @@ class _StaticPreview extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppSpacing.radiusCard),
         child: ColoredBox(
           color: Colors.white,
-          child: SvgPicture.asset(
-            assetPath,
-            fit: BoxFit.contain,
-            placeholderBuilder: (context) => const _PreviewFallback(),
-          ),
+          child: _buildPreviewAsset(assetPath),
         ),
       ),
     );
   }
+}
+
+Widget _buildPreviewAsset(String assetPath) {
+  final isSvg = assetPath.toLowerCase().endsWith('.svg');
+  if (isSvg) {
+    return SvgPicture.asset(
+      assetPath,
+      fit: BoxFit.contain,
+      placeholderBuilder: (context) => const _PreviewFallback(),
+    );
+  }
+
+  return Image.asset(
+    assetPath,
+    fit: BoxFit.contain,
+    errorBuilder: (_, error, stackTrace) => const _PreviewFallback(),
+  );
 }
 
 class _PreviewFallback extends StatelessWidget {

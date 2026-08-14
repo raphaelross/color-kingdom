@@ -99,6 +99,19 @@ const _spacePage = ColoringPage(
   ],
 );
 
+const _rasterPage = ColoringPage(
+  id: 'lovely-kitten-raster-poc',
+  title: 'Lovely Kitten (Raster POC)',
+  categoryId: 'animals',
+  assetPath: 'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art.png',
+  thumbnailAssetPath: 'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art.png',
+  sortOrder: 1,
+  rendererType: ColoringRendererType.rasterRegion,
+  regions: [
+    ColoringRegion(id: 'region-002', name: 'region-002', defaultColor: Colors.transparent),
+  ],
+);
+
 ProviderContainer _buildContainer({
   required ColoringPageRepository pageRepository,
   required ColoringSessionRepository sessionRepository,
@@ -279,5 +292,34 @@ void main() {
 
     expect(value.isLoading, isTrue);
     await expectLater(container.read(myCreationsProvider.future), throwsStateError);
+  });
+
+  test('raster pages produce raster preview asset paths', () async {
+    final container = _buildContainer(
+      pageRepository: _FakePageRepository(
+        pages: const [_rasterPage],
+        categories: const [
+          Category(categoryId: 'animals', title: 'Animals', sortOrder: 0),
+        ],
+      ),
+      sessionRepository: _FakeSessionRepository(
+        sessions: const [
+          ColoringSession(
+            pageId: 'lovely-kitten-raster-poc',
+            regionColors: {'region-002': 0xFFFF0000},
+            schemaVersion: ColoringSession.currentSchemaVersion,
+            lastUpdatedAtEpochMs: 100,
+          ),
+        ],
+      ),
+    );
+    addTearDown(container.dispose);
+
+    final result = await container.read(myCreationsProvider.future);
+    expect(result.length, 1);
+    expect(
+      result.single.previewAssetPath,
+      'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art.png',
+    );
   });
 }

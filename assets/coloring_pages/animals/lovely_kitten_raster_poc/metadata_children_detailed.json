@@ -1,0 +1,1425 @@
+{
+  "contentVersion": "phase2c-tuned-children-detailed-v1",
+  "imageHeight": 1388,
+  "imageWidth": 1133,
+  "lineArtAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png",
+  "lineArtForegroundStats": {
+    "opaqueBlackLinePixels": 193345,
+    "preservedDarkPixels": 158764,
+    "replacedWhitePixels": 1262462,
+    "semiTransparentLinePixels": 116797,
+    "totalPixels": 1572604
+  },
+  "lineArtOpaqueReferenceAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art.png",
+  "pageId": "lovely-kitten-raster-poc",
+  "profile": "childrenDetailed",
+  "qaArtifacts": {
+    "exclusions": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\regions_children_detailed_exclusions.png",
+    "fullColor": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\regions_children_detailed_qa_fullcolor.png",
+    "haloBaseline0": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_baseline_0px.png",
+    "haloDifference": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_difference.png",
+    "haloExpansion1": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_1px.png",
+    "haloExpansion2": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_2px.png",
+    "haloExpansion3": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_3px.png",
+    "haloExpansion4": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_4px.png"
+  },
+  "regionCount": 147,
+  "regionFillMapAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_fill_map.png",
+  "regionMapAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_map.png",
+  "regions": [
+    {
+      "mapColorRgba": [
+        59,
+        89,
+        81,
+        255
+      ],
+      "regionId": "region-002"
+    },
+    {
+      "mapColorRgba": [
+        243,
+        199,
+        32,
+        255
+      ],
+      "regionId": "region-003"
+    },
+    {
+      "mapColorRgba": [
+        136,
+        76,
+        247,
+        255
+      ],
+      "regionId": "region-004"
+    },
+    {
+      "mapColorRgba": [
+        64,
+        202,
+        70,
+        255
+      ],
+      "regionId": "region-005"
+    },
+    {
+      "mapColorRgba": [
+        166,
+        237,
+        10,
+        255
+      ],
+      "regionId": "region-009"
+    },
+    {
+      "mapColorRgba": [
+        55,
+        144,
+        168,
+        255
+      ],
+      "regionId": "region-011"
+    },
+    {
+      "mapColorRgba": [
+        204,
+        30,
+        127,
+        255
+      ],
+      "regionId": "region-012"
+    },
+    {
+      "mapColorRgba": [
+        21,
+        139,
+        108,
+        255
+      ],
+      "regionId": "region-015"
+    },
+    {
+      "mapColorRgba": [
+        34,
+        49,
+        35,
+        255
+      ],
+      "regionId": "region-016"
+    },
+    {
+      "mapColorRgba": [
+        179,
+        36,
+        65,
+        255
+      ],
+      "regionId": "region-018"
+    },
+    {
+      "mapColorRgba": [
+        217,
+        81,
+        182,
+        255
+      ],
+      "regionId": "region-021"
+    },
+    {
+      "mapColorRgba": [
+        174,
+        68,
+        212,
+        255
+      ],
+      "regionId": "region-023"
+    },
+    {
+      "mapColorRgba": [
+        140,
+        127,
+        152,
+        255
+      ],
+      "regionId": "region-027"
+    },
+    {
+      "mapColorRgba": [
+        213,
+        232,
+        141,
+        255
+      ],
+      "regionId": "region-030"
+    },
+    {
+      "mapColorRgba": [
+        226,
+        22,
+        92,
+        255
+      ],
+      "regionId": "region-031"
+    },
+    {
+      "mapColorRgba": [
+        105,
+        186,
+        117,
+        255
+      ],
+      "regionId": "region-038"
+    },
+    {
+      "mapColorRgba": [
+        254,
+        169,
+        155,
+        255
+      ],
+      "regionId": "region-040"
+    },
+    {
+      "mapColorRgba": [
+        183,
+        215,
+        106,
+        255
+      ],
+      "regionId": "region-041"
+    },
+    {
+      "mapColorRgba": [
+        4,
+        218,
+        136,
+        255
+      ],
+      "regionId": "region-043"
+    },
+    {
+      "mapColorRgba": [
+        149,
+        206,
+        46,
+        255
+      ],
+      "regionId": "region-045"
+    },
+    {
+      "mapColorRgba": [
+        162,
+        119,
+        253,
+        255
+      ],
+      "regionId": "region-046"
+    },
+    {
+      "mapColorRgba": [
+        122,
+        253,
+        76,
+        255
+      ],
+      "regionId": "region-047"
+    },
+    {
+      "mapColorRgba": [
+        51,
+        123,
+        3,
+        255
+      ],
+      "regionId": "region-048"
+    },
+    {
+      "mapColorRgba": [
+        203,
+        224,
+        210,
+        255
+      ],
+      "regionId": "region-049"
+    },
+    {
+      "mapColorRgba": [
+        128,
+        110,
+        161,
+        255
+      ],
+      "regionId": "region-050"
+    },
+    {
+      "mapColorRgba": [
+        88,
+        148,
+        112,
+        255
+      ],
+      "regionId": "region-051"
+    },
+    {
+      "mapColorRgba": [
+        41,
+        155,
+        150,
+        255
+      ],
+      "regionId": "region-053"
+    },
+    {
+      "mapColorRgba": [
+        230,
+        1,
+        101,
+        255
+      ],
+      "regionId": "region-054"
+    },
+    {
+      "mapColorRgba": [
+        190,
+        143,
+        52,
+        255
+      ],
+      "regionId": "region-055"
+    },
+    {
+      "mapColorRgba": [
+        119,
+        52,
+        139,
+        255
+      ],
+      "regionId": "region-056"
+    },
+    {
+      "mapColorRgba": [
+        196,
+        56,
+        41,
+        255
+      ],
+      "regionId": "region-058"
+    },
+    {
+      "mapColorRgba": [
+        85,
+        47,
+        79,
+        255
+      ],
+      "regionId": "region-060"
+    },
+    {
+      "mapColorRgba": [
+        98,
+        85,
+        30,
+        255
+      ],
+      "regionId": "region-061"
+    },
+    {
+      "mapColorRgba": [
+        243,
+        88,
+        188,
+        255
+      ],
+      "regionId": "region-063"
+    },
+    {
+      "mapColorRgba": [
+        64,
+        79,
+        194,
+        255
+      ],
+      "regionId": "region-065"
+    },
+    {
+      "mapColorRgba": [
+        209,
+        115,
+        96,
+        255
+      ],
+      "regionId": "region-067"
+    },
+    {
+      "mapColorRgba": [
+        126,
+        236,
+        85,
+        255
+      ],
+      "regionId": "region-070"
+    },
+    {
+      "mapColorRgba": [
+        216,
+        43,
+        50,
+        255
+      ],
+      "regionId": "region-081"
+    },
+    {
+      "mapColorRgba": [
+        145,
+        80,
+        129,
+        255
+      ],
+      "regionId": "region-082"
+    },
+    {
+      "mapColorRgba": [
+        169,
+        222,
+        80,
+        255
+      ],
+      "regionId": "region-083"
+    },
+    {
+      "mapColorRgba": [
+        102,
+        68,
+        39,
+        255
+      ],
+      "regionId": "region-084"
+    },
+    {
+      "mapColorRgba": [
+        247,
+        75,
+        69,
+        255
+      ],
+      "regionId": "region-086"
+    },
+    {
+      "mapColorRgba": [
+        68,
+        126,
+        235,
+        255
+      ],
+      "regionId": "region-088"
+    },
+    {
+      "mapColorRgba": [
+        28,
+        228,
+        186,
+        255
+      ],
+      "regionId": "region-089"
+    },
+    {
+      "mapColorRgba": [
+        114,
+        159,
+        126,
+        255
+      ],
+      "regionId": "region-093"
+    },
+    {
+      "mapColorRgba": [
+        80,
+        182,
+        34,
+        255
+      ],
+      "regionId": "region-097"
+    },
+    {
+      "mapColorRgba": [
+        33,
+        165,
+        64,
+        255
+      ],
+      "regionId": "region-099"
+    },
+    {
+      "mapColorRgba": [
+        79,
+        214,
+        181,
+        255
+      ],
+      "regionId": "region-102"
+    },
+    {
+      "mapColorRgba": [
+        4,
+        92,
+        4,
+        255
+      ],
+      "regionId": "region-103"
+    },
+    {
+      "mapColorRgba": [
+        149,
+        67,
+        170,
+        255
+      ],
+      "regionId": "region-105"
+    },
+    {
+      "mapColorRgba": [
+        122,
+        118,
+        200,
+        255
+      ],
+      "regionId": "region-107"
+    },
+    {
+      "mapColorRgba": [
+        131,
+        224,
+        61,
+        255
+      ],
+      "regionId": "region-110"
+    },
+    {
+      "mapColorRgba": [
+        225,
+        154,
+        225,
+        255
+      ],
+      "regionId": "region-114"
+    },
+    {
+      "mapColorRgba": [
+        156,
+        59,
+        116,
+        255
+      ],
+      "regionId": "region-119"
+    },
+    {
+      "mapColorRgba": [
+        109,
+        46,
+        154,
+        255
+      ],
+      "regionId": "region-121"
+    },
+    {
+      "mapColorRgba": [
+        67,
+        193,
+        94,
+        255
+      ],
+      "regionId": "region-125"
+    },
+    {
+      "mapColorRgba": [
+        233,
+        114,
+        179,
+        255
+      ],
+      "regionId": "region-128"
+    },
+    {
+      "mapColorRgba": [
+        161,
+        248,
+        2,
+        255
+      ],
+      "regionId": "region-129"
+    },
+    {
+      "mapColorRgba": [
+        126,
+        97,
+        209,
+        255
+      ],
+      "regionId": "region-130"
+    },
+    {
+      "mapColorRgba": [
+        207,
+        21,
+        119,
+        255
+      ],
+      "regionId": "region-132"
+    },
+    {
+      "mapColorRgba": [
+        135,
+        146,
+        198,
+        255
+      ],
+      "regionId": "region-133"
+    },
+    {
+      "mapColorRgba": [
+        229,
+        181,
+        138,
+        255
+      ],
+      "regionId": "region-137"
+    },
+    {
+      "mapColorRgba": [
+        3,
+        38,
+        255,
+        255
+      ],
+      "regionId": "region-140"
+    },
+    {
+      "mapColorRgba": [
+        97,
+        217,
+        163,
+        255
+      ],
+      "regionId": "region-144"
+    },
+    {
+      "mapColorRgba": [
+        62,
+        71,
+        114,
+        255
+      ],
+      "regionId": "region-145"
+    },
+    {
+      "mapColorRgba": [
+        143,
+        74,
+        144,
+        255
+      ],
+      "regionId": "region-147"
+    },
+    {
+      "mapColorRgba": [
+        71,
+        240,
+        103,
+        255
+      ],
+      "regionId": "region-148"
+    },
+    {
+      "mapColorRgba": [
+        28,
+        126,
+        54,
+        255
+      ],
+      "regionId": "region-149"
+    },
+    {
+      "mapColorRgba": [
+        237,
+        109,
+        84,
+        255
+      ],
+      "regionId": "region-151"
+    },
+    {
+      "mapColorRgba": [
+        165,
+        235,
+        43,
+        255
+      ],
+      "regionId": "region-152"
+    },
+    {
+      "mapColorRgba": [
+        114,
+        16,
+        250,
+        255
+      ],
+      "regionId": "region-153"
+    },
+    {
+      "mapColorRgba": [
+        80,
+        11,
+        190,
+        255
+      ],
+      "regionId": "region-157"
+    },
+    {
+      "mapColorRgba": [
+        33,
+        62,
+        220,
+        255
+      ],
+      "regionId": "region-159"
+    },
+    {
+      "mapColorRgba": [
+        78,
+        168,
+        49,
+        255
+      ],
+      "regionId": "region-162"
+    },
+    {
+      "mapColorRgba": [
+        7,
+        209,
+        128,
+        255
+      ],
+      "regionId": "region-163"
+    },
+    {
+      "mapColorRgba": [
+        220,
+        95,
+        87,
+        255
+      ],
+      "regionId": "region-164"
+    },
+    {
+      "mapColorRgba": [
+        148,
+        197,
+        38,
+        255
+      ],
+      "regionId": "region-165"
+    },
+    {
+      "mapColorRgba": [
+        50,
+        118,
+        27,
+        255
+      ],
+      "regionId": "region-168"
+    },
+    {
+      "mapColorRgba": [
+        202,
+        255,
+        234,
+        255
+      ],
+      "regionId": "region-169"
+    },
+    {
+      "mapColorRgba": [
+        16,
+        104,
+        223,
+        255
+      ],
+      "regionId": "region-172"
+    },
+    {
+      "mapColorRgba": [
+        40,
+        150,
+        174,
+        255
+      ],
+      "regionId": "region-173"
+    },
+    {
+      "mapColorRgba": [
+        225,
+        28,
+        125,
+        255
+      ],
+      "regionId": "region-174"
+    },
+    {
+      "mapColorRgba": [
+        185,
+        133,
+        204,
+        255
+      ],
+      "regionId": "region-175"
+    },
+    {
+      "mapColorRgba": [
+        199,
+        55,
+        33,
+        255
+      ],
+      "regionId": "region-178"
+    },
+    {
+      "mapColorRgba": [
+        159,
+        188,
+        240,
+        255
+      ],
+      "regionId": "region-179"
+    },
+    {
+      "mapColorRgba": [
+        84,
+        58,
+        71,
+        255
+      ],
+      "regionId": "region-180"
+    },
+    {
+      "mapColorRgba": [
+        108,
+        160,
+        22,
+        255
+      ],
+      "regionId": "region-181"
+    },
+    {
+      "mapColorRgba": [
+        37,
+        41,
+        229,
+        255
+      ],
+      "regionId": "region-182"
+    },
+    {
+      "mapColorRgba": [
+        138,
+        221,
+        11,
+        255
+      ],
+      "regionId": "region-184"
+    },
+    {
+      "mapColorRgba": [
+        67,
+        90,
+        218,
+        255
+      ],
+      "regionId": "region-185"
+    },
+    {
+      "mapColorRgba": [
+        27,
+        192,
+        169,
+        255
+      ],
+      "regionId": "region-186"
+    },
+    {
+      "mapColorRgba": [
+        208,
+        78,
+        120,
+        255
+      ],
+      "regionId": "region-187"
+    },
+    {
+      "mapColorRgba": [
+        232,
+        247,
+        207,
+        255
+      ],
+      "regionId": "region-188"
+    },
+    {
+      "mapColorRgba": [
+        20,
+        27,
+        224,
+        255
+      ],
+      "regionId": "region-195"
+    },
+    {
+      "mapColorRgba": [
+        229,
+        15,
+        6,
+        255
+      ],
+      "regionId": "region-197"
+    },
+    {
+      "mapColorRgba": [
+        189,
+        180,
+        213,
+        255
+      ],
+      "regionId": "region-198"
+    },
+    {
+      "mapColorRgba": [
+        74,
+        50,
+        164,
+        255
+      ],
+      "regionId": "region-199"
+    },
+    {
+      "mapColorRgba": [
+        219,
+        33,
+        202,
+        255
+      ],
+      "regionId": "region-201"
+    },
+    {
+      "mapColorRgba": [
+        147,
+        175,
+        153,
+        255
+      ],
+      "regionId": "region-202"
+    },
+    {
+      "mapColorRgba": [
+        168,
+        213,
+        104,
+        255
+      ],
+      "regionId": "region-203"
+    },
+    {
+      "mapColorRgba": [
+        97,
+        83,
+        63,
+        255
+      ],
+      "regionId": "region-204"
+    },
+    {
+      "mapColorRgba": [
+        246,
+        70,
+        93,
+        255
+      ],
+      "regionId": "region-206"
+    },
+    {
+      "mapColorRgba": [
+        142,
+        204,
+        44,
+        255
+      ],
+      "regionId": "region-207"
+    },
+    {
+      "mapColorRgba": [
+        71,
+        117,
+        227,
+        255
+      ],
+      "regionId": "region-208"
+    },
+    {
+      "mapColorRgba": [
+        236,
+        230,
+        208,
+        255
+      ],
+      "regionId": "region-211"
+    },
+    {
+      "mapColorRgba": [
+        165,
+        108,
+        167,
+        255
+      ],
+      "regionId": "region-212"
+    },
+    {
+      "mapColorRgba": [
+        83,
+        141,
+        58,
+        255
+      ],
+      "regionId": "region-217"
+    },
+    {
+      "mapColorRgba": [
+        104,
+        10,
+        137,
+        255
+      ],
+      "regionId": "region-218"
+    },
+    {
+      "mapColorRgba": [
+        32,
+        176,
+        88,
+        255
+      ],
+      "regionId": "region-219"
+    },
+    {
+      "mapColorRgba": [
+        249,
+        62,
+        47,
+        255
+      ],
+      "regionId": "region-220"
+    },
+    {
+      "mapColorRgba": [
+        177,
+        167,
+        254,
+        255
+      ],
+      "regionId": "region-221"
+    },
+    {
+      "mapColorRgba": [
+        172,
+        196,
+        113,
+        255
+      ],
+      "regionId": "region-226"
+    },
+    {
+      "mapColorRgba": [
+        101,
+        77,
+        192,
+        255
+      ],
+      "regionId": "region-227"
+    },
+    {
+      "mapColorRgba": [
+        61,
+        203,
+        151,
+        255
+      ],
+      "regionId": "region-228"
+    },
+    {
+      "mapColorRgba": [
+        130,
+        255,
+        53,
+        255
+      ],
+      "regionId": "region-230"
+    },
+    {
+      "mapColorRgba": [
+        91,
+        100,
+        132,
+        255
+      ],
+      "regionId": "region-231"
+    },
+    {
+      "mapColorRgba": [
+        19,
+        226,
+        91,
+        255
+      ],
+      "regionId": "region-232"
+    },
+    {
+      "mapColorRgba": [
+        40,
+        104,
+        42,
+        255
+      ],
+      "regionId": "region-233"
+    },
+    {
+      "mapColorRgba": [
+        224,
+        145,
+        249,
+        255
+      ],
+      "regionId": "region-234"
+    },
+    {
+      "mapColorRgba": [
+        185,
+        31,
+        72,
+        255
+      ],
+      "regionId": "region-235"
+    },
+    {
+      "mapColorRgba": [
+        198,
+        136,
+        189,
+        255
+      ],
+      "regionId": "region-238"
+    },
+    {
+      "mapColorRgba": [
+        159,
+        54,
+        12,
+        255
+      ],
+      "regionId": "region-239"
+    },
+    {
+      "mapColorRgba": [
+        108,
+        37,
+        146,
+        255
+      ],
+      "regionId": "region-241"
+    },
+    {
+      "mapColorRgba": [
+        36,
+        163,
+        97,
+        255
+      ],
+      "regionId": "region-242"
+    },
+    {
+      "mapColorRgba": [
+        253,
+        41,
+        48,
+        255
+      ],
+      "regionId": "region-243"
+    },
+    {
+      "mapColorRgba": [
+        27,
+        90,
+        37,
+        255
+      ],
+      "regionId": "region-246"
+    },
+    {
+      "mapColorRgba": [
+        211,
+        195,
+        244,
+        255
+      ],
+      "regionId": "region-247"
+    },
+    {
+      "mapColorRgba": [
+        232,
+        73,
+        75,
+        255
+      ],
+      "regionId": "region-248"
+    },
+    {
+      "mapColorRgba": [
+        49,
+        250,
+        184,
+        255
+      ],
+      "regionId": "region-251"
+    },
+    {
+      "mapColorRgba": [
+        206,
+        96,
+        15,
+        255
+      ],
+      "regionId": "region-252"
+    },
+    {
+      "mapColorRgba": [
+        134,
+        233,
+        222,
+        255
+      ],
+      "regionId": "region-253"
+    },
+    {
+      "mapColorRgba": [
+        95,
+        23,
+        173,
+        255
+      ],
+      "regionId": "region-254"
+    },
+    {
+      "mapColorRgba": [
+        44,
+        27,
+        51,
+        255
+      ],
+      "regionId": "region-256"
+    },
+    {
+      "mapColorRgba": [
+        189,
+        14,
+        81,
+        255
+      ],
+      "regionId": "region-258"
+    },
+    {
+      "mapColorRgba": [
+        2,
+        61,
+        247,
+        255
+      ],
+      "regionId": "region-260"
+    },
+    {
+      "mapColorRgba": [
+        96,
+        212,
+        187,
+        255
+      ],
+      "regionId": "region-264"
+    },
+    {
+      "mapColorRgba": [
+        57,
+        82,
+        10,
+        255
+      ],
+      "regionId": "region-265"
+    },
+    {
+      "mapColorRgba": [
+        241,
+        219,
+        217,
+        255
+      ],
+      "regionId": "region-266"
+    },
+    {
+      "mapColorRgba": [
+        142,
+        65,
+        168,
+        255
+      ],
+      "regionId": "region-267"
+    },
+    {
+      "mapColorRgba": [
+        70,
+        207,
+        127,
+        255
+      ],
+      "regionId": "region-268"
+    },
+    {
+      "mapColorRgba": [
+        31,
+        116,
+        206,
+        255
+      ],
+      "regionId": "region-269"
+    },
+    {
+      "mapColorRgba": [
+        215,
+        242,
+        157,
+        255
+      ],
+      "regionId": "region-270"
+    },
+    {
+      "mapColorRgba": [
+        236,
+        120,
+        108,
+        255
+      ],
+      "regionId": "region-271"
+    },
+    {
+      "mapColorRgba": [
+        164,
+        230,
+        35,
+        255
+      ],
+      "regionId": "region-272"
+    },
+    {
+      "mapColorRgba": [
+        125,
+        111,
+        242,
+        255
+      ],
+      "regionId": "region-273"
+    },
+    {
+      "mapColorRgba": [
+        53,
+        149,
+        65,
+        255
+      ],
+      "regionId": "region-274"
+    },
+    {
+      "mapColorRgba": [
+        194,
+        19,
+        16,
+        255
+      ],
+      "regionId": "region-275"
+    }
+  ],
+  "visualFillMap": {
+    "fillMapFileSizeBytes": 76114,
+    "generationTimeMs": 11462,
+    "haloRootCause": {
+      "boundaryUnassignedPixels": 92283,
+      "causeACount": 92283,
+      "causeBCount": 0,
+      "causeCCount": 0,
+      "classification": "A-dominant",
+      "samples": []
+    },
+    "lineBandRadiusPx": 1,
+    "metricsByExpansion": {
+      "0": {
+        "addedPixels": 0,
+        "ambiguousPixels": 0,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 0,
+        "logicalOwnedPixels": 928987,
+        "newlyAddedFromBaseline": 0,
+        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_baseline_0px.png",
+        "reachedPixels": 0,
+        "unresolvedHaloPixels": 0
+      },
+      "1": {
+        "addedPixels": 92119,
+        "ambiguousPixels": 164,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 92119,
+        "logicalOwnedPixels": 928987,
+        "newlyAddedFromBaseline": 92119,
+        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_1px.png",
+        "reachedPixels": 92283,
+        "unresolvedHaloPixels": 0
+      },
+      "2": {
+        "addedPixels": 141784,
+        "ambiguousPixels": 7857,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 141784,
+        "logicalOwnedPixels": 928987,
+        "newlyAddedFromBaseline": 141784,
+        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_2px.png",
+        "reachedPixels": 149641,
+        "unresolvedHaloPixels": 0
+      },
+      "3": {
+        "addedPixels": 170572,
+        "ambiguousPixels": 10588,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 170572,
+        "logicalOwnedPixels": 928987,
+        "newlyAddedFromBaseline": 170572,
+        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_3px.png",
+        "reachedPixels": 181160,
+        "unresolvedHaloPixels": 0
+      },
+      "4": {
+        "addedPixels": 193936,
+        "ambiguousPixels": 11361,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 193936,
+        "logicalOwnedPixels": 928987,
+        "newlyAddedFromBaseline": 193936,
+        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_4px.png",
+        "reachedPixels": 205297,
+        "unresolvedHaloPixels": 0
+      }
+    },
+    "recommendedExpansionPx": 1
+  }
+}

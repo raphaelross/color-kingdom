@@ -21,6 +21,10 @@ class LocalColoringPageRepository implements ColoringPageRepository {
       if (page.assetPath.trim().isEmpty) {
         throw StateError('Missing asset path for page: ${page.id}');
       }
+      if (page.rendererType == ColoringRendererType.rasterRegion &&
+          page.rasterRegionMetadata == null) {
+        throw StateError('Missing raster metadata for page: ${page.id}');
+      }
     }
 
     return sampleColoringPages;
