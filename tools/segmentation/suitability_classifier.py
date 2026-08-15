@@ -9,7 +9,7 @@ import time
 
 import cv2
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw
 
 
 PROFILE_MASTER = "MASTER"
@@ -106,6 +106,30 @@ def _save_u8_image(path: Path, arr: np.ndarray) -> None:
     Image.fromarray(arr).save(path)
 
 
+def _save_labeled_image(
+    path: Path,
+    arr: np.ndarray,
+    regions: list[dict[str, Any]],
+    profile_key: str,
+) -> None:
+    if arr.dtype != np.uint8:
+        arr = arr.astype(np.uint8)
+
+    image = Image.fromarray(arr)
+    draw = ImageDraw.Draw(image)
+
+    for region in regions:
+        centroid = region["features"]["centroid"]
+        label = str(region["id"])
+        included = bool(region["profiles"][profile_key]["included"])
+        fill = (18, 112, 34) if included else (170, 88, 24)
+        outline = (255, 255, 255)
+        position = (int(round(float(centroid["x"]))), int(round(float(centroid["y"]))))
+        draw.text(position, label, fill=outline, anchor="mm", stroke_width=2, stroke_fill=fill)
+
+    image.save(path)
+
+
 def _calc_features_for_region(
     labels: np.ndarray,
     component_label: int,
@@ -171,6 +195,38 @@ def _classify_profile(features: dict[str, Any], thresholds: ProfileThresholds) -
     if thresholds.min_occupancy_ratio > 0 and features["occupancyRatio"] < thresholds.min_occupancy_ratio:
         reasons.append(REASON_LOW_OCCUPANCY)
     if features["compactness"] < thresholds.min_compactness:
+        reasons.append(REASON_FLAGGED_SEGMENTATION_ARTIFACT)
+
+    return reasons
+
+
+def _classify_children_detailed_preservation(
+    features: dict[str, Any],
+    thresholds: ProfileThresholds,
+    config: SuitabilityConfig,
+) -> list[str]:
+    reasons: list[str] = []
+
+    # Preserve legitimate enclosed regions by default.
+    # Exclude only clearly microscopic/noise-like components.
+    area_too_small = features["areaPercent"] < thresholds.min_area_percent
+    dimension_too_small = features["minBoundingDimensionPercent"] < thresholds.min_bounding_dimension_percent
+
+    very_small_area_floor = thresholds.min_area_percent * 0.25
+    very_small_dimension_floor = config.artifact_min_dimension_percent_floor
+    very_small_area = features["areaPercent"] < very_small_area_floor
+    very_small_dimension = features["minBoundingDimensionPercent"] < very_small_dimension_floor
+
+    if area_too_small and dimension_too_small and (very_small_area or very_small_dimension):
+        reasons.append(REASON_AREA_TOO_SMALL)
+        reasons.append(REASON_BOUNDING_DIMENSION_TOO_SMALL)
+
+    # Keep a conservative artifact safeguard for thin, near-microscopic slivers.
+    likely_artifact_sliver = (
+        features["compactness"] < config.artifact_compactness_floor
+        and features["minBoundingDimensionPercent"] < config.artifact_min_dimension_percent_floor
+    )
+    if likely_artifact_sliver:
         reasons.append(REASON_FLAGGED_SEGMENTATION_ARTIFACT)
 
     return reasons
@@ -339,14 +395,36 @@ def _render_profile_exclusions(
     canvas = np.full((h, w, 3), 255, dtype=np.uint8)
 
     green = np.array([95, 190, 110], dtype=np.uint8)
-    gray = np.array([170, 170, 170], dtype=np.uint8)
+    orange = np.array([225, 150, 85], dtype=np.uint8)
 
     for region in regions:
         mask = labels == int(region["componentLabel"])
         included = bool(region["profiles"][profile_key]["included"])
-        color = green if included else gray
+        color = green if included else orange
         alpha = 0.62 if included else 0.55
         canvas[mask] = ((1.0 - alpha) * canvas[mask] + alpha * color).astype(np.uint8)
+
+    canvas[barrier_mask == 1] = np.array([0, 0, 0], dtype=np.uint8)
+    return canvas
+
+
+def _render_master_vs_profile_coverage(
+    labels: np.ndarray,
+    barrier_mask: np.ndarray,
+    regions: list[dict[str, Any]],
+    profile_key: str,
+) -> np.ndarray:
+    h, w = labels.shape
+    canvas = np.full((h, w, 3), 255, dtype=np.uint8)
+
+    green = np.array([95, 190, 110], dtype=np.uint8)
+    orange = np.array([225, 150, 85], dtype=np.uint8)
+
+    for region in regions:
+        mask = labels == int(region["componentLabel"])
+        included = bool(region["profiles"][profile_key]["included"])
+        color = green if included else orange
+        canvas[mask] = ((0.38 * canvas[mask]) + (0.62 * color)).astype(np.uint8)
 
     canvas[barrier_mask == 1] = np.array([0, 0, 0], dtype=np.uint8)
     return canvas
@@ -534,7 +612,11 @@ def classify_segmentation_result(
             min_compactness=config.children_detailed.min_compactness,
         )
 
-        detailed_reasons = _classify_profile(features, detailed_thresholds)
+        detailed_reasons = _classify_children_detailed_preservation(
+            features=features,
+            thresholds=detailed_thresholds,
+            config=config,
+        )
         simple_reasons = _classify_profile(features, config.children_simple)
         detailed_weighted = _classify_children_detailed_weighted(features, weighted_cfg, distributions)
 
@@ -714,26 +796,45 @@ def write_profile_artifacts(output_dir: Path, metadata: dict[str, Any], labels: 
         "childrenDetailedBaseline",
         "childrenDetailedWeighted",
     )
+    master_vs_children_detailed_coverage = _render_master_vs_profile_coverage(
+        labels,
+        barrier_mask,
+        accepted_regions,
+        "childrenDetailed",
+    )
 
     master_debug_path = output_dir / "regions_master_debug.png"
+    master_qa_fullcolor_path = output_dir / "regions_master_qa_fullcolor.png"
     children_detailed_debug_path = output_dir / "regions_children_detailed_debug.png"
+    children_detailed_qa_fullcolor_path = output_dir / "regions_children_detailed_qa_fullcolor.png"
     children_detailed_baseline_debug_path = output_dir / "regions_children_detailed_baseline_debug.png"
     children_detailed_weighted_debug_path = output_dir / "regions_children_detailed_weighted_debug.png"
     children_detailed_exclusions_path = output_dir / "regions_children_detailed_exclusions.png"
     children_detailed_baseline_exclusions_path = output_dir / "regions_children_detailed_baseline_exclusions.png"
     children_detailed_weighted_exclusions_path = output_dir / "regions_children_detailed_weighted_exclusions.png"
     children_detailed_comparison_path = output_dir / "regions_children_detailed_comparison.png"
+    master_vs_children_detailed_coverage_path = output_dir / "master_vs_children_detailed_coverage.png"
+    master_vs_children_detailed_coverage_labeled_path = output_dir / "master_vs_children_detailed_coverage_labeled.png"
     children_simple_debug_path = output_dir / "regions_children_simple_debug.png"
     children_simple_exclusions_path = output_dir / "regions_children_simple_exclusions.png"
 
     _save_u8_image(master_debug_path, master_debug)
+    _save_u8_image(master_qa_fullcolor_path, master_debug)
     _save_u8_image(children_detailed_debug_path, children_detailed_debug)
+    _save_u8_image(children_detailed_qa_fullcolor_path, children_detailed_debug)
     _save_u8_image(children_detailed_baseline_debug_path, children_detailed_baseline_debug)
     _save_u8_image(children_detailed_weighted_debug_path, children_detailed_weighted_debug)
     _save_u8_image(children_detailed_exclusions_path, children_detailed_exclusions)
     _save_u8_image(children_detailed_baseline_exclusions_path, children_detailed_baseline_exclusions)
     _save_u8_image(children_detailed_weighted_exclusions_path, children_detailed_weighted_exclusions)
     _save_u8_image(children_detailed_comparison_path, children_detailed_comparison)
+    _save_u8_image(master_vs_children_detailed_coverage_path, master_vs_children_detailed_coverage)
+    _save_labeled_image(
+        master_vs_children_detailed_coverage_labeled_path,
+        master_vs_children_detailed_coverage,
+        accepted_regions,
+        "childrenDetailed",
+    )
     _save_u8_image(children_simple_debug_path, children_simple_debug)
     _save_u8_image(children_simple_exclusions_path, children_simple_exclusions)
 
@@ -743,13 +844,17 @@ def write_profile_artifacts(output_dir: Path, metadata: dict[str, Any], labels: 
 
     return {
         "master_debug": master_debug_path,
+        "master_qa_fullcolor": master_qa_fullcolor_path,
         "children_detailed_debug": children_detailed_debug_path,
+        "children_detailed_qa_fullcolor": children_detailed_qa_fullcolor_path,
         "children_detailed_baseline_debug": children_detailed_baseline_debug_path,
         "children_detailed_weighted_debug": children_detailed_weighted_debug_path,
         "children_detailed_exclusions": children_detailed_exclusions_path,
         "children_detailed_baseline_exclusions": children_detailed_baseline_exclusions_path,
         "children_detailed_weighted_exclusions": children_detailed_weighted_exclusions_path,
         "children_detailed_comparison": children_detailed_comparison_path,
+        "master_vs_children_detailed_coverage": master_vs_children_detailed_coverage_path,
+        "master_vs_children_detailed_coverage_labeled": master_vs_children_detailed_coverage_labeled_path,
         "children_simple_debug": children_simple_debug_path,
         "children_simple_exclusions": children_simple_exclusions_path,
         "metadata_json": metadata_path,

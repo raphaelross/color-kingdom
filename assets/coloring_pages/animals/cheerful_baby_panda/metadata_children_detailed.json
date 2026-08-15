@@ -1,0 +1,811 @@
+{
+  "contentVersion": "phase2f-part2b-panda-v2",
+  "imageHeight": 1536,
+  "imageWidth": 1024,
+  "lineArtAssetPath": "assets/coloring_pages/animals/cheerful_baby_panda/line_art_foreground.png",
+  "lineArtForegroundStats": {
+    "opaqueBlackLinePixels": 319344,
+    "preservedDarkPixels": 304066,
+    "replacedWhitePixels": 1213454,
+    "semiTransparentLinePixels": 40066,
+    "totalPixels": 1572864
+  },
+  "lineArtOpaqueReferenceAssetPath": "assets/coloring_pages/animals/cheerful_baby_panda/line_art.png",
+  "pageId": "cheerful-baby-panda",
+  "profile": "childrenDetailed",
+  "qaArtifacts": {
+    "exclusions": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\regions_children_detailed_exclusions.png",
+    "fullColor": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\regions_children_detailed_qa_fullcolor.png",
+    "haloBaseline0": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_baseline_0px.png",
+    "haloDifference": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_difference.png",
+    "haloExpansion1": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_1px.png",
+    "haloExpansion2": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_2px.png",
+    "haloExpansion3": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_3px.png",
+    "haloExpansion4": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_4px.png"
+  },
+  "regionCount": 77,
+  "regionFillMapAssetPath": "assets/coloring_pages/animals/cheerful_baby_panda/region_fill_map.png",
+  "regionMapAssetPath": "assets/coloring_pages/animals/cheerful_baby_panda/region_map.png",
+  "regions": [
+    {
+      "mapColorRgba": [
+        98,
+        211,
+        130,
+        255
+      ],
+      "regionId": "region-001"
+    },
+    {
+      "mapColorRgba": [
+        59,
+        89,
+        81,
+        255
+      ],
+      "regionId": "region-002"
+    },
+    {
+      "mapColorRgba": [
+        243,
+        199,
+        32,
+        255
+      ],
+      "regionId": "region-003"
+    },
+    {
+      "mapColorRgba": [
+        136,
+        76,
+        247,
+        255
+      ],
+      "regionId": "region-004"
+    },
+    {
+      "mapColorRgba": [
+        64,
+        202,
+        70,
+        255
+      ],
+      "regionId": "region-005"
+    },
+    {
+      "mapColorRgba": [
+        25,
+        112,
+        21,
+        255
+      ],
+      "regionId": "region-006"
+    },
+    {
+      "mapColorRgba": [
+        209,
+        249,
+        228,
+        255
+      ],
+      "regionId": "region-007"
+    },
+    {
+      "mapColorRgba": [
+        238,
+        103,
+        187,
+        255
+      ],
+      "regionId": "region-008"
+    },
+    {
+      "mapColorRgba": [
+        166,
+        237,
+        10,
+        255
+      ],
+      "regionId": "region-009"
+    },
+    {
+      "mapColorRgba": [
+        127,
+        106,
+        217,
+        255
+      ],
+      "regionId": "region-010"
+    },
+    {
+      "mapColorRgba": [
+        204,
+        30,
+        127,
+        255
+      ],
+      "regionId": "region-012"
+    },
+    {
+      "mapColorRgba": [
+        132,
+        135,
+        206,
+        255
+      ],
+      "regionId": "region-013"
+    },
+    {
+      "mapColorRgba": [
+        93,
+        13,
+        157,
+        255
+      ],
+      "regionId": "region-014"
+    },
+    {
+      "mapColorRgba": [
+        21,
+        139,
+        108,
+        255
+      ],
+      "regionId": "region-015"
+    },
+    {
+      "mapColorRgba": [
+        34,
+        49,
+        35,
+        255
+      ],
+      "regionId": "region-016"
+    },
+    {
+      "mapColorRgba": [
+        250,
+        190,
+        242,
+        255
+      ],
+      "regionId": "region-017"
+    },
+    {
+      "mapColorRgba": [
+        75,
+        162,
+        16,
+        255
+      ],
+      "regionId": "region-019"
+    },
+    {
+      "mapColorRgba": [
+        0,
+        43,
+        231,
+        255
+      ],
+      "regionId": "region-020"
+    },
+    {
+      "mapColorRgba": [
+        217,
+        81,
+        182,
+        255
+      ],
+      "regionId": "region-021"
+    },
+    {
+      "mapColorRgba": [
+        145,
+        223,
+        5,
+        255
+      ],
+      "regionId": "region-022"
+    },
+    {
+      "mapColorRgba": [
+        174,
+        68,
+        212,
+        255
+      ],
+      "regionId": "region-023"
+    },
+    {
+      "mapColorRgba": [
+        102,
+        194,
+        171,
+        255
+      ],
+      "regionId": "region-024"
+    },
+    {
+      "mapColorRgba": [
+        247,
+        241,
+        201,
+        255
+      ],
+      "regionId": "region-026"
+    },
+    {
+      "mapColorRgba": [
+        140,
+        127,
+        152,
+        255
+      ],
+      "regionId": "region-027"
+    },
+    {
+      "mapColorRgba": [
+        68,
+        229,
+        111,
+        255
+      ],
+      "regionId": "region-028"
+    },
+    {
+      "mapColorRgba": [
+        29,
+        99,
+        62,
+        255
+      ],
+      "regionId": "region-029"
+    },
+    {
+      "mapColorRgba": [
+        213,
+        232,
+        141,
+        255
+      ],
+      "regionId": "region-030"
+    },
+    {
+      "mapColorRgba": [
+        115,
+        5,
+        226,
+        255
+      ],
+      "regionId": "region-033"
+    },
+    {
+      "mapColorRgba": [
+        11,
+        131,
+        177,
+        255
+      ],
+      "regionId": "region-034"
+    },
+    {
+      "mapColorRgba": [
+        192,
+        9,
+        0,
+        255
+      ],
+      "regionId": "region-035"
+    },
+    {
+      "mapColorRgba": [
+        152,
+        182,
+        215,
+        255
+      ],
+      "regionId": "region-036"
+    },
+    {
+      "mapColorRgba": [
+        105,
+        186,
+        117,
+        255
+      ],
+      "regionId": "region-038"
+    },
+    {
+      "mapColorRgba": [
+        38,
+        35,
+        196,
+        255
+      ],
+      "regionId": "region-039"
+    },
+    {
+      "mapColorRgba": [
+        183,
+        215,
+        106,
+        255
+      ],
+      "regionId": "region-041"
+    },
+    {
+      "mapColorRgba": [
+        4,
+        218,
+        136,
+        255
+      ],
+      "regionId": "region-043"
+    },
+    {
+      "mapColorRgba": [
+        221,
+        64,
+        95,
+        255
+      ],
+      "regionId": "region-044"
+    },
+    {
+      "mapColorRgba": [
+        162,
+        119,
+        253,
+        255
+      ],
+      "regionId": "region-046"
+    },
+    {
+      "mapColorRgba": [
+        122,
+        253,
+        76,
+        255
+      ],
+      "regionId": "region-047"
+    },
+    {
+      "mapColorRgba": [
+        51,
+        123,
+        3,
+        255
+      ],
+      "regionId": "region-048"
+    },
+    {
+      "mapColorRgba": [
+        203,
+        224,
+        210,
+        255
+      ],
+      "regionId": "region-049"
+    },
+    {
+      "mapColorRgba": [
+        88,
+        148,
+        112,
+        255
+      ],
+      "regionId": "region-051"
+    },
+    {
+      "mapColorRgba": [
+        17,
+        29,
+        199,
+        255
+      ],
+      "regionId": "region-052"
+    },
+    {
+      "mapColorRgba": [
+        41,
+        155,
+        150,
+        255
+      ],
+      "regionId": "region-053"
+    },
+    {
+      "mapColorRgba": [
+        230,
+        1,
+        101,
+        255
+      ],
+      "regionId": "region-054"
+    },
+    {
+      "mapColorRgba": [
+        119,
+        52,
+        139,
+        255
+      ],
+      "regionId": "region-056"
+    },
+    {
+      "mapColorRgba": [
+        15,
+        178,
+        90,
+        255
+      ],
+      "regionId": "region-057"
+    },
+    {
+      "mapColorRgba": [
+        156,
+        161,
+        248,
+        255
+      ],
+      "regionId": "region-059"
+    },
+    {
+      "mapColorRgba": [
+        98,
+        85,
+        30,
+        255
+      ],
+      "regionId": "region-061"
+    },
+    {
+      "mapColorRgba": [
+        243,
+        88,
+        188,
+        255
+      ],
+      "regionId": "region-063"
+    },
+    {
+      "mapColorRgba": [
+        139,
+        198,
+        115,
+        255
+      ],
+      "regionId": "region-064"
+    },
+    {
+      "mapColorRgba": [
+        64,
+        79,
+        194,
+        255
+      ],
+      "regionId": "region-065"
+    },
+    {
+      "mapColorRgba": [
+        24,
+        245,
+        145,
+        255
+      ],
+      "regionId": "region-066"
+    },
+    {
+      "mapColorRgba": [
+        209,
+        115,
+        96,
+        255
+      ],
+      "regionId": "region-067"
+    },
+    {
+      "mapColorRgba": [
+        55,
+        106,
+        36,
+        255
+      ],
+      "regionId": "region-071"
+    },
+    {
+      "mapColorRgba": [
+        132,
+        25,
+        74,
+        255
+      ],
+      "regionId": "region-073"
+    },
+    {
+      "mapColorRgba": [
+        21,
+        12,
+        232,
+        255
+      ],
+      "regionId": "region-075"
+    },
+    {
+      "mapColorRgba": [
+        45,
+        138,
+        191,
+        255
+      ],
+      "regionId": "region-076"
+    },
+    {
+      "mapColorRgba": [
+        75,
+        39,
+        172,
+        255
+      ],
+      "regionId": "region-079"
+    },
+    {
+      "mapColorRgba": [
+        3,
+        173,
+        99,
+        255
+      ],
+      "regionId": "region-080"
+    },
+    {
+      "mapColorRgba": [
+        145,
+        80,
+        129,
+        255
+      ],
+      "regionId": "region-082"
+    },
+    {
+      "mapColorRgba": [
+        102,
+        68,
+        39,
+        255
+      ],
+      "regionId": "region-084"
+    },
+    {
+      "mapColorRgba": [
+        143,
+        241,
+        20,
+        255
+      ],
+      "regionId": "region-087"
+    },
+    {
+      "mapColorRgba": [
+        68,
+        126,
+        235,
+        255
+      ],
+      "regionId": "region-088"
+    },
+    {
+      "mapColorRgba": [
+        213,
+        98,
+        9,
+        255
+      ],
+      "regionId": "region-090"
+    },
+    {
+      "mapColorRgba": [
+        237,
+        235,
+        216,
+        255
+      ],
+      "regionId": "region-091"
+    },
+    {
+      "mapColorRgba": [
+        186,
+        17,
+        175,
+        255
+      ],
+      "regionId": "region-092"
+    },
+    {
+      "mapColorRgba": [
+        114,
+        159,
+        126,
+        255
+      ],
+      "regionId": "region-093"
+    },
+    {
+      "mapColorRgba": [
+        11,
+        4,
+        205,
+        255
+      ],
+      "regionId": "region-094"
+    },
+    {
+      "mapColorRgba": [
+        195,
+        130,
+        156,
+        255
+      ],
+      "regionId": "region-095"
+    },
+    {
+      "mapColorRgba": [
+        152,
+        8,
+        83,
+        255
+      ],
+      "regionId": "region-096"
+    },
+    {
+      "mapColorRgba": [
+        80,
+        182,
+        34,
+        255
+      ],
+      "regionId": "region-097"
+    },
+    {
+      "mapColorRgba": [
+        105,
+        63,
+        241,
+        255
+      ],
+      "regionId": "region-098"
+    },
+    {
+      "mapColorRgba": [
+        33,
+        165,
+        64,
+        255
+      ],
+      "regionId": "region-099"
+    },
+    {
+      "mapColorRgba": [
+        220,
+        197,
+        219,
+        255
+      ],
+      "regionId": "region-104"
+    },
+    {
+      "mapColorRgba": [
+        149,
+        67,
+        170,
+        255
+      ],
+      "regionId": "region-105"
+    },
+    {
+      "mapColorRgba": [
+        173,
+        201,
+        121,
+        255
+      ],
+      "regionId": "region-106"
+    },
+    {
+      "mapColorRgba": [
+        122,
+        118,
+        200,
+        255
+      ],
+      "regionId": "region-107"
+    }
+  ],
+  "runtimeAssetFileSizesBytes": {
+    "lineArt": 1484645,
+    "lineArtForeground": 150491,
+    "metadataJson": 15333,
+    "regionFillMap": 49536,
+    "regionMap": 66532,
+    "regionsDart": 13524
+  },
+  "runtimeIntegrity": {
+    "approvedChildrenDetailedRegionCount": 77,
+    "fillRegionCountWithPixels": 77,
+    "logicalRegionCountWithPixels": 77,
+    "missingFillRegionIds": [],
+    "missingLogicalRegionIds": [],
+    "runtimeMetadataRegionCount": 77
+  },
+  "visualFillMap": {
+    "fillMapFileSizeBytes": 49536,
+    "generationTimeMs": 10917,
+    "haloRootCause": {
+      "boundaryUnassignedPixels": 47597,
+      "causeACount": 47597,
+      "causeBCount": 0,
+      "causeCCount": 0,
+      "classification": "A-dominant",
+      "samples": []
+    },
+    "lineBandRadiusPx": 1,
+    "metricsByExpansion": {
+      "0": {
+        "addedPixels": 0,
+        "ambiguousPixels": 0,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 0,
+        "logicalOwnedPixels": 643424,
+        "newlyAddedFromBaseline": 0,
+        "previewPath": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_baseline_0px.png",
+        "reachedPixels": 0,
+        "unresolvedHaloPixels": 0
+      },
+      "1": {
+        "addedPixels": 47591,
+        "ambiguousPixels": 6,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 47591,
+        "logicalOwnedPixels": 643424,
+        "newlyAddedFromBaseline": 47591,
+        "previewPath": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_1px.png",
+        "reachedPixels": 47597,
+        "unresolvedHaloPixels": 0
+      },
+      "2": {
+        "addedPixels": 87586,
+        "ambiguousPixels": 1288,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 87586,
+        "logicalOwnedPixels": 643424,
+        "newlyAddedFromBaseline": 87586,
+        "previewPath": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_2px.png",
+        "reachedPixels": 88874,
+        "unresolvedHaloPixels": 0
+      },
+      "3": {
+        "addedPixels": 121593,
+        "ambiguousPixels": 2099,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 121593,
+        "logicalOwnedPixels": 643424,
+        "newlyAddedFromBaseline": 121593,
+        "previewPath": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_3px.png",
+        "reachedPixels": 123692,
+        "unresolvedHaloPixels": 0
+      },
+      "4": {
+        "addedPixels": 153871,
+        "ambiguousPixels": 2422,
+        "bleedRiskPixels": 0,
+        "claimedPixels": 153871,
+        "logicalOwnedPixels": 643424,
+        "newlyAddedFromBaseline": 153871,
+        "previewPath": "output\\cheerful_baby_panda\\preservation_policy_part1c_v2\\phase2e2_halo_qc\\halo_expansion_4px.png",
+        "reachedPixels": 156293,
+        "unresolvedHaloPixels": 0
+      }
+    },
+    "recommendedExpansionPx": 1
+  }
+}

@@ -8,30 +8,35 @@ void main() {
     final categories = await repository.getCategories();
 
     expect(categories, isNotEmpty);
-    expect(
-      categories.map((category) => category.categoryId),
-      ['animals', 'dinosaurs', 'space', 'vehicles', 'unicorns', 'holidays'],
-    );
+    expect(categories.map((category) => category.categoryId), [
+      'animals',
+      'dinosaurs',
+      'space',
+      'vehicles',
+      'unicorns',
+      'holidays',
+    ]);
   });
 
-  test('repository returns multiple pages with deterministic ordering', () async {
-    final repository = LocalColoringPageRepository();
+  test(
+    'repository returns multiple pages with deterministic ordering',
+    () async {
+      final repository = LocalColoringPageRepository();
 
-    final pages = await repository.getPages();
+      final pages = await repository.getPages();
 
-    expect(pages.length, greaterThanOrEqualTo(4));
-    expect(
-      pages.map((page) => page.id).toList(),
-      [
+      expect(pages.length, greaterThanOrEqualTo(4));
+      expect(pages.map((page) => page.id).toList(), [
         'happy-cat',
         'playful-puppy',
         'friendly-lion',
         'cute-elephant',
         'lovely-kitten',
+        'cheerful-baby-panda',
         'lovely-kitten-raster-poc',
-      ],
-    );
-  });
+      ]);
+    },
+  );
 
   test('getPagesByCategory returns only matching pages', () async {
     final repository = LocalColoringPageRepository();

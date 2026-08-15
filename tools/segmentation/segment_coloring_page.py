@@ -351,16 +351,24 @@ def main() -> int:
         config=suitability,
     )
 
+    artifact_started = perf_counter()
     paths = write_artifacts(output_dir, result)
+    artifact_write_ms = (perf_counter() - artifact_started) * 1000.0
+
+    boundary_started = perf_counter()
     boundary_paths = {}
     if boundary_result is not None:
         boundary_paths = write_boundary_repair_artifacts(output_dir, boundary_result)
+    boundary_artifact_ms = (perf_counter() - boundary_started) * 1000.0
+
+    qa_started = perf_counter()
     profile_paths = write_profile_artifacts(
         output_dir=output_dir,
         metadata=result.metadata,
         labels=result.artifacts.labels,
         barrier_mask=result.artifacts.binary_repaired,
     )
+    qa_generation_ms = (perf_counter() - qa_started) * 1000.0
 
     # Additional Phase 2D aliases.
     shutil.copyfile(str(profile_paths["master_debug"]), str(output_dir / "regions_master_after_repair.png"))
@@ -441,6 +449,21 @@ def main() -> int:
     if boundary_result is not None:
         summary["boundaryRepairSummary"] = boundary_result.summary
         summary["boundaryRepairTimingsMs"] = boundary_result.timings_ms
+
+    result.metadata["pipelineTimingsMs"] = {
+        "segmentationRuntimeMs": float(result.metadata["metrics"]["runtimeMs"]),
+        "featureExtractionMs": float(classify_info["featureExtractionMs"]),
+        "classificationMs": float(classify_info["classificationMs"]),
+        "artifactWriteMs": float(artifact_write_ms),
+        "boundaryArtifactWriteMs": float(boundary_artifact_ms),
+        "qaArtifactGenerationMs": float(qa_generation_ms),
+        "wallRuntimeMs": float(wall_ms),
+    }
+
+    with (output_dir / "regions.json").open("w", encoding="utf-8") as f:
+        json.dump(result.metadata, f, indent=2, sort_keys=True)
+
+    summary["pipelineTimingsMs"] = result.metadata["pipelineTimingsMs"]
 
     print(json.dumps(summary, indent=2))
     return 0

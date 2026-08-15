@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export app-ready raster assets for the Lovely Kitten Phase 2E POC.
+"""Export app-ready raster assets for raster-region coloring pages.
 
 This script reads the approved Phase 2C metadata, selects CHILDREN_DETAILED
 regions, and exports deterministic runtime artifacts for Flutter.
@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 from array import array
 import json
+import re
 import shutil
 import time
 from pathlib import Path
@@ -586,6 +587,24 @@ def _build_visual_fill_assets(
     )
     _save_rgba_image(runtime_fill_map_path, fill_map_rgba, width, height)
 
+    logical_region_pixel_counts = [0] * len(region_entries)
+    fill_region_pixel_counts = [0] * len(region_entries)
+    for owner in logical_owners:
+        if owner >= 0:
+            logical_region_pixel_counts[owner] += 1
+    for owner in selected_owners:
+        if owner >= 0:
+            fill_region_pixel_counts[owner] += 1
+
+    logical_counts_by_region = {
+        region_entries[idx]["regionId"]: logical_region_pixel_counts[idx]
+        for idx in range(len(region_entries))
+    }
+    fill_counts_by_region = {
+        region_entries[idx]["regionId"]: fill_region_pixel_counts[idx]
+        for idx in range(len(region_entries))
+    }
+
     difference_path = qa_dir / "halo_expansion_difference.png"
     difference_rgba = _build_difference_overlay(
         logical_owners=logical_owners,
@@ -659,6 +678,8 @@ def _build_visual_fill_assets(
             "classification": f"{dominant}-dominant",
             "samples": samples,
         },
+        "logicalRegionPixelCounts": logical_counts_by_region,
+        "fillRegionPixelCounts": fill_counts_by_region,
     }
 
 
@@ -711,7 +732,19 @@ def _build_transparent_line_foreground(src: Path, dst: Path) -> dict[str, int]:
     }
 
 
-def _build_regions_dart(entries: list[dict[str, Any]]) -> str:
+def _to_lower_camel(value: str) -> str:
+    parts = [p for p in re.split(r"[^A-Za-z0-9]+", value) if p]
+    if not parts:
+        return "rasterPage"
+    head = parts[0].lower()
+    tail = "".join(part[:1].upper() + part[1:].lower() for part in parts[1:])
+    return f"{head}{tail}"
+
+
+def _build_regions_dart(entries: list[dict[str, Any]], symbol_prefix: str) -> str:
+    regions_const = f"{symbol_prefix}RasterChildrenDetailedRegions"
+    map_entries_const = f"{symbol_prefix}RasterMapEntries"
+
     lines: list[str] = []
     lines.append("import 'package:flutter/material.dart';")
     lines.append("")
@@ -719,7 +752,7 @@ def _build_regions_dart(entries: list[dict[str, Any]]) -> str:
     lines.append("")
     lines.append("const Color kTransparentRegion = Color(0x00000000);")
     lines.append("")
-    lines.append("const List<ColoringRegion> lovelyKittenRasterChildrenDetailedRegions = [")
+    lines.append(f"const List<ColoringRegion> {regions_const} = [")
     for entry in entries:
         region_id = entry["regionId"]
         lines.append(
@@ -730,7 +763,7 @@ def _build_regions_dart(entries: list[dict[str, Any]]) -> str:
         )
     lines.append("];\n")
 
-    lines.append("const List<RasterRegionMapEntry> lovelyKittenRasterMapEntries = [")
+    lines.append(f"const List<RasterRegionMapEntry> {map_entries_const} = [")
     for entry in entries:
         region_id = entry["regionId"]
         rgba = entry["mapColorRgba"]
@@ -753,6 +786,9 @@ def main() -> int:
     parser.add_argument("--runtime-dir", required=True)
     parser.add_argument("--runtime-metadata", required=True)
     parser.add_argument("--regions-dart", required=True)
+    parser.add_argument("--page-id", required=True)
+    parser.add_argument("--asset-base-path", required=True)
+    parser.add_argument("--dart-symbol-prefix", default=None)
     parser.add_argument("--content-version", required=True)
     parser.add_argument("--max-fill-expansion-px", type=int, default=4)
     parser.add_argument("--preferred-fill-expansion-px", type=int, default=2)
@@ -766,6 +802,9 @@ def main() -> int:
     runtime_dir = Path(args.runtime_dir)
     runtime_metadata = Path(args.runtime_metadata)
     regions_dart = Path(args.regions_dart)
+    page_id = str(args.page_id)
+    asset_base_path = str(args.asset_base_path).rstrip("/")
+    symbol_prefix = str(args.dart_symbol_prefix) if args.dart_symbol_prefix else _to_lower_camel(page_id)
 
     metadata = _load_json(regions_json)
     accepted = metadata.get("acceptedRegions")
@@ -829,7 +868,8 @@ def main() -> int:
     _copy_file(region_map, region_map_dst)
 
     qa_fullcolor = profile_qa_debug.parent / "regions_children_detailed_qa_fullcolor.png"
-    _copy_file(profile_qa_debug, qa_fullcolor)
+    if profile_qa_debug.resolve() != qa_fullcolor.resolve():
+        _copy_file(profile_qa_debug, qa_fullcolor)
 
     qa_dir = profile_qa_debug.parent / "phase2e2_halo_qc"
     visual_fill = _build_visual_fill_assets(
@@ -843,15 +883,15 @@ def main() -> int:
     )
 
     runtime_payload = {
-        "pageId": "lovely-kitten-raster-poc",
+        "pageId": page_id,
         "profile": "childrenDetailed",
         "contentVersion": args.content_version,
         "imageWidth": image_width,
         "imageHeight": image_height,
-        "lineArtAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png",
-        "lineArtOpaqueReferenceAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art.png",
-        "regionMapAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_map.png",
-        "regionFillMapAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_fill_map.png",
+        "lineArtAssetPath": f"{asset_base_path}/line_art_foreground.png",
+        "lineArtOpaqueReferenceAssetPath": f"{asset_base_path}/line_art.png",
+        "regionMapAssetPath": f"{asset_base_path}/region_map.png",
+        "regionFillMapAssetPath": f"{asset_base_path}/region_fill_map.png",
         "regionCount": len(selected_entries),
         "regions": selected_entries,
         "lineArtForegroundStats": foreground_stats,
@@ -862,6 +902,42 @@ def main() -> int:
             "fillMapFileSizeBytes": visual_fill["fillMapFileSizeBytes"],
             "metricsByExpansion": visual_fill["metricsByExpansion"],
             "haloRootCause": visual_fill["haloRootCause"],
+        },
+        "runtimeIntegrity": {
+            "approvedChildrenDetailedRegionCount": len(selected_entries),
+            "runtimeMetadataRegionCount": len(selected_entries),
+            "logicalRegionCountWithPixels": len(
+                [
+                    region_id
+                    for region_id, count in visual_fill["logicalRegionPixelCounts"].items()
+                    if int(count) > 0
+                ]
+            ),
+            "fillRegionCountWithPixels": len(
+                [
+                    region_id
+                    for region_id, count in visual_fill["fillRegionPixelCounts"].items()
+                    if int(count) > 0
+                ]
+            ),
+            "missingLogicalRegionIds": [
+                region_id
+                for region_id, count in visual_fill["logicalRegionPixelCounts"].items()
+                if int(count) <= 0
+            ],
+            "missingFillRegionIds": [
+                region_id
+                for region_id, count in visual_fill["fillRegionPixelCounts"].items()
+                if int(count) <= 0
+            ],
+        },
+        "runtimeAssetFileSizesBytes": {
+            "lineArt": line_art_dst.stat().st_size,
+            "lineArtForeground": line_art_foreground_dst.stat().st_size,
+            "regionMap": region_map_dst.stat().st_size,
+            "regionFillMap": region_fill_map_dst.stat().st_size,
+            "metadataJson": 0,
+            "regionsDart": 0,
         },
         "qaArtifacts": {
             "fullColor": str(qa_fullcolor),
@@ -877,7 +953,14 @@ def main() -> int:
 
     _write_json(runtime_metadata, runtime_payload)
     regions_dart.parent.mkdir(parents=True, exist_ok=True)
-    regions_dart.write_text(_build_regions_dart(selected_entries), encoding="utf-8")
+    regions_dart.write_text(_build_regions_dart(selected_entries, symbol_prefix=symbol_prefix), encoding="utf-8")
+
+    runtime_payload["runtimeAssetFileSizesBytes"]["regionsDart"] = regions_dart.stat().st_size
+
+    # Stabilize metadataJson size after embedding the measured size itself.
+    for _ in range(2):
+        runtime_payload["runtimeAssetFileSizesBytes"]["metadataJson"] = runtime_metadata.stat().st_size
+        _write_json(runtime_metadata, runtime_payload)
 
     print("Export complete")
     print(f"Runtime dir: {runtime_dir}")

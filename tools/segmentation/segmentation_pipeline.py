@@ -197,7 +197,26 @@ def _build_region_records(
     for idx, item in enumerate(raw, start=1):
         area_ok = item["areaPixels"] >= config.min_region_area_pixels
         percent_ok = item["areaPercent"] >= config.min_region_area_percent
-        classification = "ACCEPTED" if (area_ok and percent_ok) else "FLAGGED_TOO_SMALL"
+
+        min_dim_px = int(min(item["bounds"]["width"], item["bounds"]["height"]))
+        max_dim_px = int(max(item["bounds"]["width"], item["bounds"]["height"]))
+
+        # Rescue a narrow class of enclosed, near-threshold connector pockets that
+        # are often legitimate color regions but can fall just below strict area cutoffs.
+        rescue_near_threshold_connector = False
+        if config.min_region_area_pixels >= 200 and config.min_region_area_percent > 0.0:
+            rescue_near_threshold_connector = (
+                not item["touchesBorder"]
+                and item["areaPixels"] >= int(round(config.min_region_area_pixels * 0.55))
+                and item["areaPercent"] >= (config.min_region_area_percent * 0.55)
+                and min_dim_px >= int(round(config.min_region_area_pixels * 0.048))
+                and min_dim_px <= int(round(config.min_region_area_pixels * 0.06))
+                and max_dim_px >= int(round(config.min_region_area_pixels * 0.11))
+                and max_dim_px <= int(round(config.min_region_area_pixels * 0.14))
+                and item["aspectRatio"] >= 0.30
+            )
+
+        classification = "ACCEPTED" if (area_ok and percent_ok) or rescue_near_threshold_connector else "FLAGGED_TOO_SMALL"
         rid = f"region-{idx:03d}"
         color = _encode_region_color(idx)
         record = RegionRecord(

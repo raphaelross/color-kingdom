@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "flutter analyze lib",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"analyze",
+				"lib"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "ck-git-status-short",
+			"type": "shell",
+			"command": "git status --short"
+		},
+		{
+			"label": "ck-git-status-short",
+			"type": "shell",
+			"command": "git status --short"
+		}
+	]
+}

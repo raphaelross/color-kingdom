@@ -76,7 +76,7 @@ Run `--help` for all options.
 ## Suitability Profiles
 
 - `MASTER`: all accepted segmentation regions are included.
-- `CHILDREN_DETAILED`: removes impractical tiny/sliver/tap-hostile regions while preserving visual richness.
+- `CHILDREN_DETAILED`: preservation-oriented profile that keeps legitimate enclosed MASTER regions and excludes only clear artifact/noise.
 - `CHILDREN_SIMPLE`: stricter filtering for larger/easier regions and lower coloring workload.
 
 The profile layer does not modify region geometry. It only classifies inclusion per profile.
@@ -158,9 +158,15 @@ every included region has a distinct deterministic color.
 
 Canonical artifact name:
 
+- `regions_master_qa_fullcolor.png`
 - `regions_children_detailed_qa_fullcolor.png`
 
-This preview is used for Human QA to spot:
+Coverage comparison artifacts:
+
+- `master_vs_children_detailed_coverage.png`
+- `master_vs_children_detailed_coverage_labeled.png`
+
+Human QA uses these artifacts to spot:
 
 - intended regions that are not enclosed
 - intended regions not detected
@@ -168,20 +174,54 @@ This preview is used for Human QA to spot:
 - tiny unwanted included regions
 - partially enclosed regions
 
-Always keep a separate exclusions visualization alongside the full-color QA file:
+Coverage semantics:
+
+- green: included in `CHILDREN_DETAILED`
+- orange: valid MASTER region excluded from `CHILDREN_DETAILED`
+- white/gray: not represented by an accepted MASTER region
+- black: line art
+
+Human QA interpretation rule:
+
+- if a region appears to be an intentional enclosed coloring space, it should generally be colored in `CHILDREN_DETAILED`
+- any obvious white intentional enclosed region should be investigated
+
+Always keep a separate exclusions visualization alongside the full-color QA files:
 
 - `regions_children_detailed_exclusions.png`
 
 ## QA Regeneration Policy
 
-If Human QA finds:
+Default production policy:
 
-- a few isolated boundary defects: local/manual repair may be acceptable
-- multiple repeated defects: consider regeneration of source artwork
-- systematic widespread boundary failures: regenerate source artwork instead of manually repairing many regions
+- generate multiple AI artwork candidates
+- run Human artistic and topology QA before segmentation
+- reject weak candidates
+- AI regenerate or refine promising candidates
+- repeat until an artwork passes QA
+- approve the raster master unchanged
+- run deterministic segmentation and profile classification
 
-The objective is minimizing human editing effort. Automatic artwork regeneration is
-out of scope for this tooling stage.
+If Human QA finds source-art defects, prefer AI regeneration or refinement over routine manual pixel repair.
+
+Manual repair is exceptional and should only be considered when:
+
+- preserving that exact approved artwork is unusually important
+- repeated AI regeneration or refinement has already failed
+- the needed fix is genuinely trivial
+
+Keep source-art defects distinct from tooling defects:
+
+- visible open contour in source: artwork defect
+- visibly closed source contour missed by MASTER: segmentation defect
+- MASTER region excluded by `CHILDREN_DETAILED`: classifier defect
+- region survives `CHILDREN_DETAILED` but disappears later: export/runtime defect
+
+Zoom-aware usability policy:
+
+- tap target remains an important diagnostic metric
+- tap-target size alone is not a hard exclusion for `CHILDREN_DETAILED`
+- small region does not imply invalid region because runtime zoom can make fine details practical to color
 
 ## Known Limitations
 
@@ -227,3 +267,44 @@ Human QA artifacts generated for comparison:
 - `halo_expansion_3px.png`
 - `halo_expansion_4px.png`
 - `halo_expansion_difference.png`
+
+## Phase 2F Part 1 Child-Friendly Content Validation Workflow
+
+Validated production flow for new raster pages:
+
+1. define artwork against `docs/content/color-kingdom-childrens-artwork-spec.md`
+2. generate multiple AI child-friendly raster candidates
+3. Human QA gate #1: artistic and topology review of the source artwork
+4. AI regenerate or refine until one raster master is approved unchanged
+5. run segmentation and preserve the complete MASTER region set
+6. run `CHILDREN_DETAILED` classification without page-specific tuning
+7. generate canonical full-color, coverage, and exclusion QA artifacts
+8. Human QA gate #2: segmentation and coverage review
+9. choose approve, return to artwork regeneration, or investigate pipeline/classifier behavior
+10. only after approval, run halo-safe runtime export and Flutter integration
+
+Mandatory Part 1 stop condition:
+
+- Do not integrate into Flutter runtime until Human QA approves CHILDREN_DETAILED outputs.
+- Do not vectorize, hand-author SVG regions, assign manual stable IDs, or manually redraw page regions during this baseline stage.
+
+Canonical QA artifact set required before approval:
+
+- `regions_master_qa_fullcolor.png`
+- `regions_children_detailed_qa_fullcolor.png`
+- `master_vs_children_detailed_coverage.png`
+- `master_vs_children_detailed_coverage_labeled.png`
+- `regions_children_detailed_exclusions.png`
+
+Classifier policy for CHILDREN_DETAILED:
+
+- Preserve all legitimate enclosed MASTER regions by default.
+- Exclude only clear artifact/noise components.
+- Tap target, occupancy, compactness, and aspect ratio are diagnostics for QA and analysis, not standalone exclusion rules.
+- Conservative size-based artifact checks remain allowed for microscopic debris and accidental specks.
+
+Profile separation principle:
+
+- `MASTER`: topology truth for all accepted enclosed regions
+- `CHILDREN_DETAILED`: `MASTER` minus clear artifacts/noise only
+- `CHILDREN_SIMPLE`: optional stronger simplification profile for lower workload experiences

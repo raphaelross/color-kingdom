@@ -72,6 +72,7 @@ flutter:
   assets:
     - assets/coloring_pages/
     - assets/coloring_pages/animals/
+    - assets/coloring_pages/animals/cheerful_baby_panda/
     - assets/coloring_pages/animals/lovely_kitten_raster_poc/
 
   # An image asset can refer to one or more resolution-specific "variants", see
