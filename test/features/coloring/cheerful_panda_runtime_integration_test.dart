@@ -16,7 +16,6 @@ import 'package:color_kingdom/features/coloring/models/coloring_state.dart';
 import 'package:color_kingdom/features/coloring/providers/coloring_provider.dart';
 import 'package:color_kingdom/features/coloring/repositories/coloring_page_repository.dart';
 import 'package:color_kingdom/features/coloring/repositories/coloring_session_repository.dart';
-import 'package:color_kingdom/features/coloring/widgets/renderers/raster_region/raster_region_coloring_renderer.dart';
 import 'package:color_kingdom/features/coloring/widgets/renderers/raster_region/raster_region_hit_tester.dart';
 import 'package:color_kingdom/features/gallery/providers/my_creations_provider.dart';
 

@@ -1,7 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:color_kingdom/app/app.dart';
-import 'package:flutter/material.dart';
 
 void main() {
   testWidgets('shows splash then navigates to home', (WidgetTester tester) async {
