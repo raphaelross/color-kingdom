@@ -31,9 +31,8 @@ void main() {
         'playful-puppy',
         'friendly-lion',
         'cute-elephant',
-        'lovely-kitten',
-        'cheerful-baby-panda',
         'lovely-kitten-raster-poc',
+        'cheerful-baby-panda',
       ]);
     },
   );
@@ -46,6 +45,22 @@ void main() {
     expect(animals, isNotEmpty);
     expect(animals.every((page) => page.categoryId == 'animals'), isTrue);
   });
+
+  test(
+    'animals catalog exposes only one visible Lovely Kitten and it is raster',
+    () async {
+      final repository = LocalColoringPageRepository();
+
+      final animals = await repository.getPagesByCategory('animals');
+      final lovelyKittenPages = animals
+          .where((page) => page.title == 'Lovely Kitten')
+          .toList();
+
+      expect(lovelyKittenPages.length, 1);
+      expect(lovelyKittenPages.single.id, 'lovely-kitten-raster-poc');
+      expect(lovelyKittenPages.single.rendererType.name, 'rasterRegion');
+    },
+  );
 
   test('getPagesByCategory returns empty list for unknown category', () async {
     final repository = LocalColoringPageRepository();
@@ -63,6 +78,7 @@ void main() {
 
     expect(happyCat.id, 'happy-cat');
     expect(puppy.id, 'playful-puppy');
+    expect((await repository.getPageById('lovely-kitten')).id, 'lovely-kitten');
     expect(() => repository.getPageById('missing-page'), throwsStateError);
   });
 }

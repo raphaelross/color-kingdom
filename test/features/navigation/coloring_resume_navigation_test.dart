@@ -17,8 +17,9 @@ class _MemorySessionRepository implements ColoringSessionRepository {
   Future<List<ColoringSession>> getAllSessions() async {
     final allSessions = _sessions.values.toList();
     allSessions.sort((a, b) {
-      final timestampOrder =
-          b.lastUpdatedAtEpochMs.compareTo(a.lastUpdatedAtEpochMs);
+      final timestampOrder = b.lastUpdatedAtEpochMs.compareTo(
+        a.lastUpdatedAtEpochMs,
+      );
       if (timestampOrder != 0) {
         return timestampOrder;
       }
@@ -73,19 +74,18 @@ void main() {
         GoRoute(
           path: '/home',
           name: AppRouteName.home,
-          builder: (_, __) => const HomeScreen(),
+          builder: (context, state) => const HomeScreen(),
         ),
         GoRoute(
           path: '/category/:categoryId',
           name: AppRouteName.category,
-          builder: (_, state) => CategoryScreen(
-            categoryId: state.pathParameters['categoryId']!,
-          ),
+          builder: (context, state) =>
+              CategoryScreen(categoryId: state.pathParameters['categoryId']!),
         ),
         GoRoute(
           path: '/coloring/:pageId',
           name: AppRouteName.coloring,
-          builder: (_, state) {
+          builder: (context, state) {
             final pageId = state.pathParameters['pageId']!;
             return ProviderScope(
               overrides: [
@@ -101,7 +101,9 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          coloringSessionRepositoryProvider.overrideWithValue(sessionRepository),
+          coloringSessionRepositoryProvider.overrideWithValue(
+            sessionRepository,
+          ),
         ],
         child: MaterialApp.router(routerConfig: router),
       ),
@@ -147,7 +149,9 @@ void main() {
     final secondColoringContainer = ProviderScope.containerOf(
       tester.element(find.byType(ColoringScreen)),
     );
-    final restoredState = secondColoringContainer.read(coloringControllerProvider);
+    final restoredState = secondColoringContainer.read(
+      coloringControllerProvider,
+    );
 
     expect(
       restoredState.regionColors['cat-body']?.toARGB32(),

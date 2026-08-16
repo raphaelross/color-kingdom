@@ -6,9 +6,14 @@ import 'coloring_page_repository.dart';
 
 class LocalColoringPageRepository implements ColoringPageRepository {
   static final List<ColoringPage> _validatedPages = _validatePages();
+  static final List<ColoringPage> _visiblePages = _validatedPages
+      .where((page) => page.id != 'lovely-kitten')
+      .toList(growable: false);
 
   static List<ColoringPage> _validatePages() {
-    final categoryIds = localCategories.map((category) => category.categoryId).toSet();
+    final categoryIds = localCategories
+        .map((category) => category.categoryId)
+        .toSet();
     final seenPageIds = <String>{};
 
     for (final page in sampleColoringPages) {
@@ -16,7 +21,9 @@ class LocalColoringPageRepository implements ColoringPageRepository {
         throw StateError('Duplicate coloring page id: ${page.id}');
       }
       if (!categoryIds.contains(page.categoryId)) {
-        throw StateError('Unknown category id for page ${page.id}: ${page.categoryId}');
+        throw StateError(
+          'Unknown category id for page ${page.id}: ${page.categoryId}',
+        );
       }
       if (page.assetPath.trim().isEmpty) {
         throw StateError('Missing asset path for page: ${page.id}');
@@ -39,7 +46,7 @@ class LocalColoringPageRepository implements ColoringPageRepository {
 
   @override
   Future<List<ColoringPage>> getPages() async {
-    final sorted = [..._validatedPages]
+    final sorted = [..._visiblePages]
       ..sort((a, b) => a.sortOrder.compareTo(b.sortOrder));
     return sorted;
   }
@@ -47,10 +54,11 @@ class LocalColoringPageRepository implements ColoringPageRepository {
   @override
   Future<List<ColoringPage>> getPagesByCategory(String categoryId) async {
     final normalized = categoryId.toLowerCase();
-    final pages = _validatedPages
-        .where((page) => page.categoryId.toLowerCase() == normalized)
-        .toList(growable: false)
-      ..sort((a, b) => a.sortOrder.compareTo(b.sortOrder));
+    final pages =
+        _visiblePages
+            .where((page) => page.categoryId.toLowerCase() == normalized)
+            .toList(growable: false)
+          ..sort((a, b) => a.sortOrder.compareTo(b.sortOrder));
     return pages;
   }
 

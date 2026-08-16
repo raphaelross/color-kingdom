@@ -1,5 +1,5 @@
 {
-  "contentVersion": "phase2c-tuned-children-detailed-v1",
+  "contentVersion": "phase2c-tuned-children-detailed-v2",
   "imageHeight": 1388,
   "imageWidth": 1133,
   "lineArtAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png",
@@ -14,19 +14,28 @@
   "pageId": "lovely-kitten-raster-poc",
   "profile": "childrenDetailed",
   "qaArtifacts": {
-    "exclusions": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\regions_children_detailed_exclusions.png",
-    "fullColor": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\regions_children_detailed_qa_fullcolor.png",
-    "haloBaseline0": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_baseline_0px.png",
-    "haloDifference": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_difference.png",
-    "haloExpansion1": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_1px.png",
-    "haloExpansion2": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_2px.png",
-    "haloExpansion3": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_3px.png",
-    "haloExpansion4": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_4px.png"
+    "exclusions": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\regions_children_detailed_exclusions.png",
+    "fullColor": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\regions_children_detailed_qa_fullcolor.png",
+    "haloBaseline0": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_baseline_0px.png",
+    "haloDifference": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_difference.png",
+    "haloExpansion1": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_1px.png",
+    "haloExpansion2": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_2px.png",
+    "haloExpansion3": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_3px.png",
+    "haloExpansion4": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_4px.png"
   },
-  "regionCount": 147,
+  "regionCount": 175,
   "regionFillMapAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_fill_map.png",
   "regionMapAssetPath": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_map.png",
   "regions": [
+    {
+      "mapColorRgba": [
+        98,
+        211,
+        130,
+        255
+      ],
+      "regionId": "region-001"
+    },
     {
       "mapColorRgba": [
         59,
@@ -65,12 +74,30 @@
     },
     {
       "mapColorRgba": [
+        25,
+        112,
+        21,
+        255
+      ],
+      "regionId": "region-006"
+    },
+    {
+      "mapColorRgba": [
         166,
         237,
         10,
         255
       ],
       "regionId": "region-009"
+    },
+    {
+      "mapColorRgba": [
+        127,
+        106,
+        217,
+        255
+      ],
+      "regionId": "region-010"
     },
     {
       "mapColorRgba": [
@@ -92,6 +119,15 @@
     },
     {
       "mapColorRgba": [
+        132,
+        135,
+        206,
+        255
+      ],
+      "regionId": "region-013"
+    },
+    {
+      "mapColorRgba": [
         21,
         139,
         108,
@@ -110,12 +146,30 @@
     },
     {
       "mapColorRgba": [
+        250,
+        190,
+        242,
+        255
+      ],
+      "regionId": "region-017"
+    },
+    {
+      "mapColorRgba": [
         179,
         36,
         65,
         255
       ],
       "regionId": "region-018"
+    },
+    {
+      "mapColorRgba": [
+        75,
+        162,
+        16,
+        255
+      ],
+      "regionId": "region-019"
     },
     {
       "mapColorRgba": [
@@ -128,12 +182,30 @@
     },
     {
       "mapColorRgba": [
+        145,
+        223,
+        5,
+        255
+      ],
+      "regionId": "region-022"
+    },
+    {
+      "mapColorRgba": [
         174,
         68,
         212,
         255
       ],
       "regionId": "region-023"
+    },
+    {
+      "mapColorRgba": [
+        63,
+        72,
+        122,
+        255
+      ],
+      "regionId": "region-025"
     },
     {
       "mapColorRgba": [
@@ -161,6 +233,33 @@
         255
       ],
       "regionId": "region-031"
+    },
+    {
+      "mapColorRgba": [
+        11,
+        131,
+        177,
+        255
+      ],
+      "regionId": "region-034"
+    },
+    {
+      "mapColorRgba": [
+        192,
+        9,
+        0,
+        255
+      ],
+      "regionId": "region-035"
+    },
+    {
+      "mapColorRgba": [
+        152,
+        182,
+        215,
+        255
+      ],
+      "regionId": "region-036"
     },
     {
       "mapColorRgba": [
@@ -344,6 +443,15 @@
     },
     {
       "mapColorRgba": [
+        24,
+        245,
+        145,
+        255
+      ],
+      "regionId": "region-066"
+    },
+    {
+      "mapColorRgba": [
         209,
         115,
         96,
@@ -359,6 +467,24 @@
         255
       ],
       "regionId": "region-070"
+    },
+    {
+      "mapColorRgba": [
+        132,
+        25,
+        74,
+        255
+      ],
+      "regionId": "region-073"
+    },
+    {
+      "mapColorRgba": [
+        21,
+        12,
+        232,
+        255
+      ],
+      "regionId": "region-075"
     },
     {
       "mapColorRgba": [
@@ -425,12 +551,39 @@
     },
     {
       "mapColorRgba": [
+        213,
+        98,
+        9,
+        255
+      ],
+      "regionId": "region-090"
+    },
+    {
+      "mapColorRgba": [
         114,
         159,
         126,
         255
       ],
       "regionId": "region-093"
+    },
+    {
+      "mapColorRgba": [
+        195,
+        130,
+        156,
+        255
+      ],
+      "regionId": "region-095"
+    },
+    {
+      "mapColorRgba": [
+        152,
+        8,
+        83,
+        255
+      ],
+      "regionId": "region-096"
     },
     {
       "mapColorRgba": [
@@ -596,6 +749,15 @@
     },
     {
       "mapColorRgba": [
+        219,
+        172,
+        78,
+        255
+      ],
+      "regionId": "region-141"
+    },
+    {
+      "mapColorRgba": [
         97,
         217,
         163,
@@ -668,6 +830,15 @@
     },
     {
       "mapColorRgba": [
+        10,
+        158,
+        73,
+        255
+      ],
+      "regionId": "region-154"
+    },
+    {
+      "mapColorRgba": [
         80,
         11,
         190,
@@ -683,6 +854,15 @@
         255
       ],
       "regionId": "region-159"
+    },
+    {
+      "mapColorRgba": [
+        249,
+        164,
+        147,
+        255
+      ],
+      "regionId": "region-160"
     },
     {
       "mapColorRgba": [
@@ -821,6 +1001,15 @@
     },
     {
       "mapColorRgba": [
+        242,
+        87,
+        180,
+        255
+      ],
+      "regionId": "region-183"
+    },
+    {
+      "mapColorRgba": [
         138,
         221,
         11,
@@ -863,6 +1052,15 @@
         255
       ],
       "regionId": "region-188"
+    },
+    {
+      "mapColorRgba": [
+        54,
+        97,
+        60,
+        255
+      ],
+      "regionId": "region-191"
     },
     {
       "mapColorRgba": [
@@ -938,6 +1136,15 @@
     },
     {
       "mapColorRgba": [
+        57,
+        216,
+        142,
+        255
+      ],
+      "regionId": "region-205"
+    },
+    {
+      "mapColorRgba": [
         246,
         70,
         93,
@@ -965,6 +1172,15 @@
     },
     {
       "mapColorRgba": [
+        31,
+        243,
+        178,
+        255
+      ],
+      "regionId": "region-209"
+    },
+    {
+      "mapColorRgba": [
         236,
         230,
         208,
@@ -980,6 +1196,15 @@
         255
       ],
       "regionId": "region-212"
+    },
+    {
+      "mapColorRgba": [
+        194,
+        153,
+        148,
+        255
+      ],
+      "regionId": "region-215"
     },
     {
       "mapColorRgba": [
@@ -1181,6 +1406,15 @@
     },
     {
       "mapColorRgba": [
+        160,
+        247,
+        26,
+        255
+      ],
+      "regionId": "region-249"
+    },
+    {
+      "mapColorRgba": [
         49,
         250,
         184,
@@ -1217,12 +1451,30 @@
     },
     {
       "mapColorRgba": [
+        23,
+        157,
+        124,
+        255
+      ],
+      "regionId": "region-255"
+    },
+    {
+      "mapColorRgba": [
         44,
         27,
         51,
         255
       ],
       "regionId": "region-256"
+    },
+    {
+      "mapColorRgba": [
+        228,
+        128,
+        130,
+        255
+      ],
+      "regionId": "region-257"
     },
     {
       "mapColorRgba": [
@@ -1351,12 +1603,28 @@
       "regionId": "region-275"
     }
   ],
+  "runtimeAssetFileSizesBytes": {
+    "lineArt": 1843174,
+    "lineArtForeground": 311011,
+    "metadataJson": 29764,
+    "regionFillMap": 79941,
+    "regionMap": 118684,
+    "regionsDart": 30343
+  },
+  "runtimeIntegrity": {
+    "approvedChildrenDetailedRegionCount": 175,
+    "fillRegionCountWithPixels": 175,
+    "logicalRegionCountWithPixels": 175,
+    "missingFillRegionIds": [],
+    "missingLogicalRegionIds": [],
+    "runtimeMetadataRegionCount": 175
+  },
   "visualFillMap": {
-    "fillMapFileSizeBytes": 76114,
-    "generationTimeMs": 11462,
+    "fillMapFileSizeBytes": 79941,
+    "generationTimeMs": 11379,
     "haloRootCause": {
-      "boundaryUnassignedPixels": 92283,
-      "causeACount": 92283,
+      "boundaryUnassignedPixels": 96906,
+      "causeACount": 96906,
       "causeBCount": 0,
       "causeCCount": 0,
       "classification": "A-dominant",
@@ -1369,54 +1637,54 @@
         "ambiguousPixels": 0,
         "bleedRiskPixels": 0,
         "claimedPixels": 0,
-        "logicalOwnedPixels": 928987,
+        "logicalOwnedPixels": 939554,
         "newlyAddedFromBaseline": 0,
-        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_baseline_0px.png",
+        "previewPath": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_baseline_0px.png",
         "reachedPixels": 0,
         "unresolvedHaloPixels": 0
       },
       "1": {
-        "addedPixels": 92119,
-        "ambiguousPixels": 164,
+        "addedPixels": 96708,
+        "ambiguousPixels": 198,
         "bleedRiskPixels": 0,
-        "claimedPixels": 92119,
-        "logicalOwnedPixels": 928987,
-        "newlyAddedFromBaseline": 92119,
-        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_1px.png",
-        "reachedPixels": 92283,
+        "claimedPixels": 96708,
+        "logicalOwnedPixels": 939554,
+        "newlyAddedFromBaseline": 96708,
+        "previewPath": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_1px.png",
+        "reachedPixels": 96906,
         "unresolvedHaloPixels": 0
       },
       "2": {
-        "addedPixels": 141784,
-        "ambiguousPixels": 7857,
+        "addedPixels": 148811,
+        "ambiguousPixels": 8822,
         "bleedRiskPixels": 0,
-        "claimedPixels": 141784,
-        "logicalOwnedPixels": 928987,
-        "newlyAddedFromBaseline": 141784,
-        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_2px.png",
-        "reachedPixels": 149641,
+        "claimedPixels": 148811,
+        "logicalOwnedPixels": 939554,
+        "newlyAddedFromBaseline": 148811,
+        "previewPath": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_2px.png",
+        "reachedPixels": 157633,
         "unresolvedHaloPixels": 0
       },
       "3": {
-        "addedPixels": 170572,
-        "ambiguousPixels": 10588,
+        "addedPixels": 177746,
+        "ambiguousPixels": 11953,
         "bleedRiskPixels": 0,
-        "claimedPixels": 170572,
-        "logicalOwnedPixels": 928987,
-        "newlyAddedFromBaseline": 170572,
-        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_3px.png",
-        "reachedPixels": 181160,
+        "claimedPixels": 177746,
+        "logicalOwnedPixels": 939554,
+        "newlyAddedFromBaseline": 177746,
+        "previewPath": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_3px.png",
+        "reachedPixels": 189699,
         "unresolvedHaloPixels": 0
       },
       "4": {
-        "addedPixels": 193936,
-        "ambiguousPixels": 11361,
+        "addedPixels": 200736,
+        "ambiguousPixels": 12832,
         "bleedRiskPixels": 0,
-        "claimedPixels": 193936,
-        "logicalOwnedPixels": 928987,
-        "newlyAddedFromBaseline": 193936,
-        "previewPath": "tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned\\phase2e2_halo_qc\\halo_expansion_4px.png",
-        "reachedPixels": 205297,
+        "claimedPixels": 200736,
+        "logicalOwnedPixels": 939554,
+        "newlyAddedFromBaseline": 200736,
+        "previewPath": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\\halo_expansion_4px.png",
+        "reachedPixels": 213568,
         "unresolvedHaloPixels": 0
       }
     },

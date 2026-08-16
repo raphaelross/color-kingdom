@@ -1,0 +1,721 @@
+{
+  "stage": "build",
+  "workspaceRoot": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work",
+  "pages": [
+    {
+      "pageId": "cheerful-baby-panda",
+      "title": "Cheerful Baby Panda",
+      "stage": "build",
+      "result": "PASS",
+      "buildId": "cheerful-baby-panda-bc1a45c812638e51",
+      "sourceHash": "8f75a4ec02eac1a6669528f25a11288cfda5db9cab4497b19235088c09254866",
+      "configHash": "1c57c5cc01e040a7665a48ea438436415f1f0036571af0b786f80be468ad7607",
+      "buildIdentity": {
+        "strategy": "sha256(pageId + sourceHash + configHash + pipelineVersion)",
+        "sourceHash": "8f75a4ec02eac1a6669528f25a11288cfda5db9cab4497b19235088c09254866",
+        "configHash": "1c57c5cc01e040a7665a48ea438436415f1f0036571af0b786f80be468ad7607",
+        "buildId": "cheerful-baby-panda-bc1a45c812638e51"
+      },
+      "workspace": {
+        "root": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51",
+        "segmentation": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation",
+        "qa": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\qa",
+        "runtime_candidate": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\runtime_candidate",
+        "report": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\report.json",
+        "comparison": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\comparison_to_production.json",
+        "manifest_snapshot": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\manifest_snapshot.json"
+      },
+      "commandLog": {
+        "segment": {
+          "args": [
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\.venv\\Scripts\\python.exe",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\segment_coloring_page.py",
+            "--input",
+            "C:\\Users\\rross\\color_kingdom\\assets\\source_artwork\\animals\\cheerful_baby_panda_master.png",
+            "--output-dir",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation",
+            "--variant-name",
+            "cheerful-baby-panda-bc1a45c812638e51",
+            "--threshold",
+            "185",
+            "--morph-kernel",
+            "0",
+            "--morph-iterations",
+            "1",
+            "--dilate-iterations",
+            "0",
+            "--min-region-area",
+            "250",
+            "--min-region-percent",
+            "0.015",
+            "--connectivity",
+            "8",
+            "--children-detailed-min-area-percent",
+            "0.04",
+            "--children-detailed-min-bounding-dimension-percent",
+            "1.2",
+            "--children-detailed-min-tap-radius-percent",
+            "0.42",
+            "--children-detailed-min-occupancy",
+            "0.24",
+            "--children-detailed-min-aspect-ratio",
+            "0.09",
+            "--children-detailed-min-compactness",
+            "0.02",
+            "--children-detailed-mode",
+            "threshold",
+            "--children-simple-min-area-percent",
+            "0.11",
+            "--children-simple-min-bounding-dimension-percent",
+            "2.1",
+            "--children-simple-min-tap-radius-percent",
+            "0.8",
+            "--children-simple-min-occupancy",
+            "0.28",
+            "--children-simple-min-aspect-ratio",
+            "0.13",
+            "--children-simple-min-compactness",
+            "0.03"
+          ],
+          "exitCode": 0,
+          "stdout": "{\n  \"variant\": \"cheerful-baby-panda-bc1a45c812638e51\",\n  \"source\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\assets\\\\source_artwork\\\\animals\\\\cheerful_baby_panda_master.png\",\n  \"outputDir\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\",\n  \"accepted\": 77,\n  \"flaggedTooSmall\": 30,\n  \"totalCandidates\": 107,\n  \"exteriorPercent\": 37.9211,\n  \"runtimeMs\": 3074.11,\n  \"featureExtractionMs\": 458.94,\n  \"classificationMs\": 0.69,\n  \"wallRuntimeMs\": 13769.67,\n  \"warnings\": [],\n  \"childrenDetailedMode\": \"threshold\",\n  \"boundaryRepairMode\": \"off\",\n  \"openBoundaryDiagnostics\": {\n    \"humanQaRequired\": true,\n    \"notes\": \"Heuristic only: likely leaks need manual QA confirmation.\",\n    \"deepExteriorComponentCount\": 17,\n    \"suspiciousDeepExteriorComponents\": [],\n    \"suspiciousCount\": 0\n  },\n  \"weightedScoreDistribution\": {\n    \"min\": 0.0,\n    \"p10\": 0.18478664530883349,\n    \"p25\": 0.36433163623245723,\n    \"median\": 0.45223788951666866,\n    \"p75\": 0.5323838311798017,\n    \"p90\": 0.8022347466966238,\n    \"max\": 0.9896660350057458\n  },\n  \"profiles\": {\n    \"master\": {\n      \"includedCount\": 77,\n      \"excludedCount\": 0,\n      \"exclusionReasonCounts\": {},\n      \"smallestIncludedAreaPixels\": 149,\n      \"medianIncludedAreaPixels\": 3429.0,\n      \"largestIncludedAreaPixels\": 174121,\n      \"smallestIncludedTapRadiusPixels\": 1.909999966621399\n    },\n    \"childrenDetailed\": {\n      \"includedCount\": 77,\n      \"excludedCount\": 0,\n      \"exclusionReasonCounts\": {},\n      \"smallestIncludedAreaPixels\": 149,\n      \"medianIncludedAreaPixels\": 3429.0,\n      \"largestIncludedAreaPixels\": 174121,\n      \"smallestIncludedTapRadiusPixels\": 1.909999966621399\n    },\n    \"childrenDetailedBaseline\": {\n      \"includedCount\": 77,\n      \"excludedCount\": 0,\n      \"exclusionReasonCounts\": {},\n      \"smallestIncludedAreaPixels\": 149,\n      \"medianIncludedAreaPixels\": 3429.0,\n      \"largestIncludedAreaPixels\": 174121,\n      \"smallestIncludedTapRadiusPixels\": 1.909999966621399\n    },\n    \"childrenDetailedWeighted\": {\n      \"includedCount\": 16,\n      \"excludedCount\": 61,\n      \"exclusionReasonCounts\": {\n        \"SCORE_BELOW_THRESHOLD\": 52,\n        \"GUARDRAIL_AREA_TOO_SMALL\": 6,\n        \"GUARDRAIL_BOUNDING_DIMENSION_TOO_SMALL\": 6,\n        \"GUARDRAIL_TAP_TARGET_TOO_SMALL\": 8\n      },\n      \"smallestIncludedAreaPixels\": 2909,\n      \"medianIncludedAreaPixels\": 5438.0,\n      \"largestIncludedAreaPixels\": 174121,\n      \"smallestIncludedTapRadiusPixels\": 15.279999732971191\n    },\n    \"childrenSimple\": {\n      \"includedCount\": 53,\n      \"excludedCount\": 24,\n      \"exclusionReasonCounts\": {\n        \"AREA_TOO_SMALL\": 21,\n        \"TAP_TARGET_TOO_SMALL\": 10,\n        \"LOW_OCCUPANCY\": 6,\n        \"BOUNDING_DIMENSION_TOO_SMALL\": 7,\n        \"FLAGGED_SEGMENTATION_ARTIFACT\": 1\n      },\n      \"smallestIncludedAreaPixels\": 2146,\n      \"medianIncludedAreaPixels\": 3997.0,\n      \"largestIncludedAreaPixels\": 174121,\n      \"smallestIncludedTapRadiusPixels\": 8.215800285339355\n    }\n  },\n  \"artifacts\": {\n    \"grayscale\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\normalized_grayscale.png\",\n    \"binary_raw\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\binary_raw_barriers.png\",\n    \"binary_repaired\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\binary_repaired_barriers.png\",\n    \"exterior_mask\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\exterior_mask.png\",\n    \"candidate_regions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\candidate_regions_mask.png\",\n    \"region_map\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\region_map.png\",\n    \"regions_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_debug.png\",\n    \"regions_labeled\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_labeled.png\",\n    \"metadata_json\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions.json\"\n  },\n  \"boundaryArtifacts\": {},\n  \"profileArtifacts\": {\n    \"master_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_master_debug.png\",\n    \"master_qa_fullcolor\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_master_qa_fullcolor.png\",\n    \"children_detailed_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_detailed_debug.png\",\n    \"children_detailed_qa_fullcolor\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_detailed_qa_fullcolor.png\",\n    \"children_detailed_baseline_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_detailed_baseline_debug.png\",\n    \"children_detailed_weighted_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_detailed_weighted_debug.png\",\n    \"children_detailed_exclusions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_detailed_exclusions.png\",\n    \"children_detailed_baseline_exclusions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_detailed_baseline_exclusions.png\",\n    \"children_detailed_weighted_exclusions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_detailed_weighted_exclusions.png\",\n    \"children_detailed_comparison\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_detailed_comparison.png\",\n    \"master_vs_children_detailed_coverage\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\master_vs_children_detailed_coverage.png\",\n    \"master_vs_children_detailed_coverage_labeled\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\master_vs_children_detailed_coverage_labeled.png\",\n    \"children_simple_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_simple_debug.png\",\n    \"children_simple_exclusions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions_children_simple_exclusions.png\",\n    \"metadata_json\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\cheerful-baby-panda\\\\cheerful-baby-panda-bc1a45c812638e51\\\\segmentation\\\\regions.json\"\n  },\n  \"pipelineTimingsMs\": {\n    \"segmentationRuntimeMs\": 3074.114399991231,\n    \"featureExtractionMs\": 458.9382999984082,\n    \"classificationMs\": 0.6897000130265951,\n    \"artifactWriteMs\": 272.4207999999635,\n    \"boundaryArtifactWriteMs\": 0.0003999739419668913,\n    \"qaArtifactGenerationMs\": 6701.810900005512,\n    \"wallRuntimeMs\": 13769.665500003612\n  }\n}\n",
+          "stderr": "",
+          "durationMs": 13999.899799993727
+        },
+        "export": {
+          "args": [
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\.venv\\Scripts\\python.exe",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\export_raster_poc_assets.py",
+            "--regions-json",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation\\regions.json",
+            "--region-map",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation\\region_map.png",
+            "--line-art",
+            "C:\\Users\\rross\\color_kingdom\\assets\\source_artwork\\animals\\cheerful_baby_panda_master.png",
+            "--profile-qa-debug",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation\\regions_children_detailed_qa_fullcolor.png",
+            "--profile-exclusions",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation\\regions_children_detailed_exclusions.png",
+            "--runtime-dir",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\runtime_candidate",
+            "--runtime-metadata",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\runtime_candidate\\metadata_children_detailed.json",
+            "--regions-dart",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\runtime_candidate\\cheerful-baby-panda_raster_regions.dart",
+            "--page-id",
+            "cheerful-baby-panda",
+            "--asset-base-path",
+            "assets/coloring_pages/animals/cheerful_baby_panda",
+            "--dart-symbol-prefix",
+            "cheerfulBabyPanda",
+            "--content-version",
+            "phase2f-part2b-panda-v2",
+            "--max-fill-expansion-px",
+            "4",
+            "--preferred-fill-expansion-px",
+            "2"
+          ],
+          "exitCode": 0,
+          "stdout": "Export complete\nRuntime dir: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\runtime_candidate\nMetadata: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\runtime_candidate\\metadata_children_detailed.json\nRegions generated: 77\nForeground stats: {'replacedWhitePixels': 1213454, 'preservedDarkPixels': 304066, 'semiTransparentLinePixels': 40066, 'opaqueBlackLinePixels': 319344, 'totalPixels': 1572864}\nVisual fill map: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\runtime_candidate\\region_fill_map.png\nVisual fill summary: recommendedExpansionPx=1 generationTimeMs=11099 fillMapFileSizeBytes=49536\nQA full-color: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation\\regions_children_detailed_qa_fullcolor.png\nQA exclusions: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation\\regions_children_detailed_exclusions.png\nHalo QA dir: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\segmentation\\phase2e2_halo_qc\n",
+          "stderr": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\export_raster_poc_assets.py:688: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  pixels = list(image.getdata())\n",
+          "durationMs": 11851.743199978955
+        }
+      },
+      "qa": {
+        "pageId": "cheerful-baby-panda",
+        "fullColor": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\qa\\regions_children_detailed_qa_fullcolor.png",
+        "exclusions": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\qa\\regions_children_detailed_exclusions.png",
+        "labeled": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\qa\\regions_labeled.png",
+        "coverage": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\qa\\master_vs_children_detailed_coverage.png",
+        "exclusionsSummary": {
+          "excludedRegionCount": 0,
+          "reasonCounts": {}
+        }
+      },
+      "counts": {
+        "detectedCandidateRegions": 107,
+        "masterAcceptedRegions": 77,
+        "profileAcceptedRegions": 77,
+        "excludedProfileRegions": 0,
+        "runtimeMetadataRegions": 77
+      },
+      "exclusionSummary": {
+        "excludedRegionCount": 0,
+        "reasonCounts": {}
+      },
+      "comparisonToProduction": {
+        "metadataRegionSet": {
+          "status": "MATCH",
+          "productionCount": 77,
+          "candidateCount": 77,
+          "missingInCandidate": [],
+          "extraInCandidate": []
+        },
+        "logicalMap": {
+          "status": "MATCH",
+          "productionSha256": "58d5149b8632c01a7d647b9382985050a07414ade46b7b26bb143092c43ea620",
+          "candidateSha256": "58d5149b8632c01a7d647b9382985050a07414ade46b7b26bb143092c43ea620"
+        },
+        "visualFillMap": {
+          "status": "MATCH",
+          "productionSha256": "3a5bd2e71f43a8c58330f7a5d5afb8d27d8112a8916257ec2dda83791f23314c",
+          "candidateSha256": "3a5bd2e71f43a8c58330f7a5d5afb8d27d8112a8916257ec2dda83791f23314c"
+        },
+        "foreground": {
+          "status": "MATCH",
+          "productionSha256": "2dd2a2e829216e81ce8a2c57c67bc7f5ed3ea3b49247adb22937977d0d225831",
+          "candidateSha256": "2dd2a2e829216e81ce8a2c57c67bc7f5ed3ea3b49247adb22937977d0d225831"
+        }
+      },
+      "stages": {
+        "preflight": [
+          {
+            "severity": "PASS",
+            "code": "SOURCE_ARTWORK_EXISTS",
+            "message": "Source artwork exists",
+            "context": {
+              "path": "C:\\Users\\rross\\color_kingdom\\assets\\source_artwork\\animals\\cheerful_baby_panda_master.png"
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "SOURCE_IMAGE_READABLE",
+            "message": "Source artwork image can be opened and decoded",
+            "context": {
+              "width": 1024,
+              "height": 1536
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "SOURCE_ORIENTATION_MATCH",
+            "message": "Source artwork orientation matches expected orientation",
+            "context": {
+              "orientation": "portrait"
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "SEGMENTATION_ARTIFACTS_BASELINE",
+            "message": "All required baseline segmentation artifacts found",
+            "context": {
+              "outputDir": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\output\\cheerful_baby_panda\\preservation_policy_part1c_v2",
+              "missing": []
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "RUNTIME_ASSETS_PRESENT",
+            "message": "All required runtime assets found",
+            "context": {
+              "runtimeAssetDir": "C:\\Users\\rross\\color_kingdom\\assets\\coloring_pages\\animals\\cheerful_baby_panda",
+              "missing": []
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "METADATA_BASELINE_VALID",
+            "message": "Runtime metadata pageId and regionCount are valid",
+            "context": {
+              "regionCount": 77
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "DART_REGIONS_FILE_PRESENT",
+            "message": "Dart region mapping file exists",
+            "context": {
+              "path": "C:\\Users\\rross\\color_kingdom\\lib\\features\\coloring\\data\\cheerful_baby_panda_raster_regions.dart"
+            }
+          }
+        ],
+        "segment": [
+          {
+            "severity": "PASS",
+            "code": "SEGMENT_COMPLETED",
+            "message": "Segmentation stage completed",
+            "context": {}
+          }
+        ],
+        "qa": [
+          {
+            "severity": "PASS",
+            "code": "QA_PACKAGE_READY",
+            "message": "QA package generated",
+            "context": {}
+          }
+        ],
+        "export": [
+          {
+            "severity": "PASS",
+            "code": "EXPORT_COMPLETED",
+            "message": "Runtime candidate export completed",
+            "context": {}
+          }
+        ],
+        "validate": [
+          {
+            "severity": "PASS",
+            "code": "RUNTIME_REGION_SET_MATCH",
+            "message": "Runtime region ids match approved CHILDREN_DETAILED region ids",
+            "context": {
+              "regionCount": 77
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "RUNTIME_REGION_COUNT_MATCH",
+            "message": "runtime metadata regionCount matches runtime regions length",
+            "context": {
+              "regionCount": 77
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "RUNTIME_ASSET_PATHS_EXPECTED",
+            "message": "Runtime metadata asset paths checked against manifest asset base path",
+            "context": {
+              "expectedRegionMap": "assets/coloring_pages/animals/cheerful_baby_panda/region_map.png",
+              "actualRegionMap": "assets/coloring_pages/animals/cheerful_baby_panda/region_map.png",
+              "expectedRegionFillMap": "assets/coloring_pages/animals/cheerful_baby_panda/region_fill_map.png",
+              "actualRegionFillMap": "assets/coloring_pages/animals/cheerful_baby_panda/region_fill_map.png"
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "LOGICAL_MAP_ALL_METADATA_REGIONS_PRESENT",
+            "message": "All metadata regions have logical map coverage",
+            "context": {
+              "regionCount": 77
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "FILL_MAP_ALL_METADATA_REGIONS_PRESENT",
+            "message": "All metadata regions have visual fill map coverage",
+            "context": {
+              "regionCount": 77
+            }
+          }
+        ]
+      },
+      "stageStatus": {
+        "preflight": "PASS",
+        "segment": "PASS",
+        "qa": "PASS",
+        "export": "PASS",
+        "validate": "PASS"
+      },
+      "timingsMs": {
+        "preflight": 34.1449000115972,
+        "segment": 13999.928799981717,
+        "qa": 4.734599991934374,
+        "export": 11851.810399995884,
+        "validate": 1327.1380999940448,
+        "total": 27237.189700012095
+      },
+      "performance": {
+        "source": {
+          "width": 1024,
+          "height": 1536,
+          "sizeBytes": 1484645
+        },
+        "workspaceSizeBytes": 5878067,
+        "runtimeCandidateSizeBytes": 1781010,
+        "qaPackageSizeBytes": 303405
+      },
+      "operatorMessage": {
+        "headline": "BUILD COMPLETE - HUMAN COVERAGE QA REQUIRED",
+        "reviewFullColorQa": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\qa\\regions_children_detailed_qa_fullcolor.png",
+        "reviewLabeledQa": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\qa\\regions_labeled.png",
+        "runtimeCandidatePath": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\cheerful-baby-panda\\cheerful-baby-panda-bc1a45c812638e51\\runtime_candidate",
+        "nextStep": "After Human Coverage QA approval, mark lifecycle as COVERAGE_APPROVED. Production promotion is intentionally not performed in Part 2."
+      }
+    },
+    {
+      "pageId": "lovely-kitten-raster-poc",
+      "title": "Lovely Kitten (Raster POC)",
+      "stage": "build",
+      "result": "PASS",
+      "buildId": "lovely-kitten-raster-poc-2fa2bd2cfc0b96dd",
+      "sourceHash": "7653f14b5b2fcd15b539e087b8a08e11f9e838b0d86282c9cffd13927c4b1f4f",
+      "configHash": "1300bbf324ab83863c0a7a2c29b806b585887f89533f4e15e46f2be5410c7158",
+      "buildIdentity": {
+        "strategy": "sha256(pageId + sourceHash + configHash + pipelineVersion)",
+        "sourceHash": "7653f14b5b2fcd15b539e087b8a08e11f9e838b0d86282c9cffd13927c4b1f4f",
+        "configHash": "1300bbf324ab83863c0a7a2c29b806b585887f89533f4e15e46f2be5410c7158",
+        "buildId": "lovely-kitten-raster-poc-2fa2bd2cfc0b96dd"
+      },
+      "workspace": {
+        "root": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd",
+        "segmentation": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation",
+        "qa": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\qa",
+        "runtime_candidate": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\runtime_candidate",
+        "report": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\report.json",
+        "comparison": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\comparison_to_production.json",
+        "manifest_snapshot": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\manifest_snapshot.json"
+      },
+      "commandLog": {
+        "segment": {
+          "args": [
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\.venv\\Scripts\\python.exe",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\segment_coloring_page.py",
+            "--input",
+            "C:\\Users\\rross\\color_kingdom\\assets\\source_artwork\\animals\\lovely_kitten_master.png",
+            "--output-dir",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation",
+            "--variant-name",
+            "lovely-kitten-raster-poc-2fa2bd2cfc0b96dd",
+            "--threshold",
+            "185",
+            "--morph-kernel",
+            "0",
+            "--morph-iterations",
+            "1",
+            "--dilate-iterations",
+            "0",
+            "--min-region-area",
+            "250",
+            "--min-region-percent",
+            "0.015",
+            "--connectivity",
+            "8",
+            "--children-detailed-min-area-percent",
+            "0.04",
+            "--children-detailed-min-bounding-dimension-percent",
+            "1.2",
+            "--children-detailed-min-tap-radius-percent",
+            "0.42",
+            "--children-detailed-min-occupancy",
+            "0.24",
+            "--children-detailed-min-aspect-ratio",
+            "0.09",
+            "--children-detailed-min-compactness",
+            "0.02",
+            "--children-detailed-mode",
+            "threshold",
+            "--children-simple-min-area-percent",
+            "0.11",
+            "--children-simple-min-bounding-dimension-percent",
+            "2.1",
+            "--children-simple-min-tap-radius-percent",
+            "0.8",
+            "--children-simple-min-occupancy",
+            "0.28",
+            "--children-simple-min-aspect-ratio",
+            "0.13",
+            "--children-simple-min-compactness",
+            "0.03"
+          ],
+          "exitCode": 0,
+          "stdout": "{\n  \"variant\": \"lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\",\n  \"source\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\assets\\\\source_artwork\\\\animals\\\\lovely_kitten_master.png\",\n  \"outputDir\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\",\n  \"accepted\": 175,\n  \"flaggedTooSmall\": 100,\n  \"totalCandidates\": 275,\n  \"exteriorPercent\": 25.3805,\n  \"runtimeMs\": 4688.68,\n  \"featureExtractionMs\": 1075.78,\n  \"classificationMs\": 1.4,\n  \"wallRuntimeMs\": 24419.42,\n  \"warnings\": [],\n  \"childrenDetailedMode\": \"threshold\",\n  \"boundaryRepairMode\": \"off\",\n  \"openBoundaryDiagnostics\": {\n    \"humanQaRequired\": true,\n    \"notes\": \"Heuristic only: likely leaks need manual QA confirmation.\",\n    \"deepExteriorComponentCount\": 15,\n    \"suspiciousDeepExteriorComponents\": [],\n    \"suspiciousCount\": 0\n  },\n  \"weightedScoreDistribution\": {\n    \"min\": 0.006531533372343605,\n    \"p10\": 0.14521663709475066,\n    \"p25\": 0.3008526255103473,\n    \"median\": 0.42046179564662856,\n    \"p75\": 0.6413157460757999,\n    \"p90\": 0.7788495493433135,\n    \"max\": 0.9592297678305145\n  },\n  \"profiles\": {\n    \"master\": {\n      \"includedCount\": 175,\n      \"excludedCount\": 0,\n      \"exclusionReasonCounts\": {},\n      \"smallestIncludedAreaPixels\": 251,\n      \"medianIncludedAreaPixels\": 1980.0,\n      \"largestIncludedAreaPixels\": 255908,\n      \"smallestIncludedTapRadiusPixels\": 1.909999966621399\n    },\n    \"childrenDetailed\": {\n      \"includedCount\": 175,\n      \"excludedCount\": 0,\n      \"exclusionReasonCounts\": {},\n      \"smallestIncludedAreaPixels\": 251,\n      \"medianIncludedAreaPixels\": 1980.0,\n      \"largestIncludedAreaPixels\": 255908,\n      \"smallestIncludedTapRadiusPixels\": 1.909999966621399\n    },\n    \"childrenDetailedBaseline\": {\n      \"includedCount\": 175,\n      \"excludedCount\": 0,\n      \"exclusionReasonCounts\": {},\n      \"smallestIncludedAreaPixels\": 251,\n      \"medianIncludedAreaPixels\": 1980.0,\n      \"largestIncludedAreaPixels\": 255908,\n      \"smallestIncludedTapRadiusPixels\": 1.909999966621399\n    },\n    \"childrenDetailedWeighted\": {\n      \"includedCount\": 50,\n      \"excludedCount\": 125,\n      \"exclusionReasonCounts\": {\n        \"GUARDRAIL_AREA_TOO_SMALL\": 12,\n        \"GUARDRAIL_BOUNDING_DIMENSION_TOO_SMALL\": 17,\n        \"SCORE_BELOW_THRESHOLD\": 100,\n        \"GUARDRAIL_TAP_TARGET_TOO_SMALL\": 14\n      },\n      \"smallestIncludedAreaPixels\": 2235,\n      \"medianIncludedAreaPixels\": 4379.0,\n      \"largestIncludedAreaPixels\": 255908,\n      \"smallestIncludedTapRadiusPixels\": 12.323699951171875\n    },\n    \"childrenSimple\": {\n      \"includedCount\": 94,\n      \"excludedCount\": 81,\n      \"exclusionReasonCounts\": {\n        \"AREA_TOO_SMALL\": 75,\n        \"BOUNDING_DIMENSION_TOO_SMALL\": 17,\n        \"TAP_TARGET_TOO_SMALL\": 37,\n        \"LOW_OCCUPANCY\": 15\n      },\n      \"smallestIncludedAreaPixels\": 1738,\n      \"medianIncludedAreaPixels\": 3036.5,\n      \"largestIncludedAreaPixels\": 255908,\n      \"smallestIncludedTapRadiusPixels\": 9.585100173950195\n    }\n  },\n  \"artifacts\": {\n    \"grayscale\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\normalized_grayscale.png\",\n    \"binary_raw\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\binary_raw_barriers.png\",\n    \"binary_repaired\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\binary_repaired_barriers.png\",\n    \"exterior_mask\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\exterior_mask.png\",\n    \"candidate_regions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\candidate_regions_mask.png\",\n    \"region_map\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\region_map.png\",\n    \"regions_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_debug.png\",\n    \"regions_labeled\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_labeled.png\",\n    \"metadata_json\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions.json\"\n  },\n  \"boundaryArtifacts\": {},\n  \"profileArtifacts\": {\n    \"master_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_master_debug.png\",\n    \"master_qa_fullcolor\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_master_qa_fullcolor.png\",\n    \"children_detailed_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_detailed_debug.png\",\n    \"children_detailed_qa_fullcolor\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_detailed_qa_fullcolor.png\",\n    \"children_detailed_baseline_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_detailed_baseline_debug.png\",\n    \"children_detailed_weighted_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_detailed_weighted_debug.png\",\n    \"children_detailed_exclusions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_detailed_exclusions.png\",\n    \"children_detailed_baseline_exclusions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_detailed_baseline_exclusions.png\",\n    \"children_detailed_weighted_exclusions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_detailed_weighted_exclusions.png\",\n    \"children_detailed_comparison\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_detailed_comparison.png\",\n    \"master_vs_children_detailed_coverage\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\master_vs_children_detailed_coverage.png\",\n    \"master_vs_children_detailed_coverage_labeled\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\master_vs_children_detailed_coverage_labeled.png\",\n    \"children_simple_debug\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_simple_debug.png\",\n    \"children_simple_exclusions\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions_children_simple_exclusions.png\",\n    \"metadata_json\": \"C:\\\\Users\\\\rross\\\\color_kingdom\\\\tools\\\\segmentation\\\\work\\\\lovely-kitten-raster-poc\\\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\\\segmentation\\\\regions.json\"\n  },\n  \"pipelineTimingsMs\": {\n    \"segmentationRuntimeMs\": 4688.67799997679,\n    \"featureExtractionMs\": 1075.783499982208,\n    \"classificationMs\": 1.4048999873921275,\n    \"artifactWriteMs\": 383.96979999379255,\n    \"boundaryArtifactWriteMs\": 0.000100000761449337,\n    \"qaArtifactGenerationMs\": 13383.783099998254,\n    \"wallRuntimeMs\": 24419.418900011806\n  }\n}\n",
+          "stderr": "",
+          "durationMs": 24688.69090001681
+        },
+        "export": {
+          "args": [
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\.venv\\Scripts\\python.exe",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\export_raster_poc_assets.py",
+            "--regions-json",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\regions.json",
+            "--region-map",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\region_map.png",
+            "--line-art",
+            "C:\\Users\\rross\\color_kingdom\\assets\\source_artwork\\animals\\lovely_kitten_master.png",
+            "--profile-qa-debug",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\regions_children_detailed_qa_fullcolor.png",
+            "--profile-exclusions",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\regions_children_detailed_exclusions.png",
+            "--runtime-dir",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\runtime_candidate",
+            "--runtime-metadata",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\runtime_candidate\\metadata_children_detailed.json",
+            "--regions-dart",
+            "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\runtime_candidate\\lovely-kitten-raster-poc_raster_regions.dart",
+            "--page-id",
+            "lovely-kitten-raster-poc",
+            "--asset-base-path",
+            "assets/coloring_pages/animals/lovely_kitten_raster_poc",
+            "--dart-symbol-prefix",
+            "lovelyKitten",
+            "--content-version",
+            "phase2c-tuned-children-detailed-v1",
+            "--max-fill-expansion-px",
+            "4",
+            "--preferred-fill-expansion-px",
+            "2"
+          ],
+          "exitCode": 0,
+          "stdout": "Export complete\nRuntime dir: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\runtime_candidate\nMetadata: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\runtime_candidate\\metadata_children_detailed.json\nRegions generated: 175\nForeground stats: {'replacedWhitePixels': 1262462, 'preservedDarkPixels': 158764, 'semiTransparentLinePixels': 116797, 'opaqueBlackLinePixels': 193345, 'totalPixels': 1572604}\nVisual fill map: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\runtime_candidate\\region_fill_map.png\nVisual fill summary: recommendedExpansionPx=1 generationTimeMs=11379 fillMapFileSizeBytes=79941\nQA full-color: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\regions_children_detailed_qa_fullcolor.png\nQA exclusions: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\regions_children_detailed_exclusions.png\nHalo QA dir: C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\segmentation\\phase2e2_halo_qc\n",
+          "stderr": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\export_raster_poc_assets.py:688: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  pixels = list(image.getdata())\n",
+          "durationMs": 12103.512299974682
+        }
+      },
+      "qa": {
+        "pageId": "lovely-kitten-raster-poc",
+        "fullColor": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\qa\\regions_children_detailed_qa_fullcolor.png",
+        "exclusions": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\qa\\regions_children_detailed_exclusions.png",
+        "labeled": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\qa\\regions_labeled.png",
+        "coverage": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\qa\\master_vs_children_detailed_coverage.png",
+        "exclusionsSummary": {
+          "excludedRegionCount": 0,
+          "reasonCounts": {}
+        }
+      },
+      "counts": {
+        "detectedCandidateRegions": 275,
+        "masterAcceptedRegions": 175,
+        "profileAcceptedRegions": 175,
+        "excludedProfileRegions": 0,
+        "runtimeMetadataRegions": 175
+      },
+      "exclusionSummary": {
+        "excludedRegionCount": 0,
+        "reasonCounts": {}
+      },
+      "comparisonToProduction": {
+        "metadataRegionSet": {
+          "status": "DIFFER",
+          "productionCount": 147,
+          "candidateCount": 175,
+          "missingInCandidate": [],
+          "extraInCandidate": [
+            "region-001",
+            "region-006",
+            "region-010",
+            "region-013",
+            "region-017",
+            "region-019",
+            "region-022",
+            "region-025",
+            "region-034",
+            "region-035",
+            "region-036",
+            "region-066",
+            "region-073",
+            "region-075",
+            "region-090",
+            "region-095",
+            "region-096",
+            "region-141",
+            "region-154",
+            "region-160",
+            "region-183",
+            "region-191",
+            "region-205",
+            "region-209",
+            "region-215",
+            "region-249",
+            "region-255",
+            "region-257"
+          ]
+        },
+        "logicalMap": {
+          "status": "MATCH",
+          "productionSha256": "885334eca183dca25efbb1937521e0e672fa52f7151160fcb26eecd4ee0d62b8",
+          "candidateSha256": "885334eca183dca25efbb1937521e0e672fa52f7151160fcb26eecd4ee0d62b8"
+        },
+        "visualFillMap": {
+          "status": "DIFFER",
+          "productionSha256": "7142783a57e6cd892e199462c6cf79c22f4aaddc83db9cc228cc7025f2d05643",
+          "candidateSha256": "fe84f3ecdf3981823f7e6114fd5e33bad25f402bef7aa952b5db7e33c8b2fe6c"
+        },
+        "foreground": {
+          "status": "MATCH",
+          "productionSha256": "00d2260ed358157f75e7c85888e96469a2208111ba2e1633c453f219e59b692c",
+          "candidateSha256": "00d2260ed358157f75e7c85888e96469a2208111ba2e1633c453f219e59b692c"
+        }
+      },
+      "stages": {
+        "preflight": [
+          {
+            "severity": "PASS",
+            "code": "SOURCE_ARTWORK_EXISTS",
+            "message": "Source artwork exists",
+            "context": {
+              "path": "C:\\Users\\rross\\color_kingdom\\assets\\source_artwork\\animals\\lovely_kitten_master.png"
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "SOURCE_IMAGE_READABLE",
+            "message": "Source artwork image can be opened and decoded",
+            "context": {
+              "width": 1133,
+              "height": 1388
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "SOURCE_ORIENTATION_MATCH",
+            "message": "Source artwork orientation matches expected orientation",
+            "context": {
+              "orientation": "portrait"
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "SEGMENTATION_ARTIFACTS_BASELINE",
+            "message": "All required baseline segmentation artifacts found",
+            "context": {
+              "outputDir": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\output\\lovely_kitten\\phase2c_tuned",
+              "missing": []
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "RUNTIME_ASSETS_PRESENT",
+            "message": "All required runtime assets found",
+            "context": {
+              "runtimeAssetDir": "C:\\Users\\rross\\color_kingdom\\assets\\coloring_pages\\animals\\lovely_kitten_raster_poc",
+              "missing": []
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "METADATA_BASELINE_VALID",
+            "message": "Runtime metadata pageId and regionCount are valid",
+            "context": {
+              "regionCount": 147
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "DART_REGIONS_FILE_PRESENT",
+            "message": "Dart region mapping file exists",
+            "context": {
+              "path": "C:\\Users\\rross\\color_kingdom\\lib\\features\\coloring\\data\\lovely_kitten_raster_regions.dart"
+            }
+          }
+        ],
+        "segment": [
+          {
+            "severity": "PASS",
+            "code": "SEGMENT_COMPLETED",
+            "message": "Segmentation stage completed",
+            "context": {}
+          }
+        ],
+        "qa": [
+          {
+            "severity": "PASS",
+            "code": "QA_PACKAGE_READY",
+            "message": "QA package generated",
+            "context": {}
+          }
+        ],
+        "export": [
+          {
+            "severity": "PASS",
+            "code": "EXPORT_COMPLETED",
+            "message": "Runtime candidate export completed",
+            "context": {}
+          }
+        ],
+        "validate": [
+          {
+            "severity": "PASS",
+            "code": "RUNTIME_REGION_SET_MATCH",
+            "message": "Runtime region ids match approved CHILDREN_DETAILED region ids",
+            "context": {
+              "regionCount": 175
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "RUNTIME_REGION_COUNT_MATCH",
+            "message": "runtime metadata regionCount matches runtime regions length",
+            "context": {
+              "regionCount": 175
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "RUNTIME_ASSET_PATHS_EXPECTED",
+            "message": "Runtime metadata asset paths checked against manifest asset base path",
+            "context": {
+              "expectedRegionMap": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_map.png",
+              "actualRegionMap": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_map.png",
+              "expectedRegionFillMap": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_fill_map.png",
+              "actualRegionFillMap": "assets/coloring_pages/animals/lovely_kitten_raster_poc/region_fill_map.png"
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "LOGICAL_MAP_ALL_METADATA_REGIONS_PRESENT",
+            "message": "All metadata regions have logical map coverage",
+            "context": {
+              "regionCount": 175
+            }
+          },
+          {
+            "severity": "PASS",
+            "code": "FILL_MAP_ALL_METADATA_REGIONS_PRESENT",
+            "message": "All metadata regions have visual fill map coverage",
+            "context": {
+              "regionCount": 175
+            }
+          }
+        ]
+      },
+      "stageStatus": {
+        "preflight": "PASS",
+        "segment": "PASS",
+        "qa": "PASS",
+        "export": "PASS",
+        "validate": "PASS"
+      },
+      "timingsMs": {
+        "preflight": 30.820700019830838,
+        "segment": 24688.722199993208,
+        "qa": 4.718299984233454,
+        "export": 12103.5697000043,
+        "validate": 1224.2678999900818,
+        "total": 38707.88690002519
+      },
+      "performance": {
+        "source": {
+          "width": 1133,
+          "height": 1388,
+          "sizeBytes": 1843174
+        },
+        "workspaceSizeBytes": 10282292,
+        "runtimeCandidateSizeBytes": 2412917,
+        "qaPackageSizeBytes": 552140
+      },
+      "operatorMessage": {
+        "headline": "BUILD COMPLETE - HUMAN COVERAGE QA REQUIRED",
+        "reviewFullColorQa": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\qa\\regions_children_detailed_qa_fullcolor.png",
+        "reviewLabeledQa": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\qa\\regions_labeled.png",
+        "runtimeCandidatePath": "C:\\Users\\rross\\color_kingdom\\tools\\segmentation\\work\\lovely-kitten-raster-poc\\lovely-kitten-raster-poc-2fa2bd2cfc0b96dd\\runtime_candidate",
+        "nextStep": "After Human Coverage QA approval, mark lifecycle as COVERAGE_APPROVED. Production promotion is intentionally not performed in Part 2."
+      }
+    }
+  ],
+  "summaryTable": [
+    {
+      "page": "cheerful-baby-panda",
+      "preflight": "PASS",
+      "segment": "PASS",
+      "qa": "PASS",
+      "export": "PASS",
+      "validate": "PASS",
+      "result": "PASS"
+    },
+    {
+      "page": "lovely-kitten-raster-poc",
+      "preflight": "PASS",
+      "segment": "PASS",
+      "qa": "PASS",
+      "export": "PASS",
+      "validate": "PASS",
+      "result": "PASS"
+    }
+  ],
+  "summary": {
+    "totalPages": 2,
+    "pass": 2,
+    "fail": 0,
+    "durationMs": 65958.64560001064
+  }
+}

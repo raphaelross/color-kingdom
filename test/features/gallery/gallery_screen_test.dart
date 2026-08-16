@@ -77,7 +77,11 @@ const _happyCatPage = ColoringPage(
   assetPath: 'assets/coloring_pages/animals/happy_cat.svg',
   sortOrder: 0,
   regions: [
-    ColoringRegion(id: 'cat-body', name: 'Body', defaultColor: Colors.transparent),
+    ColoringRegion(
+      id: 'cat-body',
+      name: 'Body',
+      defaultColor: Colors.transparent,
+    ),
   ],
 );
 
@@ -88,12 +92,13 @@ GoRouter _buildRouter() {
       GoRoute(
         path: AppRoute.home,
         name: AppRouteName.home,
-        builder: (_, __) => const Scaffold(body: Center(child: Text('Home'))),
+        builder: (context, state) =>
+            const Scaffold(body: Center(child: Text('Home'))),
       ),
       GoRoute(
         path: AppRoute.gallery,
         name: AppRouteName.gallery,
-        builder: (_, __) => const GalleryScreen(),
+        builder: (context, state) => const GalleryScreen(),
       ),
       GoRoute(
         path: AppRoute.coloring,
@@ -127,7 +132,9 @@ Future<void> _pumpGallery(
       overrides: [
         myCreationsOverride,
         coloringPageRepositoryProvider.overrideWithValue(_FakePageRepository()),
-        coloringSessionRepositoryProvider.overrideWithValue(_FakeSessionRepository()),
+        coloringSessionRepositoryProvider.overrideWithValue(
+          _FakeSessionRepository(),
+        ),
       ],
       child: MaterialApp.router(routerConfig: _buildRouter()),
     ),
@@ -158,7 +165,10 @@ void main() {
 
     await tester.pumpAndSettle();
 
-    expect(find.text('No creations yet! Pick a picture and start coloring.'), findsOneWidget);
+    expect(
+      find.text('No creations yet! Pick a picture and start coloring.'),
+      findsOneWidget,
+    );
     expect(find.text('Go to Adventures'), findsOneWidget);
   });
 
@@ -178,16 +188,24 @@ void main() {
 
     await tester.pumpAndSettle();
 
-    expect(find.text('We could not load your creations right now.'), findsOneWidget);
+    expect(
+      find.text('We could not load your creations right now.'),
+      findsOneWidget,
+    );
     expect(find.text('Retry'), findsOneWidget);
 
     await tester.tap(find.text('Retry'));
     await tester.pumpAndSettle();
 
-    expect(find.text('No creations yet! Pick a picture and start coloring.'), findsOneWidget);
+    expect(
+      find.text('No creations yet! Pick a picture and start coloring.'),
+      findsOneWidget,
+    );
   });
 
-  testWidgets('renders multiple creation cards with page and category info', (tester) async {
+  testWidgets('renders multiple creation cards with page and category info', (
+    tester,
+  ) async {
     await _pumpGallery(
       tester,
       myCreationsOverride: myCreationsProvider.overrideWith(
@@ -229,7 +247,9 @@ void main() {
     expect(find.text('50% colored'), findsOneWidget);
   });
 
-  testWidgets('tapping creation card navigates to coloring page', (tester) async {
+  testWidgets('tapping creation card navigates to coloring page', (
+    tester,
+  ) async {
     await _pumpGallery(
       tester,
       myCreationsOverride: myCreationsProvider.overrideWith(
@@ -267,11 +287,11 @@ void main() {
         (ref) async => const <MyCreationItem>[
           MyCreationItem(
             pageId: 'lovely-kitten-raster-poc',
-            pageTitle: 'Lovely Kitten (Raster POC)',
+            pageTitle: 'Lovely Kitten',
             categoryId: 'animals',
             categoryTitle: 'Animals',
             previewAssetPath:
-              'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png',
+                'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png',
             coloredRegionCount: 2,
             totalRegionCount: 55,
             progressRatio: 0.04,
@@ -284,7 +304,7 @@ void main() {
 
     await tester.pumpAndSettle();
 
-    expect(find.text('Lovely Kitten (Raster POC)'), findsOneWidget);
+    expect(find.text('Lovely Kitten'), findsOneWidget);
     expect(find.byType(Image), findsWidgets);
   });
 }

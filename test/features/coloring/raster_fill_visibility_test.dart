@@ -1,5 +1,3 @@
-import 'dart:async';
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -20,7 +18,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   test('region mapping provides deterministic pixel offsets for tapped region', () async {
-    final page = sampleLovelyKittenRasterPocPage;
+    final page = sampleLovelyKittenPage;
     final metadata = page.rasterRegionMetadata!;
 
     final regionMapAsset = await rootBundle.load(metadata.regionMapAssetPath);
@@ -50,7 +48,7 @@ void main() {
   });
 
   test('color-layer byte mutation reflects fill/undo/redo/clear transitions', () async {
-    final page = sampleLovelyKittenRasterPocPage;
+    final page = sampleLovelyKittenPage;
     final metadata = page.rasterRegionMetadata!;
 
     final regionMapAsset = await rootBundle.load(metadata.regionMapAssetPath);
@@ -140,7 +138,7 @@ void main() {
   });
 
   test('opaque source line art hides fill while transparent foreground preserves it', () async {
-    final page = sampleLovelyKittenRasterPocPage;
+    final page = sampleLovelyKittenPage;
     final metadata = page.rasterRegionMetadata!;
 
     final regionMapAsset = await rootBundle.load(metadata.regionMapAssetPath);

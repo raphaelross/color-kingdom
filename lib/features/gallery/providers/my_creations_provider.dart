@@ -6,8 +6,9 @@ import '../../coloring/models/coloring_session.dart';
 import '../../coloring/providers/coloring_provider.dart';
 import '../models/my_creation_item.dart';
 
-final myCreationsProvider =
-    FutureProvider.autoDispose<List<MyCreationItem>>((ref) async {
+final myCreationsProvider = FutureProvider.autoDispose<List<MyCreationItem>>((
+  ref,
+) async {
   final sessionRepository = ref.watch(coloringSessionRepositoryProvider);
   final pageRepository = ref.watch(coloringPageRepositoryProvider);
 
@@ -16,12 +17,7 @@ final myCreationsProvider =
     return const <MyCreationItem>[];
   }
 
-  final pages = await pageRepository.getPages();
   final categories = await pageRepository.getCategories();
-
-  final pagesById = <String, ColoringPage>{
-    for (final page in pages) page.id: page,
-  };
 
   final categoryTitleById = <String, String>{
     for (final category in categories) category.categoryId: category.title,
@@ -30,15 +26,14 @@ final myCreationsProvider =
   final items = <MyCreationItem>[];
 
   for (final session in sessions) {
-    final page = pagesById[session.pageId];
-    if (page == null) {
+    ColoringPage page;
+    try {
+      page = await pageRepository.getPageById(session.pageId);
+    } on StateError {
       continue;
     }
 
-    final progress = calculateMyCreationProgress(
-      page: page,
-      session: session,
-    );
+    final progress = calculateMyCreationProgress(page: page, session: session);
 
     if (progress.coloredRegionCount <= 0) {
       continue;
@@ -50,7 +45,8 @@ final myCreationsProvider =
         pageTitle: page.title,
         categoryId: page.categoryId,
         categoryTitle:
-            categoryTitleById[page.categoryId] ?? _formatCategoryId(page.categoryId),
+            categoryTitleById[page.categoryId] ??
+            _formatCategoryId(page.categoryId),
         previewAssetPath: page.thumbnailAssetPath ?? page.assetPath,
         coloredRegionCount: progress.coloredRegionCount,
         totalRegionCount: progress.totalRegionCount,
@@ -99,10 +95,7 @@ MyCreationProgress calculateMyCreationProgress({
 }) {
   final totalRegionCount = page.regions.length;
   if (totalRegionCount == 0) {
-    return const MyCreationProgress(
-      coloredRegionCount: 0,
-      totalRegionCount: 0,
-    );
+    return const MyCreationProgress(coloredRegionCount: 0, totalRegionCount: 0);
   }
 
   var coloredRegionCount = 0;

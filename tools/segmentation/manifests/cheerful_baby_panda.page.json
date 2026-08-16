@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "2.7.0",
+  "pageId": "cheerful-baby-panda",
+  "title": "Cheerful Baby Panda",
+  "categoryId": "animals",
+  "lifecycleStatus": "PRODUCTION_APPROVED",
+  "renderer": "rasterRegion",
+  "profile": "childrenDetailed",
+  "sourceArtworkPath": "assets/source_artwork/animals/cheerful_baby_panda_master.png",
+  "sourceArtworkVersion": "cheerful_baby_panda_master_v1",
+  "segmentationOutputDir": "tools/segmentation/output/cheerful_baby_panda/preservation_policy_part1c_v2",
+  "runtimeAssetDir": "assets/coloring_pages/animals/cheerful_baby_panda",
+  "runtimeMetadataPath": "assets/coloring_pages/animals/cheerful_baby_panda/metadata_children_detailed.json",
+  "runtimeRegionsDartPath": "lib/features/coloring/data/cheerful_baby_panda_raster_regions.dart",
+  "assetBasePath": "assets/coloring_pages/animals/cheerful_baby_panda",
+  "runtimeContentVersion": "phase2f-part2b-panda-v2",
+  "pipelineVersion": "phase2g-part1b-foundation",
+  "expectedImageWidth": 1024,
+  "expectedImageHeight": 1536,
+  "expectedOrientation": "portrait",
+  "enforceMonochromeLineArt": false,
+  "buildConfig": {
+    "segmentArgs": [
+      "--threshold", "185",
+      "--morph-kernel", "0",
+      "--morph-iterations", "1",
+      "--dilate-iterations", "0",
+      "--min-region-area", "250",
+      "--min-region-percent", "0.015",
+      "--connectivity", "8",
+      "--children-detailed-min-area-percent", "0.04",
+      "--children-detailed-min-bounding-dimension-percent", "1.2",
+      "--children-detailed-min-tap-radius-percent", "0.42",
+      "--children-detailed-min-occupancy", "0.24",
+      "--children-detailed-min-aspect-ratio", "0.09",
+      "--children-detailed-min-compactness", "0.02",
+      "--children-detailed-mode", "threshold",
+      "--children-simple-min-area-percent", "0.11",
+      "--children-simple-min-bounding-dimension-percent", "2.1",
+      "--children-simple-min-tap-radius-percent", "0.8",
+      "--children-simple-min-occupancy", "0.28",
+      "--children-simple-min-aspect-ratio", "0.13",
+      "--children-simple-min-compactness", "0.03"
+    ],
+    "export": {
+      "maxFillExpansionPx": 4,
+      "preferredFillExpansionPx": 2
+    }
+  },
+  "dartSymbolPrefix": "cheerfulBabyPanda",
+  "notes": [
+    "Canonical Phase 2F panda production page.",
+    "Used as baseline reference for Phase 2G orchestration checks."
+  ]
+}

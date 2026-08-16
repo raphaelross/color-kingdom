@@ -246,12 +246,14 @@ const ColoringPage sampleCuteElephantPage = ColoringPage(
   ],
 );
 
-const ColoringPage sampleLovelyKittenPage = ColoringPage(
+// Hidden compatibility shim for old saved sessions that still reference the
+// retired five-region SVG Lovely Kitten page id.
+const ColoringPage legacyLovelyKittenSvgPage = ColoringPage(
   id: 'lovely-kitten',
-  title: 'Lovely Kitten',
+  title: 'Lovely Kitten (Legacy SVG)',
   categoryId: 'animals',
   assetPath: 'assets/coloring_pages/animals/lovely_kitten.svg',
-  sortOrder: 4,
+  sortOrder: 6,
   regions: [
     ColoringRegion(
       id: 'region-bow-center',
@@ -286,9 +288,9 @@ const List<ColoringPage> sampleColoringPages = [
   samplePlayfulPuppyPage,
   sampleFriendlyLionPage,
   sampleCuteElephantPage,
-  sampleLovelyKittenPage,
+  legacyLovelyKittenSvgPage,
   sampleCheerfulBabyPandaPage,
-  sampleLovelyKittenRasterPocPage,
+  sampleLovelyKittenPage,
 ];
 
 const ColoringPage sampleCheerfulBabyPandaPage = ColoringPage(
@@ -316,15 +318,16 @@ const ColoringPage sampleCheerfulBabyPandaPage = ColoringPage(
   regions: cheerfulBabyPandaRasterChildrenDetailedRegions,
 );
 
-const ColoringPage sampleLovelyKittenRasterPocPage = ColoringPage(
+// Canonical production Lovely Kitten page.
+const ColoringPage sampleLovelyKittenPage = ColoringPage(
   id: 'lovely-kitten-raster-poc',
-  title: 'Lovely Kitten (Raster POC)',
+  title: 'Lovely Kitten',
   categoryId: 'animals',
   assetPath:
       'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png',
   thumbnailAssetPath:
       'assets/coloring_pages/animals/lovely_kitten_raster_poc/line_art_foreground.png',
-  sortOrder: 6,
+  sortOrder: 4,
   rendererType: ColoringRendererType.rasterRegion,
   rasterRegionMetadata: RasterRegionMetadata(
     regionMapAssetPath:
@@ -333,7 +336,7 @@ const ColoringPage sampleLovelyKittenRasterPocPage = ColoringPage(
         'assets/coloring_pages/animals/lovely_kitten_raster_poc/region_fill_map.png',
     metadataAssetPath:
         'assets/coloring_pages/animals/lovely_kitten_raster_poc/metadata_children_detailed.json',
-    contentVersion: 'phase2c-tuned-children-detailed-v1',
+    contentVersion: 'phase2c-tuned-children-detailed-v2',
     imageWidth: 1133,
     imageHeight: 1388,
     regionMapEntries: lovelyKittenRasterMapEntries,

@@ -28,17 +28,17 @@ class _InMemorySessionRepository implements ColoringSessionRepository {
 }
 
 void main() {
-  Finder _findIconButtonByTooltip(String tooltip) {
+  Finder findIconButtonByTooltip(String tooltip) {
     return find.byWidgetPredicate(
       (widget) => widget is IconButton && widget.tooltip == tooltip,
     );
   }
 
-  Future<void> _pressIconButtonByTooltip(
+  Future<void> pressIconButtonByTooltip(
     WidgetTester tester,
     String tooltip,
   ) async {
-    final buttonFinder = _findIconButtonByTooltip(tooltip);
+    final buttonFinder = findIconButtonByTooltip(tooltip);
     expect(buttonFinder, findsWidgets);
     final button = tester.widget<IconButton>(buttonFinder.last);
     expect(button.onPressed, isNotNull);
@@ -46,7 +46,7 @@ void main() {
     await tester.pump();
   }
 
-  Future<void> _pumpUntilFound(
+  Future<void> pumpUntilFound(
     WidgetTester tester,
     Finder finder, {
     int maxPumps = 30,
@@ -61,26 +61,25 @@ void main() {
     fail('Timed out waiting for widget: $finder');
   }
 
-  Future<void> _pumpToHome(WidgetTester tester) async {
+  Future<void> pumpToHome(WidgetTester tester) async {
     final router = GoRouter(
       initialLocation: '/home',
       routes: [
         GoRoute(
           path: '/home',
           name: AppRouteName.home,
-          builder: (_, __) => const HomeScreen(),
+          builder: (context, state) => const HomeScreen(),
         ),
         GoRoute(
           path: '/category/:categoryId',
           name: AppRouteName.category,
-          builder: (_, state) => CategoryScreen(
-            categoryId: state.pathParameters['categoryId']!,
-          ),
+          builder: (context, state) =>
+              CategoryScreen(categoryId: state.pathParameters['categoryId']!),
         ),
         GoRoute(
           path: '/coloring/:pageId',
           name: AppRouteName.coloring,
-          builder: (context, state) {
+          builder: (buildContext, state) {
             final pageId = state.pathParameters['pageId']!;
             return ProviderScope(
               overrides: [
@@ -103,19 +102,19 @@ void main() {
         child: MaterialApp.router(routerConfig: router),
       ),
     );
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+    await pumpUntilFound(tester, find.text('Choose an Adventure'));
   }
 
   testWidgets('HomeScreen navigates to Animals category and shows Happy Cat', (
     WidgetTester tester,
   ) async {
-    await _pumpToHome(tester);
+    await pumpToHome(tester);
 
     expect(find.text('Choose an Adventure'), findsOneWidget);
     expect(find.text('Animals'), findsAtLeastNWidgets(1));
 
     await tester.tap(find.text('Animals').hitTestable().first);
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+    await pumpUntilFound(tester, find.text('Happy Cat'));
 
     expect(
       find.descendant(of: find.byType(AppBar), matching: find.text('Animals')),
@@ -131,15 +130,15 @@ void main() {
   testWidgets('tapping Happy Cat opens ColoringScreen with Happy Cat page', (
     WidgetTester tester,
   ) async {
-    await _pumpToHome(tester);
+    await pumpToHome(tester);
 
     await tester.tap(find.text('Animals').first);
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+    await pumpUntilFound(tester, find.text('Happy Cat'));
 
     expect(find.text('Happy Cat'), findsOneWidget);
 
     await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
 
     expect(find.byType(ColoringScreen), findsOneWidget);
     expect(find.byType(InteractiveViewer), findsOneWidget);
@@ -150,15 +149,15 @@ void main() {
   testWidgets('back control routes to animals catalog from Happy Cat', (
     WidgetTester tester,
   ) async {
-    await _pumpToHome(tester);
+    await pumpToHome(tester);
 
     await tester.tap(find.text('Animals').first);
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+    await pumpUntilFound(tester, find.text('Happy Cat'));
 
     expect(find.text('Happy Cat'), findsOneWidget);
 
     await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
 
     expect(find.byTooltip('Back to Animals'), findsWidgets);
 
@@ -177,15 +176,15 @@ void main() {
   testWidgets('back control is generic for another animals page', (
     WidgetTester tester,
   ) async {
-    await _pumpToHome(tester);
+    await pumpToHome(tester);
 
     await tester.tap(find.text('Animals').first);
-    await _pumpUntilFound(tester, find.text('Playful Puppy'));
+    await pumpUntilFound(tester, find.text('Playful Puppy'));
 
     expect(find.text('Playful Puppy'), findsOneWidget);
 
     await tester.tap(find.widgetWithText(ListTile, 'Playful Puppy').first);
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
 
     expect(find.byType(ColoringScreen), findsOneWidget);
     expect(find.text('Playful Puppy'), findsAtLeastNWidgets(1));
@@ -203,41 +202,43 @@ void main() {
     expect(find.text('Playful Puppy'), findsAtLeastNWidgets(1));
   });
 
-  testWidgets('Animals category shows Back and Home controls and both go Home', (
-    WidgetTester tester,
-  ) async {
-    await _pumpToHome(tester);
+  testWidgets(
+    'Animals category shows Back and Home controls and both go Home',
+    (WidgetTester tester) async {
+      await pumpToHome(tester);
 
-    await tester.tap(find.text('Animals').first);
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+      await tester.tap(find.text('Animals').first);
+      await pumpUntilFound(tester, find.text('Happy Cat'));
 
-    expect(_findIconButtonByTooltip('Back'), findsWidgets);
-    expect(_findIconButtonByTooltip('Home'), findsWidgets);
+      expect(findIconButtonByTooltip('Back'), findsWidgets);
+      expect(findIconButtonByTooltip('Home'), findsWidgets);
 
-    await _pressIconButtonByTooltip(tester, 'Back');
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+      await pressIconButtonByTooltip(tester, 'Back');
+      await pumpUntilFound(tester, find.text('Choose an Adventure'));
 
-    await tester.tap(find.text('Animals').first);
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+      await tester.tap(find.text('Animals').first);
+      await pumpUntilFound(tester, find.text('Happy Cat'));
 
-    await _pressIconButtonByTooltip(tester, 'Home');
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
-  });
+      await pressIconButtonByTooltip(tester, 'Home');
+      await pumpUntilFound(tester, find.text('Choose an Adventure'));
+    },
+  );
 
-  testWidgets('Coloring opened from category shows Home control that returns Home', (
-    WidgetTester tester,
-  ) async {
-    await _pumpToHome(tester);
+  testWidgets(
+    'Coloring opened from category shows Home control that returns Home',
+    (WidgetTester tester) async {
+      await pumpToHome(tester);
 
-    await tester.tap(find.text('Animals').first);
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+      await tester.tap(find.text('Animals').first);
+      await pumpUntilFound(tester, find.text('Happy Cat'));
 
-    await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
+      await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
+      await pumpUntilFound(tester, find.byType(ColoringScreen));
 
-    expect(_findIconButtonByTooltip('Home'), findsWidgets);
+      expect(findIconButtonByTooltip('Home'), findsWidgets);
 
-    await _pressIconButtonByTooltip(tester, 'Home');
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
-  });
+      await pressIconButtonByTooltip(tester, 'Home');
+      await pumpUntilFound(tester, find.text('Choose an Adventure'));
+    },
+  );
 }

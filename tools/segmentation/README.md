@@ -223,6 +223,38 @@ Zoom-aware usability policy:
 - tap-target size alone is not a hard exclusion for `CHILDREN_DETAILED`
 - small region does not imply invalid region because runtime zoom can make fine details practical to color
 
+## Region Colorability Policy (Current)
+
+Current runtime policy for CHILDREN_DETAILED raster pages:
+
+- legitimate enclosed regions identified by segmentation remain colorable
+- small region size alone is not a valid exclusion criterion
+- zoom is the intended mechanism for interacting with very small legitimate regions
+- children's complexity should be controlled primarily during artwork generation
+- if source artwork contains excessive micro-regions, regenerate/refine artwork instead of suppressing legitimate enclosed runtime regions
+
+Lovely Kitten migration context:
+
+- previous runtime exposure: 147 regions
+- current runtime exposure: 175 regions
+- reason: 28 legitimate logical regions were previously suppressed by historical CHILDREN_DETAILED filtering and are now exposed
+- this is not new segmentation geometry; logical map geometry remained identical (`region_map.png` SHA-256 `885334eca183dca25efbb1937521e0e672fa52f7151160fcb26eecd4ee0d62b8`)
+- legacy five-region SVG Lovely Kitten is retired from the visible production catalog
+- canonical production Lovely Kitten is the rasterRegion implementation with 175 regions
+- the old SVG page may remain addressable by its legacy page id only as a compatibility shim for old saved sessions
+
+Content versioning rule:
+
+- contentVersion must change when the runtime coloring contract changes
+- examples that require a contentVersion bump:
+  - region IDs added or removed
+  - region ownership mapping changes
+  - runtime colorable region-set changes
+  - persistence interpretation changes
+  - materially changed runtime assets
+- contentVersion bump is not required for comments, QA images, documentation text, or internal build-report formatting
+- a contentVersion bump may still be required even when source artwork and logical segmentation geometry are unchanged
+
 ## Known Limitations
 
 - Thresholding and morphology are global and may require per-art tuning.
@@ -308,3 +340,151 @@ Profile separation principle:
 - `MASTER`: topology truth for all accepted enclosed regions
 - `CHILDREN_DETAILED`: `MASTER` minus clear artifacts/noise only
 - `CHILDREN_SIMPLE`: optional stronger simplification profile for lower workload experiences
+
+## Phase 2G Part 1 Foundation
+
+Phase 2G Part 1 adds a manifest-driven foundation for page lifecycle tracking and
+validation without changing segmentation, export, or runtime coloring behavior.
+
+New foundation files:
+
+- `tools/segmentation/manifests/*.page.json`: per-page manifest records
+- `tools/segmentation/orchestrate_segmentation.py`: stage-aware audit/report CLI
+- `tools/segmentation/phase2g_manifest.py`: manifest loader and validation
+- `tools/segmentation/phase2g_preflight.py`: PASS/WARN/FAIL preflight checks
+- `tools/segmentation/phase2g_integrity.py`: generalized runtime-vs-approved integrity checks
+
+## Phase 2G Part 2 Manifest-Driven Build Pipeline
+
+Part 2 extends orchestration from audit-only checks to a manifest-driven build
+sequence that composes validated tooling scripts without rewriting algorithms.
+
+Implemented operational stages:
+
+- `segment`: run deterministic segmentation/classification into disposable workspace
+- `qa`: package human QA artifacts from workspace segmentation outputs
+- `export`: generate runtime candidate assets in workspace
+- `validate`: run integrity checks against candidate runtime assets
+- `build`: execute `preflight -> segment -> qa -> export -> validate`
+
+Audit stages remain:
+
+- `inventory`, `preflight`, `integrity`, `all`
+
+Important stage semantics:
+
+- `all` still means all implemented audit stages only (`preflight + integrity`).
+- `build` is the production processing pipeline stage for candidate generation.
+- No stage in Part 2 promotes candidate assets into production runtime directories.
+
+Disposable workspace root:
+
+- `tools/segmentation/work/<page-id>/<build-id>/`
+
+Workspace structure:
+
+- `segmentation/`
+- `qa/`
+- `runtime_candidate/`
+- `report.json`
+- `comparison_to_production.json`
+
+Build identity:
+
+- `sourceHash`: SHA-256 of source artwork bytes
+- `configHash`: stable hash of manifest build-relevant configuration
+- `buildId`: deterministic hash of page + source hash + config hash + pipeline version
+
+### Part 2 Operator Workflow
+
+1. Place approved source PNG in source-artwork location.
+2. Create/update page manifest.
+3. Set lifecycle to `ARTWORK_APPROVED` after Human Artwork QA.
+4. Run:
+  - `python .\orchestrate_segmentation.py --manifest .\manifests\<page>.page.json --stage build`
+5. Inspect full-color QA artifact in workspace `qa/` package.
+6. If defects are source-art driven, prefer artwork refinement/regeneration and rebuild.
+7. If coverage passes, mark lifecycle `COVERAGE_APPROVED`.
+8. Stop here in Part 2 (no production promotion).
+
+Human-gate policy:
+
+- Automated PASS is not Human approval.
+- Build is blocked when lifecycle is before `ARTWORK_APPROVED`.
+
+Artwork defect policy:
+
+- If Human Coverage QA reveals widespread uncolorable/open-contour defects, prefer AI refine/regenerate of source artwork.
+- Manual repair remains exceptional.
+
+Current canonical manifests:
+
+- `tools/segmentation/manifests/cheerful_baby_panda.page.json`
+- `tools/segmentation/manifests/lovely_kitten_raster_poc.page.json`
+
+Manifest design notes:
+
+- Keep manifests declarative and page-scoped.
+- Separate `sourceArtworkVersion` from `runtimeContentVersion` and `pipelineVersion`.
+- Keep renderer/profile explicit for validation and reporting.
+- Avoid embedding segmentation metrics or volatile run outputs in manifests.
+
+### Operator Workflow: Approved PNG to Production Page
+
+1. Approve source raster artwork PNG (no manual region redraw).
+2. Create a new `*.page.json` manifest with source, output, and runtime paths.
+3. Run segmentation/profile tooling to generate canonical output artifacts.
+4. Run export tooling to produce runtime assets and metadata.
+5. Run orchestrator preflight/integrity checks:
+   - `python .\orchestrate_segmentation.py --manifest .\manifests\<page>.page.json --stage all`
+6. Resolve any `FAIL` findings before integration.
+7. Wire page metadata in Flutter content registry.
+8. Re-run tests/analyze before merge.
+
+### Orchestrator Stage Semantics
+
+Supported stages today:
+
+- `inventory`: manifest discovery/basic presence checks
+- `preflight`: technical input/runtime prerequisite checks
+- `integrity`: metadata/map consistency checks
+- `segment`: workspace segmentation/classification build stage
+- `qa`: workspace QA package stage
+- `export`: workspace runtime-candidate export stage
+- `validate`: candidate runtime integrity stage
+- `build`: end-to-end candidate build stage (`preflight -> segment -> qa -> export -> validate`)
+- `all`: runs all currently implemented audit stages only (`preflight` + `integrity`)
+
+Important:
+
+- `--stage all` does not run segmentation, QA generation, export, or Flutter integration steps.
+- `--stage build` produces QA-ready runtime candidates and stops before production promotion.
+- Human approval gates remain separate from automated checks.
+
+### Scalable 10-Page Workflow
+
+For batching multiple pages, keep one manifest per page and run the orchestrator
+with repeated `--manifest` arguments:
+
+```powershell
+python .\orchestrate_segmentation.py \
+  --manifest .\manifests\page01.page.json \
+  --manifest .\manifests\page02.page.json \
+  --manifest .\manifests\page03.page.json \
+  --stage all \
+  --output-json .\output\phase2g\batch_report.json
+```
+
+Recommended batching policy:
+
+- Treat each page as independently shippable.
+- Keep canonical output under a stable per-page directory.
+- Promote only pages with `FAIL=0` in orchestrator report.
+
+### Retention and Git Policy
+
+- Keep canonical per-page segmentation output directories used by production/runtime references.
+- Keep runtime assets under `assets/coloring_pages/...` for integrated pages.
+- Keep per-page manifest JSON files under `tools/segmentation/manifests/`.
+- Remove disposable experiments and one-off scripts after inventory and approval.
+- Ignore narrowly scoped transient files only; avoid broad ignore patterns that can hide canonical artifacts.

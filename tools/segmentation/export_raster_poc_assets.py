@@ -748,7 +748,7 @@ def _build_regions_dart(entries: list[dict[str, Any]], symbol_prefix: str) -> st
     lines: list[str] = []
     lines.append("import 'package:flutter/material.dart';")
     lines.append("")
-    lines.append("import '../models/coloring_page.dart';")
+    lines.append("import 'package:color_kingdom/features/coloring/models/coloring_page.dart';")
     lines.append("")
     lines.append("const Color kTransparentRegion = Color(0x00000000);")
     lines.append("")

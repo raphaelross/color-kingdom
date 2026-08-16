@@ -46,3 +46,6 @@ app.*.map.json
 
 # Transient local segmentation test report
 /tools/segmentation/output/phase2d_test_results.xml
+
+# Disposable manifest-driven build workspace
+/tools/segmentation/work/

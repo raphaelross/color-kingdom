@@ -30,7 +30,9 @@ class _MemorySessionRepository implements ColoringSessionRepository {
   Future<List<ColoringSession>> getAllSessions() async {
     final sessions = _sessions.values.toList();
     sessions.sort((a, b) {
-      final timestampOrder = b.lastUpdatedAtEpochMs.compareTo(a.lastUpdatedAtEpochMs);
+      final timestampOrder = b.lastUpdatedAtEpochMs.compareTo(
+        a.lastUpdatedAtEpochMs,
+      );
       if (timestampOrder != 0) {
         return timestampOrder;
       }
@@ -55,7 +57,7 @@ class _MemorySessionRepository implements ColoringSessionRepository {
   }
 }
 
-Future<void> _pumpUntilFound(
+Future<void> pumpUntilFound(
   WidgetTester tester,
   Finder finder, {
   int maxPumps = 40,
@@ -70,7 +72,7 @@ Future<void> _pumpUntilFound(
   fail('Timed out waiting for widget: $finder');
 }
 
-Future<void> _waitForColoringReady(WidgetTester tester) async {
+Future<void> waitForColoringReady(WidgetTester tester) async {
   for (var i = 0; i < 40; i++) {
     final container = ProviderScope.containerOf(
       tester.element(find.byType(ColoringScreen)),
@@ -96,24 +98,23 @@ Future<GoRouter> _pumpApp(
       GoRoute(
         path: '/home',
         name: AppRouteName.home,
-        builder: (_, __) => const HomeScreen(),
+        builder: (context, state) => const HomeScreen(),
       ),
       GoRoute(
         path: '/category/:categoryId',
         name: AppRouteName.category,
-        builder: (_, state) => CategoryScreen(
-          categoryId: state.pathParameters['categoryId']!,
-        ),
+        builder: (context, state) =>
+            CategoryScreen(categoryId: state.pathParameters['categoryId']!),
       ),
       GoRoute(
         path: '/gallery',
         name: AppRouteName.gallery,
-        builder: (_, __) => const GalleryScreen(),
+        builder: (context, state) => const GalleryScreen(),
       ),
       GoRoute(
         path: '/coloring/:pageId',
         name: AppRouteName.coloring,
-        builder: (_, state) {
+        builder: (context, state) {
           final pageId = state.pathParameters['pageId']!;
           final source = state.uri.queryParameters[ColoringRouteQuery.source];
           final sourceCategoryId =
@@ -145,17 +146,17 @@ Future<GoRouter> _pumpApp(
 }
 
 void main() {
-  Finder _findIconButtonByTooltip(String tooltip) {
+  Finder findIconButtonByTooltip(String tooltip) {
     return find.byWidgetPredicate(
       (widget) => widget is IconButton && widget.tooltip == tooltip,
     );
   }
 
-  Future<void> _pressIconButtonByTooltip(
+  Future<void> pressIconButtonByTooltip(
     WidgetTester tester,
     String tooltip,
   ) async {
-    final buttonFinder = _findIconButtonByTooltip(tooltip);
+    final buttonFinder = findIconButtonByTooltip(tooltip);
     expect(buttonFinder, findsWidgets);
     final button = tester.widget<IconButton>(buttonFinder.last);
     expect(button.onPressed, isNotNull);
@@ -164,42 +165,55 @@ void main() {
   }
 
   testWidgets('Home route exposes My Creations destination', (tester) async {
-    final router =
-        await _pumpApp(tester, _MemorySessionRepository(), initialLocation: '/home');
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+    final router = await _pumpApp(
+      tester,
+      _MemorySessionRepository(),
+      initialLocation: '/home',
+    );
+    await pumpUntilFound(tester, find.text('Choose an Adventure'));
 
     router.goNamed(AppRouteName.gallery);
     await tester.pumpAndSettle();
 
-    expect(find.text('No creations yet! Pick a picture and start coloring.'), findsOneWidget);
+    expect(
+      find.text('No creations yet! Pick a picture and start coloring.'),
+      findsOneWidget,
+    );
   });
 
-  testWidgets('My Creations shows Back and Home controls and both go Home', (tester) async {
-    final router =
-        await _pumpApp(tester, _MemorySessionRepository(), initialLocation: '/gallery');
-    await _pumpUntilFound(
+  testWidgets('My Creations shows Back and Home controls and both go Home', (
+    tester,
+  ) async {
+    final router = await _pumpApp(
+      tester,
+      _MemorySessionRepository(),
+      initialLocation: '/gallery',
+    );
+    await pumpUntilFound(
       tester,
       find.text('No creations yet! Pick a picture and start coloring.'),
     );
 
-    expect(_findIconButtonByTooltip('Back'), findsWidgets);
-    expect(_findIconButtonByTooltip('Home'), findsWidgets);
+    expect(findIconButtonByTooltip('Back'), findsWidgets);
+    expect(findIconButtonByTooltip('Home'), findsWidgets);
 
-    await _pressIconButtonByTooltip(tester, 'Back');
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+    await pressIconButtonByTooltip(tester, 'Back');
+    await pumpUntilFound(tester, find.text('Choose an Adventure'));
 
     router.goNamed(AppRouteName.gallery);
     await tester.pumpAndSettle();
-    await _pumpUntilFound(
+    await pumpUntilFound(
       tester,
       find.text('No creations yet! Pick a picture and start coloring.'),
     );
 
-    await _pressIconButtonByTooltip(tester, 'Home');
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+    await pressIconButtonByTooltip(tester, 'Home');
+    await pumpUntilFound(tester, find.text('Choose an Adventure'));
   });
 
-  testWidgets('My Creations to Happy Cat and back returns to My Creations', (tester) async {
+  testWidgets('My Creations to Happy Cat and back returns to My Creations', (
+    tester,
+  ) async {
     final sessionRepository = _MemorySessionRepository()
       ..seed(
         const ColoringSession(
@@ -211,11 +225,11 @@ void main() {
       );
 
     await _pumpApp(tester, sessionRepository, initialLocation: '/gallery');
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+    await pumpUntilFound(tester, find.text('Happy Cat'));
 
     await tester.tap(find.text('Happy Cat'));
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
-    await _pumpUntilFound(tester, find.byTooltip('Back to My Creations'));
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
+    await pumpUntilFound(tester, find.byTooltip('Back to My Creations'));
 
     await tester.tap(find.byTooltip('Back to My Creations'));
     await tester.pumpAndSettle();
@@ -230,16 +244,18 @@ void main() {
     expect(items.single.pageId, 'happy-cat');
   });
 
-  testWidgets('Animals to Happy Cat and back returns to Animals', (tester) async {
+  testWidgets('Animals to Happy Cat and back returns to Animals', (
+    tester,
+  ) async {
     await _pumpApp(tester, _MemorySessionRepository());
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+    await pumpUntilFound(tester, find.text('Choose an Adventure'));
 
     await tester.tap(find.text('Animals').first);
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+    await pumpUntilFound(tester, find.text('Happy Cat'));
 
     await tester.tap(find.widgetWithText(ListTile, 'Happy Cat').first);
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
-    await _pumpUntilFound(tester, find.byTooltip('Back to Animals'));
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
+    await pumpUntilFound(tester, find.byTooltip('Back to Animals'));
 
     await tester.tap(find.byTooltip('Back to Animals'));
     await tester.pumpAndSettle();
@@ -250,10 +266,16 @@ void main() {
     );
   });
 
-  testWidgets('direct coloring route back uses safe category fallback', (tester) async {
-    await _pumpApp(tester, _MemorySessionRepository(), initialLocation: '/coloring/happy-cat');
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
-    await _pumpUntilFound(tester, find.byTooltip('Back to Animals'));
+  testWidgets('direct coloring route back uses safe category fallback', (
+    tester,
+  ) async {
+    await _pumpApp(
+      tester,
+      _MemorySessionRepository(),
+      initialLocation: '/coloring/happy-cat',
+    );
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
+    await pumpUntilFound(tester, find.byTooltip('Back to Animals'));
 
     await tester.tap(find.byTooltip('Back to Animals'));
     await tester.pumpAndSettle();
@@ -264,17 +286,25 @@ void main() {
     );
   });
 
-  testWidgets('direct coloring route Home control returns Home', (tester) async {
-    await _pumpApp(tester, _MemorySessionRepository(), initialLocation: '/coloring/happy-cat');
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
+  testWidgets('direct coloring route Home control returns Home', (
+    tester,
+  ) async {
+    await _pumpApp(
+      tester,
+      _MemorySessionRepository(),
+      initialLocation: '/coloring/happy-cat',
+    );
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
 
-    expect(_findIconButtonByTooltip('Home'), findsWidgets);
+    expect(findIconButtonByTooltip('Home'), findsWidgets);
 
-    await _pressIconButtonByTooltip(tester, 'Home');
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+    await pressIconButtonByTooltip(tester, 'Home');
+    await pumpUntilFound(tester, find.text('Choose an Adventure'));
   });
 
-  testWidgets('My Creations refreshes progress after returning from coloring', (tester) async {
+  testWidgets('My Creations refreshes progress after returning from coloring', (
+    tester,
+  ) async {
     final sessionRepository = _MemorySessionRepository()
       ..seed(
         const ColoringSession(
@@ -286,11 +316,11 @@ void main() {
       );
 
     await _pumpApp(tester, sessionRepository, initialLocation: '/gallery');
-    await _pumpUntilFound(tester, find.text('10% colored'));
+    await pumpUntilFound(tester, find.text('10% colored'));
 
     await tester.tap(find.text('Happy Cat'));
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
-    await _waitForColoringReady(tester);
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
+    await waitForColoringReady(tester);
 
     final container = ProviderScope.containerOf(
       tester.element(find.byType(ColoringScreen)),
@@ -303,7 +333,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 50));
 
     await tester.tap(find.byTooltip('Back to My Creations'));
-    await _pumpUntilFound(tester, find.text('My Creations'));
+    await pumpUntilFound(tester, find.text('My Creations'));
 
     final galleryContainer = ProviderScope.containerOf(
       tester.element(find.byType(GalleryScreen)),
@@ -314,7 +344,9 @@ void main() {
     expect(items.single.progressPercent, 20);
   });
 
-  testWidgets('Coloring from My Creations Home control returns Home', (tester) async {
+  testWidgets('Coloring from My Creations Home control returns Home', (
+    tester,
+  ) async {
     final sessionRepository = _MemorySessionRepository()
       ..seed(
         const ColoringSession(
@@ -326,18 +358,20 @@ void main() {
       );
 
     await _pumpApp(tester, sessionRepository, initialLocation: '/gallery');
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+    await pumpUntilFound(tester, find.text('Happy Cat'));
 
     await tester.tap(find.text('Happy Cat'));
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
 
-    expect(_findIconButtonByTooltip('Home'), findsWidgets);
+    expect(findIconButtonByTooltip('Home'), findsWidgets);
 
-    await _pressIconButtonByTooltip(tester, 'Home');
-    await _pumpUntilFound(tester, find.text('Choose an Adventure'));
+    await pressIconButtonByTooltip(tester, 'Home');
+    await pumpUntilFound(tester, find.text('Choose an Adventure'));
   });
 
-  testWidgets('clear from coloring removes item from My Creations', (tester) async {
+  testWidgets('clear from coloring removes item from My Creations', (
+    tester,
+  ) async {
     final sessionRepository = _MemorySessionRepository()
       ..seed(
         const ColoringSession(
@@ -349,17 +383,17 @@ void main() {
       );
 
     await _pumpApp(tester, sessionRepository, initialLocation: '/gallery');
-    await _pumpUntilFound(tester, find.text('Happy Cat'));
+    await pumpUntilFound(tester, find.text('Happy Cat'));
 
     await tester.tap(find.text('Happy Cat'));
-    await _pumpUntilFound(tester, find.byType(ColoringScreen));
-    await _waitForColoringReady(tester);
+    await pumpUntilFound(tester, find.byType(ColoringScreen));
+    await waitForColoringReady(tester);
 
     await tester.tap(find.text('Clear'));
     await tester.pump(const Duration(milliseconds: 100));
 
     await tester.tap(find.byTooltip('Back to My Creations'));
-    await _pumpUntilFound(tester, find.text('My Creations'));
+    await pumpUntilFound(tester, find.text('My Creations'));
 
     final galleryContainer = ProviderScope.containerOf(
       tester.element(find.byType(GalleryScreen)),

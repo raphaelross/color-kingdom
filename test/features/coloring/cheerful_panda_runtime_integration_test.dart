@@ -1,6 +1,4 @@
-import 'dart:async';
 import 'dart:convert';
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -131,7 +129,9 @@ void main() {
       expect(decoded['regionCount'], 77);
       expect(regions.length, 77);
 
-      final logicalMapAsset = await rootBundle.load(metadata.regionMapAssetPath);
+      final logicalMapAsset = await rootBundle.load(
+        metadata.regionMapAssetPath,
+      );
       expect(logicalMapAsset.lengthInBytes, greaterThan(0));
 
       final visualMapAsset = await rootBundle.load(
@@ -185,9 +185,10 @@ void main() {
       final logicalRgba = logicalMapBytes!.buffer.asUint8List();
 
       final primaryRegionId = metadata.regionMapEntries.first.regionId;
-      final secondaryRegionId = metadata.regionMapEntries
-          .map((e) => e.regionId)
-          .contains('region-020')
+      final secondaryRegionId =
+          metadata.regionMapEntries
+              .map((e) => e.regionId)
+              .contains('region-020')
           ? 'region-020'
           : metadata.regionMapEntries.last.regionId;
 
@@ -251,8 +252,7 @@ void main() {
       expect(secondaryHit, secondaryRegionId);
 
       final backgroundPixelX = (backgroundOffset! ~/ 4) % metadata.imageWidth;
-      final backgroundPixelY =
-          (backgroundOffset ~/ 4) ~/ metadata.imageWidth;
+      final backgroundPixelY = (backgroundOffset ~/ 4) ~/ metadata.imageWidth;
 
       final backgroundHit = hitTester.regionIdAtPixel(
         x: backgroundPixelX,
@@ -274,7 +274,7 @@ void main() {
       final sessionRepository = _MemorySessionRepository();
       final pageRepository = _FakeRepository([
         sampleCheerfulBabyPandaPage,
-        sampleLovelyKittenRasterPocPage,
+        sampleLovelyKittenPage,
       ]);
 
       final container = ProviderContainer(
@@ -364,7 +364,11 @@ void main() {
       await controller.loadPageById('lovely-kitten-raster-poc');
       state = container.read(coloringControllerProvider);
       expect(state.page!.id, 'lovely-kitten-raster-poc');
-      expect(state.regionColors.containsKey(regionA), isFalse);
+      expect(state.regionColors.length, 175);
+      expect(
+        state.regionColors[regionA]?.toARGB32(),
+        Colors.transparent.toARGB32(),
+      );
     },
   );
 
@@ -374,7 +378,7 @@ void main() {
       final sessionRepository = _MemorySessionRepository();
       final pageRepository = _FakeRepository([
         sampleCheerfulBabyPandaPage,
-        sampleLovelyKittenRasterPocPage,
+        sampleLovelyKittenPage,
       ]);
 
       final controllerContainer = ProviderContainer(

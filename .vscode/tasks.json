@@ -20,6 +20,55 @@
 			"label": "ck-git-status-short",
 			"type": "shell",
 			"command": "git status --short"
+		},
+		{
+			"label": "segmentation-isolation-test",
+			"type": "shell",
+			"command": "tools/segmentation/.venv/Scripts/python.exe",
+			"args": [
+				"-m",
+				"pytest",
+				"-q",
+				"tools/segmentation/tests/test_phase2g_build_pipeline.py::test_multi_manifest_result_isolation",
+				"-vv"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "phase2g-diffqa-generate",
+			"type": "shell",
+			"command": "tools\\segmentation\\.venv\\Scripts\\python.exe",
+			"args": [
+				"tools\\segmentation\\phase2g_differential_qa.py",
+				"--build-report",
+				"tools\\segmentation\\output\\part2_build_report.json",
+				"--page-id",
+				"lovely-kitten-raster-poc"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "phase2g_part2a_run",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"Set-Location tools/segmentation; .\\.venv\\Scripts\\python.exe .\\phase2g_differential_qa.py --build-report .\\output\\part2_build_report.json --page-id lovely-kitten-raster-poc; $code2=$LASTEXITCODE; $dq='work/lovely-kitten-raster-poc/lovely-kitten-raster-poc-123b40815a18479f/differential_qa'; if(Test-Path $dq){Get-ChildItem -File $dq | Select-Object -ExpandProperty Name | Set-Content .\\output\\phase2g_part2a_differential_qa_files.txt; $code3=0}else{$code3=1}; .\\.venv\\Scripts\\python.exe -m pytest -q .\\tests\\test_phase2g_differential_qa.py; $code4=$LASTEXITCODE; @(\"EXIT1=0\",\"EXIT2=$code2\",\"EXIT3=$code3\",\"EXIT4=$code4\") | Set-Content .\\output\\phase2g_part2a_exit_codes.txt"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "ck00212-isolated-lk-test",
+			"type": "shell",
+			"command": "flutter",
+			"args": [
+				"test",
+				"--reporter",
+				"expanded",
+				"test/features/coloring/lovely_kitten_runtime_path_test.dart"
+			],
+			"isBackground": false
 		}
 	]
 }

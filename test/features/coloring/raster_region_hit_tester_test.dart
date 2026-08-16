@@ -1,4 +1,3 @@
-import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/services.dart';
@@ -19,7 +18,7 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   test('region map loads and known region pixel maps to expected region id', () async {
-    final page = sampleLovelyKittenRasterPocPage;
+    final page = sampleLovelyKittenPage;
     final metadata = page.rasterRegionMetadata!;
 
     final bytes = await rootBundle.load(metadata.regionMapAssetPath);
@@ -49,7 +48,7 @@ void main() {
   });
 
   test('exterior/background and line barrier pixels map to no region', () async {
-    final page = sampleLovelyKittenRasterPocPage;
+    final page = sampleLovelyKittenPage;
     final metadata = page.rasterRegionMetadata!;
 
     final bytes = await rootBundle.load(metadata.regionMapAssetPath);

@@ -39,7 +39,7 @@ void main() {
   });
 
   test('raster POC page metadata is configured and deterministic', () {
-    final page = sampleLovelyKittenRasterPocPage;
+    final page = sampleLovelyKittenPage;
     final metadata = page.rasterRegionMetadata;
 
     expect(page.rendererType, ColoringRendererType.rasterRegion);
@@ -60,11 +60,33 @@ void main() {
       metadata.metadataAssetPath,
       'assets/coloring_pages/animals/lovely_kitten_raster_poc/metadata_children_detailed.json',
     );
-    expect(metadata.contentVersion, 'phase2c-tuned-children-detailed-v1');
+    expect(metadata.contentVersion, 'phase2c-tuned-children-detailed-v2');
     expect(metadata.imageWidth, 1133);
     expect(metadata.imageHeight, 1388);
-    expect(metadata.regionMapEntries.length, 147);
-    expect(page.regions.length, 147);
+    expect(metadata.regionMapEntries.length, 175);
+    expect(page.regions.length, 175);
+  });
+
+  testWidgets('lovely kitten metadata asset loads with 175 regions', (
+    tester,
+  ) async {
+    final page = sampleLovelyKittenPage;
+    final metadata = page.rasterRegionMetadata!;
+
+    final rawJson = await rootBundle.loadString(metadata.metadataAssetPath!);
+    final decoded = jsonDecode(rawJson) as Map<String, dynamic>;
+    final regions = decoded['regions'] as List<dynamic>;
+
+    expect(decoded['pageId'], page.id);
+    expect(decoded['profile'], 'childrenDetailed');
+    expect(decoded['regionCount'], 175);
+    expect(regions.length, 175);
+    expect(
+      regions.any(
+        (r) => (r as Map<String, dynamic>)['regionId'] == 'region-001',
+      ),
+      isTrue,
+    );
   });
 
   testWidgets('metadata asset loads and matches configured map entries', (

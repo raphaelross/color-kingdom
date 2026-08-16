@@ -1,4 +1,3 @@
-import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -96,7 +95,7 @@ void main() {
     final sessionRepository = _MemorySessionRepository();
     final pageRepository = _FakeRepository([
       sampleHappyCatPage,
-      sampleLovelyKittenRasterPocPage,
+      sampleLovelyKittenPage,
     ]);
 
     final container = _buildContainer(
@@ -132,7 +131,7 @@ void main() {
     final sessionRepository = _MemorySessionRepository();
     final pageRepository = _FakeRepository([
       sampleHappyCatPage,
-      sampleLovelyKittenRasterPocPage,
+      sampleLovelyKittenPage,
     ]);
 
     final container = _buildContainer(
